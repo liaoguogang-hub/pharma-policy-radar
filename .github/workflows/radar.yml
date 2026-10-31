@@ -1,0 +1,228 @@
+name: Pharma BD Radar
+
+on:
+  schedule:
+    # 北京时间 06:23 = UTC 22:23（前一天）
+    #
+    # ⚠️ 为什么不是整点 06:00？
+    # GitHub 官方文档明确说：schedule 事件在整点（start of every hour）
+    # 高负载时会被延后，"如果负载足够高，一些排队的任务可能被丢弃"。
+    # 实测（2026-10-12）：两个仓库用整点 cron（0 21 / 0 22），
+    # 连续 4 个触发窗口【一个都没跑】——不是延迟，是彻底没触发。
+    # Node.js 官方仓库也专门把 cron 偏移 3 分钟来规避这个问题。
+    # 所以这里偏移 23 分钟，避开整点高峰。
+    #
+    # ⚠️ 另一层保险：本机有一个 Windows 计划任务会在这个时间之后再触发一次
+    # （见 README「定时任务的第二条腿」）。重复触发由下面的 guard job 拦掉。
+    - cron: '23 22 * * *'
+  workflow_dispatch:
+    inputs:
+      date:
+        description: '补抓指定日期 (YYYY-MM-DD)，留空为今天'
+        required: false
+        default: ''
+      skip_compose:
+        description: '只跑采集+评分，不生成文章'
+        type: boolean
+        default: false
+      skip_llm:
+        description: '冒烟测试：跳过所有 LLM 步骤（不需要 API key）'
+        type: boolean
+        default: false
+      force:
+        description: '强制重跑（忽略"今天已跑过"检查）。补跑历史日期时必须加 -f force=true'
+        type: boolean
+        default: false
+      publish_only:
+        description: '只重建站点+推飞书+部署 Pages，不重新采集/评分/成稿。补推历史文章（稿子已在仓库里）时用'
+        type: boolean
+        default: false
+
+concurrency:
+  group: radar-${{ github.ref }}
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  # ============================================================
+  # 先检查"今天是否已经跑过"
+  #
+  # 定时任务有【两条腿】——GitHub 的 cron 和本机的计划任务。
+  # 两条腿都可能触发，不做检查就会重复采集、重复成稿、重复推送飞书。
+  #
+  # 判据用 data/scored/<date>.json：它由评分步骤产出、由"提交产出"提交，
+  # 是"今天确实跑完过"的可靠信号（data/raw/ 被 gitignore 了，不能用）。
+  #
+  # ⚠️ 2026-10-22 修正：以前【只对 schedule 触发做这个判断】，
+  #    workflow_dispatch 一律放行。但本机的兜底计划任务
+  #    （Radar-*-Fallback）用的就是 workflow_dispatch！
+  #    结果 2026-10-21 BD 雷达一天跑了两次：
+  #      08:40  GitHub 的 cron（晚了 2 小时多）跑完，提交了
+  #             data/scored/2026-10-21.json
+  #      09:07  兜底任务补跑（机器 06:41 关机、08:58 开机）又触发一次
+  #    → 整条流水线重跑：重新采集、重新评分（62 条覆盖成 41 条）、
+  #      再烧一轮 LLM、再推一次飞书。
+  #    注释里一直写着"重复触发由下面的 guard job 拦掉"，
+  #    但代码只拦 schedule —— 文档和实现对不上，这就是重复的根因。
+  #
+  # 现在 schedule 和 workflow_dispatch 都拦，例外两种：
+  #    · force=true     → 补跑历史日期时人工指定，强行执行
+  #    · skip_llm=true  → 冒烟测试，无副作用（只写 data/raw/，已 gitignore）
+  # ============================================================
+  guard:
+    runs-on: ubuntu-latest
+    outputs:
+      skip: ${{ steps.check.outputs.skip }}
+    steps:
+      - name: 检出仓库
+        uses: actions/checkout@v4
+
+      - name: 检查今天是否已跑过
+        id: check
+        run: |
+          DATE="${{ inputs.date }}"
+          if [ -z "$DATE" ]; then
+            DATE=$(TZ=Asia/Shanghai date +%F)
+          fi
+          echo "北京日期：$DATE"
+          EVENT="${{ github.event_name }}"
+          FORCE="${{ inputs.force }}"
+          SKIP_LLM="${{ inputs.skip_llm }}"
+          PUBLISH_ONLY="${{ inputs.publish_only }}"
+          NEED_CHECK=0
+          if [ "$EVENT" = "schedule" ]; then
+            NEED_CHECK=1
+          elif [ "$EVENT" = "workflow_dispatch" ] && [ "$FORCE" != "true" ] && [ "$SKIP_LLM" != "true" ] && [ "$PUBLISH_ONLY" != "true" ]; then
+            NEED_CHECK=1
+          fi
+          # ⚠️ 2026-11-01 修 guard 毒点：scored 文件【存在但内容为空数组】
+          #    不算"跑过"——那是评分失败的残留（MiniMax 429 那天就是这样），
+          #    旧逻辑会因此把当天后续所有重试都跳过，只能 force=true 才能跑。
+          SCORED_EMPTY=0
+          if [ -f "data/scored/$DATE.json" ]; then
+            N=$(python3 -c "import json,sys;d=json.load(open('data/scored/$DATE.json'));print(len(d) if isinstance(d,list) else -1)" 2>/dev/null || echo -1)
+            if [ "$N" = "0" ]; then
+              SCORED_EMPTY=1
+            fi
+            echo "scored 条目数：$N"
+          fi
+          if [ "$NEED_CHECK" = "1" ] && [ -f "data/scored/$DATE.json" ] && [ "$SCORED_EMPTY" != "1" ]; then
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            echo "⏭  $DATE 已经跑过（data/scored/$DATE.json 存在且非空），本次跳过。"
+            echo "   触发来源：$EVENT  force=$FORCE"
+          else
+            if [ "$SCORED_EMPTY" = "1" ]; then
+              echo "⚠️  $DATE 的 scored 文件是空数组（上次评分失败留下的），本次重跑。"
+            fi
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+            echo "▶  $DATE 还没跑过，继续执行（触发来源：$EVENT force=$FORCE）。"
+          fi
+
+  radar:
+    needs: guard
+    if: needs.guard.outputs.skip != 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: 检出仓库
+        uses: actions/checkout@v4
+
+      - name: 安装 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+
+      - name: 安装依赖
+        run: pip install -r requirements.txt
+
+      - name: 采集
+        if: ${{ inputs.publish_only != true }}
+        working-directory: src
+        env:
+          SEARCH_BACKEND: ${{ vars.SEARCH_BACKEND }}
+          SERPER_API_KEY: ${{ secrets.SERPER_API_KEY }}
+          TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
+          BRAVE_API_KEY: ${{ secrets.BRAVE_API_KEY }}
+        run: python fetch.py ${{ inputs.date }}
+      - name: 去重
+        if: ${{ inputs.publish_only != true }}
+        working-directory: src
+        run: python dedupe.py ${{ inputs.date }}
+
+      - name: LLM 评分
+        if: ${{ inputs.publish_only != true && inputs.skip_llm != true }}
+        working-directory: src
+        env:
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          # 2026-11-01：MiniMax 额度耗尽后切 DeepSeek Flash；
+          # 配置里 provider=deepseek_flash 优先读 DEEPSEEK_API_KEY。
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+        run: python score.py ${{ inputs.date }}
+
+      - name: 选题
+        if: ${{ inputs.publish_only != true && inputs.skip_llm != true }}
+        working-directory: src
+        run: python pick.py ${{ inputs.date }}
+
+      - name: 生成文章
+        if: ${{ inputs.publish_only != true && inputs.skip_llm != true && inputs.skip_compose != true }}
+        working-directory: src
+        env:
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          # 2026-11-01：MiniMax 额度耗尽后切 DeepSeek Flash；
+          # 配置里 provider=deepseek_flash 优先读 DEEPSEEK_API_KEY。
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+        run: python compose.py ${{ inputs.date }}
+
+      - name: 发布站点
+        if: ${{ inputs.skip_compose != true }}
+        working-directory: src
+        env:
+          FEISHU_WEBHOOK: ${{ secrets.FEISHU_WEBHOOK }}
+          FEISHU_SECRET: ${{ secrets.FEISHU_SECRET }}
+          SITE_BASE_URL: ${{ vars.SITE_BASE_URL }}
+          # ⚠️ 2026-10-25：云端雷达【要发飞书】——"做的稿件要发飞书"是用户要求。
+          #    云端卡片 = 产出播报（今天几篇、评分达不达标、为什么 0 篇）；
+          #    本机 publisher 卡片 = 推送播报（核验改稿结果、进了草稿箱哪些）。
+          #    临时关掉云端通知：在这里加 RADAR_FEISHU_NOTIFY: '0'。
+        run: python publish.py ${{ inputs.date }}
+
+      - name: 提交产出
+        run: |
+          git config user.name  "radar-bot"
+          git config user.email "radar-bot@users.noreply.github.com"
+          git add data posts site
+          if git diff --staged --quiet; then
+            echo "无变更"
+          else
+            git commit -m "chore(radar): $(date -u +%Y-%m-%d) 采集/评分/成稿"
+            git push
+          fi
+
+      - name: 上传 Pages 产物
+        if: ${{ inputs.skip_compose != true }}
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./site
+
+      - name: 部署 Pages
+        if: ${{ inputs.skip_compose != true }}
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: 失败时保留调试产物
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: debug-${{ github.run_id }}
+          path: |
+            data/debug/
+            data/compose_*.json
+          retention-days: 14
+          if-no-files-found: ignore

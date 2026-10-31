@@ -1,0 +1,148 @@
+score:
+  dimensions:
+    amount:
+      label: 金额量级
+      max: 2.5
+      desc: 首付>5亿美元=2.5；>1亿=2.0；>1000万=1.2；<500万=0.3
+      note: 必须区分【潜在总额】和【首付】。首付是真实出价，总额含里程碑不可兑现
+    stage:
+      label: 交易阶段
+      max: 2.0
+      desc: III期读出/NDA受理=2.0；II期阳性=1.5；I期=0.8；临床前=0.5
+    first_mover:
+      label: 首创性
+      max: 2.0
+      desc: 全球首个靶点/机制=2.0；全球首个适应症=1.6；国产首个=1.2；me-better=0.4
+    tier:
+      label: 公司层级
+      max: 1.5
+      desc: MNC主导=1.5；大型药企对大型药企=1.2；二线biotech=0.7
+    impact:
+      label: 外溢影响
+      max: 2.0
+      desc: 改变赛道格局=2.0；单一公司重大进展=1.3；常规交易=0.6
+
+  # 阈值
+  #
+  # ⚠️ 8.5 / 7.5 这组阈值是在"数据被污染"时期定下的，当时分数虚高：
+  # 41 笔 2025 年的旧交易被当成新交易，撑出了一批 8.2~9.0 的假高分。
+  # 清掉污染、补上真实发布日期后（2026-10-11 实测 54 条），
+  # 真实分布是：>=8.5 有 0 条，7.5-8.5 有 1 条，7.0-7.5 有 1 条，
+  # 6.0-7.0 有 5 条，<5.0 有 43 条。
+  # 沿用旧阈值会导致多数日子产出 0-1 篇。
+  #
+  # 现按真实分布重标：目标稳定日产 2-3 篇。
+  # 6.5 分仍是"有实质交易、有明确金额或阶段"的门槛，不是凑数线。
+  must_publish: 8.0      # >= 必发
+  keep: 6.5              # >= 进备选池，< 丢弃
+  min_confidence: 0.5    # 置信度过低的不采用
+
+  # 大额交易保底：总分不到 keep 也放行。
+  # 例：2026-10-19 Roche/Hansoh 首付 4 亿美元、总额 150 亿美元，
+  # 因处于早期且非首创只拿 6.3 分，被 6.5 硬门槛挡掉。
+  # 判据要求 deal_key 非空（有明确买卖双方），且置信度达标。
+  big_deal_upfront_usd: 300000000     # 首付 >= 3 亿美元
+  big_deal_total_usd: 5000000000      # 或潜在总额 >= 50 亿美元
+
+  # 同一笔交易在多少天内不重复写（跨天/跨来源/跨语种）
+  deal_lookback_days: 60
+
+  # 每日篇数
+  daily_max: 3
+  daily_min: 2
+  # 同靶点最多展开几笔（超过则合并成综述）
+  same_target_cluster_max: 3
+
+# 硬性排除（命中即 0 分）
+exclude_keywords:
+  pure_financing:
+    - IPO
+    - "raises"
+    - "financing round"
+    - "Series A"
+    - "Series B"
+    - "follow-on"
+    - 上市募资
+    - 定增
+    - 融资轮
+  stale:
+    - preview
+    - "what to watch"
+    - calendar
+    - recap
+    - roundup
+
+# ===== LLM 配置 =====
+# 支持 DeepSeek / MiniMax / 任意 OpenAI 兼容端点
+# 环境变量（GitHub Secrets）：
+#   LLM_API_KEY   统一用一个 key，切换 provider 时不用改代码
+#   也可分别用 DEEPSEEK_API_KEY / MINIMAX_API_KEY
+
+llm:
+  provider: minimax_domestic    # deepseek | minimax | minimax_domestic
+  fallback_providers: [deepseek_flash]   # 主用挂了自动切
+  model: MiniMax-M3.1-Flash-Preview
+  base_url: https://api.minimaxi.com/v1
+  temperature: 0.3
+  # ⚠️ MiniMax 的 max_tokens 含思考 token，设太小会返回空 content
+  max_tokens: 16000
+  # JSON 模式：DeepSeek 支持；MiniMax 文档未声明支持，
+  # 设为 false 时靠 prompt 约束 + 鲁棒解析器兜底
+  json_mode: false
+  batch_size: 30
+  max_retries: 2
+
+# 备选 provider 配置（改 llm.provider 后自动切换）
+providers:
+  # 2026-11-01 新增：备用 provider。MiniMax 429/超时/鉴权失败时，
+  # score._client 会按下面的 fallback_providers 自动切到它。
+  deepseek_flash:
+    base_url: https://api.deepseek.com/v1
+    model: deepseek-flash
+    max_tokens: 16000
+    json_mode: true          # DeepSeek 支持 response_format；不支持时会自动降级
+    env_key: DEEPSEEK_API_KEY
+  deepseek:
+    base_url: https://api.deepseek.com/v1
+    model: deepseek-chat
+    max_tokens: 8000
+    json_mode: true
+    env_key: DEEPSEEK_API_KEY
+  minimax:
+    base_url: https://api.minimax.io/v1
+    model: MiniMax-M3.1-Flash-Preview
+    max_tokens: 16000
+    json_mode: false
+    env_key: MINIMAX_API_KEY
+  minimax_domestic:
+    base_url: https://api.minimaxi.com/v1
+    model: MiniMax-M2.7
+    max_tokens: 16000
+    json_mode: false
+    env_key: MINIMAX_API_KEY
+  # 生成专用：非推理模型，思考 token 为 0，长 HTML 结构更稳、速度快
+  minimax_flash:
+    base_url: https://api.minimaxi.com/v1
+    model: MiniMax-M3.1-Flash-Preview
+    max_tokens: 16000
+    json_mode: false
+    env_key: MINIMAX_API_KEY
+
+# 生成用配置（与评分分开）
+#
+# ⚠️ 实测结论（2026-10-10，同一篇文章 A/B）：
+#   内容/模板分离后，M2.7 全面优于 Flash：
+#     M2.7  ：46s，3291 字符，结构完整（6小节/1表/4框/2脚注）
+#     Flash ：113s，0 字符（空响应）
+#   此前 M2.7 表现差，是因为它要同时写 HTML+CSS（格式负担）；
+#   把标签和样式交给代码后，推理模型的优势就体现出来了。
+gen_llm:
+  provider: minimax_domestic
+  fallback_providers: [deepseek_flash]   # 主用挂了自动切
+  model: MiniMax-M2.7
+  base_url: https://api.minimaxi.com/v1
+  # M2.7 的 max_tokens 含思考 token；纯内容输出约 4500 token，
+  # 32000 有充足余量（写 HTML 时代需要这么多，现在其实用不满）
+  max_tokens: 32000
+  temperature: 0.7
+  json_mode: false

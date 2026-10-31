@@ -1,0 +1,260 @@
+# 源清单
+# access_level 说明（实测结论）：
+#   full     — 全文可读，正文可直接用于写作
+#   headline — 仅标题/摘要可读，正文需订阅，用于时间线与定性
+#   rss      — 首页被 CloudFront 403，但 RSS 可用，取摘要
+#   blocked  — 完全不可达，仅通过其他源间接确认
+
+version: 1
+
+# 采集行为
+fetch:
+  # 每个源最多抓几篇正文（2026-10-25 新增）。
+  #
+  # ⚠️ 原来是硬编码在 fetch.py 里的 6 源 21 篇：
+  #   {"biopharmadive_deals":6, "pharnexcloud":6, "phirda_industry":4, ...}
+  # 结果 9 个 full 源里有 3 个完全没有额度，headline 源一篇都抓不到。
+  #   实测 10-25：67 条候选 59 条 content 为空（88%）。
+  #
+  # 现在配额在这里配，缺省 8。中文源给高一点——中文交易稿是本雷达的主产出。
+  # 总请求量 ≈ 各源配额之和，60 条上下，GitHub runner 跑得动。
+  article_quota:
+    biopharmadive_deals: 8
+    biopharmadive_home: 6
+    pharmexec_partnership: 6
+    pharmexec_irlp: 6
+    phirda_industry: 6
+    pharnexcloud: 8
+    stcn_medicine: 6
+    nbdd_cn: 4
+    pharmcube: 4
+    stat_biotech: 6
+    stat_pharma: 6
+    endpoints_rss: 6
+  # 去文章页补全发布日期的上限（条）。列表页没有日期，必须逐篇取。
+  # 实测约 120 条需 ~15 秒，可接受。
+  date_probe_limit: 120
+
+  # 陈旧内容过滤：发布日期超过该天数的条目直接丢弃。
+  # 起因：BioPharma Dive 的 /topic/deals/ 是专题归档页，
+  # 会把几个月前的旧文一直挂在上面；早期版本又给所有列表页条目
+  # 填了抓取时刻，于是旧文被当成当天新闻（实测把 2026-08-18 的
+  # Leo Pharma 稿写成 10-11 的头条）。
+  # 日期未知的条目不受此限制（未知不等于过旧）。
+  max_age_days: 21
+
+  # 一手材料补全上限（条）。走 SEC EDGAR 全文检索，免费无需 key。
+  # 起因：RSS 摘要只有 200 字符，写出来的稿子没有每股价格、
+  # 没有交易日期，读者看不出是新闻。EDGAR 的 8-K Exhibit 99.1
+  # 就是完整并购公告。
+  # 注意 SEC 限速 10 请求/秒，每条要 2 次请求（检索 + 取文），
+  # 12 条约 24 次请求，安全。
+  edgar_limit: 12
+
+sources:
+  # ============ 英文 ============
+  - id: biopharmadive_deals
+    name: BioPharma Dive - Deals
+    lang: en
+    url: https://www.biopharmadive.com/topic/deals/
+    mode: html
+    access: full
+    weight: 1.0
+    topics: [deals, licensing, mergers]
+
+  - id: biopharmadive_home
+    name: BioPharma Dive - Home
+    lang: en
+    url: https://www.biopharmadive.com/
+    mode: html
+    access: full
+    weight: 0.8
+    selector: 'a[href*="/news/"]'
+
+  # ⚠️ BioWorld：2026-10-10 在本地与 GitHub runner 双向实测均 HTTP 403
+# （Cloudflare，返回 5510 字节挑战页）。确认无法抓取，标记 disabled。
+# 保留配置仅作记录，不再发起请求。
+  - id: bioworld_deals
+    name: BioWorld - Deals & M&A
+    lang: en
+    url: https://www.bioworld.com/
+    mode: html
+    access: blocked
+    weight: 0.0
+    topics: [deals, mergers]
+    note: 实测 403（双环境确认），已停用
+
+  - id: bioworld_asia
+    name: BioWorld Asia
+    lang: en
+    url: https://www.bioworld.com/
+    mode: html
+    access: blocked
+    weight: 0.0
+    note: 实测 403（双环境确认），已停用
+
+  - id: pharmexec_partnership
+    name: Pharmaceutical Executive - Partnerships
+    lang: en
+    url: https://www.pharmexec.com/topic/partnerships
+    mode: html
+    access: full
+    weight: 0.7
+    topics: [deals, partnering]
+    note: |
+      文章路径是 /view/<slug>，不是 /news/。
+      2026-10-10 实测：本站 200，203 个链接，其中 /view/ 为文章页。
+      曾因选择器写成 /news/ 导致误判为"数据中心 IP 被拦"。
+
+  - id: pharmexec_irlp
+    name: PharmExec - IR Licensing & Partnerships
+    lang: en
+    url: https://www.pharmexec.com/topic/ir-licensing-partnerships
+    mode: html
+    access: full
+    weight: 0.8
+    topics: [deals, licensing]
+    note: 同上，文章路径为 /view/<slug>
+
+  - id: stat_biotech
+    name: STAT - Biotech
+    lang: en
+    url: https://www.statnews.com/category/biotech/
+    mode: html
+    access: headline
+    # ⚠️ 2026-10-25：access=headline 只是"默认不抓正文"，
+    #    它的 URL 是完整的文章页，抓得到。实测 10-25 最高分的
+    #    AZ/insitro 交易就出自这里，headline 拿不到正文 → 写不出稿。
+    fetch_body: true
+    weight: 1.0
+
+  - id: stat_pharma
+    name: STAT - Pharma
+    lang: en
+    url: https://www.statnews.com/category/pharma/
+    mode: html
+    access: headline
+    fetch_body: true      # 同 stat_biotech（2026-10-25）
+    weight: 0.9
+
+  - id: fierce_rss_legacy
+    name: Fierce Biotech (legacy RSS, 403)
+    lang: en
+    url: https://www.fiercebiotech.com/rss/xml
+    mode: rss
+    access: blocked
+    weight: 0.0
+    note: 已确认全站 CloudFront 403，RSS 同样被封；保留配置仅作记录
+
+  # ⚠️ Fierce 系列：站点全站 CloudFront 403，RSS 同样被封。
+  # 实测 6 种 feed URL 全部 403，无法直接抓取。
+  # 替代方案：走 search_fallback（web_search 兜底），见 src/fallback.py
+  - id: fierce_pharma_search
+    name: Fierce Pharma (search fallback)
+    lang: en
+    url: ""
+    mode: search
+    access: headline
+    weight: 0.9
+    query: "site:fiercepharma.com licensing OR deal OR acquisition"
+
+  - id: fierce_biotech_search
+    name: Fierce Biotech (search fallback)
+    lang: en
+    url: ""
+    mode: search
+    access: headline
+    weight: 0.9
+    query: "site:fiercebiotech.com licensing deal acquisition"
+
+  - id: endpoints_rss
+    name: Endpoints News (RSS)
+    lang: en
+    url: https://endpts.com/feed
+    mode: rss
+    access: rss
+    # ⚠️ 2026-10-25：RSS 的 summary 大面积为空，article 页抓得到正文。
+    #    实测 10-19 的 AZ-insitro 交易（当天唯一 5.5 分候选）就出自这里。
+    fetch_body: true
+    weight: 1.3
+
+  - id: biopharmaintelligence
+    name: BioPharma Intelligence
+    lang: en
+    url: https://www.biopharmaintelligence.informer.com
+    mode: html
+    access: blocked
+    weight: 0.8
+
+  # ============ 中文 ============
+  - id: phirda_industry
+    name: 中国医药创新促进会 - 产业资讯
+    lang: cn
+    url: https://www.phirda.com/
+    mode: html
+    access: full
+    weight: 1.2
+    topics: [china, policy, deals]
+
+  - id: pharnexcloud
+    name: 摩熵医药
+    lang: cn
+    url: https://www.pharnexcloud.com/zixun/
+    mode: html
+    access: full
+    weight: 1.1
+    topics: [china, deals, clinical]
+
+  - id: stcn_medicine
+    name: 证券时报 - 医药
+    lang: cn
+    url: https://stcn.com/
+    mode: html
+    access: full
+    weight: 1.0
+
+  - id: cnstock_health
+    name: 上海证券报 - 医药
+    lang: cn
+    url: https://www.cnstock.com/
+    mode: html
+    access: disabled
+    weight: 0.0
+    note: |
+      2026-10-10 实测：HTTP 200，命中 38 个 commonDetail 链接，
+      但内容全是综合财经（新质生产力/公募基金/社会招聘/保险举牌），
+      无医药内容，RELEVANT 过滤后保留 0 条。
+      尝试过 /list/yy 频道，内容与首页相同，不是医药频道。
+      该报为综合财经媒体，找不到稳定医药入口，故停用。
+
+  - id: nbdd_cn
+    name: 每日经济新闻 - 医药
+    lang: cn
+    url: https://www.nbd.com.cn/
+    mode: html
+    access: full
+    weight: 0.9
+
+  - id: pharmcube
+    name: 医药魔方 ByDrug
+    lang: cn
+    url: https://bydrug.pharmcube.com/news
+    mode: html
+    access: full
+    weight: 1.1
+
+# ============ 一手来源（交易所/公司）============
+# 这些在 GitHub Actions 内可下 PDF，产出权威原文
+primary_sources:
+  hkex:
+    name: 香港交易所披露易
+    base: https://www1.hkexnews.hk
+    enabled: false   # 需配 stock code 列表后启用
+  sse:
+    name: 上海证券交易所
+    base: https://www.sse.com.cn
+    enabled: false
+  szse:
+    name: 深圳证券交易所
+    base: https://www.szse.cn
+    enabled: false

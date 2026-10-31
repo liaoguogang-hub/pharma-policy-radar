@@ -1,0 +1,25 @@
+# Pharma BD Radar - Python 依赖
+# 目标：兼容 Python 3.11，全部纯 wheel，无编译依赖
+
+# --- HTTP 抓取 ---
+httpx>=0.27.0            # 异步 HTTP，比 requests 快且支持 HTTP/2
+feedparser>=6.0.11       # RSS/Atom 解析
+selectolax>=0.3.21       # 比 BeautifulSoup 快 10 倍的 HTML 解析
+lxml>=5.2.0              # selectolax 的后端
+lxml_html_clean>=0.1.0   # lxml 清理辅助
+
+# --- PDF 解析（GitHub Actions 内可用，抓港交所/上交所公告）---
+pdfplumber>=0.11.0        # 文本型 PDF 解析
+pypdf>=4.2.0             # 轻量备选
+
+# --- 数据处理 ---
+PyYAML>=6.0.1            # 配置文件
+dataclasses-json>=0.6.7  # 数据类序列化
+rapidfuzz>=3.9.4          # 模糊去重，比 difflib 快一个数量级
+
+# --- LLM 调用（DeepSeek / OpenAI 兼容）---
+openai>=1.40.0           # OpenAI 兼容客户端，DeepSeek 直接换 base_url
+
+# --- 输出 ---
+jinja2>=3.1.4            # 模板（后续 P3 用）
+python-dateutil>=2.9.0
