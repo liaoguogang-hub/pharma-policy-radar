@@ -1,0 +1,129 @@
+{
+  "date": "2026-11-02",
+  "count": 4,
+  "plan": [
+    {
+      "type": "policy_readout",
+      "cluster_key": "policy:nmpa-独立软件检查指导原则",
+      "channel": "china",
+      "lead_id": "9d335bcaf0ee68a1",
+      "title": "国家药监局关于印发医疗器械生产质量管理规范独立软件检查指导原则的通知",
+      "score": 7.5,
+      "member_ids": [
+        "9d335bcaf0ee68a1"
+      ],
+      "members": [
+        {
+          "title": "国家药监局关于印发医疗器械生产质量管理规范独立软件检查指导原则的通知",
+          "url": "https://www.nmpa.gov.cn/xxgk/fgwj/gzwj/gzwjylqx/20261030165430153.html",
+          "score": 7.5,
+          "reasoning": "独立软件类医疗器械生产检查适用国家药监局新发布的指导原则，涉及生产许可核查和上市后监督检查的判定口径，属于可全国适用的部委级品类监管规则，值得拆解适用范围、检查项目及执行要求。"
+        }
+      ],
+      "reasoning": "独立软件类医疗器械生产检查适用国家药监局新发布的指导原则，涉及生产许可核查和上市后监督检查的判定口径，属于可全国适用的部委级品类监管规则，值得拆解适用范围、检查项目及执行要求。",
+      "verify_todo": [
+        "核对指导原则文号、完整附件及2026年11月1日施行日期",
+        "确认原《医疗器械生产质量现场检查指导原则》的废止关系",
+        "核实软件组件检查参照执行及生产许可核查、上市后检查的衔接安排"
+      ],
+      "flags": [
+        "formal",
+        "national",
+        "approval",
+        "industry"
+      ]
+    },
+    {
+      "type": "policy_readout",
+      "cluster_key": "policy:山西-医保行政处罚裁量基准",
+      "channel": "china",
+      "lead_id": "3ee4d70d59a9dcc9",
+      "title": "山西省医疗保障局关于印发《医疗保障行政处罚裁量基准适用办法》的通知",
+      "score": 7.3,
+      "member_ids": [
+        "3ee4d70d59a9dcc9"
+      ],
+      "members": [
+        {
+          "title": "山西省医疗保障局关于印发《医疗保障行政处罚裁量基准适用办法》的通知",
+          "url": "https://ybj.shanxi.gov.cn/xxfb/xxgkml/202610/t20261030_10249020.html",
+          "score": 7.3,
+          "reasoning": "省级医保行政处罚裁量办法属于医保基金监管执法的基础性规则，直接关系各类违法违规行为的裁量尺度，值得系统比较其与国家规则及既有地方办法的衔接和变化。"
+        }
+      ],
+      "reasoning": "省级医保行政处罚裁量办法属于医保基金监管执法的基础性规则，直接关系各类违法违规行为的裁量尺度，值得系统比较其与国家规则及既有地方办法的衔接和变化。",
+      "verify_todo": [
+        "核对晋医保发〔2026〕20号全文、施行日期及附件内容",
+        "梳理违法情形、裁量档次、从轻减轻情节及听证程序的对应关系",
+        "确认是否废止或替代既有山西医保行政处罚裁量文件",
+        "核对与医保发〔2021〕35号及其他国家医保规则的具体衔接方式"
+      ],
+      "flags": [
+        "formal",
+        "effective",
+        "local",
+        "enforcement"
+      ]
+    },
+    {
+      "type": "policy_readout",
+      "cluster_key": "policy:drug-price-formation-mechanism",
+      "channel": "china",
+      "lead_id": "b2685eac0be0e895",
+      "title": "国务院办公厅关于健全药品价格形成机制的若干意见",
+      "score": 7.3,
+      "member_ids": [
+        "b2685eac0be0e895"
+      ],
+      "members": [
+        {
+          "title": "国务院办公厅关于健全药品价格形成机制的若干意见",
+          "url": "https://www.gov.cn/zhengce/content/202604/content_7065541.htm",
+          "score": 7.3,
+          "reasoning": "国务院办公厅层面的药品价格形成机制改革具有较高政策层级和广泛行业覆盖面，涉及创新药、仿制药及多环节价格环境，适合系统梳理政策逻辑与行业影响；但已非近日，成稿应按历史文件处理。"
+        }
+      ],
+      "reasoning": "国务院办公厅层面的药品价格形成机制改革具有较高政策层级和广泛行业覆盖面，涉及创新药、仿制药及多环节价格环境，适合系统梳理政策逻辑与行业影响；但已非近日，成稿应按历史文件处理。",
+      "verify_todo": [
+        "核对国办发〔2026〕9号原文、完整条款及附件",
+        "确认文件具体生效时间、配套文件及与现行价格管理文件的关系",
+        "核实各价格机制涉及的实施部门、操作流程和过渡安排"
+      ],
+      "flags": [
+        "formal",
+        "national",
+        "price"
+      ]
+    },
+    {
+      "type": "policy_readout",
+      "cluster_key": "policy:cms-器官获取组织问责",
+      "channel": "global",
+      "lead_id": "912d686231cfe14b",
+      "title": "CMS Finalizes Rule to Help More Organs Reach Patients and Strengthen Accountability for Organ Procurement Organizations",
+      "score": 7.8,
+      "member_ids": [
+        "912d686231cfe14b"
+      ],
+      "members": [
+        {
+          "title": "CMS Finalizes Rule to Help More Organs Reach Patients and Strengthen Accountability for Organ Procurement Organizations",
+          "url": "https://www.hhs.gov/press-room/cms-finalizes-rule-organ-procurement-organizations-transplant-accountability.html",
+          "score": 7.8,
+          "reasoning": "CMS器官获取组织最终规则属于HHS体系下的全国性监管政策，关联机构问责、移植资源配置和监管执行，值得系统梳理适用主体、核心义务及实施安排。"
+        }
+      ],
+      "reasoning": "CMS器官获取组织最终规则属于HHS体系下的全国性监管政策，关联机构问责、移植资源配置和监管执行，值得系统梳理适用主体、核心义务及实施安排。",
+      "verify_todo": [
+        "获取CMS最终规则正式文本、联邦公报发布日期及生效日期",
+        "核对规则修订的法定依据、适用主体范围和分阶段实施安排",
+        "确认相关机构报送、记录、认证及绩效评估要求"
+      ],
+      "flags": [
+        "formal",
+        "national",
+        "overseas"
+      ]
+    }
+  ]
+}

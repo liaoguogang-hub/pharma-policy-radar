@@ -1,20 +1,40 @@
 {
- "version": 3,
- "entries": [
-  {
-   "id": "8d2ab22e72c795ab",
-   "title": "国家药监局关于印发医疗器械生产质量管理规范无菌医疗器械检查指导原则等4个检查指导原则的通知",
-   "date": "2026-11-01"
-  },
-  {
-   "id": "22043ec6c0096607",
-   "title": "关于取消2个国家组织集中带量采购药品中选资格并将相关企业列入违规名单的公告",
-   "date": "2026-11-01"
-  },
-  {
-   "id": "48c959f915003570",
-   "title": "FDA Issues Final Guidance on Prescription Drug Apps and Software",
-   "date": "2026-11-01"
-  }
- ]
+  "version": 3,
+  "entries": [
+    {
+      "id": "8d2ab22e72c795ab",
+      "title": "国家药监局关于印发医疗器械生产质量管理规范无菌医疗器械检查指导原则等4个检查指导原则的通知",
+      "date": "2026-11-01"
+    },
+    {
+      "id": "22043ec6c0096607",
+      "title": "关于取消2个国家组织集中带量采购药品中选资格并将相关企业列入违规名单的公告",
+      "date": "2026-11-01"
+    },
+    {
+      "id": "48c959f915003570",
+      "title": "FDA Issues Final Guidance on Prescription Drug Apps and Software",
+      "date": "2026-11-01"
+    },
+    {
+      "id": "9d335bcaf0ee68a1",
+      "title": "国家药监局关于印发医疗器械生产质量管理规范独立软件检查指导原则的通知",
+      "date": "2026-11-02"
+    },
+    {
+      "id": "3ee4d70d59a9dcc9",
+      "title": "山西省医疗保障局关于印发《医疗保障行政处罚裁量基准适用办法》的通知",
+      "date": "2026-11-02"
+    },
+    {
+      "id": "b2685eac0be0e895",
+      "title": "国务院办公厅关于健全药品价格形成机制的若干意见",
+      "date": "2026-11-02"
+    },
+    {
+      "id": "912d686231cfe14b",
+      "title": "CMS Finalizes Rule to Help More Organs Reach Patients and Strengthen Accountability for Organ Procurement Organizations",
+      "date": "2026-11-02"
+    }
+  ]
 }
