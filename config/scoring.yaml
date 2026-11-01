@@ -66,9 +66,11 @@ score:
     min_policy_level: 2.5
     min_force: 1.5
     reason: 部委级正式文件保底
-    # 海外（FDA/EMA/HHS/CMS）政策类文件达到这个分数就保底占 1 个名额
-    # （用户 2026-11-01：「FDA 可以把评分 7 分就放行」；同分时 FDA 优先）
-    overseas_threshold: 7.0
+    # 海外（FDA/EMA/HHS/CMS）政策类文件：独立配额，不占国内名额。
+    # 用户 2026-11-01：「国内 1-3 篇，国外 >7 分」。
+    overseas_threshold: 7.0     # 海外达到这个分数即可加（默认 ≥7.0）
+    overseas_strict: false      # true = 严格大于 threshold（7.1 起才加）
+    overseas_max_articles: 1    # 每天最多加几篇海外
 
 # 硬性排除（标题命中即在预筛阶段丢弃）
 #

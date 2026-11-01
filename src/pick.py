@@ -355,86 +355,60 @@ def run(date: str | None = None) -> dict:
     reviews.sort(key=lambda x: (float(x.get("score") or 0),
                                 len(x.get("member_ids") or [])), reverse=True)
 
-    plan: list[dict] = reviews[:dmax]
-    if reviews:
-        print(f"[select] 同簇合并 {len(reviews)} 篇综述"
-              f"（占 {len(plan)} 个名额，同簇最多 {cluster_max} 条）")
 
-    # ---- 4) 单篇：china / global 轮流取，避免一边占满 ----
+    # ---- 4) 国内单篇：只补国内名额（国内 1-3 篇）----
+    #
+    # 用户 2026-11-01 口径：「国内 1-3 篇，国外 >7 分」——
+    # 国内与海外是**两套独立配额**，海外不占国内名额：
+    #   · 国内：1-3 篇（max_articles，默认 3）
+    #   · 海外：最多 overseas_max_articles（默认 1）篇，且分数必须 > overseas_threshold
     singles.sort(key=lambda x: (float(x.get("score") or 0), _evidence(x)),
                  reverse=True)
     by_ch: dict[str, list[dict]] = defaultdict(list)
     for s in singles:
         by_ch[_channel(s)].append(s)
-    # ⚠️ 2026-11-01 改：原来是"china/global 死板轮流"，结果 7.8 分的国内条例
-    #    输给了 7.5 分的海外规则。用户口径是「中国为主」，所以改成：
-    #    每轮取当前分数更高的那个渠道；只有两边差距 < 0.3 才按 china 优先轮流，
-    #    避免一边独吞名额。
-    last_ch = None
-    while len(plan) < dmax and any(by_ch.values()):
-        cands = [(ch, by_ch[ch][0]) for ch in ("china", "global") if by_ch.get(ch)]
-        if not cands:
-            break
-        if len(cands) == 1:
-            ch, _ = cands[0]
-        else:
-            cands.sort(key=lambda x: -float(x[1].get("score") or 0))
-            (ch1, s1), (ch2, s2) = cands[0], cands[1]
-            gap = float(s1.get("score") or 0) - float(s2.get("score") or 0)
-            if gap >= 0.3:
-                ch = ch1
-            else:
-                ch = "china" if last_ch != "china" else "global"
-        if by_ch.get(ch):
-            plan.append(_single_entry(by_ch[ch].pop(0)))
-            last_ch = ch
 
-    # ---- 4.6) 海外（FDA 等）7 分保底放行 ----
-    #
-    # 用户 2026-11-01 定：「FDA 可以把评分 7 分就放行」。
-    # 意思是海外国家级政策文件只要有 7.0 分，就至少占 1 个名额，
-    # 不因为国内当天有更高分的条目而被挤掉（中国为主，但海外重点每天要有）。
-    if plan:
-        has_global = any(_channel(p) == "global" for p in plan)
-        if not has_global:
-            chosen = set()
-            for p in plan:
-                chosen.update(p.get("member_ids") or [p.get("lead_id") or ""])
-            glob = [s for s in pool
-                    if _channel(s) == "global"
-                    and (s.get("id") or "")[:8] not in posted
-                    and (s.get("id") or "")[:8] not in chosen]
-            # 同分时 FDA 优先（用户点名「FDA 7 分就放行」）
-            def _global_rank(x):
-                srcs = " ".join(x.get("sources") or [])
-                return (float(x.get("score") or 0),
-                        1 if "fda" in srcs.lower() else 0,
-                        _evidence(x))
-            glob.sort(key=_global_rank, reverse=True)
-            overseas_thr = float(fb_cfg.get("overseas_threshold", 7.0))
-            if not glob:
-                print("[select] 🌍 无海外候选（可能当天海外没出稿或都被写成稿了）")
-            elif float(glob[0].get("score") or 0) < overseas_thr:
-                print(f"[select] 🌍 海外最高 {glob[0].get('score')} 分 < {overseas_thr}，不保底")
-            if glob and float(glob[0].get("score") or 0) >= overseas_thr:
-                best = glob[0]
-                if len(plan) < dmax:
-                    plan.append(_single_entry(best))
-                    print(f"[select] 🌍 海外 {overseas_thr} 分保底：追加 "
-                          f"{best.get('score')} 分 {best.get('title', '')[:40]}")
-                else:
-                    # 挤掉分数最低的国内【单篇】（不动同簇综述）
-                    # 单篇 = members 只有 1 个（综述才有多个 member）
-                    idxs = [i for i, p in enumerate(plan)
-                            if _channel(p) == "china"
-                            and len(p.get("members") or []) <= 1]
-                    if idxs:
-                        i = min(idxs, key=lambda j: float(plan[j].get("score") or 0))
-                        dropped = plan[i]
-                        plan[i] = _single_entry(best)
-                        print(f"[select] 🌍 海外 {overseas_thr} 分保底：用 "
-                              f"{best.get('score')} 分海外替代 {dropped.get('score')} 分国内"
-                              f"（{dropped.get('title', '')[:28]} → {best.get('title', '')[:28]}）")
+    plan: list[dict] = [p for p in reviews if _channel(p) == "china"][:dmax]
+    overseas_reviews = [p for p in reviews if _channel(p) == "global"]
+    if reviews:
+        print(f"[select] 同簇合并 {len(reviews)} 篇综述"
+              f"（国内 {len(plan)} 篇占名额，同簇最多 {cluster_max} 条）")
+    for s in by_ch.get("china", []):
+        if len(plan) >= dmax:
+            break
+        plan.append(_single_entry(s))
+
+    # ---- 4.6) 海外独立配额：>7 分就加 1 篇（不占国内名额）----
+    overseas_max = int(fb_cfg.get("overseas_max_articles", 1))
+    overseas_min = float(fb_cfg.get("overseas_threshold", 7.0))
+    # 用户口径有两句话：「FDA 7 分就放行」+「国外 >7 分」。
+    # 默认按 ≥7.0（含 7 分）；想严格大于 7.0（7.1 起）就把 overseas_strict 设 true。
+    overseas_strict = bool(fb_cfg.get("overseas_strict", False))
+
+    def _global_rank(x):
+        srcs = " ".join(x.get("sources") or [])
+        return (float(x.get("score") or 0),
+                1 if "fda" in srcs.lower() else 0,   # 同分 FDA 优先
+                _evidence(x))
+
+    cand_glob = list(overseas_reviews) + [_single_entry(s) for s in by_ch.get("global", [])]
+    # 已发表的不要（pool 已过滤，但综述成员可能含已发表，稳妥再查一次）
+    cand_glob = [c for c in cand_glob
+                 if str(c.get("lead_id") or "")[:8] not in posted]
+    cand_glob.sort(key=_global_rank, reverse=True)
+    if cand_glob:
+        best = cand_glob[0]
+        best_score = float(best.get("score") or 0)
+        _pass = (best_score > overseas_min) if overseas_strict else (best_score >= overseas_min)
+        if _pass and overseas_max > 0:
+            plan.extend(cand_glob[:overseas_max])
+            print(f"[select] 🌍 海外独立配额：{best_score} 分 "
+                  f"{best.get('title', '')[:44]}（国内 {len(plan) - min(len(cand_glob), overseas_max)} 篇 + 海外 "
+                  f"{min(len(cand_glob), overseas_max)} 篇）")
+        else:
+            print(f"[select] 🌍 海外最高 {best_score} 分，未超过 {overseas_min}，本轮不加海外")
+    else:
+        print("[select] 🌍 无海外候选")
 
     # ---- 5) 政策保底：一条都没达标时，部委级正式文件放行 1 篇 ----
     if not plan and fb_cfg.get("enabled", True):
@@ -471,7 +445,7 @@ def run(date: str | None = None) -> dict:
         else:
             _print_empty_diagnosis(scored, keep_thr, fb_cfg)
 
-    plan = plan[:dmax]
+    plan = plan[:dmax + max(int(fb_cfg.get('overseas_max_articles', 1)), 0)]
 
     out = {"date": date, "count": len(plan), "plan": plan}
     # 诊断信息：本地 stage 读它来向用户解释"0 篇"的真实原因
