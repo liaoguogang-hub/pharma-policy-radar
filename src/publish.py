@@ -29,6 +29,14 @@ POSTS_DIR = ROOT / "posts"
 SITE_DIR = ROOT / "site"
 
 
+def _keep_thr():
+    """入选门槛，从 scoring.yaml 读（别硬编码：政策雷达是 6.0，BD 曾是 6.5）。"""
+    try:
+        return load_yaml("scoring.yaml").get("keep", 6.0)
+    except Exception:
+        return 6.0
+
+
 def _iter_posts() -> list[dict]:
     """扫描 posts/ 目录，返回按日期倒序的文章列表"""
     out: list[dict] = []
@@ -111,7 +119,7 @@ def build_index(posts: list[dict], date: str) -> str:
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>医药 BD 雷达 · {date}</title>
+<title>医药政策雷达 · {date}</title>
 <style>
 {CSS}
 .index{{max-width:900px;margin:0 auto;padding:56px 24px 90px}}
@@ -138,8 +146,8 @@ def build_index(posts: list[dict], date: str) -> str:
 </head>
 <body>
 <div class="index">
-  <h1>医药 BD 雷达</h1>
-  <p class="tagline">每日自动抓取全球医药 BD 热点 · 评分 · 成稿 · {date}</p>
+  <h1>医药政策雷达</h1>
+  <p class="tagline">每日抓取中外医药政策与监管动态 · 评分 · 成稿 · {date}</p>
   {''.join(rows) if rows else '<p class="empty">今日无稿件。</p>'}
   <div class="ar">
     <h3>历史归档</h3>
@@ -178,7 +186,7 @@ def build_site(date: str | None = None) -> Path:
     if not today:
         st = _run_stats(date)
         print(f"[publish] 今日 0 篇：采集 {st['raw']} 条，评分 {st['scored']} 条，"
-              f"最高 {st['top']:.1f} 分（门槛 6.5）")
+              f"最高 {st['top']:.1f} 分（门槛 {_keep_thr()}）")
     return SITE_DIR
 
 
@@ -276,7 +284,7 @@ def build_card(posts: list[dict], date: str, base_url: str = "") -> dict:
                          f"（最高 {top} 分），且没有可保底的候选。")
         else:
             body += (f"评分 {st['scored']} 条 · 最高 {st['top']:.1f} 分"
-                     f"（入选门槛 6.5）")
+                     f"（入选门槛 {_keep_thr()}）")
 
     # 0 篇=grey（跑过、没得写）；有待核查=orange；有评分不达标=yellow；正常=red
     if not posts:
@@ -294,7 +302,7 @@ def build_card(posts: list[dict], date: str, base_url: str = "") -> dict:
             "config": {"wide_screen_mode": True},
             "header": {
                 "title": {"tag": "plain_text",
-                          "content": (f"医药 BD 雷达 · {date}"
+                          "content": (f"医药政策雷达 · {date}"
                                       + (f" · {len(review)} 篇待核查" if review else
                                          (f" · {len(low)} 篇评分不达标" if low else
                                           (" · 0 篇" if not posts else ""))))},
@@ -328,7 +336,7 @@ def notify_feishu(posts: list[dict], date: str,
 
     安全模式说明：
       关键词模式   —— 消息里含你设的关键词即可。
-                     本卡片标题含"医药 BD 雷达"，可把关键词设为 医药 / BD / 雷达
+                     本卡片标题含"医药政策雷达"，可把关键词设为 政策 / 医药 / 监管
       签名模式     —— 需要 FEISHU_SECRET，见 _feishu_sign
       IP 白名单    —— GitHub Actions 出口 IP 不固定，无法使用
     """

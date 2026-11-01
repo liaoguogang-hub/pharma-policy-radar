@@ -1,13 +1,23 @@
 """
-噪声过滤器。
+噪声过滤器（政策口径）。
 
-问题：证券时报/每经这类综合财经媒体，首页混了大量与BD 无关的内容
-（退市、稀土价格、苹果订单、航运海峡、电视剧）。
-实测 99 条里，证券时报 10 条有 7 条是噪声。
+问题：政策雷达的候选里混着大量"看着像政策、其实不是政策"的东西——
+企业软文 / 产品推广、会议通知、人事任免、纯转载通稿、科普问答、
+地方事务性小文件（无全国影响）、招聘与榜单。这些标题里也带着"药""医保"
+"监管"这些词，命中法拦不住，只能按"它是不是一份文件"来判断。
 
-策略：两级过滤
-1. 噪声黑名单 —— 明确的非医药/非交易话题
-2. 医药源加权 —— 医药垂直源放宽，综合财经源收紧
+策略（两级）：
+1. 噪声黑名单 —— 标题命中即丢（软文 / 会议 / 人事 / 转载 / 科普 / 招聘 / 榜单）
+2. 源分级 —— 官方源与垂直医药源放宽，综合财经源收紧
+   （综合财经源必须同时带"政策强信号"和"医药属性"才留）
+
+刻意 fail-open：来源不明的源默认保留，交给评分层判断。
+误杀一条政策原文的代价，比多花一次 LLM 打分大得多。
+
+保留的公开接口（签名与调用方式不变）：
+    is_noise(title, source) -> bool
+    is_weak(title) -> bool
+    filter_items(items) -> (kept, dropped)
 """
 from __future__ import annotations
 
@@ -15,69 +25,74 @@ import re
 
 # ============ 噪声黑名单（标题命中即丢弃）============
 NOISE_PATTERNS = [
-    # 资本市场/股价
-    r"锁定退市|退市风险|股价连续|涨停潮|拉高|抄底",
-    r"\bdelist|delisting|stock price|shares? (?:rise|fall|jump|plunge)\b",
-    # 宏观/产业无关
-    r"稀土|苹果|iPhone|手机订单|油价|航运|海峡|干散货|煤业|矿价",
-    r"霍尔木兹|OPEC|关税|汇率|降息|加息",
-    # 娱乐/社会
-    r"综艺|真人剧|芒果|会员拉新|电视剧",
-    # 人事/行政
-    r"general counsel.{0,20}(?:left|resign)|总经理辞职|CEO离任",
-    # 注意：科学家/高管加盟要保留（如"两位前莫德纳核心科学家加盟"是实质行业动态）
-    # 反垄断/法务（非BD）
-    r"反垄断审查通过|诉.{0,10}政府|集体诉讼",
-    # 招聘/学术会议广告
-    r"媒体招募|大会.{0,6}开幕|论坛|研讨会.{0,4}举办|欢迎报名",
+    # 企业软文 / 产品推广 / 招商加盟
+    r"新品上市|重磅上市|正式上市|全球首发|首发上市|招商加盟|代理招募|"
+    r"火热招商|限时优惠|促销|周年庆|品牌焕新|荣获|斩获|"
+    r"\b(?:launch(?:es|ed)? (?:its|new)|now available|order now|"
+    r"sponsored|advertorial|webinar)\b",
+    # 会议 / 活动（通知本身不是政策）
+    r"会议通知|论坛|峰会|研讨会|沙龙|培训班|研修班|宣讲会|直播预告|"
+    r"邀请函|参会报名|展位|博览会",
+    # 人事任免
+    r"任免|任命|免去|辞去|辞职|离任|履新|人事变动|领导班子调整|拟任|"
+    r"(?:CEO|CFO|CMO|总经理|董事长|院长).{0,6}(?:离职|辞职|上任|履新)",
+    # 纯转载 / 通稿（二手到没有新增信息）
+    r"^\s*转载|转自|全文转载|原文链接|综合报道|通稿",
+    # 科普 / 问答 / 养生
+    r"科普|十问十答|一问一答|问答|小知识|医生提醒|"
+    r"如何(?:看|选|用|预防)|能(?:治|吃)吗|吃什么",
+    # 招聘 / 榜单
+    r"招聘|诚聘|招贤|纳贤|简历投递|岗位职责|榜单|排行榜",
 ]
-
 NOISE_RE = re.compile("|".join(NOISE_PATTERNS), re.I)
 
-# ============ 例外：即使命中黑名单也保留（确认过的实质内容）============
-KEEP_ANYWAY = re.compile(
-    r"核心科学家.{0,6}加盟|科学家.{0,4}加盟|"
-    r"科学家|研发.{0,4}总监|医学总监.{0,6}(?:加盟|履新)",
-    re.I,
-)
+# ============ 地方事务性小文件（无全国影响）============
+# 地方机关 + 事务性文种 + 没有任何全国性信号 → 噪声。
+# 三个条件同时成立才动手；省级政策文件本身也在这个管辖范围内
+# （policy_level 0.8 打不到 keep 6.0，留下来只是白占池子）。
+LOCAL_BODY_RE = re.compile(
+    r"(?:省|市|县|区|盟|旗)(?:医保局|医疗保障局|药监局|药品监督管理局|"
+    r"卫生健康委|卫健委|市场监管局|人民政府|人社厅|财政厅|中医药局)")
+MUNICIPAL_TXN_RE = re.compile(
+    r"通知|公告|工作动态|工作简报|公示|名单|答复|复函|检查计划|"
+    r"抽检|实施方案|考核|通报|会议")
+NATIONAL_MARKERS = re.compile(
+    r"国家|全国|国务院|部委|总局|海关总署|全行业")
 
+# ============ 政策强信号（命中即算政策话题）============
+STRONG_POLICY = re.compile(
+    r"国务院|国家发展改革委|国家发改委|国家医保局|国家医疗保障局|"
+    r"国家药监局|国家药品监督管理局|国家卫生健康委|国家卫健委|"
+    r"国家中医药局|工业和信息化部|工信部|财政部|商务部|市场监管总局|"
+    r"国家疾控局|NMPA|NHSA|FDA|EMA|WHO|CDE|药审中心|"
+    r"征求意见|管理办法|管理规定|实施细则|指导意见|实施意见|"
+    r"条例|规定|办法|方案|公告|通知|规范性文件|指导原则|"
+    r"医保目录|支付标准|集采|带量采购|DRG|DIP|"
+    r"审评审批|注册|监管|处罚|执行|落地|新规|政策",
+    re.I)
 
-# ============ BD 强相关词（命中即保留）============
-STRONG_BD = re.compile(
-    r"\b(license[- ]?(?:out|in)|licensing deal|acquire|acquisition|merger|"
-    r"collaboration|partnership|option agreement|upfront payment|milestone|"
-    r"royalty|asset purchase|spin[- ]?off|takeover|buyout|stake)\b"
-    r"|授权|收购|合作|许可|首付款|里程碑|分成|权益|引进|对外授权|共同开发",
-    re.I,
-)
-
-# 医药/科学强相关（辅助判断这是医药内容）
+# 医药属性（辅助判断这是医药内容，不是稀土/航运那种"通知"）
 PHARMA_TOPIC = re.compile(
-    r"\b(drug|molecule|antibody|ADC|bispecific|cell therapy|CAR[- ]?T|"
-    r"phase [123]|trial|FDA|NMPA|pipeline|therapeutic|oncology|"
-    r"immunology|inflammation|obesity|diabetes|cardio|rare disease)\b"
-    r"|新药|创新药|临床|获批|适应症|靶点|管线|单抗|双抗|细胞治疗|肿瘤|"
-    r"免疫|自免|减重|糖尿病|心血管|罕见病|医保",
-    re.I,
-)
+    r"\b(?:drug|medicine|pharma|biotech|vaccine|device|IVD|generic|"
+    r"antibody|ADC|cell therapy|gene therapy|prescription|hospital|"
+    r"reimbursement|procurement|regulator)\b"
+    r"|医药|药品|医疗机构|器械|耗材|疫苗|中药|创新药|仿制药|处方|药店|"
+    r"医院|医保|集采|药监|卫健委|临床|注册|审评|支付|价格|患者",
+    re.I)
 
-# 非 BD 的"合作/协议"语境（综合财经常见，需排除）
-FAKE_DEAL = re.compile(
-    r"战略合作框架协议|签订.{0,6}(?:框架)?协议|举行.{0,8}启动会|"
-    r"共筑|共建.{0,10}平台|战略合作.{0,6}(?:仪式|启幕)",
-)
+# ============ 源分级 ============
+# 官方源 / 垂直医药源：只过黑名单，其余交给评分层
+OFFICIAL_SOURCE_RE = re.compile(
+    r"nmpa|nhsa|nhc|gov|gov_|cde|fda|ema|who|official|policy|regulat",
+    re.I)
 
-
-# ============ 垂直医药源（放宽）============
-PHARMA_SOURCES = {
-    "phirda_industry", "pharnexcloud", "pharmcube",
-    "biopharmadive_deals", "biopharmadive_home", "stat_biotech",
-    "stat_pharma", "endpoints_rss", "bioworld_deals", "bioworld_asia",
-    "pharmexec_partnership", "pharmexec_irlp",
-}
-
-# 综合财经源（收紧）
+# 综合财经源：收紧——必须带政策强信号 + 医药属性，否则丢
 GENERAL_SOURCES = {"stcn_medicine", "nbdd_cn", "cnstock_health"}
+
+# 弱相关（保留但降权）：二手解读/评论（不是原文，也不是软文）
+SECONDHAND_RE = re.compile(
+    r"解读|图解|一图读懂|一文读懂|速览|划重点|答记者问|专访|观察|"
+    r"评论|述评|前瞻|盘点|影响分析|如何理解")
 
 
 def is_noise(title: str, source: str) -> bool:
@@ -85,39 +100,46 @@ def is_noise(title: str, source: str) -> bool:
     判断是否噪声。
     返回 True = 噪声，丢弃。
     """
-    t = title.strip()
+    t = (title or "").strip()
     if len(t) < 10:
         return True
-
-    # 例外白名单优先
-    if KEEP_ANYWAY.search(t):
-        return False
 
     # 黑名单命中 → 噪声
     if NOISE_RE.search(t):
         return True
 
-    # 综合财经源：必须有 BD 强信号，且不能是假合作
-    if source in GENERAL_SOURCES:
-        if FAKE_DEAL.search(t):
+    # 地方事务性小文件（地方机关 + 事务性文种 + 无全国信号）→ 噪声
+    if (LOCAL_BODY_RE.search(t) and MUNICIPAL_TXN_RE.search(t)
+            and not NATIONAL_MARKERS.search(t)):
+        return True
+
+    src = (source or "").lower()
+
+    # 综合财经源：既要有政策强信号，也要有医药属性
+    if src in GENERAL_SOURCES:
+        if not STRONG_POLICY.search(t):
             return True
-        if not STRONG_BD.search(t):
-            return True
-        # 还需带医药属性，避免"稀土合作框架协议"这类
         if not PHARMA_TOPIC.search(t):
             return True
         return False
 
-    # 垂直医药源：排除黑名单即可，其余交给后续 RELEVANT 过滤
+    # 官方源 / 垂直医药源 / 未知源：只过黑名单（fail-open）
     return False
 
 
 def is_weak(title: str) -> bool:
-    """弱相关内容：可能是 BD 但信息量低，保留但降权"""
-    t = title.lower()
-    # 只有泛泛的"合作"没有具体交易细节
-    if re.search(r"合作", t) and not re.search(
-            r"亿美元|万美元|首付|里程碑|授权|收购|license|\$\d", t):
+    """
+    弱相关内容：是政策话题，但属于二手解读/评论（原文不在手上），
+    保留但降权——成稿前必须补官方原文。
+    """
+    t = (title or "").strip()
+    if not t:
+        return True
+    if SECONDHAND_RE.search(t) and not STRONG_POLICY.search(t):
+        return True
+    # 只有"解读"没有文件要素（文号/日期/条款），说明手上的只是别人的转述
+    if SECONDHAND_RE.search(t) and not re.search(
+            r"第\d+号|文号|〔\d{4}〕|\[\d{4}\]|生效|施行|发布|印发", t):
         return True
     return False
 

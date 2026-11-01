@@ -1,76 +1,98 @@
+# 医药政策雷达 · 评分配置
+#
+# 口径：国务院/部委发布的医药政策文件（含征求意见稿、执法处罚）及其落地。
+# 分值 = 五个维度加总，满分 10。
+#
+# ⚠️ 评分 JSON 的字段被下游（pick/compose/claimcheck）锁死，这里是
+#    "怎么给分"的说明，不要求模型回传每一项维度分（没有 dims 字段）。
 score:
   dimensions:
-    amount:
-      label: 金额量级
-      max: 2.5
-      desc: 首付>5亿美元=2.5；>1亿=2.0；>1000万=1.2；<500万=0.3
-      note: 必须区分【潜在总额】和【首付】。首付是真实出价，总额含里程碑不可兑现
-    stage:
-      label: 交易阶段
-      max: 2.0
-      desc: III期读出/NDA受理=2.0；II期阳性=1.5；I期=0.8；临床前=0.5
-    first_mover:
-      label: 首创性
-      max: 2.0
-      desc: 全球首个靶点/机制=2.0；全球首个适应症=1.6；国产首个=1.2；me-better=0.4
-    tier:
-      label: 公司层级
-      max: 1.5
-      desc: MNC主导=1.5；大型药企对大型药企=1.2；二线biotech=0.7
+    policy_level:
+      label: 发文层级
+      max: 3.0
+      desc: 国务院/多部委联合=3；单一部委=2.5；部委司局/直属机构=1.5；地方省级=0.8；地方市级及以下=0.3
+      note: 看发文机关层级，不看转发媒体。多部委联合发文取最高层级；"办公厅"算本级。
     impact:
-      label: 外溢影响
+      label: 影响范围
+      max: 3.0
+      desc: 全行业规则=3；单适应症/单品类/单环节=2；单企业=0.8；仅表述重申=0.3
+      note: 问的是"整个行业怎么干"，还是"某类产品/某个环节"，还是"某一家企业"。
+    force:
+      label: 效力阶段
       max: 2.0
-      desc: 改变赛道格局=2.0；单一公司重大进展=1.3；常规交易=0.6
+      desc: 已生效并执行=2；正式发布未生效=1.5；征求意见稿=1.0；吹风/规划/解读=0.5
+      note: 征求意见稿不是已发布文件，任何情况下都不得按已生效打分。
+    novelty:
+      label: 增量
+      max: 1.5
+      desc: 首次明确/推翻既有规则/超预期=1.5；增量收紧=1.0；例行发布=0.4；纯重申=0
+      note: 和既往文件比，新在哪里。纯转发、纯复述给 0。
+    verifiability:
+      label: 可核验性
+      max: 0.5
+      desc: 官方原文+文号+生效日期=0.5；只有官方通知摘要=0.3；只有媒体转述=0.1
 
   # 阈值
   #
-  # ⚠️ 8.5 / 7.5 这组阈值是在"数据被污染"时期定下的，当时分数虚高：
-  # 41 笔 2025 年的旧交易被当成新交易，撑出了一批 8.2~9.0 的假高分。
-  # 清掉污染、补上真实发布日期后（2026-10-11 实测 54 条），
-  # 真实分布是：>=8.5 有 0 条，7.5-8.5 有 1 条，7.0-7.5 有 1 条，
-  # 6.0-7.0 有 5 条，<5.0 有 43 条。
-  # 沿用旧阈值会导致多数日子产出 0-1 篇。
-  #
-  # 现按真实分布重标：目标稳定日产 2-3 篇。
-  # 6.5 分仍是"有实质交易、有明确金额或阶段"的门槛，不是凑数线。
-  must_publish: 8.0      # >= 必发
-  keep: 6.5              # >= 进备选池，< 丢弃
-  min_confidence: 0.5    # 置信度过低的不采用
-
-  # 大额交易保底：总分不到 keep 也放行。
-  # 例：2026-10-19 Roche/Hansoh 首付 4 亿美元、总额 150 亿美元，
-  # 因处于早期且非首创只拿 6.3 分，被 6.5 硬门槛挡掉。
-  # 判据要求 deal_key 非空（有明确买卖双方），且置信度达标。
-  big_deal_upfront_usd: 300000000     # 首付 >= 3 亿美元
-  big_deal_total_usd: 5000000000      # 或潜在总额 >= 50 亿美元
-
-  # 同一笔交易在多少天内不重复写（跨天/跨来源/跨语种）
-  deal_lookback_days: 60
+  # 政策稿的分数天然比交易稿低（没有金额），不要用 BD 雷达的 8.0 去卡。
+  # 6.0 的含义是"有一条实质性的政策变化，能写成 2200 字以上有信息量的稿"，
+  # 不是凑数线；7.5 是"层级够高 + 有明确增量"，够格必发。
+  must_publish: 7.5      # >= 必发
+  keep: 6.0              # >= 进备选池，< 丢弃
+  min_confidence: 0.5    # 置信度 < 0.5 不用
 
   # 每日篇数
-  daily_max: 3
-  daily_min: 2
-  # 同靶点最多展开几笔（超过则合并成综述）
-  same_target_cluster_max: 3
+  max_articles: 3
+  # 同一 cluster_key（同一政策事件）最多展开几条，超过合并成一篇综述
+  same_cluster_max: 3
 
-# 硬性排除（命中即 0 分）
+  # 跨天去重：同一个政策事件在多少天内不重复写（跨来源/跨语种）
+  cluster_lookback_days: 45
+
+  # 政策保底：当天没有 >= keep 的条目时，若存在"部委级正式文件"，
+  # 允许保底 1 篇，plan 里标 fallback: true。
+  #
+  # 判据直接取上面的维度档位：
+  #   policy_level >= 2.5  = 单一部委及以上（国务院/多部委=3，单一部委=2.5）
+  #   force        >= 1.5  = 正式发布（已生效执行 2.0 / 正式发布未生效 1.5），
+  #                          征求意见稿 1.0 不够，吹风/解读 0.5 更不够
+  #
+  # ⚠️ 评分 JSON 没有 policy_level / force 数值字段（schema 被下游锁死），
+  #    pick._policy_level() / pick._force() 用等价映射判定，映射关系见那两个函数：
+  #    endpoint_verdict → force；flags(national/local/minor) + 发文机关正则 → policy_level。
+  policy_fallback:
+    enabled: true
+    max_articles: 1
+    min_policy_level: 2.5
+    min_force: 1.5
+    reason: 部委级正式文件保底
+
+# 硬性排除（标题命中即在预筛阶段丢弃）
+#
+# ⚠️ 键名 `pure_financing` 是 BD 时代留下的，score._prefilter 只读这一个键——
+#    改键名会让预筛静默失效（不报错，只是什么都不筛）。现语义＝非政策噪声。
 exclude_keywords:
   pure_financing:
-    - IPO
-    - "raises"
-    - "financing round"
-    - "Series A"
-    - "Series B"
-    - "follow-on"
-    - 上市募资
-    - 定增
-    - 融资轮
+    - 招聘
+    - 诚聘
+    - 招贤
+    - 招商加盟
+    - 新品上市
+    - 重磅上市
+    - 会议通知
+    - 培训班
+    - 研修班
+    - 任免
+    - 任命
+    - 免去
+    - 辞职
+    - 榜单
+    - 排行榜
   stale:
-    - preview
-    - "what to watch"
-    - calendar
-    - recap
-    - roundup
+    - 盘点
+    - 回顾
+    - 展望
+    - 日历
 
 # ===== LLM 配置 =====
 # 支持 DeepSeek / MiniMax / 任意 OpenAI 兼容端点
@@ -89,7 +111,7 @@ llm:
   # JSON 模式：DeepSeek 支持；MiniMax 文档未声明支持，
   # 设为 false 时靠 prompt 约束 + 鲁棒解析器兜底
   json_mode: false
-  batch_size: 30
+  batch_size: 15          # 政策评分输出更长；30 条易触发 JSON 截断
   max_retries: 2
 
 # 备选 provider 配置（改 llm.provider 后自动切换）

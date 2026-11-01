@@ -1,260 +1,269 @@
-# 源清单
-# access_level 说明（实测结论）：
-#   full     — 全文可读，正文可直接用于写作
-#   headline — 仅标题/摘要可读，正文需订阅，用于时间线与定性
-#   rss      — 首页被 CloudFront 403，但 RSS 可用，取摘要
-#   blocked  — 完全不可达，仅通过其他源间接确认
+# 医药政策雷达 · 源清单
+#
+# 口径：中国为主 + 海外重点。四类：
+#   1) 中国监管（NMPA 公告通告 / 法规文件 / 政策解读，CDE 通知公告）
+#   2) 医保与集采（国家医保局首页 / 政策法规，上海药事所 公告公示 / 国家集采）
+#   3) 产业政策（中国政府网政策频道，工信部消费品工业司）
+#   4) 海外重点（EMA news、FDA press、HHS newsroom；CMS 实测 403 标 blocked）
+#
+# access 分级（与 fetch.py 的调度一致）：
+#   full     — 列表页可解析 + 文章页有正文
+#   headline — 只能拿标题/摘要（正文在附件、需登录、或由 JS 渲染）
+#   rss      — 走 RSS
+#   blocked  — 站点直接拒绝（403/412/反爬 404），配置保留但不发请求
+#   disabled — 站点可访问但内容不对口/无有效产出
+#
+# 本文件的每条 url / access / note 都是 2026-11-01 在本机（Windows，中国网络）实测的，
+# 不是估的。复测方法：python src/probe_sources.py
 
 version: 1
 
-# 采集行为
+# ============ 采集行为 ============
 fetch:
-  # 每个源最多抓几篇正文（2026-10-25 新增）。
-  #
-  # ⚠️ 原来是硬编码在 fetch.py 里的 6 源 21 篇：
-  #   {"biopharmadive_deals":6, "pharnexcloud":6, "phirda_industry":4, ...}
-  # 结果 9 个 full 源里有 3 个完全没有额度，headline 源一篇都抓不到。
-  #   实测 10-25：67 条候选 59 条 content 为空（88%）。
-  #
-  # 现在配额在这里配，缺省 8。中文源给高一点——中文交易稿是本雷达的主产出。
-  # 总请求量 ≈ 各源配额之和，60 条上下，GitHub runner 跑得动。
+  # 每个源最多抓几篇正文（中文源 6-10，海外 4-6）。
+  # 目的是控制单次运行的请求量：列表条目远多于额度，靠 _enrich_priority 排序取前 N。
   article_quota:
-    biopharmadive_deals: 8
-    biopharmadive_home: 6
-    pharmexec_partnership: 6
-    pharmexec_irlp: 6
-    phirda_industry: 6
-    pharnexcloud: 8
-    stcn_medicine: 6
-    nbdd_cn: 4
-    pharmcube: 4
-    stat_biotech: 6
-    stat_pharma: 6
-    endpoints_rss: 6
-  # 去文章页补全发布日期的上限（条）。列表页没有日期，必须逐篇取。
-  # 实测约 120 条需 ~15 秒，可接受。
+    nmpa_ggtg: 10
+    nmpa_fgwj: 8
+    nmpa_zhcjd: 6
+    cde_news: 8
+    nhsa_home: 10
+    nhsa_fgk: 8
+    smpaa_gggs: 10
+    smpaa_jc: 6
+    gov_zhengce: 6
+    miit_xfpg: 6
+    ema_news: 5
+    fda_press: 6
+    hhs_news: 4
+
+  # 去文章页补全发布日期的上限（条）。
+  # 本文件的列表页大多自带日期（span/URL/meta），真正需要逐篇探的很少。
   date_probe_limit: 120
 
-  # 陈旧内容过滤：发布日期超过该天数的条目直接丢弃。
-  # 起因：BioPharma Dive 的 /topic/deals/ 是专题归档页，
-  # 会把几个月前的旧文一直挂在上面；早期版本又给所有列表页条目
-  # 填了抓取时刻，于是旧文被当成当天新闻（实测把 2026-08-18 的
-  # Leo Pharma 稿写成 10-11 的头条）。
-  # 日期未知的条目不受此限制（未知不等于过旧）。
-  max_age_days: 21
-
-  # 一手材料补全上限（条）。走 SEC EDGAR 全文检索，免费无需 key。
-  # 起因：RSS 摘要只有 200 字符，写出来的稿子没有每股价格、
-  # 没有交易日期，读者看不出是新闻。EDGAR 的 8-K Exhibit 99.1
-  # 就是完整并购公告。
-  # 注意 SEC 限速 10 请求/秒，每条要 2 次请求（检索 + 取文），
-  # 12 条约 24 次请求，安全。
-  edgar_limit: 12
+  # 陈旧内容过滤的默认窗口（天）：只丢【已知日期且过旧】的条目，
+  # 日期未知的保留（未知 ≠ 过旧）。
+  #
+  # 为什么是 45 而不是 BD 雷达的 21：政策文件的保鲜期比交易新闻长，
+  # 一个 3 周前发布的指导原则仍值得写。单源可用 max_age_days 覆盖（见下）。
+  max_age_days: 45
 
 sources:
-  # ============ 英文 ============
-  - id: biopharmadive_deals
-    name: BioPharma Dive - Deals
-    lang: en
-    url: https://www.biopharmadive.com/topic/deals/
-    mode: html
-    access: full
-    weight: 1.0
-    topics: [deals, licensing, mergers]
-
-  - id: biopharmadive_home
-    name: BioPharma Dive - Home
-    lang: en
-    url: https://www.biopharmadive.com/
-    mode: html
-    access: full
-    weight: 0.8
-    selector: 'a[href*="/news/"]'
-
-  # ⚠️ BioWorld：2026-10-10 在本地与 GitHub runner 双向实测均 HTTP 403
-# （Cloudflare，返回 5510 字节挑战页）。确认无法抓取，标记 disabled。
-# 保留配置仅作记录，不再发起请求。
-  - id: bioworld_deals
-    name: BioWorld - Deals & M&A
-    lang: en
-    url: https://www.bioworld.com/
-    mode: html
-    access: blocked
-    weight: 0.0
-    topics: [deals, mergers]
-    note: 实测 403（双环境确认），已停用
-
-  - id: bioworld_asia
-    name: BioWorld Asia
-    lang: en
-    url: https://www.bioworld.com/
-    mode: html
-    access: blocked
-    weight: 0.0
-    note: 实测 403（双环境确认），已停用
-
-  - id: pharmexec_partnership
-    name: Pharmaceutical Executive - Partnerships
-    lang: en
-    url: https://www.pharmexec.com/topic/partnerships
-    mode: html
-    access: full
-    weight: 0.7
-    topics: [deals, partnering]
-    note: |
-      文章路径是 /view/<slug>，不是 /news/。
-      2026-10-10 实测：本站 200，203 个链接，其中 /view/ 为文章页。
-      曾因选择器写成 /news/ 导致误判为"数据中心 IP 被拦"。
-
-  - id: pharmexec_irlp
-    name: PharmExec - IR Licensing & Partnerships
-    lang: en
-    url: https://www.pharmexec.com/topic/ir-licensing-partnerships
-    mode: html
-    access: full
-    weight: 0.8
-    topics: [deals, licensing]
-    note: 同上，文章路径为 /view/<slug>
-
-  - id: stat_biotech
-    name: STAT - Biotech
-    lang: en
-    url: https://www.statnews.com/category/biotech/
-    mode: html
-    access: headline
-    # ⚠️ 2026-10-25：access=headline 只是"默认不抓正文"，
-    #    它的 URL 是完整的文章页，抓得到。实测 10-25 最高分的
-    #    AZ/insitro 交易就出自这里，headline 拿不到正文 → 写不出稿。
-    fetch_body: true
-    weight: 1.0
-
-  - id: stat_pharma
-    name: STAT - Pharma
-    lang: en
-    url: https://www.statnews.com/category/pharma/
-    mode: html
-    access: headline
-    fetch_body: true      # 同 stat_biotech（2026-10-25）
-    weight: 0.9
-
-  - id: fierce_rss_legacy
-    name: Fierce Biotech (legacy RSS, 403)
-    lang: en
-    url: https://www.fiercebiotech.com/rss/xml
-    mode: rss
-    access: blocked
-    weight: 0.0
-    note: 已确认全站 CloudFront 403，RSS 同样被封；保留配置仅作记录
-
-  # ⚠️ Fierce 系列：站点全站 CloudFront 403，RSS 同样被封。
-  # 实测 6 种 feed URL 全部 403，无法直接抓取。
-  # 替代方案：走 search_fallback（web_search 兜底），见 src/fallback.py
-  - id: fierce_pharma_search
-    name: Fierce Pharma (search fallback)
-    lang: en
-    url: ""
-    mode: search
-    access: headline
-    weight: 0.9
-    query: "site:fiercepharma.com licensing OR deal OR acquisition"
-
-  - id: fierce_biotech_search
-    name: Fierce Biotech (search fallback)
-    lang: en
-    url: ""
-    mode: search
-    access: headline
-    weight: 0.9
-    query: "site:fiercebiotech.com licensing deal acquisition"
-
-  - id: endpoints_rss
-    name: Endpoints News (RSS)
-    lang: en
-    url: https://endpts.com/feed
-    mode: rss
-    access: rss
-    # ⚠️ 2026-10-25：RSS 的 summary 大面积为空，article 页抓得到正文。
-    #    实测 10-19 的 AZ-insitro 交易（当天唯一 5.5 分候选）就出自这里。
-    fetch_body: true
-    weight: 1.3
-
-  - id: biopharmaintelligence
-    name: BioPharma Intelligence
-    lang: en
-    url: https://www.biopharmaintelligence.informer.com
-    mode: html
-    access: blocked
-    weight: 0.8
-
-  # ============ 中文 ============
-  - id: phirda_industry
-    name: 中国医药创新促进会 - 产业资讯
+  # ============ 一、中国监管 ============
+  # 三个 NMPA 栏目页结构一致：<div class="list"><ul><li><a title=...>标题</a>
+  #   <span>(2026-10-29)</span></li>，日期在列表页就有，不需要逐篇探。
+  - id: nmpa_ggtg
+    name: 国家药监局 - 公告通告
     lang: cn
-    url: https://www.phirda.com/
+    url: https://www.nmpa.gov.cn/xxgk/ggtg/index.html
     mode: html
     access: full
     weight: 1.2
-    topics: [china, policy, deals]
+    topics: [nmpa, regulation, notice]
+    note: |
+      实测 200，20 条列表项，正文容器 div.text（公告正文 400-800 字）。
+      注意同页还有"中药品种保护受理公示"（zwfw 路径），也是实质监管动态。
 
-  - id: pharnexcloud
-    name: 摩熵医药
+  - id: nmpa_fgwj
+    name: 国家药监局 - 法规文件
     lang: cn
-    url: https://www.pharnexcloud.com/zixun/
+    url: https://www.nmpa.gov.cn/xxgk/fgwj/index.html
     mode: html
     access: full
-    weight: 1.1
-    topics: [china, deals, clinical]
+    weight: 1.2
+    topics: [nmpa, regulation, policy]
+    note: |
+      实测 200，20 条。含规范性文件/工作文件/批复，正文在 div.text。
+      这是"审评审批改革、指导原则、管理办法"这类硬政策的主入口。
 
-  - id: stcn_medicine
-    name: 证券时报 - 医药
+  - id: nmpa_zhcjd
+    name: 国家药监局 - 政策解读
     lang: cn
-    url: https://stcn.com/
+    url: https://www.nmpa.gov.cn/xxgk/zhcjd/index.html
     mode: html
     access: full
     weight: 1.0
-
-  - id: cnstock_health
-    name: 上海证券报 - 医药
-    lang: cn
-    url: https://www.cnstock.com/
-    mode: html
-    access: disabled
-    weight: 0.0
+    topics: [nmpa, interpretation]
+    # 政策解读更新慢（实测最新一条 2026-07-29），单独放宽陈旧窗口，
+    # 否则天天 0 条——这是源本身的节奏，不是抓取失败。
+    max_age_days: 150
     note: |
-      2026-10-10 实测：HTTP 200，命中 38 个 commonDetail 链接，
-      但内容全是综合财经（新质生产力/公募基金/社会招聘/保险举牌），
-      无医药内容，RELEVANT 过滤后保留 0 条。
-      尝试过 /list/yy 频道，内容与首页相同，不是医药频道。
-      该报为综合财经媒体，找不到稳定医药入口，故停用。
+      实测 200，20 条。其中包括"图解政策"（图片型），正文可能不足 200 字，
+      这类会降级成 headline，属正常。
 
-  - id: nbdd_cn
-    name: 每日经济新闻 - 医药
+  - id: cde_news
+    name: 药审中心 CDE - 通知公告
     lang: cn
-    url: https://www.nbd.com.cn/
-    mode: html
-    access: full
-    weight: 0.9
-
-  - id: pharmcube
-    name: 医药魔方 ByDrug
-    lang: cn
-    url: https://bydrug.pharmcube.com/news
+    url: https://www.cde.org.cn/
     mode: html
     access: full
     weight: 1.1
+    topics: [cde, review, consultation]
+    note: |
+      ⚠️ CDE 是瑞数/通付盾 WAF：文章页（/main/news/viewInfoCommon/<id>）
+      首次请求返回 HTTP 202 + JS 挑战页，同 client 带 cookie 重放一次即 200
+      （fetch._get 里有 202 重试）。所以**不能**用无 cookie 的一次性请求。
+      列表：首页 div.news_roll_module_title a（10 条滚动通知，含日期 20261030）。
+      正文容器：div.news_detail_box；日期：<meta name="PubDate" content="20261023">。
+      站内 JSON 接口没有采用——首页列表已经够新，且 202 重试比逆向接口稳。
 
-# ============ 一手来源（交易所/公司）============
-# 这些在 GitHub Actions 内可下 PDF，产出权威原文
-primary_sources:
-  hkex:
-    name: 香港交易所披露易
-    base: https://www1.hkexnews.hk
-    enabled: false   # 需配 stock code 列表后启用
-  sse:
-    name: 上海证券交易所
-    base: https://www.sse.com.cn
-    enabled: false
-  szse:
-    name: 深圳证券交易所
-    base: https://www.szse.cn
-    enabled: false
+  # ============ 二、医保与集采 ============
+  - id: nhsa_home
+    name: 国家医保局 - 首页
+    lang: cn
+    url: https://www.nhsa.gov.cn/
+    mode: html
+    access: full
+    weight: 1.2
+    topics: [nhsa, reimbursement, policy]
+    note: |
+      实测 200。首页 ul.localnews li a（约 115 条，含"政策法规/政策解读/地方动态"
+      多个 tab），日期在 li 的 <span> 里。地方动态多，靠 RELEVANT + 陈旧过滤收口。
+
+  - id: nhsa_fgk
+    name: 国家医保局 - 政策法规
+    lang: cn
+    url: https://www.nhsa.gov.cn/col/col104/index.html
+    mode: hanweb
+    access: full
+    weight: 1.3
+    topics: [nhsa, reimbursement, policy]
+    max_age_days: 150
+    note: |
+      该栏目是 Hanweb/TRS 的 jpage：列表由 dataproxy.jsp 异步取，HTML 里嵌着
+      首屏 45 条 <record><![CDATA[<li>…]]></record>。fetch.py 的 hanweb 模式
+      直接解析这段内嵌记录（0 条时回退 POST dataproxy.jsp），不需要浏览器。
+      实测 200，45 条，最新 2026-09-15（政策文件本身低频，故 max_age_days 放宽）。
+      ⚠️ 正文**不在文章页**：文章页只有元数据 + 附件下载链接（.txt/.wps），
+      正文由 fetch.py 的附件回退去取 downfile.jsp 的 .txt（实测拿到 1898 字全文）。
+
+  - id: smpaa_gggs
+    name: 上海药事所 - 公告公示
+    lang: cn
+    url: https://www.smpaa.cn/xxgk/gggs/
+    mode: html
+    access: full
+    weight: 1.2
+    topics: [procurement, smpaa, policy]
+    note: |
+      实测 200，列表 a[href*='/xxgk/gggs/']，URL 自带日期
+      （/xxgk/gggs/2026/10/30/25598.shtml），列表也有 <span>2026-10-30</span>。
+      正文容器 div#content（类 content_con_cen docContent，746 字）。
+      这是省级集采/挂网/中选结果的一手发布口。
+
+  - id: smpaa_jc
+    name: 上海药事所 - 国家组织药品集采
+    lang: cn
+    url: https://www.smpaa.cn/gjsdcg/
+    mode: html
+    access: full
+    weight: 1.2
+    topics: [procurement, vbp, policy]
+    note: 实测 200，a[href*='/gjsdcg/'] 23 条，最新 2026-10-26。与 smpaa_gggs 互补。
+
+  # ============ 三、产业政策 ============
+  - id: gov_zhengce
+    name: 中国政府网 - 政策
+    lang: cn
+    url: https://www.gov.cn/zhengce/
+    mode: html
+    access: full
+    weight: 1.0
+    topics: [statecouncil, policy]
+    note: |
+      实测 200，最新政策块 div.item03 div.list li a（8 条，日期在 <span>）。
+      政策文件库 /zhengce/zhengceku/ 实测 403，不用。
+      /zhengce/zuixin/ 是 JS 渲染（200 但正文列表为空），也不用。
+      医药相关条目稀疏（本周只有《医疗康复护理扩容提升工程实施方案》批复），
+      这是"国务院层级"的固有节奏，不是抓取问题。
+
+  - id: miit_xfpg
+    name: 工信部 - 消费品工业司（医药工业政策）
+    lang: cn
+    url: https://www.miit.gov.cn/jgsj/xfpgys/
+    mode: html
+    access: full
+    weight: 1.1
+    topics: [miit, industry, policy]
+    max_age_days: 150
+    note: |
+      实测 200。列表 a[href*='/xfpgys/wjfb/'], a[href*='/xfpgys/gzdt/']（15 条，
+      日期在 span.bt-list-time）。医药条目的主入口：医药工业"十五五"规划、
+      鼓励仿制药品目录等。
+      ⚠️ 文章页正文是 JS 渲染（页面里是 /api-gateway/jpaas-publish-server 的
+      unit 挂载脚本），fetch.py 用同一个 CMS 的 unit 接口（tagId=文章正文）取正文，
+      实测能拿到 602 字；纯 HTML 解析只会拿到 <meta name="Description"> 的 188 字。
+      工信部文件低频，故 max_age_days 放宽。
+
+  # ============ 四、海外重点 ============
+  - id: ema_news
+    name: EMA - News
+    lang: en
+    url: https://www.ema.europa.eu/en/news
+    mode: html
+    access: full
+    weight: 1.0
+    topics: [ema, eu, regulation]
+    note: |
+      实测 200（Chrome UA 即可）。列表 a[href*='/en/news/']（10 条），
+      日期在卡片 metadata（"30 October 2026"），正文容器 article（约 500 字）。
+
+  - id: fda_press
+    name: FDA - Press Announcements
+    lang: en
+    url: https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/press-releases/rss.xml
+    mode: rss
+    access: rss
+    fetch_body: true
+    ua: reader
+    weight: 1.1
+    topics: [fda, us, approval]
+    note: |
+      ⚠️ UA 决定成败（实测）：Chrome UA 下 fda.gov 全部返回
+      HTTP 404 + /apology_objects/abuse-detection-apology.html（反爬拦截页），
+      换阅读器 UA "Feedbin feed reader/1.0" 后 RSS 200 / 列表 200。
+      所以本源在配置里写 ua: reader，fetch.py 按源覆盖 User-Agent。
+      正确入口不是 /news-events/press-announcements（那个 404），
+      而是上面这条 press-releases RSS（20 条，含标题+日期+摘要）。
+      正文页同样要 reader UA（fetch_body: true）。
+
+  - id: hhs_news
+    name: HHS - Newsroom
+    lang: en
+    url: https://www.hhs.gov/news
+    mode: html
+    access: full
+    ua: reader
+    weight: 0.8
+    topics: [hhs, us, policy]
+    note: |
+      实测：Chrome UA 403（Akamai），阅读器 UA 200（187KB）。
+      列表 li.usa-collection__item h2 a（10 条），日期在 <time datetime>。
+      正文容器 div.content（约 5,000 字）。HHS 稿件偏美国国内卫生政策，
+      与医药直接相关的大约三成，其余靠 RELEVANT 过滤。
+
+  - id: cms_newsroom
+    name: CMS - Newsroom
+    lang: en
+    url: https://www.cms.gov/newsroom
+    mode: html
+    access: blocked
+    weight: 0.0
+    topics: [cms, us, reimbursement]
+    note: |
+      实测 403（Chrome / 阅读器 / Googlebot 三种 UA 全部 403，响应体 371-394 字节，
+      是 Akamai 的拒绝页，不是挑战页）。同样 /newsroom/press-releases 也 403。
+      按约定标 blocked，不再发请求。要用这条源需要代理或能过 Akamai 的出口 IP。
+
+  # ============ 已确认不可达（保留记录，不再发请求）============
+  - id: nhc_gov
+    name: 国家卫生健康委
+    lang: cn
+    url: https://www.nhc.gov.cn/
+    mode: html
+    access: blocked
+    weight: 0.0
+    topics: [nhc, china, policy]
+    note: |
+      实测 412（Precondition Failed，站点按 UA/指纹拦爬），2026-11-01 复测仍是 412。
+      标 blocked。需要换出口 IP 或走官方 RSS/接口才有戏。
