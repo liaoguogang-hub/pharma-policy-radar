@@ -23,6 +23,7 @@ import sys
 from collections import defaultdict
 from datetime import date as _date
 
+import scope
 from common import (ROOT, SCORED_DIR, load_yaml, read_json, write_json,
                     today_cst)
 
@@ -32,7 +33,8 @@ POSTS_DIR = ROOT / "posts"
 #   stale     过期（媒体转载旧文件，评分层已判）
 #   duplicate 与别的条目重复（同源转载）
 #   minor     地方小文件/事务性通知（无全国影响，写不出政策稿）
-_POOL_EXCLUDE_FLAGS = {"stale", "duplicate", "minor"}
+#   out_of_scope 发文机关不在白名单 / 影响范围不到省级或联盟 / 海外非政策类
+_POOL_EXCLUDE_FLAGS = {"stale", "duplicate", "minor", "out_of_scope"}
 
 # endpoint_verdict → force 分（与 config/scoring.yaml 的 force 档位对应）
 _FORCE_BY_VERDICT = {
@@ -275,6 +277,24 @@ def run(date: str | None = None) -> dict:
                               cfg.get("same_target_cluster_max", 3)))
     lookback = int(cfg.get("cluster_lookback_days", 45))
     fb_cfg = cfg.get("policy_fallback") or {}
+
+    # ---- 0) 政策范围闸门（2026-11-01 用户口径）----
+    #
+    # 只放「国家/各省医保局、卫健委，国家药监局、CDE 发布的、
+    # 对国家或省份（省际联盟）产生影响的政策」。
+    # 这是确定性闸门，不依赖模型打分——范围外的条目即使 9 分也不进候选池。
+    scope_cfg = load_yaml("scoring.yaml").get("policy_scope") or {}
+    in_scope, out_scope = [], []
+    for s in scored:
+        ok, why = scope.in_scope(
+            s.get("title", ""), s.get("content") or s.get("summary") or "",
+            s.get("flags"), s.get("channel", "china"), scope_cfg)
+        (in_scope if ok else out_scope).append((s, why))
+    if out_scope:
+        print(f"[select] 范围闸门剔除 {len(out_scope)} 条（不在目标范围）")
+        for s, why in sorted(out_scope, key=lambda x: -float(x[0].get("score") or 0))[:8]:
+            print(f"    ✗ {float(s.get('score') or 0):>4} | {s.get('title','')[:44]:46} | {why[:36]}")
+    scored = [s for s, _why in in_scope]
 
     # ---- 1) 达标池：分数 + 置信度 + flag 排除 ----
     pool: list[dict] = []
