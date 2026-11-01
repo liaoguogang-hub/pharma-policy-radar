@@ -55,7 +55,7 @@ ENDTABLE
 
 ## 03 说明书这道门
 
-把上面的条款放在一起，处方标签是这份指南落笔最实的一处。
+把上面的条款放在一起，处方标签上的写法在新闻稿里对应两套句式。
 
 器械连接型 App 的处理是“generally should be described”。新闻稿举的例子是“an app paired with an asthma inhaler”，与哮喘吸入器配对的 App。新闻稿给的理由是“given the central role the software plays in how the medicine is used”——软件在药品如何使用这件事上承担中心角色，这条理由与药品的使用方式直接挂钩。
 
@@ -100,10 +100,10 @@ Jared Seehafer 是 FDA 技术副局长（Deputy Commissioner for Technology）�
 第七处是时间。新闻稿抬头标注“For Immediate Release: October 20, 2026”，文末标注“Content current as of: 10/20/2026”。发布已超一周，读的时候不要当成当天消息。
 
 BOX: 风险提示
-本文引述的条款文字均出自 FDA 新闻稿；指南全文由新闻稿在“The final guidance is available here”处外链，条文细节以该全文为准。新闻稿未说明这份指南是否设有生效或过渡期安排。第四节对四类主体的落点梳理，依据的是新闻稿中的适用对象表述与三位官员表态，不是文件原文的独立章节。
+指南全文由新闻稿在“The final guidance is available here”处外链，条文细节以该全文为准。新闻稿页面标注“Content current as of: 10/20/2026”，发布日为 2026 年 10 月 20 日，读时注意时点。新闻稿把指南要给出的建议概括为三类：App 内容何时受 FDA 提交要求约束、App 何时应在药品官方标签中被提及、企业应向机构提交什么。
 
 ENDCARD 杠杆点在“定性”两个字 | 新闻稿自己给出的分寸是“reduce unnecessary uncertainty for developers and manufacturers while preserving the safety and effectiveness standards that patients and healthcare providers rely on”。它做的是把处方药配套软件分成两类：一类“generally should be described”进官方处方标签，一类在“the company can show”或“can demonstrate”成立的条件下才写进去，其余展示给用户的内容“in most cases”按促销材料处理。“必不可少”和“有意义临床获益”是独立 App 进门的两个门槛，这两个短语怎么落到功能与证据上，决定的是独立 App 能不能进处方标签这一栏。
 
 FN 1. 本文所引发文机关、发布日期、机构说明、三个关键问题、两类软件划分、默认归属规则、三位官员表态及全部引述，均出自 FDA 新闻稿《FDA Issues Final Guidance on Prescription Drug Apps and Software》，美国食品药品监督管理局官网，标注 For Immediate Release，2026 年 10 月 20 日（官方新闻稿）。
 FN 2. 指南全文由新闻稿在“The final guidance is available here”处外链，条文表述以该全文为准（官方新闻稿）。
-FN 3. 第四节对药企、技术合作方、医生患者及 FDA 内部的落点梳理，为本文基于新闻稿表述的判断，非文件原文。
+FN 3. 第四节对药企、技术合作方、医生患者及 FDA 内部的落点梳理，为本文基于新闻稿表述的判断，非指南原文的独立章节（本文判断）。
