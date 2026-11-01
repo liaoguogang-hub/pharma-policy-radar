@@ -3,113 +3,93 @@
   "count": 3,
   "plan": [
     {
-      "type": "policy_review",
-      "cluster_key": "policy:医疗器械生产质量管理规范-检查指导原则",
+      "type": "consultation",
+      "cluster_key": "policy:cde-新生抗原技术考虑",
       "channel": "china",
-      "lead_id": "9d335bcaf0ee68a1",
-      "title": "国家药监局关于印发医疗器械生产质量管理规范独立软件检查指导原则的通知",
-      "score": 7.5,
+      "lead_id": "437bb2b849510aad",
+      "title": "关于公开征求《新生抗原药品关键问题的技术考虑（征求意见稿）》意见的通知",
+      "score": 6.3,
       "member_ids": [
-        "9d335bcaf0ee68a1",
-        "8d2ab22e72c795ab"
+        "437bb2b849510aad"
       ],
       "members": [
         {
-          "title": "国家药监局关于印发医疗器械生产质量管理规范独立软件检查指导原则的通知",
-          "url": "https://www.nmpa.gov.cn/xxgk/fgwj/gzwj/gzwjylqx/20261030165430153.html",
-          "score": 7.5,
-          "reasoning": "国家药监局正式印发新版独立软件检查指导原则，并明确替代2020年旧版，属于部委级生产监管规则的更新，直接改变独立软件类医疗器械生产许可核查和上市后检查的判定依据，值得把新旧判定标准的差异写清"
-        },
-        {
-          "title": "国家药监局关于印发医疗器械生产质量管理规范无菌医疗器械检查指导原则等4个检查指导原则的通知",
-          "url": "https://www.nmpa.gov.cn/xxgk/fgwj/gzwj/gzwjylqx/20261028170125118.html",
-          "score": 7.5,
-          "reasoning": "国家药监局一次性印发无菌、植入、体外诊断试剂、定制式义齿四类器械的新版检查指导原则并废止2015/2016年旧版，配套新修订生产质量管理规范同步施行，属部委级全品类生产监管规则更新，值得结合同日发布的独立软件指导原则做整体解读"
+          "title": "关于公开征求《新生抗原药品关键问题的技术考虑（征求意见稿）》意见的通知",
+          "url": "https://www.cde.org.cn/main/news/viewInfoCommon/876a3d7ae3af17d948c21d4974079d0d",
+          "score": 6.3,
+          "reasoning": "药审中心就新生抗原药品发布技术考虑征求意见稿，属于新兴技术领域首次由监管方系统性表态，对布局该赛道的研发企业申报路径有直接影响，值得跟踪条文要点与后续定稿差异；目前仅为征求意见阶段"
         }
       ],
-      "reasoning": "国家药监局正式印发新版独立软件检查指导原则，并明确替代2020年旧版，属于部委级生产监管规则的更新，直接改变独立软件类医疗器械生产许可核查和上市后检查的判定依据，值得把新旧判定标准的差异写清",
+      "reasoning": "药审中心就新生抗原药品发布技术考虑征求意见稿，属于新兴技术领域首次由监管方系统性表态，对布局该赛道的研发企业申报路径有直接影响，值得跟踪条文要点与后续定稿差异；目前仅为征求意见阶段",
       "verify_todo": [
-        "核对通知文号与2026年11月1日施行日期",
-        "对照药监综械管〔2020〕57号旧版，梳理检查项目与判定标准的实质变化",
-        "确认软件组件参照执行的适用范围边界",
-        "逐项比对新旧指导原则的检查项目与判定标准变化",
-        "确认四类产品的适用范围与旧文废止关系"
+        "下载并核对征求意见稿正文与起草说明的具体要求",
+        "确认意见反馈截止日期与反馈方式",
+        "核对是否与既有肿瘤治疗性疫苗/个体化治疗指导原则存在衔接或冲突"
       ],
       "flags": [
-        "approval",
-        "formal",
-        "national"
+        "consultation",
+        "national",
+        "approval"
       ]
     },
     {
-      "type": "policy_review",
-      "cluster_key": "policy:药材进口边境口岸增设",
-      "channel": "china",
-      "lead_id": "a13a8974eead5f72",
-      "title": "国家药监局 海关总署关于增设云南省清水河、猴桥口岸为药材进口边境口岸的公告（2026年第94号）",
-      "score": 6.0,
+      "type": "policy_readout",
+      "cluster_key": "policy:cms-opo-accountability-rule",
+      "channel": "global",
+      "lead_id": "912d686231cfe14b",
+      "title": "CMS Finalizes Rule to Help More Organs Reach Patients and Strengthen Accountability for Organ Procurement Organizations",
+      "score": 7.5,
       "member_ids": [
-        "a13a8974eead5f72",
-        "a8c324c41edf891b"
+        "912d686231cfe14b"
       ],
       "members": [
         {
-          "title": "国家药监局 海关总署关于增设云南省清水河、猴桥口岸为药材进口边境口岸的公告（2026年第94号）",
-          "url": "https://www.nmpa.gov.cn/xxgk/ggtg/ypggtg/ypqtggtg/20261022111755120.html",
-          "score": 6.0,
-          "reasoning": "药监局与海关总署联合公告增设药材进口边境口岸并明确对应备案与检验机构，属多部委联合发文且自发布之日起执行，对中药材进口通道布局有实质影响；发布已逾一周，议题偏区域与通道层面"
-        },
-        {
-          "title": "国家药监局 海关总署关于增设广西壮族自治区钦州港口岸为药材进口边境口岸的公告（2026年第93号）",
-          "url": "https://www.nmpa.gov.cn/xxgk/ggtg/ypggtg/ypqtggtg/20261022111416194.html",
-          "score": 6.0,
-          "reasoning": "与同日另一公告同属增设药材进口边境口岸的政策动作，明确钦州港口岸的备案与检验主体，可与云南两口岸合并为一条关于进口通道扩容的综述；发布已逾一周"
+          "title": "CMS Finalizes Rule to Help More Organs Reach Patients and Strengthen Accountability for Organ Procurement Organizations",
+          "url": "https://www.hhs.gov/press-room/cms-finalizes-rule-organ-procurement-organizations-transplant-accountability.html",
+          "score": 7.5,
+          "reasoning": "CMS 正式定稿器官获取组织问责规则，属于美国联邦层面的正式规章，直接改变一类机构的考核与准入方式，对器官获取与移植链条有实质约束，值得系统解读其指标与问责机制"
         }
       ],
-      "reasoning": "药监局与海关总署联合公告增设药材进口边境口岸并明确对应备案与检验机构，属多部委联合发文且自发布之日起执行，对中药材进口通道布局有实质影响；发布已逾一周，议题偏区域与通道层面",
+      "reasoning": "CMS 正式定稿器官获取组织问责规则，属于美国联邦层面的正式规章，直接改变一类机构的考核与准入方式，对器官获取与移植链条有实质约束，值得系统解读其指标与问责机制",
       "verify_todo": [
-        "核对2026年第94号公告文号与落款日期",
-        "确认对应口岸药监部门与检验机构的具体承担范围",
-        "核实是否与既有口岸名单公告存在整合关系",
-        "核对2026年第93号公告文号与落款日期",
-        "确认与另一口岸公告是否应合并报道",
-        "核实口岸检验机构承担的检验范围"
+        "核对最终规则文号、联邦公报刊载日期与生效日期",
+        "确认新的绩效指标口径与不合格后果条款",
+        "核对是否与既有 OPO 认证/再认证条件冲突或废止旧条款"
       ],
       "flags": [
         "formal",
-        "local",
+        "overseas",
         "national"
       ]
     },
     {
       "type": "policy_readout",
-      "cluster_key": "policy:非药用类麻精药品-奥啡类整类列管",
-      "channel": "china",
-      "lead_id": "451aa445bf175746",
-      "title": "公安部、国家卫生健康委、国家药监局关于将奥啡类物质整类列入《非药用类麻醉药品和精神药品目录》的公告",
-      "score": 8.0,
+      "cluster_key": "policy:hhs-section504-disability-definition",
+      "channel": "global",
+      "lead_id": "ebaca3acc30dd192",
+      "title": "HHS Final Rule Amends Section 504 Regulations to Codify Statutory Exclusions from the Definition of Disability",
+      "score": 7.5,
       "member_ids": [
-        "451aa445bf175746"
+        "ebaca3acc30dd192"
       ],
       "members": [
         {
-          "title": "公安部、国家卫生健康委、国家药监局关于将奥啡类物质整类列入《非药用类麻醉药品和精神药品目录》的公告",
-          "url": "https://www.nmpa.gov.cn/xxgk/ggtg/ypggtg/ypqtggtg/20260923160938138.html",
-          "score": 8.0,
-          "reasoning": "公安部、国家卫健委、国家药监局三部门联合将奥啡类物质整类列入非药用类麻醉药品和精神药品目录，采用整类列管而非逐种列管的方式，并设定了以溴啡、螺溴啡为参照的结构条件，属多部委联合发布、已明确施行日期的全国性管制规则。此类整类列管会影响化工、医药研发与进出口合规判断，且对合法用途留有调整通道，值得就把控边界与企业合规影响做深度解读。该条发布已 39 天但仍在施行初期。"
+          "title": "HHS Final Rule Amends Section 504 Regulations to Codify Statutory Exclusions from the Definition of Disability",
+          "url": "https://www.hhs.gov/press-room/hhs-finalizes-section-504-rule-gender-dysphoria-disability.html",
+          "score": 7.5,
+          "reasoning": "HHS 民权办公室发布最终规则，修订《康复法》504 条关于残疾定义的排除项，属于联邦层面的正式规章，会改变受联邦资金支持的医疗机构在反歧视合规上的判断标准，属于值得解读的监管变化"
         }
       ],
-      "reasoning": "公安部、国家卫健委、国家药监局三部门联合将奥啡类物质整类列入非药用类麻醉药品和精神药品目录，采用整类列管而非逐种列管的方式，并设定了以溴啡、螺溴啡为参照的结构条件，属多部委联合发布、已明确施行日期的全国性管制规则。此类整类列管会影响化工、医药研发与进出口合规判断，且对合法用途留有调整通道，值得就把控边界与企业合规影响做深度解读。该条发布已 39 天但仍在施行初期。",
+      "reasoning": "HHS 民权办公室发布最终规则，修订《康复法》504 条关于残疾定义的排除项，属于联邦层面的正式规章，会改变受联邦资金支持的医疗机构在反歧视合规上的判断标准，属于值得解读的监管变化",
       "verify_todo": [
-        "核对公告原文、三部门落款与 2026 年 10 月 1 日施行日期",
-        "确认整类列管的结构条件表述与现有列管物质清单的衔接",
-        "确认对合法医药、科研用途申请调整的具体程序与受理部门",
-        "核对与海关、出口管制环节的联动要求"
+        "核对最终规则文号、生效日期与是否有过渡期",
+        "确认适用主体范围（接受联邦资金的机构）与具体排除条款措辞",
+        "核对是否涉及既有执法指引或既往解释的调整"
       ],
       "flags": [
         "formal",
-        "national",
-        "effective"
+        "overseas",
+        "national"
       ]
     }
   ]

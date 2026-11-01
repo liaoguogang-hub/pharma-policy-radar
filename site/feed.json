@@ -1,7 +1,20 @@
 {
   "date": "2026-11-01",
-  "count": 3,
+  "count": 6,
   "posts": [
+    {
+      "rel": "2026/11/01/03-policy_readout-ebaca3ac.html",
+      "date": "2026-11-01",
+      "title": "HHS 把“非身体损伤引起的性别烦躁”写进 504 条排除项：只改定义，未动义务",
+      "kicker": "Policy Readout｜美国 HHS 民权规则",
+      "sub": "2026年10月30日发布的最终规则落在 45 C.F.R. § 84.4(g)，接受 HHS 资金的机构要按新定义重读合规清单",
+      "hook": "2026年10月30日，美国卫生与公众服务部（HHS）民权办公室（OCR）发布最终规则，把《1973年康复法》504 条中国会写下的排除项搬进实施条例。最反常识的地方在于，它没有改动任何一条禁止歧视的实体义务，只用一个定语——“非由身体损伤引起的”——把一整类申诉挡在 504 条门外。",
+      "chars": 2770,
+      "site_rel": "posts/2026/11/01/03-policy_readout-ebaca3ac.html",
+      "needs_review": false,
+      "problems": [],
+      "below_threshold": false
+    },
     {
       "rel": "2026/11/01/03-policy_readout-451aa445.html",
       "date": "2026-11-01",
@@ -31,6 +44,19 @@
       "below_threshold": false
     },
     {
+      "rel": "2026/11/01/02-policy_readout-912d6862.html",
+      "date": "2026-11-01",
+      "title": "CMS 定稿 OPO 问责规则：研究用胰腺不再计入移植数，高绩效机构可跨区竞标",
+      "kicker": "Policy Readout｜器官获取",
+      "sub": "一份最终规则同时改了算分方式、认证门槛和摘牌路径",
+      "hook": "2026年10月30日，美国卫生与公众服务部（HHS）通过联邦医保与医助服务中心（CMS）发布器官获取组织（OPO）最终规则，同日在其官网刊出新闻稿。规则里最不合直觉的一条是：一个捐献者的胰腺如果只为胰岛细胞研究取出，仍然计入这家 OPO 的“捐献率”，但不再计入“移植率”。",
+      "chars": 2766,
+      "site_rel": "posts/2026/11/01/02-policy_readout-912d6862.html",
+      "needs_review": false,
+      "problems": [],
+      "below_threshold": false
+    },
+    {
       "rel": "2026/11/01/01-policy_review-9d335bca.html",
       "date": "2026-11-01",
       "title": "独立软件检查指导原则换版：203项检查项目、41项关键，11月1日就施行",
@@ -44,7 +70,22 @@
         "AI味句式 1 处（值得注意）——必须改掉，不是换词而是拆句重写"
       ],
       "below_threshold": false
+    },
+    {
+      "rel": "2026/11/01/01-consultation-437bb2b8.html",
+      "date": "2026-11-01",
+      "title": "新生抗原药品技术考虑开始征求意见：1个月窗口，条款这次没露面",
+      "kicker": "Policy Readout｜征求意见稿",
+      "sub": "药审中心2026年10月30日挂出通知，三份附件，正文条款本次检索未取得",
+      "hook": "2026年10月30日，国家药品监督管理局药品审评中心发布《关于公开征求〈新生抗原药品关键问题的技术考虑（征求意见稿）〉意见的通知》。通知正文里没有一条技术指标。能确认的只有三件事：文件叫什么名字、征求意见时限是自发布之日起1个月、意见发到哪两个邮箱。被当成\"新生抗原监管口径\"的那份正文，是以附件PDF形式挂出的，不在通知文本里。",
+      "chars": 2588,
+      "site_rel": "posts/2026/11/01/01-consultation-437bb2b8.html",
+      "needs_review": true,
+      "problems": [
+        "正文字数 1919 超出范围（目标 2250-3900）"
+      ],
+      "below_threshold": false
     }
   ],
-  "all_count": 3
+  "all_count": 6
 }
