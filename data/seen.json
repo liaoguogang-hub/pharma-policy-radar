@@ -1,20 +1,20 @@
 {
-  "version": 3,
-  "entries": [
-    {
-      "id": "8d2ab22e72c795ab",
-      "title": "国家药监局关于印发医疗器械生产质量管理规范无菌医疗器械检查指导原则等4个检查指导原则的通知",
-      "date": "2026-11-01"
-    },
-    {
-      "id": "22043ec6c0096607",
-      "title": "关于取消2个国家组织集中带量采购药品中选资格并将相关企业列入违规名单的公告",
-      "date": "2026-11-01"
-    },
-    {
-      "id": "48c959f915003570",
-      "title": "FDA Issues Final Guidance on Prescription Drug Apps and Software",
-      "date": "2026-11-01"
-    }
-  ]
+ "version": 3,
+ "entries": [
+  {
+   "id": "8d2ab22e72c795ab",
+   "title": "国家药监局关于印发医疗器械生产质量管理规范无菌医疗器械检查指导原则等4个检查指导原则的通知",
+   "date": "2026-11-01"
+  },
+  {
+   "id": "22043ec6c0096607",
+   "title": "关于取消2个国家组织集中带量采购药品中选资格并将相关企业列入违规名单的公告",
+   "date": "2026-11-01"
+  },
+  {
+   "id": "48c959f915003570",
+   "title": "FDA Issues Final Guidance on Prescription Drug Apps and Software",
+   "date": "2026-11-01"
+  }
+ ]
 }

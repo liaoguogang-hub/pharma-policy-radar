@@ -255,6 +255,878 @@ sources:
       是 Akamai 的拒绝页，不是挑战页）。同样 /newsroom/press-releases 也 403。
       按约定标 blocked，不再发请求。要用这条源需要代理或能过 Akamai 的出口 IP。
 
+  # ============ 五、省级行政区（31 省/区/市）============
+  # 目标：每省至少 1 个能拿到「标题 + 链接 + 发布日期 + 正文」的入口，医保局优先。
+  #
+  # 省级站与部委站结构差别很大，所以新增 mode: prov（fetch.fetch_prov）：
+  #   · 列表页不写死 CSS，扫全页 <a>，只留「标题命中 RELEVANT + 条目祖先里带日期
+  #     + href 像文章页」的链接；需要更严的源用 item: 覆盖。
+  #   · 页面里嵌 Hanweb <record> 的（江苏/江西医保）走 hanweb 解析。
+  #   · 正文容器按实测补进 CONTENT_SELECTORS，最后还有类名+链接密度兜底。
+  #
+  # 每条 access / note 都是 2026-11-01 在本机实测；blocked 的不发请求。
+  # 省级文件更新慢，默认 max_age_days: 120；政策文件栏目 240。
+
+  # ---- 北京市 ----
+  - id: bj_ybj
+    name: 北京 - 医疗保障局（通知公告）
+    lang: cn
+    url: https://ybj.beijing.gov.cn/tzgg2022/
+    mode: prov
+    access: full
+    weight: 1.1
+    max_age_days: 120
+    topics: [province, beijing, nhsa, notice]
+    note: |
+      实测 200，通知公告 13 条（li 内"标题+2026-10-23"，日期在列表页）。
+      正文 div.news-info，取到 397-1,567 字。
+
+  - id: bj_wjw
+    name: 北京 - 卫生健康委（政策文件）
+    lang: cn
+    url: https://wjw.beijing.gov.cn/zwgk_20040/zcwj2024/zcwjss/
+    mode: prov
+    access: full
+    weight: 1.0
+    max_age_days: 240
+    topics: [province, beijing, nhc, policy]
+    note: 实测 200，政策文件 4 条（更新慢，故 240 天窗口）；正文 4,900+ 字。
+
+  - id: bj_yjj
+    name: 北京 - 药品监督管理局（政策文件）
+    lang: cn
+    url: https://yjj.beijing.gov.cn/yjj/zwgk20/zcwj91/index.html
+    mode: prov
+    access: full
+    weight: 1.0
+    max_age_days: 240
+    topics: [province, beijing, nmpa, policy]
+    note: 实测 200，10 条带日期；正文 div.content，6,200-9,900 字。
+
+  # ---- 天津市 ----
+  - id: tj_ybj
+    name: 天津 - 医疗保障局（通知公告）
+    lang: cn
+    url: https://ylbz.tj.gov.cn/xwzx/tzgg/
+    mode: prov
+    access: full
+    weight: 1.1
+    max_age_days: 120
+    topics: [province, tianjin, nhsa, notice]
+    note: |
+      实测 200，ul.det 列表 6 条（标题+2026-10-30）。正文 div.content，
+      401-672 字。首页导航无日期，靠"祖先带日期"排除。
+
+  - id: tj_wjw
+    name: 天津 - 卫生健康委（公示公告）
+    lang: cn
+    url: https://wsjk.tj.gov.cn/ZWGK3158/GSGG247/
+    mode: prov
+    access: full
+    weight: 0.9
+    max_age_days: 120
+    topics: [province, tianjin, nhc, notice]
+    note: |
+      实测 200，公示公告 3 条。"通知公告"是 javascript:void(0) 二级菜单，
+      所以用公示公告栏目；正文 div.content 224-1,613 字。
+
+  # ---- 河北省 ----
+  - id: he_ybj
+    name: 河北 - 医疗保障局（通知公告）
+    lang: cn
+    url: https://ylbzj.hebei.gov.cn/category/31
+    mode: prov
+    access: full
+    weight: 1.1
+    max_age_days: 120
+    topics: [province, hebei, nhsa, notice]
+    note: |
+      ⚠️ 自研 CMS（/category/31 → /content/5566），文章 URL 不带日期，
+      日期只在 li 文本里（2026/10/30），所以日期必须看条目祖先而非 URL。
+      实测 9 条带日期；正文 div.news-info，300-400 字。
+
+  - id: he_yjj
+    name: 河北 - 药品监督管理局（政策文件）
+    lang: cn
+    url: https://yjj.hebei.gov.cn/xxgk/zfxxgk/zhce/wzfl/juw/index.html
+    mode: prov
+    access: full
+    weight: 0.9
+    max_age_days: 240
+    topics: [province, hebei, nmpa, policy]
+    note: 实测 200，19 条带日期；正文 628-1,142 字。
+
+  - id: he_wjw
+    name: 河北 - 卫生健康委
+    lang: cn
+    url: https://wsjkw.hebei.gov.cn/
+    mode: prov
+    access: blocked
+    weight: 0.0
+    topics: [province, hebei, nhc]
+    note: 实测首页只有 1,334 字节空壳（框架页，正文 JS 注入），标 blocked。
+
+  # ---- 山西省 ----
+  - id: sx_ybj
+    name: 山西 - 医疗保障局（通知公告）
+    lang: cn
+    url: https://ybj.shanxi.gov.cn/xxfb/fdzdgknr/tzgg/
+    mode: prov
+    access: full
+    weight: 1.1
+    max_age_days: 120
+    topics: [province, shanxi, nhsa, notice]
+    note: |
+      实测 200，14 条带日期，正文 1,075-5,155 字。
+      域名是 ybj.shanxi.gov.cn（ybj.sx.gov.cn 是绍兴市医保局，别混）。
+
+  - id: sx_wjw
+    name: 山西 - 卫生健康委（通知公告）
+    lang: cn
+    url: https://wjw.shanxi.gov.cn/tzgg/
+    mode: prov
+    access: full
+    weight: 1.0
+    max_age_days: 120
+    topics: [province, shanxi, nhc, notice]
+    note: 实测 200，12 条带日期；正文 div.newsTex，485-528 字。
+
+  # ---- 内蒙古自治区 ----
+  - id: nm_ybj
+    name: 内蒙古 - 医疗保障局（通知公告）
+    lang: cn
+    url: https://ylbzj.nmg.gov.cn/xwzx/tzgg/
+    mode: prov
+    access: full
+    weight: 1.1
+    max_age_days: 120
+    topics: [province, neimenggu, nhsa, notice]
+    note: 实测 200，8 条带日期；正文 362-1,507 字。域名 ylbzj.nmg.gov.cn。
+
+  - id: nm_wjw
+    name: 内蒙古 - 卫生健康委（文件通知）
+    lang: cn
+    url: https://wjw.nmg.gov.cn/zfxxgk/fdzzgknr/wjzt/
+    mode: prov
+    access: full
+    weight: 0.9
+    max_age_days: 240
+    topics: [province, neimenggu, nhc, policy]
+    note: 实测 200，3 条（文件通知更新慢）；正文 586-1,614 字。
+
+  # ---- 辽宁省 ----
+  - id: ln_ybj
+    name: 辽宁 - 医疗保障局（通知公告）
+    lang: cn
+    url: https://ybj.ln.gov.cn/ybj/zxzx/tzgg/index.shtml
+    mode: prov
+    access: disabled
+    weight: 0.0
+    topics: [province, liaoning, nhsa, notice]
+    note: |
+      实测 200，能解析 4 条，但最新一条也早于 120 天窗口（2026 年内更新极少），
+      陈旧过滤后 0 条；disabled。辽宁由 ln_wjw（政务公开文件）覆盖。
+
+  - id: ln_wjw
+    name: 辽宁 - 卫生健康委（政务公开文件）
+    lang: cn
+    url: https://wsjk.ln.gov.cn/wsjk/index/syxwxx/zwgk/index.shtml
+    mode: prov
+    access: full
+    weight: 0.9
+    max_age_days: 120
+    topics: [province, liaoning, nhc, policy]
+    note: 实测 200，3 条；列表日期在正文页，靠文章页补。
+
+  # ---- 吉林省 ----
+  - id: jl_ybj
+    name: 吉林 - 医疗保障局（通知公告）
+    lang: cn
+    url: https://ybj.jl.gov.cn/ybxw/gsgg/
+    mode: prov
+    access: full
+    weight: 1.1
+    max_age_days: 120
+    topics: [province, jilin, nhsa, notice]
+    note: 实测 200，12 条带日期；正文 540 字（部分正文在附件）。
+
+  - id: jl_wjw
+    name: 吉林 - 卫生健康委（政府文件）
+    lang: cn
+    url: https://wsjkw.jl.gov.cn/zfxxgk/zfwj/
+    mode: prov
+    access: blocked
+    weight: 0.0
+    topics: [province, jilin, nhc]
+    note: 实测栏目只返回 350 字节跳转壳，列表取不到；标 blocked。
+
+  # ---- 黑龙江省 ----
+  - id: hlj_ybj
+    name: 黑龙江 - 医疗保障局（通知公告）
+    lang: cn
+    url: https://ybj.hlj.gov.cn/ybj/c105387/list.shtml
+    mode: prov
+    access: full
+    weight: 1.1
+    max_age_days: 120
+    topics: [province, heilongjiang, nhsa, notice]
+    note: 实测 200，10 条带日期；正文 314-583 字。列表在 DOM 里，不需要 hanweb。
+
+  - id: hlj_wjw
+    name: 黑龙江 - 卫生健康委
+    lang: cn
+    url: https://wjw.hlj.gov.cn/
+    mode: prov
+    access: blocked
+    weight: 0.0
+    topics: [province, heilongjiang, nhc]
+    note: 实测 TCP 连接超时（多次复测），标 blocked。
+
+  # ---- 上海市 ----
+  - id: sh_ybj
+    name: 上海 - 医疗保障局（规范性文件）
+    lang: cn
+    url: https://ybj.sh.gov.cn/gfxwj/
+    mode: prov
+    access: full
+    weight: 1.2
+    max_age_days: 240
+    topics: [province, shanghai, nhsa, policy]
+    note: |
+      实测 200，12 条（部分条目无列表日期，由文章页补）；正文 821-1,441 字。
+      首页另有 /qtwj/（其他文件）与 /gsgg/（公示公告）可作补充。
+
+  - id: sh_wjw
+    name: 上海 - 卫生健康委（通知公告）
+    lang: cn
+    url: https://wsjkw.sh.gov.cn/ggl1/index.html
+    mode: prov
+    access: full
+    weight: 0.9
+    max_age_days: 120
+    topics: [province, shanghai, nhc, notice]
+    note: 实测 200，5 条带日期；正文 339-365 字。
+
+  - id: sh_yjj
+    name: 上海 - 药品监督管理局（规范性文件）
+    lang: cn
+    url: https://yjj.sh.gov.cn/gfxwj/index.html
+    mode: prov
+    access: full
+    weight: 0.9
+    max_age_days: 400
+    topics: [province, shanghai, nmpa, policy]
+    note: |
+      实测 200；栏目是"规范性文件"存档，19 条里最新 2026-07，其余多为 2024-2025
+      （更新慢，故 max_age 400）。正文 div.content/div.article，7,000+ 字。
+
+  # ---- 江苏省 ----
+  - id: js_ybj
+    name: 江苏 - 医疗保障局（通知公告）
+    lang: cn
+    url: http://ybj.jiangsu.gov.cn/col/col73935/index.html
+    mode: hanweb
+    access: full
+    weight: 1.1
+    max_age_days: 120
+    topics: [province, jiangsu, nhsa, notice]
+    note: |
+      ⚠️ 必须用 http：同路径 https 会 404（站点只对 http 提供栏目页）。
+      栏目是 Hanweb jpage，HTML 里嵌 45 条 <record>，走 fetch_hanweb。
+
+  - id: js_wjw
+    name: 江苏 - 卫生健康委（政策法规）
+    lang: cn
+    url: http://wjw.jiangsu.gov.cn/col/col49491/index.html
+    mode: prov
+    access: blocked
+    weight: 0.0
+    topics: [province, jiangsu, nhc]
+    note: |
+      栏目页 200（http），但列表里的文章链接（/art/2026/6/16/art_49492_...）
+      实测 404；正文拿不到，标 blocked。江苏由 js_ybj 覆盖。
+
+  # ---- 浙江省 ----
+  - id: zj_ybj
+    name: 浙江 - 医疗保障局（首页动态）
+    lang: cn
+    url: https://ybj.zj.gov.cn/
+    mode: prov
+    access: full
+    weight: 1.0
+    max_age_days: 120
+    topics: [province, zhejiang, nhsa, policy]
+    note: |
+      实测首页 200，可解析 47 条相关链接（政策文件库在 www.zj.gov.cn 外部，
+      站内无独立政策栏目）。列表不带日期，由文章页补；正文 1,000+ 字。
+
+  - id: zj_wjw
+    name: 浙江 - 卫生健康委（通知公告）
+    lang: cn
+    url: https://wsjkw.zj.gov.cn/col/col1659204/gggs/index.html
+    mode: prov
+    access: blocked
+    weight: 0.0
+    topics: [province, zhejiang, nhc]
+    note: |
+      实测栏目页只有 6.9KB 导航壳，列表由省级政策文件库（zj.gov.cn）注入，
+      站内拿不到条目，标 blocked。浙江由 zj_ybj 覆盖。
+
+  # ---- 安徽省 ----
+  - id: ah_ybj
+    name: 安徽 - 医疗保障局（公示公告）
+    lang: cn
+    url: https://ybj.ah.gov.cn/xwzx/gsgg/index.html
+    mode: prov
+    access: full
+    weight: 1.0
+    max_age_days: 120
+    topics: [province, anhui, nhsa, notice]
+    note: |
+      实测 200，18 条带日期。站内"部门文件"是 /public/column/7071 的 JS 查询接口，
+      列表不在 DOM，所以用公示公告栏目；正文 1,000+ 字。
+
+  - id: ah_wjw
+    name: 安徽 - 卫生健康委（公告公示）
+    lang: cn
+    url: https://wjw.ah.gov.cn/xwzx/gggs/index.html
+    mode: prov
+    access: disabled
+    weight: 0.0
+    topics: [province, anhui, nhc, notice]
+    note: |
+      实测 200，列表 20 条带日期（/public/…/58394751.html），但栏目内容以
+      医师资格考试/协会人事/名单公示为主，标题命中 RELEVANT 的为 0。
+      disabled（安徽由 ah_ybj 覆盖）。
+
+  # ---- 福建省 ----
+  - id: fj_ybj
+    name: 福建 - 医疗保障局（政策文件）
+    lang: cn
+    url: https://ybj.fj.gov.cn/zwgk/zcwjzw/
+    mode: prov
+    access: full
+    weight: 1.1
+    max_age_days: 240
+    topics: [province, fujian, nhsa, policy]
+    note: 实测 200，11 条带日期；正文 385-3,086 字。
+
+  - id: fj_wjw
+    name: 福建 - 卫生健康委（政策文件）
+    lang: cn
+    url: https://wjw.fj.gov.cn/xxgk/fgwj/
+    mode: prov
+    access: full
+    weight: 0.9
+    max_age_days: 240
+    topics: [province, fujian, nhc, policy]
+    note: 实测 200，9 条带日期；正文 89-8,682 字（部分为短公示）。
+
+  # ---- 江西省 ----
+  - id: jx_ybj
+    name: 江西 - 医疗保障局（政策文件）
+    lang: cn
+    url: https://ybj.jiangxi.gov.cn/jxsylbzj/col/col27600/index.html
+    mode: prov
+    access: blocked
+    weight: 0.0
+    topics: [province, jiangxi, nhsa, policy]
+    note: |
+      实测 200，但页面是 Handlebars 模板（`{{#each items}}` + urite.min.js），
+      列表由前端 JS 从接口拉取；HTML 里既无 <record> 也无 dataproxy 参数，
+      7 个 <a> 全是导航。拿不到条目，标 blocked。江西由 jx_wjw 覆盖（亦为
+      blocked，故江西本省彻底拿不到）。
+
+  - id: jx_wjw
+    name: 江西 - 卫生健康委
+    lang: cn
+    url: https://hc.jiangxi.gov.cn/
+    mode: prov
+    access: blocked
+    weight: 0.0
+    topics: [province, jiangxi, nhc]
+    note: |
+      首页 200、202 个链接，但通知列表的日期不在条目祖先里（前端模板渲染），
+      无法稳定判定发布日期，标 blocked。江西本省（医保 + 卫健）均不可用。
+
+  # ---- 山东省 ----
+  - id: sd_ybj
+    name: 山东 - 医疗保障局（首页动态）
+    lang: cn
+    url: http://ybj.shandong.gov.cn/
+    mode: prov
+    access: full
+    weight: 1.1
+    max_age_days: 120
+    topics: [province, shandong, nhsa, notice]
+    note: |
+      ⚠️ 只认 http：https 一律 404/连接超时（实测）。
+      通知公告栏目 /col/col65415/ 是"政府信息公开"壳（列表由接口注入，DOM 里只有
+      27 条信息公开法规链接），所以退到首页：首页 200，能解析到带日期的
+      /art/2026/10/30/art_65410_*.html 动态。正文 div.content。
+
+  - id: sd_wjw
+    name: 山东 - 卫生健康委（公示公告）
+    lang: cn
+    url: http://wsjkw.shandong.gov.cn/zwgk/fdzdgknr/gsgg/
+    mode: prov
+    access: full
+    weight: 0.9
+    max_age_days: 120
+    topics: [province, shandong, nhc, notice]
+    note: |
+      ⚠️ 只认 http（https 连接超时）。栏目 200，文章 URL /202610/t20261031_*.html，
+      列表没有日期（日期在文章页），靠日期补全；正文 div.content。
+
+  # ---- 河南省 ----
+  - id: ha_ybj
+    name: 河南 - 医疗保障局（政策法规）
+    lang: cn
+    url: https://ylbz.henan.gov.cn/zcfg/
+    mode: prov
+    access: full
+    weight: 1.1
+    max_age_days: 240
+    topics: [province, henan, nhsa, policy]
+    note: |
+      实测 200，14 条带日期（URL /2026/10-29/3442523.html 自带日期）。
+      正文 div.newsinfo（#mainCon），2,200-7,130 字。域名 ylbz.henan.gov.cn。
+
+  - id: ha_wjw
+    name: 河南 - 卫生健康委（规范性文件）
+    lang: cn
+    url: https://wsjkw.henan.gov.cn/zfxxgk/gfxwj/
+    mode: prov
+    access: full
+    weight: 1.0
+    max_age_days: 400
+    topics: [province, henan, nhc, policy]
+    note: |
+      实测 200，5 条带日期；正文 div.artibody，1,300-8,800 字。
+      "规范性文件"更新慢（最新 2026-05），故 max_age 400。
+
+  - id: ha_yjj
+    name: 河南 - 药品监督管理局（公告通告）
+    lang: cn
+    url: https://yjj.henan.gov.cn/zwgk/ggtg/
+    mode: prov
+    access: full
+    weight: 1.0
+    max_age_days: 120
+    topics: [province, henan, nmpa, notice]
+    note: 实测 200，19 条带日期；公告通告比"法规文件"栏目新（法规多为 2022 存量）。
+
+  # ---- 湖北省 ----
+  - id: hb_ybj
+    name: 湖北 - 医疗保障局
+    lang: cn
+    url: https://ybj.hubei.gov.cn/
+    mode: prov
+    access: blocked
+    weight: 0.0
+    topics: [province, hubei, nhsa]
+    note: |
+      实测持续 412（Precondition Failed，WAF 指纹拦截），2026-11-01 复测仍 412。
+      标 blocked，不发请求。湖北由 hb_wjw 覆盖。
+
+  - id: hb_wjw
+    name: 湖北 - 卫生健康委
+    lang: cn
+    url: http://wjw.hubei.gov.cn/bmdt/dtyw/
+    mode: prov
+    access: disabled
+    weight: 0.0
+    topics: [province, hubei, nhc, notice]
+    note: |
+      政策文件栏目 /zfxxgk/zc/gfwj/ 与 /gkwj/ 列表由 ajax 注入、无日期；
+      动态要闻 /bmdt/dtyw/ 只有 1 条命中 RELEVANT，且是"人才招聘会"（被噪声
+      黑名单丢掉）。湖北两个站都拿不到有效政策条目，disabled。
+
+  # ---- 湖南省 ----
+  - id: hn_ybj
+    name: 湖南 - 医疗保障局（政策文件）
+    lang: cn
+    url: https://ybj.hunan.gov.cn/ybj/first113541/firstF/f2113606/index.html
+    mode: prov
+    access: full
+    weight: 1.1
+    max_age_days: 240
+    topics: [province, hunan, nhsa, policy]
+    note: 实测 200，10 条；列表日期在文章页，正文 308-5,203 字。
+
+  - id: hn_wjw
+    name: 湖南 - 卫生健康委（政策法规）
+    lang: cn
+    url: https://wjw.hunan.gov.cn/wjw/xxgk/zcfg/index.html
+    mode: prov
+    access: blocked
+    weight: 0.0
+    topics: [province, hunan, nhc]
+    note: 实测栏目只返回 74 字节空响应，列表取不到；标 blocked。湖南由 hn_ybj 覆盖。
+
+  # ---- 广东省 ----
+  - id: gd_ybj
+    name: 广东 - 医疗保障局（通知公告）
+    lang: cn
+    url: https://hsa.gd.gov.cn/zwdt/snkb/
+    mode: prov
+    access: full
+    weight: 1.1
+    max_age_days: 120
+    topics: [province, guangdong, nhsa, notice]
+    note: |
+      实测 200，14 条带日期（URL /content/post_4968994.html）；正文部分 10,000+ 字。
+      域名是 hsa.gd.gov.cn。
+
+  - id: gd_wjw
+    name: 广东 - 卫生健康委（政策文件）
+    lang: cn
+    url: https://wsjkw.gd.gov.cn/hdjl/hdjl_zcwj/index.html
+    mode: prov
+    access: disabled
+    weight: 0.0
+    topics: [province, guangdong, nhc, policy]
+    note: |
+      实测 200，能解析 9 条，但全是 2023-2025 年的存量政策（最新 2025-04），
+      超出 240 天窗口后 0 条；disabled。广东由 gd_ybj（11 条）覆盖。
+
+  # ---- 广西壮族自治区 ----
+  - id: gx_ybj
+    name: 广西 - 医疗保障局（通知公告）
+    lang: cn
+    url: http://ybj.gxzf.gov.cn/xwdt/tzgg/
+    mode: prov
+    item: "ul.more-list li a"
+    max_items: 24
+    access: full
+    weight: 1.1
+    max_age_days: 120
+    topics: [province, guangxi, nhsa, notice]
+    note: |
+      ⚠️ 只认 http（https 能解析但 TCP 连不上）。
+      列表容器是 ul.more-list li a（不用 item 会扫出 600+ 条侧栏链接）。
+      正文 413-1,762 字。
+
+  - id: gx_wjw
+    name: 广西 - 卫生健康委（通知公告）
+    lang: cn
+    url: https://wsjkw.gxzf.gov.cn/xwdt_49370/tzgg/
+    mode: prov
+    access: full
+    weight: 0.9
+    max_age_days: 120
+    topics: [province, guangxi, nhc, notice]
+    note: 实测 200，30 条带日期；正文 div.content，约 500-1,500 字。
+
+  # ---- 海南省 ----
+  - id: hi_ybj
+    name: 海南 - 医疗保障局（政策文件）
+    lang: cn
+    url: https://ybj.hainan.gov.cn/xxgk/zcwj/
+    mode: prov
+    access: full
+    weight: 1.0
+    max_age_days: 240
+    topics: [province, hainan, nhsa, policy]
+    note: 实测 200，9 条；正文 538-5,384 字。
+
+  - id: hi_wjw
+    name: 海南 - 卫生健康委（政策文件）
+    lang: cn
+    url: https://wst.hainan.gov.cn/swjw/xxgk/0500/
+    mode: prov
+    access: disabled
+    weight: 0.0
+    topics: [province, hainan, nhc, policy]
+    note: |
+      实测 200，但栏目只有 2 条命中 RELEVANT（2022/2024 年的"废止文件"通知），
+      均超出陈旧窗口；海南由 hi_ybj 覆盖，本源 disabled。
+
+  # ---- 重庆市 ----
+  - id: cq_ybj
+    name: 重庆 - 医疗保障局（公告通知）
+    lang: cn
+    url: https://ylbzj.cq.gov.cn/zwgk_535/gstz/
+    mode: prov
+    access: full
+    weight: 1.1
+    max_age_days: 120
+    topics: [province, chongqing, nhsa, notice]
+    note: 实测 200，17 条带日期；正文 div.zwxl-article，517-3,878 字。
+
+  - id: cq_wjw
+    name: 重庆 - 卫生健康委（行政规范性文件）
+    lang: cn
+    url: https://wsjkw.cq.gov.cn/zwgk_242/zfxxgkml/zcwj/xzgfxwj2/
+    mode: prov
+    access: full
+    weight: 1.0
+    max_age_days: 240
+    topics: [province, chongqing, nhc, policy]
+    note: 实测 200，5 条；正文 div.trs_editor_view，3,675-5,534 字。
+
+  # ---- 四川省 ----
+  - id: sc_ybj
+    name: 四川 - 医疗保障局（政策文件）
+    lang: cn
+    url: https://ylbzj.sc.gov.cn/scsybj/nc010105/yy_zfxxgklist_gfxwj.shtml
+    mode: prov
+    access: full
+    weight: 1.1
+    max_age_days: 240
+    topics: [province, sichuan, nhsa, policy]
+    note: 实测 200，10 条；正文 681-1,985 字。域名 ylbzj.sc.gov.cn。
+
+  - id: sc_wjw
+    name: 四川 - 卫生健康委（文件）
+    lang: cn
+    url: https://wsjkw.sc.gov.cn/scwsjkw/wj1/wenjian.shtml
+    mode: prov
+    access: full
+    weight: 0.9
+    max_age_days: 240
+    topics: [province, sichuan, nhc, policy]
+    note: 实测 200，8 条；正文 481-826 字。
+
+  - id: sc_yjj
+    name: 四川 - 药品监督管理局（政策法规）
+    lang: cn
+    url: https://yjj.sc.gov.cn/scyjj/c103189/zcfg.shtml
+    mode: prov
+    access: full
+    weight: 0.9
+    max_age_days: 240
+    topics: [province, sichuan, nmpa, policy]
+    note: |
+      实测 200，18 条；正文容器是 td.articlecontent3（老式表格布局），
+      147-5,557 字（通知正文短、解读长）。
+
+  # ---- 贵州省 ----
+  - id: gz_ybj
+    name: 贵州 - 医疗保障局（通知公告）
+    lang: cn
+    url: https://ylbzj.guizhou.gov.cn/xwdt/tzgg/
+    mode: prov
+    access: full
+    weight: 1.1
+    max_age_days: 120
+    topics: [province, guizhou, nhsa, notice]
+    note: 实测 200，13 条带日期；正文 div.Article_Con，280-403 字。
+
+  - id: gz_wjw
+    name: 贵州 - 卫生健康委（通知公告）
+    lang: cn
+    url: https://wjw.guizhou.gov.cn/xwzx/tzgg/
+    mode: prov
+    access: disabled
+    weight: 0.0
+    topics: [province, guizhou, nhc, notice]
+    note: |
+      实测 200，但通知公告栏目里只有 1 条命中 RELEVANT（《医疗机构执业许可证》
+      注销公告），其余是医师注册/考试类，产量不足 2 条；disabled。
+      贵州由 gz_ybj（13 条）与 gz_yjj（13 条）覆盖。
+
+  - id: gz_yjj
+    name: 贵州 - 药品监督管理局（通知公告）
+    lang: cn
+    url: https://yjj.guizhou.gov.cn/xwdt/tzgg/
+    mode: prov
+    access: full
+    weight: 0.9
+    max_age_days: 120
+    topics: [province, guizhou, nmpa, notice]
+    note: 实测 200，15 条带日期；正文 241-669 字。
+
+  # ---- 云南省 ----
+  - id: yn_ybj
+    name: 云南 - 医疗保障局（通知公告）
+    lang: cn
+    url: https://ylbz.yn.gov.cn/zfxxgk/fdzdgknr/tzgg/
+    mode: prov
+    access: full
+    weight: 1.1
+    max_age_days: 120
+    topics: [province, yunnan, nhsa, notice]
+    note: |
+      实测 200，20 条带日期；正文 div.article-overview-wrapper，420-955 字
+      （开头带索引号/发布机构元数据表）。域名 ylbz.yn.gov.cn。
+
+  - id: yn_wjw
+    name: 云南 - 卫生健康委（公示公告）
+    lang: cn
+    url: http://ynswsjkw.yn.gov.cn/gsgg/
+    mode: prov
+    access: disabled
+    weight: 0.0
+    topics: [province, yunnan, nhc, notice]
+    note: |
+      ⚠️ 站点是 http（https 未配置）。政策文件栏目 /zwgk/zcwj/xzgfxwj/ 更新极慢
+      （8 条里最新 2026-06，其余 2021-2025）；公示公告 /gsgg/ 虽有 25 条带日期，
+      但多为遴选/医师注册/评审公示，命中 RELEVANT 仅 2 条、有正文 1 条。
+      产量不足 2 条，disabled；云南由 yn_ybj（20 条）覆盖。
+
+  # ---- 西藏自治区 ----
+  - id: xz_ybj
+    name: 西藏 - 医疗保障局（政策文件）
+    lang: cn
+    url: https://ylbzj.xizang.gov.cn/zwgk/zcwj/
+    mode: prov
+    access: blocked
+    weight: 0.0
+    topics: [province, xizang, nhsa, policy]
+    note: |
+      列表 200、8 条带日期，但**正文全部是扫描件图片**：文章页
+      div.zy-detail-content 只有 79 字标题+发布日期，正文是 10 张图片；
+      2026 年的 2 篇实测正文 0 字（2025-12 的一篇有文字版，但已超窗口）。
+      拿不到正文，按约定标 blocked。西藏本省（医保+卫健）都不可用。
+
+  - id: xz_wjw
+    name: 西藏 - 卫生健康委
+    lang: cn
+    url: https://wjw.xizang.gov.cn/zwgk/zcwj/
+    mode: prov
+    access: blocked
+    weight: 0.0
+    topics: [province, xizang, nhc]
+    note: |
+      实测列表文章链接全部指向 www.nhc.gov.cn（转载国家文件），
+      而 nhc.gov.cn 在本机持续 412，正文拿不到；标 blocked。
+
+  # ---- 陕西省 ----
+  - id: sn_ybj
+    name: 陕西 - 医疗保障局（政策文件）
+    lang: cn
+    url: https://ybj.shaanxi.gov.cn/zfxxgk/fdzdgknr/zcwj/
+    mode: prov
+    access: blocked
+    weight: 0.0
+    topics: [province, shaanxi, nhsa, policy]
+    note: |
+      列表 200、15 条带日期，但文章正文由 JS/iframe 注入（实测
+      div.Information-disclosure-body 只剩 21 字"扫一扫…附件下载"，正文是
+      30 张图片 + 2 个 iframe），拿不到文本；标 blocked。
+      陕西卫健委域名（wsjkw/wjw.shaanxi.gov.cn）无法解析，故陕西本省彻底拿不到。
+
+  - id: sn_wjw
+    name: 陕西 - 卫生健康委
+    lang: cn
+    url: https://wsjkw.shaanxi.gov.cn/
+    mode: prov
+    access: blocked
+    weight: 0.0
+    topics: [province, shaanxi, nhc]
+    note: 实测 wsjkw/wjw.shaanxi.gov.cn 均无法解析或连接，标 blocked。陕西由 sn_ybj 覆盖。
+
+  # ---- 甘肃省 ----
+  - id: gs_ybj
+    name: 甘肃 - 医疗保障局
+    lang: cn
+    url: https://ylbz.gansu.gov.cn/
+    mode: prov
+    access: blocked
+    weight: 0.0
+    topics: [province, gansu, nhsa]
+    note: |
+      实测 https 与 http 均 412（WAF 指纹拦截，6.4KB 拒绝页），多次复测。
+      甘肃三套站（医保/卫健/药监）全部 412。
+
+  - id: gs_wjw
+    name: 甘肃 - 卫生健康委
+    lang: cn
+    url: https://wsjk.gansu.gov.cn/
+    mode: prov
+    access: blocked
+    weight: 0.0
+    topics: [province, gansu, nhc]
+    note: 实测 412（同上），标 blocked。
+
+  - id: gs_yjj
+    name: 甘肃 - 药品监督管理局
+    lang: cn
+    url: http://yjj.gansu.gov.cn/yjj/c114316/
+    mode: prov
+    access: blocked
+    weight: 0.0
+    topics: [province, gansu, nmpa]
+    note: 实测 412（http/https 都拦），标 blocked。
+
+  # ---- 青海省 ----
+  - id: qh_ybj
+    name: 青海 - 医疗保障局（通知公告）
+    lang: cn
+    url: https://ybj.qinghai.gov.cn/tzgg.htm
+    mode: prov
+    access: full
+    weight: 1.1
+    max_age_days: 120
+    topics: [province, qinghai, nhsa, notice]
+    note: 实测 200，17 条；正文 641-2,359 字。域名 ybj.qinghai.gov.cn。
+
+  - id: qh_wjw
+    name: 青海 - 卫生健康委（通知公告）
+    lang: cn
+    url: https://wsjkw.qinghai.gov.cn/tzgg_0/
+    mode: prov
+    access: full
+    weight: 0.9
+    max_age_days: 120
+    topics: [province, qinghai, nhc, notice]
+    note: 实测 200，3 条带日期；正文 1,778-1,986 字。
+
+  # ---- 宁夏回族自治区 ----
+  - id: nx_ybj
+    name: 宁夏 - 医疗保障局
+    lang: cn
+    url: https://ylbz.nx.gov.cn/
+    mode: prov
+    access: blocked
+    weight: 0.0
+    topics: [province, ningxia, nhsa]
+    note: |
+      首页 200（29 条相关链接但无列表日期）；/zfxxgk/ 与 /xwdt/ 只返回
+      313 字节 JS 跳转壳，栏目列表拿不到，标 blocked。宁夏由 nx_wjw 覆盖。
+
+  - id: nx_wjw
+    name: 宁夏 - 卫生健康委（政策法规）
+    lang: cn
+    url: http://wsjkw.nx.gov.cn/zfxxgk_279/zcfg/
+    mode: prov
+    access: full
+    weight: 1.0
+    max_age_days: 240
+    topics: [province, ningxia, nhc, policy]
+    note: |
+      实测 200，14 条带日期（更新到 2026-10）。原选的"主动公开文件"
+      /zdgkwj/ 全是同标题的"备案托育机构信息公开"，改用政策法规栏目；
+      正文 div.content，约 600-1,500 字。
+
+  # ---- 新疆维吾尔自治区 ----
+  - id: xj_ybj
+    name: 新疆 - 医疗保障局（通知公告）
+    lang: cn
+    url: http://ylbzj.xinjiang.gov.cn/ylbzj/tzgg/list.shtml
+    mode: prov
+    access: full
+    weight: 1.1
+    max_age_days: 120
+    topics: [province, xinjiang, nhsa, notice]
+    note: |
+      ⚠️ 只认 http（https 栏目 403）。列表 12 条带日期（URL /202610/）。
+      正文 div.article_txt（约 234 字，通知偏短）。
+
+  - id: xj_wjw
+    name: 新疆 - 卫生健康委（首页政策文件）
+    lang: cn
+    url: https://wjw.xinjiang.gov.cn/
+    mode: prov
+    access: full
+    weight: 0.9
+    max_age_days: 240
+    topics: [province, xinjiang, nhc, policy]
+    note: |
+      实测 /hfpc/zcwj4/ 栏目页 403，只能退到首页（首页 200，政策文件链接
+      带日期）。实测 15 条相关；正文 600-2,000 字。
+
   # ============ 已确认不可达（保留记录，不再发请求）============
   - id: nhc_gov
     name: 国家卫生健康委

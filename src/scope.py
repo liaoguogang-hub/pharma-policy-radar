@@ -26,11 +26,18 @@ import re
 # ---------- 默认规则（可在 scoring.yaml 的 policy_scope 里覆盖）----------
 DEFAULTS = {
     "allowed_authorities": [
-        r"国家医疗保障局|国家医保局|医疗保障局|医保局",
-        r"国家卫生健康委员会|国家卫健委|卫生健康委员会|卫健委|卫生和计划生育委员会|卫计委",
+        # 国家级：国务院 / 国办 / 人大（法律）——"国家"级的政策发布主体
+        r"国务院办公厅|国务院|国办|全国人民代表大会常务委员会|全国人大|人大常委会",
+        # 医保系统（国家 + 各省）
+        r"医疗保障局|医保局|医疗保障",
+        # 卫健系统（国家 + 各省；注意"卫生健康委办公室"这种简称）
+        r"卫生健康委员会|卫生健康委|卫健委|卫健局|卫生和计划生育委员会|卫计委",
+        # 药监系统（国家 + 省级）
         r"国家药品监督管理局|国家药监局|药品监督管理局|药监局|药品监督",
+        # CDE
         r"药品审评中心|药审中心|CDE",
-        r"联合采购办公室|联采办",
+        # 集采执行机构
+        r"联合采购办公室|联采办|集采办公室|采购办公室",
     ],
     "excluded_authorities": [
         r"公安部|公安厅|公安局",
@@ -67,6 +74,34 @@ DEFAULTS = {
         r"clearance of|launches? .{0,40}\b(?:drug|therapy|treatment)\b"
     ),
 }
+
+
+# 抓取源 → 发文机关 的确定性映射。
+#
+# 列表页标题经常只写「关于…的通知」，不带机关名，正文又可能很薄（政策文件在附件里）。
+# 这时按【源】判定最可靠：
+#   · 省级源 id 以 _ybj / _wjw / _yjj 结尾 → 就是该省医保局 / 卫健委 / 药监局
+#   · 国家源（nmpa_* / cde_news / nhsa_* / smpaa_*）→ 就是对应国家部委
+# 注意 gov_zhengce（国务院政策频道）也算国家级；miit_xfpg（工信部）**不算**。
+PROV_SRC_RE = re.compile(r"_(ybj|wjw|yjj)$")
+NAT_SRC = {
+    "nmpa_ggtg", "nmpa_fgwj", "nmpa_zhcjd", "cde_news",
+    "nhsa_home", "nhsa_fgk", "smpaa_gggs", "smpaa_jc",
+    "gov_zhengce",
+}
+
+
+def _source_authority(source: str) -> str:
+    """按源 id 判机关；返回 national-source / province-source-xxx / ''。"""
+    s = (source or "").lower()
+    if not s:
+        return ""
+    if s in NAT_SRC:
+        return "national-source"
+    m = PROV_SRC_RE.search(s)
+    if m:
+        return "province-source-" + m.group(1)
+    return ""
 
 
 def _cfg(raw: dict | None) -> dict:
@@ -112,7 +147,7 @@ def impact_level(title: str, content: str, flags, channel: str) -> str:
 
 
 def in_scope(title: str, content: str, flags=None, channel: str = "china",
-             raw_cfg: dict | None = None) -> tuple[bool, str]:
+             raw_cfg: dict | None = None, source: str = "") -> tuple[bool, str]:
     """返回 (是否在范围内, 原因)。原因只在 False 时有意义。"""
     cfg = _cfg(raw_cfg)
     title = title or ""
@@ -151,10 +186,29 @@ def in_scope(title: str, content: str, flags=None, channel: str = "china",
             return False, "海外单个产品批准，不是政策"
         return True, f"海外国家级政策（{auth}）"
 
-    # 4) 国内：必须命中发文机关白名单
+    # 3.5) 按抓取源判定机关（列表标题常不带机关名，正文又可能很薄）
+    src_auth = _source_authority(source)
+    if src_auth == "national-source":
+        lvl = impact_level(title, content, flags, channel)
+        if lvl not in ("national", "province", "alliance"):
+            lvl = "national"
+        return True, f"{source}（国家级源）/ 影响范围={lvl}"
+    if src_auth.startswith("province-source-"):
+        lvl = impact_level(title, content, flags, channel)
+        if lvl not in ("national", "province", "alliance"):
+            lvl = "province"
+        return True, f"{source}（省级源）/ 影响范围={lvl}"
+
+    # 4) 国内：必须命中发文机关白名单。
+    #    例外：标题本身就是「国家组织…集采 / 省际联盟采购」的，执行主体是联采办，
+    #    标题里不一定写机关名，这类直接认（否则会漏掉整批集采文件）。
     auth = _any(cfg["allowed_authorities"], text)
     if not auth:
-        return False, "发文机关不在白名单（医保局/卫健委/药监局/CDE）"
+        if re.search(r"国家组织.{0,8}(?:集中带量采购|集采|采购)|"
+                     r"省际联盟|跨省联盟|联盟采购", title):
+            auth = "国家组织采购/省际联盟"
+    if not auth:
+        return False, "发文机关不在白名单（医保局/卫健委/药监局/CDE/国务院）"
 
     # 5) 影响范围：国家 / 省 / 省际联盟
     lvl = impact_level(title, content, flags, channel)

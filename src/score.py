@@ -447,16 +447,48 @@ def _apply_deal_fields(s: dict) -> None:
 
 
 def _prefilter(items: list[RawItem], cfg: dict) -> list[RawItem]:
-    """规则层预筛：纯融资直接丢弃，过期的降权"""
+    """规则层预筛。
+
+    2026-11-01 起省级源上线，单日原始条目从 ~120 涨到 ~509 条，
+    全量送 LLM 太慢太贵。这里先做**确定性范围预筛**：
+      · 命中排除主题（化妆品/牙膏…）、排除机关（牵头为公安/工信/协会…）、
+        事务性文件（参比目录/转 OTC/说明书修订…）→ 直接丢，不送 LLM
+      · 其余（含"标题里看不出机关"的省级条目）留给 LLM 判，避免误杀
+    """
+    import scope  # 延迟导入，避免与 score 循环依赖
+    scope_cfg = cfg.get("policy_scope") or {}
     excl = cfg.get("exclude_keywords", {}) or {}
     bad = [w.lower() for w in excl.get("pure_financing", [])]
-    out = []
+    out, dropped_noise, dropped_scope = [], 0, 0
     for it in items:
-        t = it.title.lower()
+        t = (it.title or "").lower()
         if any(w in t for w in bad):
+            dropped_noise += 1
+            continue
+        # 只对"明显出局"的做预筛：排除主题 / 牵头机关在读 / 事务性文件
+        body = (getattr(it, "content", "") or "")[:600]
+        ok, why = scope.in_scope(it.title or "", body, getattr(it, "flags", None),
+                                 _guess_channel(it), scope_cfg,
+                                 source=getattr(it, "source", ""))
+        # 预筛只信任"确定型"理由；机关/范围判定留给后面（pick 硬闸 + LLM）
+        if not ok and ("主题不属于医药政策" in why or "牵头机关不在白名单" in why
+                       or "事务性文件" in why or "海外单个产品批准" in why):
+            dropped_scope += 1
             continue
         out.append(it)
+    if dropped_noise or dropped_scope:
+        print(f"[score] 预筛：噪声 {dropped_noise} 条 + 范围外 {dropped_scope} 条 直接丢弃")
     return out
+
+
+def _guess_channel(it) -> str:
+    """粗判渠道：海外源/英文标题 → global，其余 china。"""
+    src = (getattr(it, "source", "") or "").lower()
+    if src in ("ema_news", "fda_press", "hhs_news", "cms_newsroom") or src.endswith("_intl"):
+        return "global"
+    title = getattr(it, "title", "") or ""
+    cjk = sum(1 for ch in title if "一" <= ch <= "鿿")
+    return "china" if cjk >= max(2, len(title) // 3) else "global"
 
 
 _NO_RETRY_HINTS = ("用量上限", "token plan", "insufficient", "balance",

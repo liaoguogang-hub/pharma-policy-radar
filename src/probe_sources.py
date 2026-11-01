@@ -37,8 +37,7 @@ except ImportError:  # pragma: no cover
 
 from common import load_yaml
 from fetch import (LIST_PATTERNS, TIMEOUT, _enrich_priority, _run_one,
-                   _src_headers, fetch_article)
-from noise import filter_items
+                   _src_headers, fetch_article, noise_filter)
 
 
 def _link_diag(html: str, src: dict) -> dict:
@@ -48,6 +47,26 @@ def _link_diag(html: str, src: dict) -> dict:
     except Exception:
         return {}
     cfg = LIST_PATTERNS.get(src["id"])
+    # mode: prov 的源不写死选择器，这里报告通用通道的判据命中情况：
+    # "带日期的条目容器"有多少、文章型链接有多少（见 fetch.fetch_prov）
+    if src.get("mode") == "prov" and not cfg:
+        sel = src.get("item") or "a[href]"
+        nodes = tree.css(sel)
+        date_li = 0
+        for li in tree.css("li,tr,dd,p"):
+            if li.css_first("a[href]") and re.search(
+                    r"20\d{2}[-/.年]\d{1,2}[-/.月]\d{1,2}", li.text() or ""):
+                date_li += 1
+        texts = [re.sub(r"\s+", " ", n.text()).strip() for n in nodes]
+        return {
+            "selector": sel,
+            "raw_links": len(re.findall(r'href="([^"]+)"', html)),
+            "selected": len(nodes),
+            "with_title": len([t for t in texts if len(t) >= 12]),
+            "date_items": date_li,
+            "samples": [t for t in texts if len(t) >= 12][:3],
+            "records": len(re.findall(r"<record>", html)),
+        }
     sel = cfg["item"] if cfg else "h2 a, h3 a"
     nodes = tree.css(sel)
     texts = [re.sub(r"\s+", " ", n.text()).strip() for n in nodes]
@@ -84,7 +103,9 @@ async def probe_one(client: httpx.AsyncClient, src: dict, body_n: int = 3) -> di
     out["items"] = len(items)
     out["dated"] = sum(1 for i in items if i.published)
     if items:
-        kept, _ = filter_items(items)
+        # 与生产一致：省级源只过噪声黑名单（noise_filter 的分流口径）
+        prov = ("province" in (src.get("topics") or []))
+        kept, _ = noise_filter(items, {src["id"]} if prov else set())
         out["kept"] = len(kept)
         if kept:
             out["stage"] = "ok"
@@ -131,6 +152,11 @@ async def probe_one(client: httpx.AsyncClient, src: dict, body_n: int = 3) -> di
         elif d.get("with_title", 0) == 0:
             out["stage"] = "命中但无标题"
             out["note"] = f"命中 {d['selected']} 个，但都取不到标题文本"
+        elif src.get("mode") == "prov":
+            out["stage"] = "通用提取未命中"
+            out["note"] = (f"链接 {d.get('raw_links')} / 选中 {d.get('selected')} / "
+                           f"带日期条目 {d.get('date_items')}；"
+                           f"检查 RELEVANT、href 文章特征，或改用 item: 指定列表容器")
         else:
             out["stage"] = "关键词过滤"
             out["note"] = (f"命中 {d['selected']} 个 / 有标题 {d['with_title']} 个，"

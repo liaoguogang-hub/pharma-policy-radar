@@ -288,7 +288,8 @@ def run(date: str | None = None) -> dict:
     for s in scored:
         ok, why = scope.in_scope(
             s.get("title", ""), s.get("content") or s.get("summary") or "",
-            s.get("flags"), s.get("channel", "china"), scope_cfg)
+            s.get("flags"), s.get("channel", "china"), scope_cfg,
+            source=((s.get("sources") or [""])[0] or s.get("source", "")))
         (in_scope if ok else out_scope).append((s, why))
     if out_scope:
         print(f"[select] 范围闸门剔除 {len(out_scope)} 条（不在目标范围）")
@@ -365,12 +366,28 @@ def run(date: str | None = None) -> dict:
     by_ch: dict[str, list[dict]] = defaultdict(list)
     for s in singles:
         by_ch[_channel(s)].append(s)
+    # ⚠️ 2026-11-01 改：原来是"china/global 死板轮流"，结果 7.8 分的国内条例
+    #    输给了 7.5 分的海外规则。用户口径是「中国为主」，所以改成：
+    #    每轮取当前分数更高的那个渠道；只有两边差距 < 0.3 才按 china 优先轮流，
+    #    避免一边独吞名额。
+    last_ch = None
     while len(plan) < dmax and any(by_ch.values()):
-        for ch in ("china", "global"):
-            if len(plan) >= dmax:
-                break
-            if by_ch.get(ch):
-                plan.append(_single_entry(by_ch[ch].pop(0)))
+        cands = [(ch, by_ch[ch][0]) for ch in ("china", "global") if by_ch.get(ch)]
+        if not cands:
+            break
+        if len(cands) == 1:
+            ch, _ = cands[0]
+        else:
+            cands.sort(key=lambda x: -float(x[1].get("score") or 0))
+            (ch1, s1), (ch2, s2) = cands[0], cands[1]
+            gap = float(s1.get("score") or 0) - float(s2.get("score") or 0)
+            if gap >= 0.3:
+                ch = ch1
+            else:
+                ch = "china" if last_ch != "china" else "global"
+        if by_ch.get(ch):
+            plan.append(_single_entry(by_ch[ch].pop(0)))
+            last_ch = ch
 
     # ---- 5) 政策保底：一条都没达标时，部委级正式文件放行 1 篇 ----
     if not plan and fb_cfg.get("enabled", True):

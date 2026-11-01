@@ -5,7 +5,12 @@
   html    普通服务端渲染的列表页 + 文章页（NMPA / 上海药事所 / 中国政府网 / EMA / HHS）
   rss     FDA press releases（Chrome UA 会被 404 反爬页拦，必须用阅读器 UA）
   hanweb  汉王/TRS jpage 栏目（国家医保局政策法规：列表在页面内嵌 XML 里，不在 DOM 里）
+  prov    省级政府站通用通道（省医保局/卫健委/药监局）：不写死 CSS，按
+          "标题命中 RELEVANT + 条目祖先带日期 + href 像文章页"收口，
+          页面内嵌 Hanweb <record> 时自动切换；见 fetch_prov。
   正文的三类特殊情况：CDE 的 202 挑战页、医保局的 .txt 附件、工信部的 jpaas CMS 接口
+  省级站的第四类：正文类名各不相同（newsTex/newsinfo/zwxl-article/…），
+  CONTENT_SELECTORS 按实测补齐，最后还有一层类名+链接密度兜底。
 
 设计要点（都来自实测教训）：
 1. 每个源声明 access_level，抓不到时降级为 headline 而不是丢弃
@@ -36,7 +41,7 @@ except ImportError:                 # 旧版回退
 from common import (RawItem, clean_text, ensure_dirs, load_yaml, make_id,
                     now_iso, split_entity_tags, RAW_DIR, write_json,
                     today_cst)
-from noise import filter_items
+from noise import NOISE_RE, filter_items
 from deepen import looks_important
 from search_backend import get_search_fn
 
@@ -59,6 +64,15 @@ def _src_headers(src: dict | None) -> dict:
     if src and src.get("ua") == "reader":
         return HEADERS_READER
     return HEADERS
+
+
+# 省级站 href 里常混入零宽字符/BOM（实测某省外链带 U+200B，httpx 直接抛
+# InvalidURL: Invalid IDNA hostname），统一在 urljoin 之前清掉。
+RE_INVISIBLE = re.compile(r"[\u200b\u200c\u200d\ufeff\u00a0]")
+
+
+def _clean_href(h: str | None) -> str:
+    return RE_INVISIBLE.sub("", (h or "")).strip()
 
 
 # 同 host 的最小请求间隔（秒）。
@@ -263,6 +277,9 @@ RE_PUBLISHED_CN8 = re.compile(
 RE_PUBLISHED_CN = re.compile(
     r"(?:发布|发表于?|更新)[^0-9]{0,6}(20\d{2})[-/年](\d{1,2})[-/月](\d{1,2})")
 RE_URL_DATE = re.compile(r"/(20\d{2})/(\d{1,2})/(\d{1,2})/")
+# 紧凑日期目录：青海医保 /20261030/7f12…/c.html、部分省站 /20261030/t….
+RE_URL_COMPACT_DATE = re.compile(
+    r"/(20\d{2})(0[1-9]|1[0-2])(0[1-9]|[12]\d|3[01])(?=[/_])")
 
 _MONTHS = {"jan": 1, "feb": 2, "mar": 3, "apr": 4, "may": 5, "jun": 6,
            "jul": 7, "aug": 8, "sep": 9, "oct": 10, "nov": 11, "dec": 12}
@@ -379,6 +396,11 @@ def extract_pub_date(html: str, url: str = "") -> str:
                 return iso
     if url:
         m = RE_URL_DATE.search(url)
+        if m:
+            iso = _norm_date("-".join(m.groups()))
+            if iso:
+                return iso
+        m = RE_URL_COMPACT_DATE.search(url)
         if m:
             iso = _norm_date("-".join(m.groups()))
             if iso:
@@ -548,6 +570,11 @@ async def fetch_hanweb(client: httpx.AsyncClient, src: dict) -> list[RawItem]:
             print(f"  [hanweb] {src['id']}: 页面既无内嵌记录、dataproxy 也取不到")
             return []
 
+    return _parse_hanweb_records(records, src)
+
+
+def _parse_hanweb_records(records: list[str], src: dict) -> list[RawItem]:
+    """把 Hanweb <record> 里的 <li> 片段解析成 RawItem（hanweb / prov 共用）。"""
     out: list[RawItem] = []
     seen: set[str] = set()
     for rec in records[:120]:
@@ -560,7 +587,7 @@ async def fetch_hanweb(client: httpx.AsyncClient, src: dict) -> list[RawItem]:
                 break
         if anchor is None:
             continue
-        href = (anchor.attributes.get("href") or "").strip()
+        href = _clean_href(anchor.attributes.get("href"))
         if not href or href.startswith("javascript") or href.startswith("#"):
             continue
         url = urljoin(src["url"], href)
@@ -584,6 +611,106 @@ async def fetch_hanweb(client: httpx.AsyncClient, src: dict) -> list[RawItem]:
     return out
 
 
+# ============ 省级政府站通用通道（prov）============
+#
+# 为什么单独加一个通道：省级医保局/卫健委/药监局的列表模板比国家部委碎得多，
+# 同一个 CMS 在不同省会换 DOM 类和路径（有的是 li.text_list、有的是 ul.det、
+# 有的是 div.news-list），一个源写死一个 CSS 选择器，改版即失效。
+#
+# 这里改用"政府站列表的共同特征"收口（2026-11-01 对 50 个省级栏目实测）：
+#   1. 标题命中 RELEVANT（政策/医药关键词）；
+#   2. 条目祖先（最多 3 层）里有日期，或 URL 自带 /20xx/ 日期段，
+#      或 href 是文章路径（/art/、/content/N）——用来排除导航链接；
+#   3. href 像文章页，排除栏目首页 / 站外导航。
+# 需要更严的源可在 sources.yaml 里用 item: <CSS> 覆盖（值是 a 或包含 a 的 li）。
+#
+# 页面里嵌 Hanweb <record> 的（江苏/江西医保）先走内嵌记录解析，与 hanweb 通道一致。
+RE_ARTICLE_HREF = re.compile(
+    r"\.(?:s?html?|jsp)(?:\?|$)|/(?:content|art|detail)/\d|/20\d{2}[-/]|"
+    r"/20\d{2}(?:0[1-9]|1[0-2])\d{2}/|/t\d{8}\.",
+    re.I)
+# URL 里出现"强文章特征"时，不再要求列表条目里有日期（部分省级站列表只给标题）：
+#   /art/、/content/123、/2026/10/、/t20261031_、58319191.html、/2026102708.../
+RE_STRONG_ARTICLE = re.compile(
+    r"/art/|/content/\d+|/20\d{2}[-/]\d|/20\d{2}(?:0[1-9]|1[0-2])\d{2}/|"
+    r"/t\d{6,}[_.]|/\d{5,}\.s?html?$|/\d{8,}/", re.I)
+
+
+def _list_date(node) -> str:
+    """列表条目日期：沿链接向上最多 3 层，取最近一个带日期的条目容器。"""
+    p = node.parent
+    for _ in range(3):
+        if p is None:
+            break
+        t = re.sub(r"\s+", " ", p.text())
+        if len(t) <= 350:
+            d = _date_from_text(t)
+            if d:
+                return d
+        p = p.parent
+    return ""
+
+
+async def fetch_prov(client: httpx.AsyncClient, src: dict) -> list[RawItem]:
+    h = _src_headers(src)
+    r = await _get(client, src["url"], h)
+    if not r:
+        return []
+    html = r.text
+    records = RE_HANWEB_RECORD.findall(html)
+    if len(records) >= 3:                 # 栏目页是 Hanweb jpage 时直接解析内嵌记录
+        return _parse_hanweb_records(records, src)
+
+    tree = HTMLParser(html)
+    cfg = LIST_PATTERNS.get(src["id"]) or {}
+    sel = src.get("item") or cfg.get("item")
+    nodes = tree.css(sel) if sel else tree.css("a[href]")
+    base = src.get("base") or cfg.get("base") or src["url"]
+
+    out: list[RawItem] = []
+    seen: set[str] = set()
+    # 省级站有些栏目页会把整站栏目树都渲染进来（广西医保一页 756 个 li），
+    # 用 max_items 截断 DOM 顺序靠前的真实列表，避免把侧栏/其他栏目一起收进来。
+    max_items = int(src.get("max_items") or 120)
+    for n in nodes[:400]:
+        if len(out) >= max_items:
+            break
+        if n.tag != "a":                  # item 选择器可能命中 li
+            a = n.css_first("a[href]")
+            if a is None:
+                continue
+            n = a
+        href = _clean_href(n.attributes.get("href"))
+        if not href or href.startswith("#") or href.startswith("javascript"):
+            continue
+        url = urljoin(base, href)
+        if not url.startswith(("http://", "https://")):
+            continue
+        # 优先用 <a title>：省级站锚文本常把日期/省略号粘进标题
+        attr_title = clean_text(n.attributes.get("title") or "")
+        text_title = clean_title(clean_text(n.text()))
+        title = clean_title(attr_title) if len(attr_title) >= 8 else text_title
+        if len(title) < 12 or url in seen:
+            continue
+        if not RELEVANT.search(title):
+            continue
+        if not RE_ARTICLE_HREF.search(url):
+            continue
+        published = extract_pub_date("", url) or _list_date(n)
+        # 既没有列表日期、URL 里也没有 /20xx/ 或 /art/ 这类文章特征 → 是导航链接
+        if not published and not RE_STRONG_ARTICLE.search(url):
+            continue
+        seen.add(url)
+        out.append(RawItem(
+            id=make_id(title, url), source=src["id"], lang=src["lang"],
+            title=title, url=url, published=published,
+            access=src.get("access", "full"), mode="html",
+            weight=src.get("weight", 1.0), topics=src.get("topics", []),
+            fetch_time=now_iso(), fetch_body=bool(src.get("fetch_body")),
+        ))
+    return out
+
+
 # ============ 正文抓取（access: full，或配了 fetch_body 的源）===========
 # 正文容器候选（按优先级尝试，命中第一个 > 200 字的就停）。
 #
@@ -599,19 +726,75 @@ async def fetch_hanweb(client: httpx.AsyncClient, src: dict) -> list[RawItem]:
 #
 # 顺序即优先级：`main` 放最后——它会连导航一起吞（HHS 实测 main 9,572 字，
 # 而真正的正文 div.content 5,183 字），放前面会污染正文。
+#
+# ⚠️ 2026-11-01 补充省级站模板（全部对着真实文章页实测命中）：
+#   河北医保/药监  div.news-info
+#   河南医保/药监  div.newsinfo / #mainCon
+#   重庆医保      div.zwxl-article
+#   贵州医保      div.Article_Con
+#   云南医保      div.article-overview-wrapper
+#   新疆医保      div.article_txt
+#   山西卫健      div.newsTex / div.cont
+#   河南卫健      div.artibody
+#   重庆卫健      div.trs_editor_view（注意不是 TRS_Editor）
+#   贵州卫健      div.DocTextBox
+#   四川药监      td.articlecontent3（老式表格布局）
+# 这些放在通用 div.content / main 之前，避免被上层容器（含导航）抢先命中。
 CONTENT_SELECTORS = [
     "article",
     "div.news_detail_box",
     "div.pages_content",
     "#UCAP-CONTENT",
     "div.article-body", "div#article-body", "div.article__content",
+    # ---- 省级站实测容器 ----
+    "div.newsTex", "div.news-info", "div.cont",
+    "div.newsinfo", "#mainCon",
+    "div.zwxl-article", "div.Article_Con", "div.article-overview-wrapper",
+    "div.artibody", "div.trs_editor_view", "div.DocTextBox",
+    "td.articlecontent3", "div.article_txt",
+    # ---- 通用容器 ----
     "div.atricle",
     "div#zoom", "div.TRS_Editor",
-    "div.content", "div.detail", "div.article",
+    # div.text 是 NMPA 的正文容器，必须排在 div.content 之前（NMPA 页面里
+    # div.content 是外层大容器，会让正文混进导航/相关链接）
     "div.text",
+    "div.content", "div.detail", "div.article",
     "div#content",
     "main",
 ]
+
+# 省级站最后一层兜底：类名/ID 含正文语义词、链接密度低、有中文句读的容器。
+# 只在上面所有选择器都 <200 字时启用（见 _generic_body），不会覆盖已知模板。
+RE_BODY_ATTR = re.compile(
+    r"(content|article|detail|news|text|zoom|editor|doc|con|nr|wz|body)", re.I)
+
+
+def _generic_body(tree) -> str:
+    """
+    正文兜底提取：挑"像正文"的最大容器。
+
+    判据（缺一不可）：
+      · 文本 250-15000 字（太短是标题/摘要，太长是整页）
+      · class/id 含 content/article/detail/news/... 这类语义词
+      · 链接文本占全文 < 25%（排除导航/列表页）
+      · 至少两处中文句读（排除表格/名单）
+    """
+    best, best_len = "", 0
+    for n in tree.css("div,article,section,td"):
+        t = clean_text(n.text())
+        ln = len(t)
+        if ln < 250 or ln > 15000 or ln <= best_len:
+            continue
+        attr = f"{n.attributes.get('class') or ''} {n.attributes.get('id') or ''}"
+        if not RE_BODY_ATTR.search(attr):
+            continue
+        link_len = sum(len(clean_text(a.text())) for a in n.css("a"))
+        if link_len / max(ln, 1) > 0.25:
+            continue
+        if t.count("。") < 2 and "；" not in t:
+            continue
+        best, best_len = t, ln
+    return best
 
 # 政策文件正文常做成附件（.txt / downfile.jsp）。医保局的政策法规文章页
 # 只有元数据表 + "文件下载链接：xxx.txt"，直接抓正文只有 1,100 字的元数据，
@@ -745,6 +928,11 @@ async def fetch_article(client: httpx.AsyncClient, item: RawItem,
         att = await _attachment_text(client, r.text, item.url, h)
         if len(att) > best_len:
             best, best_len = att, len(att)
+    # 省级站模板不在候选表里时的最后一层兜底（仅在什么都没取到时启用）
+    if best_len <= 200:
+        gb = _generic_body(tree)
+        if len(gb) > best_len:
+            best, best_len = gb, len(gb)
     # 剥掉政府站正文开头的 CMS 页眉（"视力保护色…字号：[大中小]"）
     m = RE_CMS_HEAD.match(best)
     if m and m.end() <= 300:
@@ -856,6 +1044,31 @@ def _drop_stale(items: list[RawItem], max_age_days: int,
 
 
 # ============ 主流程 ============
+def noise_filter(items: list[RawItem],
+                 prov_sources: set[str]) -> tuple[list, list]:
+    """
+    噪声过滤（省级源走单独口径）。
+
+    ⚠️ 为什么省级源不能直接走 noise.filter_items：
+    noise.py 的 LOCAL_BODY_RE 会把"地方机关 + 事务性文种"判成噪声
+    （"河北省医疗保障局关于…的通知" 命中 `省` + `医疗保障局` + `通知`），
+    这规则对**全国**雷达是对的——地方事务性文件确实不值得写；
+    但对本轮新加的省级雷达，这些标题正是要收的一手材料。
+    noise.py 不在本任务可改范围，所以在调用侧按源分流：
+      · topics 含 province 的源：只过黑名单 NOISE_RE（软文/招聘/会议/人事）
+      · 其他源：原样走 filter_items（行为不变）
+    """
+    keep, rest = [], []
+    for it in items:
+        if (it.source in prov_sources and len(it.title or "") >= 10
+                and not NOISE_RE.search(it.title)):
+            keep.append(it)
+        else:
+            rest.append(it)
+    rest, dropped = filter_items(rest)
+    return keep + rest, dropped
+
+
 async def _run_one(client: httpx.AsyncClient, src: dict) -> list[RawItem]:
     # blocked：站点确认封爬（Cloudflare 403 等）
     # disabled：源无有效产出（地址失效/内容不对口），停用以免浪费请求
@@ -872,6 +1085,8 @@ async def _run_one(client: httpx.AsyncClient, src: dict) -> list[RawItem]:
             items = await fetch_rss(client, src)
         elif mode == "hanweb":
             items = await fetch_hanweb(client, src)
+        elif mode == "prov":
+            items = await fetch_prov(client, src)
         else:
             items = await fetch_html(client, src)
         print(f"  [ok]   {src['id']}: {len(items)} 条")
@@ -898,8 +1113,10 @@ async def run(date: str | None = None) -> list[RawItem]:
             if isinstance(r, list):
                 items.extend(r)
 
-        # 噪声过滤（综合财经源收紧，医药垂直源放宽）
-        items, dropped = filter_items(items)
+        # 噪声过滤（综合财经源收紧；省级源只过黑名单，见 noise_filter）
+        prov_srcs = {s["id"] for s in cfg["sources"]
+                     if "province" in (s.get("topics") or [])}
+        items, dropped = noise_filter(items, prov_srcs)
         print(f"\n=== 噪声过滤：{len(items)+len(dropped)} -> {len(items)} 条"
               f"（丢弃 {len(dropped)}）===")
 
@@ -964,7 +1181,7 @@ async def run(date: str | None = None) -> list[RawItem]:
         by_src: dict[str, int] = {}
         picked = []
         for it in need:
-            cap = quota.get(it.source, 8)
+            cap = quota.get(it.source, 5)
             if by_src.get(it.source, 0) >= cap:
                 continue
             by_src[it.source] = by_src.get(it.source, 0) + 1
@@ -973,8 +1190,17 @@ async def run(date: str | None = None) -> list[RawItem]:
             print(f"\n=== 抓正文 {len(picked)} 篇（{len(need)} 条可抓）===")
             for it in picked[:5]:
                 print(f"    优先: {it.title[:58]}")
+            # 省级源把候选面从 ~10 条/源 拉到 ~50 条/源，一次性 gather 全部
+            # 文章页就是几百个并发请求——政府站 WAF 会直接 412。
+            # 全局限到 12 并发（host 级还有 0.7s 间隔）。
+            sem = asyncio.Semaphore(12)
+
+            async def _one(it):
+                async with sem:
+                    return await fetch_article(client, it, hdr.get(it.source))
+
             enriched = await asyncio.gather(
-                *[fetch_article(client, i, hdr.get(i.source)) for i in picked],
+                *[_one(i) for i in picked],
                 return_exceptions=True
             )
             ok = 0
