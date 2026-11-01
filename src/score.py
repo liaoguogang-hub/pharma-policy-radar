@@ -459,11 +459,17 @@ def _prefilter(items: list[RawItem], cfg: dict) -> list[RawItem]:
     scope_cfg = cfg.get("policy_scope") or {}
     excl = cfg.get("exclude_keywords", {}) or {}
     bad = [w.lower() for w in excl.get("pure_financing", [])]
-    out, dropped_noise, dropped_scope = [], 0, 0
+    out, dropped_noise, dropped_scope, body_thin = [], 0, 0, 0
     for it in items:
         t = (it.title or "").lower()
         if any(w in t for w in bad):
             dropped_noise += 1
+            continue
+        # 只丢"完全没正文"的（<100 字）。100-250 字里有真政策
+        # （如「河北省药监局关于印发《医疗器械分类界定工作程序》的通知」247 字），
+        # 不能按 250 一刀切（2026-11-01 实测误丢 9 条）。
+        if len((getattr(it, "content", "") or "")) < 100:
+            body_thin += 1
             continue
         # 只对"明显出局"的做预筛：排除主题 / 牵头机关在读 / 事务性文件
         body = (getattr(it, "content", "") or "")[:600]
@@ -476,6 +482,11 @@ def _prefilter(items: list[RawItem], cfg: dict) -> list[RawItem]:
             dropped_scope += 1
             continue
         out.append(it)
+    # 没正文的条目写不出稿（成稿阶段 material_too_thin 也会拦），
+    # 先在这里丢掉，省 LLM 调用。政策文件正文在附件里的情况会丢，
+    # 这类源抓取层已尽量回退抓附件（nhsa_fgk 的 .txt 回退）。
+    if body_thin:
+        print(f"[score] 预筛：无正文 {body_thin} 条 直接丢弃")
     if dropped_noise or dropped_scope:
         print(f"[score] 预筛：噪声 {dropped_noise} 条 + 范围外 {dropped_scope} 条 直接丢弃")
     return out
