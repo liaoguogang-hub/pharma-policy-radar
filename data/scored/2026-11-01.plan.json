@@ -44,33 +44,31 @@
     },
     {
       "type": "policy_readout",
-      "cluster_key": "policy:医疗服务价格项目预立项制度",
-      "channel": "china",
-      "lead_id": "cf02cf14959620fc",
-      "title": "山西省医疗保障局 关于转发《国家医疗保障局关于试行高水平新技术新产品医疗服务价格项目预立项制度的通知》的通知",
-      "score": 8.0,
+      "cluster_key": "policy:cms-opo-accountability-rule",
+      "channel": "global",
+      "lead_id": "912d686231cfe14b",
+      "title": "CMS Finalizes Rule to Help More Organs Reach Patients and Strengthen Accountability for Organ Procurement Organizations",
+      "score": 7.0,
       "member_ids": [
-        "cf02cf14959620fc"
+        "912d686231cfe14b"
       ],
       "members": [
         {
-          "title": "山西省医疗保障局 关于转发《国家医疗保障局关于试行高水平新技术新产品医疗服务价格项目预立项制度的通知》的通知",
-          "url": "https://ybj.shanxi.gov.cn/xxfb/xxgkml/202610/t20261026_10244637.html",
-          "score": 8.0,
-          "reasoning": "国家医保局试行的高水平新技术新产品医疗服务价格项目预立项制度，直接改变创新技术进入医疗服务价格目录的路径与时间节奏，是价格管理机制层面的新安排，属于全行业规则级变化；本条为省级转发，需回溯国家医保局原文进行解读。"
+          "title": "CMS Finalizes Rule to Help More Organs Reach Patients and Strengthen Accountability for Organ Procurement Organizations",
+          "url": "https://www.hhs.gov/press-room/cms-finalizes-rule-organ-procurement-organizations-transplant-accountability.html",
+          "score": 7.0,
+          "reasoning": "CMS 正式发布关于器官获取组织（OPO）问责与监管的最终规则，属联邦医保监管规则变动，影响器官获取与移植链条上的机构准入与考核方式，可作为海外监管规则观察点"
         }
       ],
-      "reasoning": "国家医保局试行的高水平新技术新产品医疗服务价格项目预立项制度，直接改变创新技术进入医疗服务价格目录的路径与时间节奏，是价格管理机制层面的新安排，属于全行业规则级变化；本条为省级转发，需回溯国家医保局原文进行解读。",
+      "reasoning": "CMS 正式发布关于器官获取组织（OPO）问责与监管的最终规则，属联邦医保监管规则变动，影响器官获取与移植链条上的机构准入与考核方式，可作为海外监管规则观察点",
       "verify_todo": [
-        "回溯国家医保局医保发〔2026〕23号原文全文，核对预立项的适用条件、申报流程与时限",
-        "确认该文件的生效日期与是否设过渡期",
-        "核实预立项与现有新增医疗服务价格项目受理流程的衔接或替代关系",
-        "确认是否另有配套的技术规范或申报指南"
+        "核对最终规则在联邦公报的发布编号与生效日期",
+        "确认OPO考核指标（如捐赠率）的具体调整内容",
+        "确认是否设有过渡期或分阶段实施安排"
       ],
       "flags": [
-        "formal",
-        "national",
-        "price"
+        "overseas",
+        "formal"
       ]
     },
     {

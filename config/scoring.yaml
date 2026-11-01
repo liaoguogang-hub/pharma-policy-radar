@@ -66,6 +66,9 @@ score:
     min_policy_level: 2.5
     min_force: 1.5
     reason: 部委级正式文件保底
+    # 海外（FDA/EMA/HHS/CMS）政策类文件达到这个分数就保底占 1 个名额
+    # （用户 2026-11-01：「FDA 可以把评分 7 分就放行」；同分时 FDA 优先）
+    overseas_threshold: 7.0
 
 # 硬性排除（标题命中即在预筛阶段丢弃）
 #

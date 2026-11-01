@@ -389,6 +389,53 @@ def run(date: str | None = None) -> dict:
             plan.append(_single_entry(by_ch[ch].pop(0)))
             last_ch = ch
 
+    # ---- 4.6) 海外（FDA 等）7 分保底放行 ----
+    #
+    # 用户 2026-11-01 定：「FDA 可以把评分 7 分就放行」。
+    # 意思是海外国家级政策文件只要有 7.0 分，就至少占 1 个名额，
+    # 不因为国内当天有更高分的条目而被挤掉（中国为主，但海外重点每天要有）。
+    if plan:
+        has_global = any(_channel(p) == "global" for p in plan)
+        if not has_global:
+            chosen = set()
+            for p in plan:
+                chosen.update(p.get("member_ids") or [p.get("lead_id") or ""])
+            glob = [s for s in pool
+                    if _channel(s) == "global"
+                    and (s.get("id") or "")[:8] not in posted
+                    and (s.get("id") or "")[:8] not in chosen]
+            # 同分时 FDA 优先（用户点名「FDA 7 分就放行」）
+            def _global_rank(x):
+                srcs = " ".join(x.get("sources") or [])
+                return (float(x.get("score") or 0),
+                        1 if "fda" in srcs.lower() else 0,
+                        _evidence(x))
+            glob.sort(key=_global_rank, reverse=True)
+            overseas_thr = float(fb_cfg.get("overseas_threshold", 7.0))
+            if not glob:
+                print("[select] 🌍 无海外候选（可能当天海外没出稿或都被写成稿了）")
+            elif float(glob[0].get("score") or 0) < overseas_thr:
+                print(f"[select] 🌍 海外最高 {glob[0].get('score')} 分 < {overseas_thr}，不保底")
+            if glob and float(glob[0].get("score") or 0) >= overseas_thr:
+                best = glob[0]
+                if len(plan) < dmax:
+                    plan.append(_single_entry(best))
+                    print(f"[select] 🌍 海外 {overseas_thr} 分保底：追加 "
+                          f"{best.get('score')} 分 {best.get('title', '')[:40]}")
+                else:
+                    # 挤掉分数最低的国内【单篇】（不动同簇综述）
+                    # 单篇 = members 只有 1 个（综述才有多个 member）
+                    idxs = [i for i, p in enumerate(plan)
+                            if _channel(p) == "china"
+                            and len(p.get("members") or []) <= 1]
+                    if idxs:
+                        i = min(idxs, key=lambda j: float(plan[j].get("score") or 0))
+                        dropped = plan[i]
+                        plan[i] = _single_entry(best)
+                        print(f"[select] 🌍 海外 {overseas_thr} 分保底：用 "
+                              f"{best.get('score')} 分海外替代 {dropped.get('score')} 分国内"
+                              f"（{dropped.get('title', '')[:28]} → {best.get('title', '')[:28]}）")
+
     # ---- 5) 政策保底：一条都没达标时，部委级正式文件放行 1 篇 ----
     if not plan and fb_cfg.get("enabled", True):
         cands: list[dict] = []
