@@ -1,0 +1,130 @@
+{
+  "date": "2026-11-03",
+  "count": 4,
+  "plan": [
+    {
+      "type": "policy_readout",
+      "cluster_key": "policy:抗肿瘤药物后线数据前线试验指导原则",
+      "channel": "china",
+      "lead_id": "7c8bae49360af24e",
+      "title": "国家药监局药审中心关于发布《抗肿瘤药物基于后线研究数据开展前线适应症临床试验技术指导原则》的通告（2026年第48号）",
+      "score": 7.5,
+      "member_ids": [
+        "7c8bae49360af24e"
+      ],
+      "members": [
+        {
+          "title": "国家药监局药审中心关于发布《抗肿瘤药物基于后线研究数据开展前线适应症临床试验技术指导原则》的通告（2026年第48号）",
+          "url": "https://www.cde.org.cn/main/news/viewInfoCommon/e50c89621a69b8bffeaf90977d836f17",
+          "score": 7.5,
+          "reasoning": "药审中心发布并施行面向抗肿瘤药物研发的技术指导原则，涉及特定研发场景下的试验设计证据要求，对相关临床试验方案和审评沟通具有直接指导意义。"
+        }
+      ],
+      "reasoning": "药审中心发布并施行面向抗肿瘤药物研发的技术指导原则，涉及特定研发场景下的试验设计证据要求，对相关临床试验方案和审评沟通具有直接指导意义。",
+      "verify_todo": [
+        "核对2026年第48号通告及指导原则全文",
+        "确认适用药物类别、后线数据来源和前线适应证范围",
+        "梳理试验设计、统计分析和审评申报的具体技术要求",
+        "核实是否存在适用过渡安排或配套问答文件"
+      ],
+      "flags": [
+        "formal",
+        "national",
+        "approval",
+        "effective"
+      ]
+    },
+    {
+      "type": "policy_readout",
+      "cluster_key": "policy:医疗服务价格项目预立项",
+      "channel": "china",
+      "lead_id": "cf02cf14959620fc",
+      "title": "山西省医疗保障局 关于转发《国家医疗保障局关于试行高水平新技术新产品医疗服务价格项目预立项制度的通知》的通知",
+      "score": 7.4,
+      "member_ids": [
+        "cf02cf14959620fc"
+      ],
+      "members": [
+        {
+          "title": "山西省医疗保障局 关于转发《国家医疗保障局关于试行高水平新技术新产品医疗服务价格项目预立项制度的通知》的通知",
+          "url": "https://ybj.shanxi.gov.cn/xxfb/xxgkml/202610/t20261026_10244637.html",
+          "score": 7.4,
+          "reasoning": "涉及国家医保层面的医疗服务价格项目预立项制度，并出现省级医保部门转发落地安排，关系到创新医疗技术价格形成与临床转化衔接，具有较高的制度解读价值。"
+        }
+      ],
+      "reasoning": "涉及国家医保层面的医疗服务价格项目预立项制度，并出现省级医保部门转发落地安排，关系到创新医疗技术价格形成与临床转化衔接，具有较高的制度解读价值。",
+      "verify_todo": [
+        "核对国家医保局医保发〔2026〕23号原文、施行日期及配套附件",
+        "确认预立项制度的适用项目、申报程序和价格管理要求",
+        "比较山西转发通知与国家文件是否存在执行口径差异",
+        "核实其他省市是否已同步转发或出台落地文件"
+      ],
+      "flags": [
+        "formal",
+        "national",
+        "local",
+        "price"
+      ]
+    },
+    {
+      "type": "policy_readout",
+      "cluster_key": "policy:国家药品集采-中选信息变更",
+      "channel": "china",
+      "lead_id": "5fcdd683d9e2a570",
+      "title": "关于国家组织药品集中带量采购中选产品信息变更工作的公告",
+      "score": 7.0,
+      "member_ids": [
+        "5fcdd683d9e2a570"
+      ],
+      "members": [
+        {
+          "title": "关于国家组织药品集中带量采购中选产品信息变更工作的公告",
+          "url": "https://www.smpaa.cn/gjsdcg/2026/10/23/25518.shtml",
+          "score": 7.0,
+          "reasoning": "国家组织药品集采的中选信息变更规则涉及中选资格维持、持有人和生产主体变更、规格增补等核心操作环节，值得梳理规则变化及其对中选企业和医疗机构采购执行的影响。"
+        }
+      ],
+      "reasoning": "国家组织药品集采的中选信息变更规则涉及中选资格维持、持有人和生产主体变更、规格增补等核心操作环节，值得梳理规则变化及其对中选企业和医疗机构采购执行的影响。",
+      "verify_todo": [
+        "核对公告适用批次、申请截止日期及后续办理流程",
+        "确认中选信息变更后协议、平台状态和采购量的具体衔接方式",
+        "核实该公告是否设置正式生效日期或另附操作指南"
+      ],
+      "flags": [
+        "formal",
+        "national",
+        "procurement"
+      ]
+    },
+    {
+      "type": "policy_readout",
+      "cluster_key": "policy:hhs-section-504-gender-dysphoria",
+      "channel": "global",
+      "lead_id": "ebaca3acc30dd192",
+      "title": "HHS Final Rule Amends Section 504 Regulations to Codify Statutory Exclusions from the Definition of Disability",
+      "score": 9.0,
+      "member_ids": [
+        "ebaca3acc30dd192"
+      ],
+      "members": [
+        {
+          "title": "HHS Final Rule Amends Section 504 Regulations to Codify Statutory Exclusions from the Definition of Disability",
+          "url": "https://www.hhs.gov/press-room/hhs-finalizes-section-504-rule-gender-dysphoria-disability.html",
+          "score": 9.0,
+          "reasoning": "HHS发布涉及联邦残障法监管定义的最终规则，可能影响医疗服务提供方适用反歧视义务及与残障人士相关的服务安排，属于影响范围较广的正式政策。"
+        }
+      ],
+      "reasoning": "HHS发布涉及联邦残障法监管定义的最终规则，可能影响医疗服务提供方适用反歧视义务及与残障人士相关的服务安排，属于影响范围较广的正式政策。",
+      "verify_todo": [
+        "核对最终规则文本、Federal Register引文及正式生效日期",
+        "确认规则适用的医疗服务和联邦资助项目范围",
+        "梳理其与既有Section 504规则、法院判决及后续执行指引的关系",
+        "核实是否存在过渡条款、合规要求或配套问答"
+      ],
+      "flags": [
+        "formal",
+        "overseas"
+      ]
+    }
+  ]
+}

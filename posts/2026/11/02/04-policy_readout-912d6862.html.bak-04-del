@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CMS器官获取组织最终规则落地：高绩效机构可竞标多个服务区，低绩效机构面临加速退出</title>
+<style>
+:root{--bg:#fff;--soft:#f7f7f5;--ink:#1a1a1a;--ink2:#4a4a4a;--faint:#8a8a8a;--rule:#e6e6e3;--bronze:#9c6b3c;--deep:#6b4a2a;--red:#a93226;--green:#4a7c4e;--amber:#f5ecd9;--rose:#f7e8e6;--mint:#e8f0e6;--serif:"Noto Serif SC",Georgia,"Songti SC",serif;--mono:"JetBrains Mono",Menlo,monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--serif);font-size:16px;line-height:1.9;color:var(--ink);background:var(--bg)}
+.wrap{max-width:780px;margin:0 auto;padding:60px 24px 90px}
+p{margin-bottom:18px;text-align:justify}
+.kicker{font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--bronze);margin-bottom:12px}
+h1{font-size:clamp(25px,3.6vw,34px);font-weight:700;color:var(--red);line-height:1.35;margin-bottom:14px}
+.sub{font-size:15px;color:var(--ink2);margin-bottom:34px;font-style:italic}
+h2{font-size:21px;font-weight:600;color:var(--deep);margin:44px 0 16px;padding-top:12px;border-top:1px solid var(--rule)}
+h2 .n{color:var(--red);font-family:var(--mono);font-size:15px;margin-right:9px}
+h3{font-size:17px;font-weight:600;margin:26px 0 10px}
+.hook{background:var(--red);color:#fff;padding:26px 30px;margin:22px 0 32px;font-size:18px;line-height:1.75}
+.hook strong{color:#ffd166}
+.box{background:var(--soft);border:1px solid var(--rule);padding:15px 19px;margin:20px 0;font-size:14px;color:var(--ink2)}
+.box b{color:var(--deep)}
+.box p{margin-bottom:8px;text-align:left}
+.w{background:var(--amber);border-left:3px solid #b88a3e}
+.g{background:var(--mint);border-left:3px solid var(--green)}
+.r{background:var(--rose);border-left:3px solid var(--red)}
+table{width:100%;border-collapse:collapse;margin:20px 0;font-size:13px}
+th{background:var(--deep);color:#fff;text-align:left;padding:9px 11px;font-weight:600;font-size:12.5px}
+td{padding:9px 11px;border-bottom:1px solid var(--rule);vertical-align:top}
+tbody tr:nth-child(even){background:var(--soft)}
+.m{font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:12.5px}
+.hl{color:var(--red);font-weight:700}
+.foot{font-size:12px;color:var(--faint);margin-top:7px}
+strong{font-weight:700}
+ul{margin:12px 0 18px 24px}
+li{margin-bottom:8px}
+.fn{font-size:12px;color:var(--faint);margin-top:38px;line-height:1.8;text-align:left}
+.end{background:var(--deep);color:#fff;padding:24px 28px;margin:40px 0 22px}
+.end h4{font-size:18px;font-weight:600;margin-bottom:8px}
+@media(max-width:720px){.wrap{padding:30px 16px 60px}}
+</style>
+</head>
+<body>
+<article class="wrap">
+<div class="kicker">Policy Readout｜器官移植</div>
+<h1>CMS器官获取组织最终规则落地：高绩效机构可竞标多个服务区，低绩效机构面临加速退出</h1>
+<p class="sub">新规把竞争、接管过渡、不安全医疗行为处置和研究用器官统计纳入同一套问责框架。</p>
+<div class="hook">2026年10月30日，美国卫生与公众服务部（HHS）通过医疗保险与医疗补助服务中心（CMS）发布消息，宣布已经敲定针对器官获取组织的最终规则。最反常识的变化是，表现突出的OPO未来可以竞争多个器官捐赠服务区，同时，仅用于胰岛细胞研究的胰腺不再被计入移植率，CMS的绩效分数将更直接地反映真正进入患者体内的器官数量。</div>
+<h2><span class="n">01</span>文件要素与基本框架</h2>
+<p>这是一份已经定稿的全国性监管规则，不是征求意见稿。HHS新闻稿将其称为“final rule”，调整对象是 Organ Procurement Organizations，即器官获取组织。OPO连接捐献医院与移植项目，负责取得捐献授权、摘取器官并协调安全、及时转运和移植。</p>
+<p>文件意在同时处理三类问题。第一，器官捐赠资源如何在不同OPO之间分配。第二，OPO接管一个服务区时怎样维持服务连续性。第三，CMS如何识别不安全做法，并通过取消认证、听证和申诉程序追究责任。</p>
+<p>| 文件要素 | 已确认内容 | 适用对象与范围 |</p>
+<p>|---|---|---|</p>
+<p>| 发文机关 | HHS下属CMS | 在美国开展器官获取业务的OPO及其管理者 |</p>
+<p>| 文号 | 本次检索到的材料未载明 | 联邦公报正式文本的文号仍需核对 |</p>
+<p>| 发布日期 | 2026年10月30日，HHS发布最终规则消息 | 全国性规则 |</p>
+<p>| 生效日期 | 本次检索到的材料未找到公开数据 | 应以联邦公报最终文本为准 |</p>
+<p>| 适用对象 | 器官获取组织、医疗负责人、接管方与被接管方 | 涉及认证、绩效、接管、质量管理和申诉 |</p>
+<p>| 关键动作 | 允许高绩效OPO竞标多个服务区；明确取消认证路径；规范接管过渡；调整研究用胰腺统计 | OPO服务区分配、绩效评价和监管处置 |</p>
+<p>文件还在既有制度上继续推进。HHS称，该规则承接2019年美国行政命令以及HHS《Kidney Care National Plan》的器官移植改革方向。CMS称，2020年OPO规则建立透明、可靠的绩效指标，并推动开放服务区竞争。新规没有从零搭建监管体系，主要改动集中在竞争边界、绩效计算、接管程序和问责路径。</p>
+<p>文件明写，2025年美国完成超过49,000例移植，同时仍有超过100,000名患者等待挽救生命的移植。HHS还称，自2020年规则实施以来，全国器官捐赠量增长36%，移植量增长30%，最低绩效OPO数量持续下降。这些数据是HHS和CMS用于说明改革背景的成绩指标，不能直接等同于本次新规则单独造成的效果。</p>
+<h2><span class="n">02</span>七项关键条款拆解</h2>
+<h3>高绩效OPO可竞争多个服务区</h3>
+<p>文件明写，最终规则允许高绩效OPO竞争多个捐赠服务区。原有的服务区安排因此不再只以单一区域为基础。CMS希望把更多服务区交给有较好运行记录的机构，以减少低绩效机构长期控制区域资源的局面。</p>
+<p>分析来看，真正变化在“竞争资格与资源配置”。OPO不再只是等待CMS重新划定或指定服务区。高绩效记录将成为参与更多服务区竞争的重要条件。OPO能否扩大业务范围，还要结合其实际绩效、认证状态以及后续竞争程序判断，不能理解为一次扩区审批。</p>
+<h3>接管必须提交过渡计划</h3>
+<p>文件明写，当一个OPO接手另一个OPO原有服务区时，原OPO必须配合，新的OPO必须提交过渡计划，并持续提供进展更新。规则将“交出”从服务区终点改造成一段必须管理的业务过程。</p>
+<p>分析的重点落在器官能否连续流转。捐献授权、供者信息交接、器官获取、跨机构运输和移植协调必须衔接。新规则没有在新闻稿中列出固定的过渡天数，也没有规定未提交计划时的具体处罚。其执行尺度仍需结合最终规则正文和后续程序判断。</p>
+<h3>不安全医疗行为触发立即取消认证路径</h3>
+<p>文件明写，规则定义了“不安全医疗实践”，用于明确CMS何时可以依据现有权限立即取消不合规OPO的认证，以保护患者。CMS不需要只依赖一般性的持续整改程序，在符合相关条件时可以直接采取认证处置。</p>
+<p>分析显示，这项条款把监管关注点前移。OPO如果出现严重且持续的不安全做法，可能更快面临认证资格丧失。新闻稿未披露“不安全医疗实践”的完整认定清单，也未给出对应处罚表。是否达到立即取消认证标准，要看最终规则中的定义、事实认定和程序要求。</p>
+<h3>研究用胰腺改按研究用途记录</h3>
+<p>文件明写，供者胰腺如果仅被摘取用于胰岛细胞研究，仍可计入OPO的捐赠率。但如果该胰腺没有进入移植，就不再计入移植率。OPO还必须跟踪并记录送往研究用途的器官去向。</p>
+<p>这项调整会改变CMS计算OPO绩效时采用的分子和分母。器官被用于研究，不等于器官移植给患者。过去容易出现“已取得胰腺”与“患者实际获得移植”混在一起的情况。新规把捐献取得、器官用途和临床移植拆开统计，使绩效分数更接近患者实际获得的移植结果。</p>
+<h3>医疗负责人必须持有服务地区牌照</h3>
+<p>文件明写，OPO医疗负责人至少要持有其服务的一个州或地区的执业许可。地方牌照原本属于人员资质要求，新规则把它写得更明确。</p>
+<p>分析来看，这会直接影响OPO管理层配置。医疗负责人跨州提供服务时，需要证明其许可至少覆盖一个实际服务地区。OPO在人员招聘、继任安排和覆盖多个服务区时，必须把这一条件纳入管理。规则未在新闻稿中规定由哪一级部门核验，也没有披露过渡安排。</p>
+<h3>取消认证、听证与申诉路径更清楚</h3>
+<p>文件明写，CMS明确列出可以取消OPO认证的情形。最终规则还把CMS Administrator对听证官决定进行自由裁量复核的程序写入规则，并更新申诉时限。</p>
+<p>这组条款把“发现违规—作出决定—申请复核”的路径进一步制度化。分析上，减少程序空白有利于降低监管处置的不确定性。对OPO而言，有利之处是处理路径更可预期；压力则在于出现严重合规问题时，申诉不再是无限延期的缓冲。最终时限和文书要求应以联邦公报文本为准。</p>
+<h3>取消历史认证年限限制</h3>
+<p>文件明写，规则删除了一项将认证资格限于在2002年至2005年间完成再认证OPO的限制。该限制取消后，符合其他条件的OPO不再受这一历史年份门槛约束。</p>
+<p>这项修改与多服务区竞争相互关联。CMS希望更多具备能力的OPO进入竞争和服务区调整程序。分析上，认证年限门槛移除，释放的是准入空间，并不会自动给任何OPO增加服务区。最终业务变化仍取决于绩效表现、认证结果和后续资源配置。</p>
+<h2><span class="n">03</span>谁受影响，变化怎样传导</h2>
+<p>对OPO而言，影响最直接。高绩效机构可能获得更广的服务区竞争机会，业务规模和跨区域协调能力的重要性上升。医疗负责人牌照、过渡计划、器官去向记录和申诉时限，也都转化为日常治理要求。管理规范、记录完整且能够稳定运行的OPO，更容易证明自身具备扩大服务范围的能力。</p>
+<p>对医疗机构而言，规则把OPO治理与捐献医院的运行安全连接起来。捐献医院需要与OPO保持顺畅协作。OPO接管服务区时，交接不再只是机构之间的行政手续，也可能影响捐献机会识别、器官转运和移植项目衔接。但本次材料没有要求医院承担新的报告义务，也没有改变医院原有的移植准入条件。</p>
+<p>对移植项目而言，器官用途记录变得更清楚。尤其是胰岛细胞研究用胰腺，将与临床移植分开统计。移植项目获得什么样的绩效数据，取决于OPO对研究器官的获取、转运、用途和最终去向留下完整记录。规则未对移植项目设置新的直接义务。</p>
+<p>对等待移植的患者而言，潜在受益来自OPO绩效计算方式的调整。研究用胰腺不再被当作已经完成的临床移植，有助于CMS把考核重点放到器官是否真正进入患者体内。服务区竞争也可能提高高绩效OPO覆盖能力。不过，实际等待时间能否缩短，还受供者数量、匹配、跨区域运输和其他临床因素影响。本次材料没有提供患者等待时间变化数据。</p>
+<p>BOX g: 受益方 | 高绩效且合规记录稳定的OPO将获得更清晰的多服务区竞争通道；规则对研究用器官与临床移植的区分，也有利于提高绩效指标的可解释性。</p>
+<p>BOX r: 承压方 | 存在不安全医疗行为、记录缺陷或接管准备不足的OPO，将面对更明确的认证风险。风险程度仍取决于最终规则中的认定条件和程序。</p>
+<p>BOX w: 口径提示 | 允许高绩效OPO参与多个服务区竞争，不等于已经完成扩区。服务区归属仍受竞争结果、认证状态和CMS配置程序约束。</p>
+<h2><span class="n">04</span>还没确定的关键问题</h2>
+<p>第一，正式法律信息仍需补齐。本次素材确认HHS于2026年10月30日发布最终规则消息，并提供了联邦公报公共检视版PDF入口，但未载明正式文号、联邦公报刊登日期和生效日期。正文多处安排不能只依据新闻稿推定，应以联邦公报最终文本为准。</p>
+<p>第二，具体执行尺度没有在新闻稿中展开。规则定义了不安全医疗实践，也明确取消认证路径，但材料未给出全部认定因素。接管过渡计划应包含哪些内容、多久提交一次进展更新、研究器官记录采用什么字段，也没有公开披露。CMS后续操作文件和表单可能进一步补足这些细节。</p>
+<p>第三，申诉与复核时限不能自行换算。新闻稿只说规则更新了申诉时限，没有列出具体天数。医疗负责人牌照要求也没有在材料中说明宽限期、跨州核验方式或替代安排。分析这些问题时，不能把政策方向写成已经发生的监管结果。</p>
+<p>第四，效果评估仍需要连续数据。HHS公布的捐赠量增长36%、移植量增长30%，反映的是2020年规则以来的总体变化。新规实施后的绩效、服务区重新配置和患者结局，需要新的公开数据才能判断。本次检索到的材料中，未见针对本次最终规则的基线数据和量化目标。</p>
+<h2><span class="n">05</span>接下来看什么</h2>
+<p>未来12至18个月，观察重点应放在正式文本落地后的服务区竞争安排。CMS如何认定“高绩效”，哪些OPO因此获得新的竞争资格，原服务区如何重新划分，是直接影响资源配置的第一组问题。</p>
+<p>第二组关注点是OPO接管。CMS是否发布过渡计划模板、进展更新频率和跨机构协作要求，将决定这项条款能否转化为稳定运行。研究器官记录是否形成统一口径，也会影响捐赠率、移植率和机构排名的可比性。</p>
+<p>第三组关注取消认证与申诉实践。首批“不安全医疗实践”处置、标准听证和Administrator复核案件，能够反映新规则的实际力度。公开材料若能公布申请数量、处理时限和申诉结果，才更适合评估监管效果。</p>
+<p>第四组是绩效数据是否更能反映患者获益。若研究用胰腺被排除出移植率，OPO排名的计算基础将发生变化。CMS后续是否公开新口径下的机构绩效、服务区分布和等待者数据，将决定外界能否看清规则带来的实际改变。</p>
+<div class="end"><h4>规则真正的杠杆在绩效与资源配置相连</h4><p>这份最终规则并未把重点放在扩大器官总量，而是让高绩效OPO获得更多服务区竞争机会，同时把不安全做法、接管失灵和记录缺失接入取消认证路径。规则能否推动患者更快获得器官，最终要看服务区如何重新分配，以及CMS是否用连续、公开的数据检验绩效和问责是否同时生效。</p></div>
+<p class="fn"><strong>来源与核查口径：</strong><br>
+1. 美国卫生与公众服务部HHS新闻稿《CMS Finalizes Rule to Help More Organs Reach Patients and Strengthen Accountability for Organ Procurement Organizations》，2026年10月30日发布，官方原文。<br>
+2. 美国联邦公报公共检视版最终规则PDF，入口标识为2026-22381，官方原文；本次素材未提供正式文号、刊登日期和生效日期。<br>
+3. CMS新闻资料页《Medicare, Medicaid Programs; Organ Procurement Organizations: Conditions for Coverage; Revisions to Conditions》，官方通知及官方解读入口。</p>
+</article>
+</body>
+</html>
