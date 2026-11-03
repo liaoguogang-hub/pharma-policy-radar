@@ -1,0 +1,132 @@
+{
+  "date": "2026-11-04",
+  "count": 4,
+  "plan": [
+    {
+      "type": "policy_readout",
+      "cluster_key": "policy:广东长期护理保险经办规程",
+      "channel": "china",
+      "lead_id": "64900bf5fcbd51f7",
+      "title": "广东省医疗保障局关于印发《广东省长期护理保险经办规程》的通知",
+      "score": 6.8,
+      "member_ids": [
+        "64900bf5fcbd51f7"
+      ],
+      "members": [
+        {
+          "title": "广东省医疗保障局关于印发《广东省长期护理保险经办规程》的通知",
+          "url": "http://hsa.gd.gov.cn/zwdt/snkb/content/post_4972566.html",
+          "score": 6.8,
+          "reasoning": "省级长期护理保险经办规程涉及经办职责、支付边界、服务管理及争议处理，是观察长期护理保险从原则安排走向具体经办的重要样本，值得拆解制度工具和落地边界。"
+        }
+      ],
+      "reasoning": "省级长期护理保险经办规程涉及经办职责、支付边界、服务管理及争议处理，是观察长期护理保险从原则安排走向具体经办的重要样本，值得拆解制度工具和落地边界。",
+      "verify_todo": [
+        "核对文号、成文日期、发布日期及明确生效日期",
+        "确认规程与国家长期护理保险经办规程及财务管理办法的衔接关系",
+        "梳理经办主体、基金支付范围、失能评估和服务项目目录等关键条款"
+      ],
+      "flags": [
+        "formal",
+        "local",
+        "reimbursement",
+        "price"
+      ]
+    },
+    {
+      "type": "policy_readout",
+      "cluster_key": "policy:医保支持基层医疗卫生服务-湖南",
+      "channel": "china",
+      "lead_id": "25ccaa1e49739264",
+      "title": "关于贯彻落实国家《关于医保支持基层医疗卫生服务发展的指导意见》的通知",
+      "score": 6.8,
+      "member_ids": [
+        "25ccaa1e49739264"
+      ],
+      "members": [
+        {
+          "title": "关于贯彻落实国家《关于医保支持基层医疗卫生服务发展的指导意见》的通知",
+          "url": "https://ybj.hunan.gov.cn/ybj/first113541/firstF/f2113606/202610/t20261028_34089741.html",
+          "score": 6.8,
+          "reasoning": "国家医保支持基层医疗卫生服务指导意见的省级落地涉及基金配置、总额管理、支付方式和基层机构激励，是观察医保支付如何影响分级诊疗的重要样本。"
+        }
+      ],
+      "reasoning": "国家医保支持基层医疗卫生服务指导意见的省级落地涉及基金配置、总额管理、支付方式和基层机构激励，是观察医保支付如何影响分级诊疗的重要样本。",
+      "verify_todo": [
+        "核对完整文号、联合发文形式及生效安排",
+        "对照国家医保发〔2026〕7号逐条核实地方新增或细化的措施",
+        "核实基层基金倾斜比例、总额管理及付费方式的具体指标"
+      ],
+      "flags": [
+        "formal",
+        "local",
+        "reimbursement",
+        "price"
+      ]
+    },
+    {
+      "type": "policy_readout",
+      "cluster_key": "policy:四川-1类创新药临床试验财政补助",
+      "channel": "china",
+      "lead_id": "cd39767db3eda385",
+      "title": "四川省卫生健康委员会 四川省财政厅 四川省药品监督管理局关于印发《四川省...",
+      "score": 6.6,
+      "member_ids": [
+        "cd39767db3eda385"
+      ],
+      "members": [
+        {
+          "title": "四川省卫生健康委员会 四川省财政厅 四川省药品监督管理局关于印发《四川省...",
+          "url": "https://wsjkw.sc.gov.cn/scwsjkw/xzgfxwj/2026/10/30/c26c7c8e25be4dbb8f473c0d54ef4a1f.shtml",
+          "score": 6.6,
+          "reasoning": "省卫健委牵头、财政厅与省药监局会签，出台1类创新药临床试验财政专项补助方案，属于以财政资金直接激励创新药临床研发的地方产业政策，且覆盖研发终止情形，具备明确报道价值"
+        }
+      ],
+      "reasoning": "省卫健委牵头、财政厅与省药监局会签，出台1类创新药临床试验财政专项补助方案，属于以财政资金直接激励创新药临床研发的地方产业政策，且覆盖研发终止情形，具备明确报道价值",
+      "verify_todo": [
+        "核对补助范围、标准上限、申报批次与资金来源",
+        "确认与省政府办公厅既有生物医药政策措施的衔接关系",
+        "确认文件的执行时间与负责部门",
+        "确认“1类创新药”的认定口径是否限定国家药监局分类"
+      ],
+      "flags": [
+        "formal",
+        "local",
+        "industry",
+        "effective"
+      ]
+    },
+    {
+      "type": "policy_readout",
+      "cluster_key": "policy:fda-cgt-potency-quality-guidance",
+      "channel": "global",
+      "lead_id": "b059cc5a8f5649e8",
+      "title": "FDA Provides Clarity to Support Cell and Gene Therapy Development and Quality",
+      "score": 7.5,
+      "member_ids": [
+        "b059cc5a8f5649e8"
+      ],
+      "members": [
+        {
+          "title": "FDA Provides Clarity to Support Cell and Gene Therapy Development and Quality",
+          "url": "http://www.fda.gov/news-events/press-announcements/fda-provides-clarity-support-cell-and-gene-therapy-development-and-quality",
+          "score": 7.5,
+          "reasoning": "FDA针对细胞与基因治疗产品发布最终指南，覆盖研发生产中的关键质量控制环节，虽集中于特定治疗品类，但可能影响相关企业的技术路径与合规准备。"
+        }
+      ],
+      "reasoning": "FDA针对细胞与基因治疗产品发布最终指南，覆盖研发生产中的关键质量控制环节，虽集中于特定治疗品类，但可能影响相关企业的技术路径与合规准备。",
+      "verify_todo": [
+        "核对FDA最终指南的正式标题、发布日期及适用产品范围",
+        "确认效价标准的具体要求、提交时点及与既有指南的衔接安排",
+        "核实指南是否设置生效日期或过渡期"
+      ],
+      "flags": [
+        "formal",
+        "national",
+        "overseas",
+        "approval",
+        "industry"
+      ]
+    }
+  ]
+}

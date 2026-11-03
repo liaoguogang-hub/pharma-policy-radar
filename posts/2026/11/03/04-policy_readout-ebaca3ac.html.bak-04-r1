@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HHS最终规则明确：非由身体损伤导致的性别焦虑不纳入Section 504残障定义</title>
+<style>
+:root{--bg:#fff;--soft:#f7f7f5;--ink:#1a1a1a;--ink2:#4a4a4a;--faint:#8a8a8a;--rule:#e6e6e3;--bronze:#9c6b3c;--deep:#6b4a2a;--red:#a93226;--green:#4a7c4e;--amber:#f5ecd9;--rose:#f7e8e6;--mint:#e8f0e6;--serif:"Noto Serif SC",Georgia,"Songti SC",serif;--mono:"JetBrains Mono",Menlo,monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--serif);font-size:16px;line-height:1.9;color:var(--ink);background:var(--bg)}
+.wrap{max-width:780px;margin:0 auto;padding:60px 24px 90px}
+p{margin-bottom:18px;text-align:justify}
+.kicker{font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--bronze);margin-bottom:12px}
+h1{font-size:clamp(25px,3.6vw,34px);font-weight:700;color:var(--red);line-height:1.35;margin-bottom:14px}
+.sub{font-size:15px;color:var(--ink2);margin-bottom:34px;font-style:italic}
+h2{font-size:21px;font-weight:600;color:var(--deep);margin:44px 0 16px;padding-top:12px;border-top:1px solid var(--rule)}
+h2 .n{color:var(--red);font-family:var(--mono);font-size:15px;margin-right:9px}
+h3{font-size:17px;font-weight:600;margin:26px 0 10px}
+.hook{background:var(--red);color:#fff;padding:26px 30px;margin:22px 0 32px;font-size:18px;line-height:1.75}
+.hook strong{color:#ffd166}
+.box{background:var(--soft);border:1px solid var(--rule);padding:15px 19px;margin:20px 0;font-size:14px;color:var(--ink2)}
+.box b{color:var(--deep)}
+.box p{margin-bottom:8px;text-align:left}
+.w{background:var(--amber);border-left:3px solid #b88a3e}
+.g{background:var(--mint);border-left:3px solid var(--green)}
+.r{background:var(--rose);border-left:3px solid var(--red)}
+table{width:100%;border-collapse:collapse;margin:20px 0;font-size:13px}
+th{background:var(--deep);color:#fff;text-align:left;padding:9px 11px;font-weight:600;font-size:12.5px}
+td{padding:9px 11px;border-bottom:1px solid var(--rule);vertical-align:top}
+tbody tr:nth-child(even){background:var(--soft)}
+.m{font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:12.5px}
+.hl{color:var(--red);font-weight:700}
+.foot{font-size:12px;color:var(--faint);margin-top:7px}
+strong{font-weight:700}
+ul{margin:12px 0 18px 24px}
+li{margin-bottom:8px}
+.fn{font-size:12px;color:var(--faint);margin-top:38px;line-height:1.8;text-align:left}
+.end{background:var(--deep);color:#fff;padding:24px 28px;margin:40px 0 22px}
+.end h4{font-size:18px;font-weight:600;margin-bottom:8px}
+@media(max-width:720px){.wrap{padding:30px 16px 60px}}
+</style>
+</head>
+<body>
+<article class="wrap">
+<div class="kicker">Policy Readout｜美国残障合规</div>
+<h1>HHS最终规则明确：非由身体损伤导致的性别焦虑不纳入Section 504残障定义</h1>
+<p class="sub">新规改写HHS联邦资助项目的残障认定边界，并回应2024年规则留下的解释争议。</p>
+<div class="hook">2026年10月30日，美国卫生与公众服务部（HHS）民事权利办公室（OCR）发布最终规则，明确“不由身体损伤导致的性别焦虑”不属于《1973年康复法》第504条所称的残障。该规则适用于所有接受HHS联邦资金的项目和活动，核心变化集中在Section 504残障定义中的一项法定排除。</div>
+<h2><span class="n">01</span>最终规则改了什么</h2>
+<p>HHS OCR于2026年10月30日发布最终规则，正式文件名称为“HHS Final Rule Amends Section 504 Regulations to Codify Statutory Exclusions from the Definition of Disability”。规则修改HHS执行的45 C.F.R. § 84.4(g)，把国会写入法律的排除项纳入HHS关于残障及“残障个人”的定义。</p>
+<p>HHS称，国会制定相关法律时排除了若干情形，其中包括不由身体损伤导致的性别身份障碍。此次规则明确，不由身体损伤导致的性别焦虑属于这些法定排除，因而在HHS依据Section 504执行的残障定义中不属于残障。</p>
+<p>此次修订回应了2024年最终规则留下的解释问题。HHS表示，2024年最终规则的序言曾暗示性别焦虑可能构成残障，而规章本身对该问题保持沉默。2025年4月，HHS在《联邦公报》发布通知，强调规章序言本身不具有法律效力，并指出当时的规章未处理性别焦虑问题。</p>
+<p>本次最终规则通过修改45 C.F.R. § 84.4(g)，把相关法定排除写入规章正文。HHS将其概括为四项目标：更新Section 504规章，识别国会排除的情形；明确不由身体损伤导致的性别焦虑被排除在保障范围之外；澄清接受HHS资助的组织所承担的现有义务；以及使HHS实施规章与法律文本保持一致。</p>
+<table><thead><tr><th>政策要素</th><th>本次确认内容</th><th>尚未披露或适用边界</th></tr></thead><tbody><tr><td>发文机关</td><td>HHS Office for Civil Rights</td><td>负责执行HHS资助项目中的Section 504义务</td></tr><tr><td>文件性质</td><td>最终规则，2026年10月30日发布</td><td>已进入正式发布阶段，不是征求意见稿</td></tr><tr><td>拟议规则发布日期</td><td>2025年12月19日</td><td>征求意见阶段共收到超过380份意见</td></tr><tr><td>规章修改位置</td><td>45 C.F.R. § 84.4(g)</td><td>增加法定排除，并明确性别焦虑的处理口径</td></tr><tr><td>生效日期</td><td>新闻稿提供《联邦公报》正式规则链接</td><td>具体规则安排以正式规则文本为准</td></tr><tr><td>适用范围</td><td>所有接受HHS联邦资金的项目和活动</td><td>OCR投诉渠道覆盖HHS直接运营或由HHS提供联邦资助的项目和活动</td></tr><tr><td>关键内容</td><td>非由身体损伤导致的性别焦虑不构成Section 504意义上的残障</td><td>第504条禁止残障歧视的义务继续适用</td></tr></tbody></table>
+<p>BOX w：HHS确认最终规则已经发布，并在新闻稿中链接了《联邦公报》正式规则。规则的正式文本可通过该链接查阅。</p>
+<h2><span class="n">02</span>四项关键条款分别怎么改</h2>
+<p>第一项修改，是把国会写入法律的排除项正式放进HHS规章。HHS称，国会在制定相关法律时排除了若干情形，其中包括不由身体损伤导致的性别身份障碍。本次规则将这些法定排除加入Section 504残障定义，并明确指出：不由身体损伤导致的性别焦虑 falls within the exclusions。</p>
+<p>第二项修改，处理2024年规则序言与规章正文之间的关系。HHS表示，2024年最终规则的序言曾留下性别焦虑可能构成残障的暗示，但规章本身没有处理该问题。2025年《联邦公报》通知已经说明，序言没有法律效力，规章也未就性别焦虑作出规定。此次最终规则把法定排除加入45 C.F.R. § 84.4(g)，从而在规章层面明确其处理口径。</p>
+<p>第三项修改，是保留“不由身体损伤导致”这一条件。HHS在规则目标与说明中均使用这一表述，最终规则确认被排除的是不由身体损伤导致的性别焦虑。新闻稿同时说明，接受HHS资助的项目和活动原有Section 504责任仍然存在，OCR负责执行禁止基于残障歧视的要求。</p>
+<p>第四项修改，是继续执行受资助机构原有的残障反歧视义务。HHS称，本次澄清旨在确认接受联邦资助的组织需要遵循法定残障定义。OCR负责执行Section 504，禁止接受联邦财政援助的项目和活动基于残障歧视个人。个人如果认为自己或他人遭受了残障歧视，可以向OCR提出投诉。</p>
+<p>从规则覆盖范围看，HHS的表述是“所有接受HHS资金的项目和活动”。这一范围对应HHS联邦资助形成的项目与活动关系。OCR的投诉说明进一步区分了两类情形：由HHS直接运营的项目和活动，以及由HHS提供联邦资助的项目和活动。</p>
+<p>BOX g：Section 504的既有反歧视义务继续适用。本次修订将国会写入法律的法定排除明确纳入45 C.F.R. § 84.4(g)，接受HHS资助的项目和活动仍受第504条禁止残障歧视的约束。</p>
+<h2><span class="n">03</span>哪些主体与事项进入规则范围</h2>
+<h3>接受HHS资助的项目和活动</h3>
+<p>规则适用于所有接受HHS联邦资金的项目和活动。因此，判断某项活动是否落入本次规则范围，首先要确认它是否接受HHS资助。</p>
+<p>对这类项目与活动而言，变化发生在Section 504所使用的残障定义。HHS称，接受HHS资助的组织需要遵循国会确立的定义；本次规则通过修改45 C.F.R. § 84.4(g)，把相关法定排除加入HHS实施规章。原有反歧视责任没有消失，OCR仍负责执行Section 504。</p>
+<p>HHS还在征求意见阶段收到来自医疗服务提供方的意见。提交意见的主体还包括个人、教育机构、残障权益组织、信仰组织、专业协会、州政府和国会议员。OCR审阅了全部意见，并在最终规则前言中回应意见提出的主要问题。</p>
+<h3>意见提交者与联邦资助体系中的其他主体</h3>
+<p>征求意见期间，HHS收到超过380份意见，来源包括个人、医疗服务提供方、教育机构、残障权益组织、信仰组织、专业协会、州政府和国会议员。OCR审阅了全部意见，并在最终规则前言中回应意见提出的主要问题。</p>
+<p>HHS将规则目标之一表述为澄清接受HHS资助组织的现有义务，另项目标是使HHS实施规章与国会写入法律的排除项保持一致。</p>
+<h3>患者、残障个人与投诉渠道</h3>
+<p>本次修订改变的是一种具体状况进入Section 504残障定义的范围。HHS确认，在不由身体损伤导致的性别焦虑被排除后，相关个人不能仅凭这一状况主张自己在HHS资助项目中取得第504条残障保护。与此同时，第504条对符合残障定义的其他个人继续提供保护。</p>
+<p>个人或他人如果认为在HHS直接运营或由HHS提供联邦资助的项目和活动中遭受歧视，可以向OCR提出投诉。OCR负责执行Section 504所禁止的残障歧视要求。除残障外，OCR还执行基于种族、肤色、原国籍、年龄、性别、宗教信仰及信仰自由行使的平权保护。</p>
+<p>BOX r：本次规则将法定排除写入Section 504残障定义。HHS OCR继续执行残障、年龄、性别、宗教信仰、种族、肤色、原国籍及信仰自由行使等领域的平权保护。</p>
+<h2><span class="n">04</span>最终规则确认了哪些执行信息</h2>
+<p>第一，最终规则已经发布。HHS新闻稿明确标注发布日期为2026年10月30日，并在新闻稿末尾提供《联邦公报》正式规则链接。读者可通过该链接查阅最终规则文本。</p>
+<p>第二，“不由身体损伤导致”是最终规则明确保留的限定。HHS在规则目标和说明中均使用这一表述，规则目标之一是明确该类性别焦虑属于法定排除。HHS特别说明，本次澄清虽然只影响一项条款，但承担多个目标，其中包括更新残障定义、确认被排除的情形以及澄清受资助组织的现有义务。</p>
+<p>第三，本次规则处理了2024年规章与2025年《联邦公报》通知之间的解释问题。HHS称，2024年最终规则序言曾暗示性别焦虑可能构成残障，但规章本身对此保持沉默；2025年通知则强调序言没有法律效力，规章未处理性别焦虑。2026年最终规则通过修改45 C.F.R. § 84.4(g)，把相关法定排除纳入规章正文。</p>
+<p>第四，投诉与执法渠道保持明确。个人或他人如认为在HHS直接运营或由HHS提供联邦资助的项目和活动中遭受歧视，可以向OCR提出投诉。Section 504适用于接受联邦财政援助的项目和活动，OCR负责执行禁止基于残障歧视的要求。</p>
+<p>第五，行政政策背景也被纳入HHS的规则说明。HHS称，本次规则与Executive Order 14168保持一致，并与Executive Order 14219所列放松监管议程一致。HHS部长Robert F. Kennedy Jr.在宣布拟议规则时表示，国会已经界定哪些状况获得联邦残障法保护，HHS有责任按照法律文本执行；本次最终规则的目的，是让HHS依据法定文本管理Section 504。</p>
+<p>BOX w：可以确认的内容包括最终规则的发布日期、45 C.F.R. § 84.4(g)的修改、法定排除的适用条件，以及规则覆盖所有接受HHS联邦资金的项目和活动。新闻稿同时提供了《联邦公报》正式规则的查阅入口。</p>
+<div class="end"><h4>| 最终规则把一项法定排除写入HHS规章正文</h4><p>这项规则明确，不由身体损伤导致的性别焦虑不构成Section 504意义上的残障。接受HHS联邦资金的项目和活动仍继续承担既有的反歧视义务，OCR投诉渠道保持开放。</p></div>
+<p class="fn"><strong>来源与核查口径：</strong><br>
+1. 来源性质：HHS官方新闻稿，标题为“HHS Final Rule Amends Section 504 Regulations to Codify Statutory Exclusions from the Definition of Disability”，发布日期及最后修订日期均为2026年10月30日。文中有关发布机关、发布日期、规则性质、修改条款、适用对象、意见数量、规则目标及OCR投诉渠道的信息据此整理。<br>
+2. 来源性质：HHS官方新闻稿所链接的《联邦公报》最终规则文件。正式规则文本及其所列规则信息以该文件为准。</p>
+</article>
+</body>
+</html>

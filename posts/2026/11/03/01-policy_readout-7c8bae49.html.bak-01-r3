@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>后线数据用于前线试验，药审中心第48号通告发布技术指导原则</title>
+<style>
+:root{--bg:#fff;--soft:#f7f7f5;--ink:#1a1a1a;--ink2:#4a4a4a;--faint:#8a8a8a;--rule:#e6e6e3;--bronze:#9c6b3c;--deep:#6b4a2a;--red:#a93226;--green:#4a7c4e;--amber:#f5ecd9;--rose:#f7e8e6;--mint:#e8f0e6;--serif:"Noto Serif SC",Georgia,"Songti SC",serif;--mono:"JetBrains Mono",Menlo,monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--serif);font-size:16px;line-height:1.9;color:var(--ink);background:var(--bg)}
+.wrap{max-width:780px;margin:0 auto;padding:60px 24px 90px}
+p{margin-bottom:18px;text-align:justify}
+.kicker{font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--bronze);margin-bottom:12px}
+h1{font-size:clamp(25px,3.6vw,34px);font-weight:700;color:var(--red);line-height:1.35;margin-bottom:14px}
+.sub{font-size:15px;color:var(--ink2);margin-bottom:34px;font-style:italic}
+h2{font-size:21px;font-weight:600;color:var(--deep);margin:44px 0 16px;padding-top:12px;border-top:1px solid var(--rule)}
+h2 .n{color:var(--red);font-family:var(--mono);font-size:15px;margin-right:9px}
+h3{font-size:17px;font-weight:600;margin:26px 0 10px}
+.hook{background:var(--red);color:#fff;padding:26px 30px;margin:22px 0 32px;font-size:18px;line-height:1.75}
+.hook strong{color:#ffd166}
+.box{background:var(--soft);border:1px solid var(--rule);padding:15px 19px;margin:20px 0;font-size:14px;color:var(--ink2)}
+.box b{color:var(--deep)}
+.box p{margin-bottom:8px;text-align:left}
+.w{background:var(--amber);border-left:3px solid #b88a3e}
+.g{background:var(--mint);border-left:3px solid var(--green)}
+.r{background:var(--rose);border-left:3px solid var(--red)}
+table{width:100%;border-collapse:collapse;margin:20px 0;font-size:13px}
+th{background:var(--deep);color:#fff;text-align:left;padding:9px 11px;font-weight:600;font-size:12.5px}
+td{padding:9px 11px;border-bottom:1px solid var(--rule);vertical-align:top}
+tbody tr:nth-child(even){background:var(--soft)}
+.m{font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:12.5px}
+.hl{color:var(--red);font-weight:700}
+.foot{font-size:12px;color:var(--faint);margin-top:7px}
+strong{font-weight:700}
+ul{margin:12px 0 18px 24px}
+li{margin-bottom:8px}
+.fn{font-size:12px;color:var(--faint);margin-top:38px;line-height:1.8;text-align:left}
+.end{background:var(--deep);color:#fff;padding:24px 28px;margin:40px 0 22px}
+.end h4{font-size:18px;font-weight:600;margin-bottom:8px}
+@media(max-width:720px){.wrap{padding:30px 16px 60px}}
+</style>
+</head>
+<body>
+<article class="wrap">
+<div class="kicker">Policy Readout｜抗肿瘤临床研发</div>
+<h1>后线数据用于前线试验，药审中心第48号通告发布技术指导原则</h1>
+<p class="sub">《抗肿瘤药物基于后线研究数据开展前线适应症临床试验技术指导原则》自2026年10月23日起施行</p>
+<div class="hook">2026年10月23日，国家药品监督管理局药品审评中心发布2026年第48号通告，正式发布《抗肿瘤药物基于后线研究数据开展前线适应症临床试验技术指导原则》。通告明确了制定目的、发布程序与施行时间，并在正文中援引“见附件”，页面“相关附件”列出对应PDF文件。</div>
+<h2><span class="n">01</span>通告确认了什么</h2>
+<p>通告正文首先说明，制定该指导原则，是为了“在保障患者安全、确保试验设计科学严谨的前提下，稳健且高效地推动抗肿瘤药物临床研发向前线阶段推进”，并“为相关临床研发场景提供可参考的技术规范”。</p>
+<p>这段表述包含四项明确信息：文件面向抗肿瘤药物临床研发；关注点包括临床研发向前线阶段推进；患者安全和试验设计科学严谨被置于前提位置；文件为相关临床研发场景提供可参考的技术规范。</p>
+<p>通告随后载明，经国家药品监督管理局审查同意，现予发布，自发布之日起施行。正文在文件名称后标注“见附件”，官方页面的“相关附件”栏同时列出《抗肿瘤药物基于后线研究数据开展前线适应症临床试验技术指导原则.pdf》。</p>
+<table><thead><tr><th>发文机关</th><th>通告编号</th><th>发布日期</th><th>施行日期</th><th>适用对象</th><th>关键表述</th></tr></thead><tbody><tr><td>国家药品监督管理局药品审评中心</td><td>2026年第48号</td><td>2026年10月23日</td><td>自发布之日起施行</td><td>抗肿瘤药物基于后线研究数据开展前线适应症临床试验的相关临床研发场景</td><td>保障患者安全、确保试验设计科学严谨；推动相关研发向前线阶段推进；提供可参考的技术规范</td></tr></tbody></table>
+<p>从通告原文看，发布信息由几个相互衔接的部分构成：药审中心组织制定相关指导原则，经国家药品监督管理局审查同意后发布，并以“自发布之日起施行”明确效力时间。通告名称、制定目的、审查程序、施行时间和附件指向均可在官方页面直接对应。</p>
+<h2><span class="n">02</span>文件题名界定了研发场景</h2>
+<p>指导原则题名包含四个连续要素：研究对象是抗肿瘤药物；已有研究数据属于后线研究数据；拟开展的临床试验对应前线适应症；文件性质为技术指导原则。这四个要素共同构成通告所指向的研发场景。</p>
+<p>其中，“基于后线研究数据”是研究数据的来源设定，“开展前线适应症临床试验”是拟开展的研究活动，“技术指导原则”则是药审中心发布的技术文件。题名把药物类别、研究数据所处阶段、拟申请适应症所处阶段和文件性质连接在同一表述之中。</p>
+<p>与题名相呼应，通告正文把政策目的写成“推动抗肿瘤药物临床研发向前线阶段推进”。原文使用的是“向前线阶段推进”，并没有在通告层面列出某一具体药品、疾病或试验方案。文件为相关研发场景提供技术规范参考，适用方式仍落在具体临床研发场景之中。</p>
+<p>这也是理解该文件时应把握的制度特点。题名明确“后线研究数据”与“前线适应症临床试验”之间的对应关系，通告正文则明确文件服务于抗肿瘤药物临床研发向前线阶段推进。题名回答的是研究场景问题，通告正文回答的是制定目的与文件性质问题。</p>
+<h2><span class="n">03</span>“可参考的技术规范”如何理解</h2>
+<p>通告对文件性质给出了直接表述：“为相关临床研发场景提供可参考的技术规范”。其中，“相关临床研发场景”承接指导原则题名，“可参考的技术规范”界定文件用途。</p>
+<p>这项表述首先强调技术规范属性。文件名称使用“指导原则”，通告正文使用“技术规范”，二者都指向抗肿瘤药物临床研发活动中的专业指引。“可参考”则是原文对使用方式的限定词，读者应保留这一定语，不宜把指导原则直接等同于对所有项目都适用的固定方案。</p>
+<p>其次，这项表述保留了具体研发中的判断空间。临床试验涉及的数据、方案与评价内容，需要结合具体研发内容形成。指导原则提供技术参考，相关项目则围绕自身研发内容落实相应要求。文件名称中的两个研究要素——后线研究数据与前线适应症临床试验——因此构成规范适用时的场景关系。</p>
+<p>再次，通告把“保障患者安全”和“确保试验设计科学严谨”放在制定目的的前部，随后提出“稳健且高效地推动抗肿瘤药物临床研发向前线阶段推进”。这组原文同时呈现安全性、科学严谨性与研发推进效率三个关键词，其关系不是相互割裂的目标，而是同一项政策表述中的不同层次。</p>
+<h2><span class="n">04</span>发布程序与效力时间</h2>
+<p>通告的发布程序写得清楚：国家药品监督管理局药品审评中心组织制定指导原则，经国家药品监督管理局审查同意后予以发布，并以“自发布之日起施行”明确效力时间。</p>
+<p>发布日期为2026年10月23日，施行表述同样是“自发布之日起施行”。因此，这份文件的明确时间信息是：2026年第48号通告于2026年10月23日发布，指导原则自发布之日起施行。通告日期与文件落款日期一致，均为2026年10月23日。</p>
+<p>发布机关、制定方式和审查程序也在正文中得到确认。药审中心负责组织制定，国家药品监督管理局审查同意，文件随后以通告形式发布。通告末尾另列“特此通告”，并附上文件名称和落款。</p>
+<p>官方页面同时列出相关附件，即《抗肿瘤药物基于后线研究数据开展前线适应症临床试验技术指导原则.pdf》。页面阅读路径因此较为清楚：通告正文给出制定目的、组织制定与审查同意程序、发布日期、施行方式及附件指向，相关附件栏则呈现对应文件名称。</p>
+<h2><span class="n">05</span>阅读这份文件时的信息层次</h2>
+<p>第一层是标题信息。指导原则题名直接呈现抗肿瘤药物、后线研究数据、前线适应症临床试验和技术指导原则四个核心要素。题名本身提供了识别文件适用研发场景的文字依据。</p>
+<p>第二层是目的信息。通告以患者安全和试验设计科学严谨为前提，以稳健且高效地推动相关临床研发向前线阶段推进为目标，并用“为相关临床研发场景提供可参考的技术规范”概括文件用途。</p>
+<p>第三层是程序信息。通告明确了制定机关、审查同意程序、发布日期、施行方式和附件指向。对2026年第48号通告的识别，可以直接对应国家药品监督管理局药品审评中心于2026年10月23日发布的文件及其“自发布之日起施行”的安排。</p>
+<p>第四层是名称信息。通告正文完整写出《抗肿瘤药物基于后线研究数据开展前线适应症临床试验技术指导原则》，页面“相关附件”栏再次列出同名PDF文件。通告标题、正文文件名称和附件名称使用同一表述，便于按完整名称检索和识别。</p>
+<p>把四层信息连起来，通告完成的是一项正式文件发布：它以明确题名界定相关临床研发场景，以原文说明制定目的，以发布和审查程序确认文件状态，并在页面列出对应附件。与题名相呼应的是，后线研究数据与前线适应症临床试验被写入文件名称；与制定目的相呼应的是，患者安全、试验设计科学严谨以及稳健高效地向前线阶段推进被同时列明。</p>
+<h2><span class="n">06</span>通告原文给出了哪些政策信号</h2>
+<p>第一项信号来自制定目的中的前提结构。“在保障患者安全、确保试验设计科学严谨的前提下”限定了政策推进所依托的基础，“稳健且高效地推动”则描述推动方式，“抗肿瘤药物临床研发向前线阶段推进”明确对象与方向。原文将安全性、科学严谨性和推进效率置于同一段目的表述中。</p>
+<p>第二项信号来自文件题名。“后线研究数据”与“前线适应症临床试验”分别标明数据来源和拟开展试验的适应症阶段，“抗肿瘤药物”限定研究对象，“技术指导原则”说明文件属性。题名所对应的研发场景，与通告正文所说的“相关临床研发场景”直接呼应。</p>
+<p>第三项信号来自文件用途。“可参考的技术规范”既指向技术指引属性，也保留具体应用时的参考属性。通告没有在这一表述之外增加其他用途描述，因此阅读时应同时保留“技术规范”和“可参考”两个限定。</p>
+<p>第四项信号来自发布与施行表述。“经国家药品监督管理局审查同意，现予发布，自发布之日起施行”构成完整程序链条，“2026年10月23日”则是通告发布日期、文件落款日期和施行起点所对应的日期。题名、目的、程序与时间共同界定了这份文件的政策信息范围。</p>
+<table><thead><tr><th>政策事项</th><th>通告已明确</th><th>可以作出的政策分析</th><th>本次未找到公开数据</th></tr></thead><tbody><tr><td>文件性质</td><td>以技术指导原则形式发布</td><td>文件面向相关临床研发场景提供可参考的技术规范</td><td>具体技术条款</td></tr><tr><td>研发场景</td><td>后线研究数据与前线适应症临床试验</td><td>题名明确了两类研究内容之间的场景对应关系</td><td>具体数据来源与适用范围</td></tr><tr><td>制定目的</td><td>患者安全、试验设计科学严谨、稳健且高效地向前线阶段推进</td><td>三组关键词共同构成文件的政策表述</td><td>各目的在具体方案中的落实方式</td></tr><tr><td>发布程序</td><td>药审中心组织制定，经国家药品监督管理局审查同意后发布</td><td>通告完整呈现制定、审查与发布关系</td><td>后续配套文件安排</td></tr><tr><td>施行时间</td><td>2026年10月23日发布，自发布之日起施行</td><td>发布日与效力起点一致</td><td>已开展项目的适用方式</td></tr></tbody></table>
+<p>BOX w：通告层面可以确认的信息包括发布机关、通告编号、发布日期、施行时间、制定目的、文件性质及附件指向。</p>
+<p>BOX g：文件发布信息由三项核心内容组成：2026年10月23日正式发布；经国家药品监督管理局审查同意；自发布之日起施行。</p>
+<p>BOX r：阅读时应区分通告正文的发布信息与技术指导原则的具体内容，并以官方页面列出的同名文件为阅读对象。</p>
+<div class="end"><h4>一份正式发布的临床研发技术指导原则</h4><p>2026年第48号通告确认了文件名称、制定目的、发布程序和施行时间。它把后线研究数据与前线适应症临床试验写入同一研发场景，并以患者安全、试验设计科学严谨和稳健高效推进作为指导原则的明确表述。</p></div>
+<p class="fn"><strong>来源与核查口径：</strong><br>
+1. 国家药品监督管理局药品审评中心官网，《国家药监局药审中心关于发布〈抗肿瘤药物基于后线研究数据开展前线适应症临床试验技术指导原则〉的通告》（2026年第48号），官方原文，发布日期为2026年10月23日：https://www.cde.org.cn/main/news/viewInfoCommon/e50c89621a69b8bffeaf90977d836f17<br>
+2. 上述官方页面“相关附件”栏，《抗肿瘤药物基于后线研究数据开展前线适应症临床试验技术指导原则.pdf》，官方附件名称。</p>
+</article>
+</body>
+</html>
