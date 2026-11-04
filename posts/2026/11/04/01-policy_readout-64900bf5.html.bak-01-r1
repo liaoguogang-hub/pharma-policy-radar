@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>广东印发长期护理保险经办规程：评估、定点、支付与争议处理有了操作框架</title>
+<style>
+:root{--bg:#fff;--soft:#f7f7f5;--ink:#1a1a1a;--ink2:#4a4a4a;--faint:#8a8a8a;--rule:#e6e6e3;--bronze:#9c6b3c;--deep:#6b4a2a;--red:#a93226;--green:#4a7c4e;--amber:#f5ecd9;--rose:#f7e8e6;--mint:#e8f0e6;--serif:"Noto Serif SC",Georgia,"Songti SC",serif;--mono:"JetBrains Mono",Menlo,monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--serif);font-size:16px;line-height:1.9;color:var(--ink);background:var(--bg)}
+.wrap{max-width:780px;margin:0 auto;padding:60px 24px 90px}
+p{margin-bottom:18px;text-align:justify}
+.kicker{font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--bronze);margin-bottom:12px}
+h1{font-size:clamp(25px,3.6vw,34px);font-weight:700;color:var(--red);line-height:1.35;margin-bottom:14px}
+.sub{font-size:15px;color:var(--ink2);margin-bottom:34px;font-style:italic}
+h2{font-size:21px;font-weight:600;color:var(--deep);margin:44px 0 16px;padding-top:12px;border-top:1px solid var(--rule)}
+h2 .n{color:var(--red);font-family:var(--mono);font-size:15px;margin-right:9px}
+h3{font-size:17px;font-weight:600;margin:26px 0 10px}
+.hook{background:var(--red);color:#fff;padding:26px 30px;margin:22px 0 32px;font-size:18px;line-height:1.75}
+.hook strong{color:#ffd166}
+.box{background:var(--soft);border:1px solid var(--rule);padding:15px 19px;margin:20px 0;font-size:14px;color:var(--ink2)}
+.box b{color:var(--deep)}
+.box p{margin-bottom:8px;text-align:left}
+.w{background:var(--amber);border-left:3px solid #b88a3e}
+.g{background:var(--mint);border-left:3px solid var(--green)}
+.r{background:var(--rose);border-left:3px solid var(--red)}
+table{width:100%;border-collapse:collapse;margin:20px 0;font-size:13px}
+th{background:var(--deep);color:#fff;text-align:left;padding:9px 11px;font-weight:600;font-size:12.5px}
+td{padding:9px 11px;border-bottom:1px solid var(--rule);vertical-align:top}
+tbody tr:nth-child(even){background:var(--soft)}
+.m{font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:12.5px}
+.hl{color:var(--red);font-weight:700}
+.foot{font-size:12px;color:var(--faint);margin-top:7px}
+strong{font-weight:700}
+ul{margin:12px 0 18px 24px}
+li{margin-bottom:8px}
+.fn{font-size:12px;color:var(--faint);margin-top:38px;line-height:1.8;text-align:left}
+.end{background:var(--deep);color:#fff;padding:24px 28px;margin:40px 0 22px}
+.end h4{font-size:18px;font-weight:600;margin-bottom:8px}
+@media(max-width:720px){.wrap{padding:30px 16px 60px}}
+</style>
+</head>
+<body>
+<article class="wrap">
+<div class="kicker">Policy Readout｜长期护理保险</div>
+<h1>广东印发长期护理保险经办规程：评估、定点、支付与争议处理有了操作框架</h1>
+<p class="sub">这份文件把长护险从待遇原则进一步落到经办流程，并明确政府经办与第三方服务之间的边界。</p>
+<div class="hook">2026年10月27日，广东省医疗保障局官网发布《广东省长期护理保险经办规程》，文件落款日期为2026年10月26日。最反常识的变化是，第三方机构可以广泛参与申请审核、评估和费用初审，但医保经办机构仍是责任主体；长护服务机构即使由商业保险公司或第三方运营，也不能同时承担失能评估和医保经办。</div>
+<h2><span class="n">01</span>文件说了什么：广东开始统一长护险经办流程</h2>
+<p>2026年10月26日，广东省医疗保障局印发《广东省长期护理保险经办规程》，文号为<strong>粤医保规〔2026〕4号</strong>。10月27日，广东省医疗保障局官网公开通知全文。文件依据国家长期护理保险制度相关政策制定，适用于已经实施长期护理保险制度的统筹区。</p>
+<p><strong>文件明写</strong>，各地级以上市医疗保障经办机构可以结合当地情况制定本地区规程或实施细则。地方权限主要集中在定点管理、核查考核、费用审核结算、信息系统建设，以及对商保公司等第三方机构的管理。</p>
+<p>文件建立了一套完整经办链条。申请失能评估后，进入现场评估、结论确认、复评和动态评估。待遇启动后，由长护专员衔接评估结论、护理需求与服务计划，再通过定点机构提供服务。评估机构和长护服务机构实行协议管理，并接受第三方辅助经办。</p>
+<table><thead><tr><th>文件要素</th><th>已公开信息</th></tr></thead><tbody><tr><td>发文机关</td><td>广东省医疗保障局</td></tr><tr><td>文号</td><td>粤医保规〔2026〕4号</td></tr><tr><td>发布日期</td><td>2026年10月27日官网发布；通知落款日期为2026年10月26日</td></tr><tr><td>生效日期</td><td>本次检索到的通知及正文摘录未载明具体施行日期，未找到公开数据</td></tr><tr><td>适用对象</td><td>实施长期护理保险制度的广东各统筹区，以及相关参保人、评估机构、长护服务机构、医保经办机构和第三方机构</td></tr><tr><td>关键条款</td><td>失能评估、护理服务、协议管理、第三方参与、基金支付、争议处理及省内跨市长护</td></tr></tbody></table>
+<p>这份规程没有另起一套待遇规则。它以国家长期护理保险经办规程、基金财务管理办法为基础，着重解决广东落地时的流程和职责问题。文件正文还引用了<strong>医保办发〔2024〕22号</strong>和<strong>财办社〔2026〕8号</strong>。</p>
+<h2><span class="n">02</span>失能评估：拿到评估结论只是待遇起点</h2>
+<p>申请入口采取自愿原则。评估对象本人或其监护人、委托代理人可以提出申请，也可以选择定点长护服务机构代为申请。服务机构代为申请时，要先做初筛，只有初筛符合条件的才可提交。</p>
+<p>申请材料包括有效身份证件或参保凭证、评估申请表，以及与失能相关的住院病历或诊断书等。文件列出不予受理的五类情形，包括未参保、不符合待遇条件、相关护理费用不属于基金支付范围、材料不全或提供虚假材料，以及其他不予受理情形。</p>
+<p><strong>分析来看</strong>，服务入口前移能降低参保人寻找评估机构的成本，但初筛权也交给了服务机构。规程相应设置材料复核、专家确认、结论公示和复评机制，用来控制初筛偏差。不同经办机构还可自行制定实施细则，实际尺度仍需结合地方制度核对。</p>
+<p>现场评估原则上由至少2名评估人员上门，其中至少1名是评估专家。评估结论原则上需要至少2名专家确认。重度失能等级评估结论有效期一般不超过2年。结论达到待遇标准的，公示期不少于3个工作日。</p>
+<p>时限也被写进流程。医保经办机构受理后5个工作日内告知审核结果。评估结论书原则上在申请受理之日起30个工作日内送达。对结论有异议，可在送达之日起5个工作日内申请复评。经办机构受理复评后，应在15个工作日内组织复评。</p>
+<p>复评结果为最终评估结论。复评费用按初评标准收取。原结论与复评结论不一致时，由原定点评估机构支付；结论一致时，由申请复评的评估对象个人承担。</p>
+<h2><span class="n">03</span>护理服务：目录、收费和自主选择被放进同一张清单</h2>
+<p>长护服务机构提供的服务分为居家护理、社区护理和机构护理。居家护理指在参保人住所内提供服务。社区护理以社区为依托，提供就近就便、非全日服务。机构护理则在服务机构内提供全日服务。</p>
+<p><strong>文件明写</strong>，失能评估通过后，参保人或其监护人、委托代理人可以自主选择定点长护服务机构。长护专员结合评估专家提出的护理服务建议，与机构和参保人沟通，形成护理服务计划。计划要明确服务类型、频次、时长和配比。</p>
+<p>服务机构应按计划提供服务，并严格执行长期护理保险服务项目等目录。目录内项目应优先使用。目录外项目同样要落实价格公示和知情同意。提供保险保障范围外的事项，还要事先取得参保人或其监护人、委托代理人的书面同意。</p>
+<p>待遇起算也有明确节点。经申请、评估并达到规定失能等级标准的参保人，<strong>自评估认定次月起</strong>按规定享受长期护理保险待遇。这里区分了“评估通过”和“待遇开始”。评估完成并不等于从申请当月即可领取待遇。</p>
+<p>长护险与基本医保的衔接机制也被写入规程。参保人享受长护服务期间，可以按规定同步享受普通门诊、门诊特定病种相关待遇。住院、急诊留观期间暂停长护险结算，因疾病治疗产生的医疗费用按医保规定结算。</p>
+<p><strong>分析来看</strong>，这些条款把长护险定位为基本医保之外的长期照护支付安排。两者并非简单互相替代。日常照护与疾病治疗在结算场景上被分开，参保人不能一边住院，一边通过长护险结算同一期间的相关费用。</p>
+<h2><span class="n">04</span>定点与第三方：政府担责，社会力量补充具体事务</h2>
+<p>评估机构和长护服务机构实行定点管理。各统筹地区医保经办机构负责确定机构、签订协议并开展管理。经办机构可以结合实际，委托县级或镇、街医保经办机构在辖区内签订协议、管理协议。</p>
+<p>机构申请采取“初审、综合审核、协商谈判、公布名单”的流程。初步审核应在收到申请之日起5个工作日内组织。对材料不全的，要一次性告知补齐事项。综合审核自受理材料之日起不超过3个月，申请机构补充材料的时间不计入审核期限。</p>
+<p>综合审核采取书面查验、现场核查和集体评议等方式。审核小组不少于5人，且人数为单数。合格机构名单公示不少于5个工作日。首次签订协议的，协议期一般为1年。续签后可适当延长，最长不超过3年。</p>
+<p>机构之间实行角色隔离。评估机构不得同时承担依评估结论开展的长期护理服务，也不得承担长护险经办。长护服务机构不得同时开展失能评估，也不得承担医保经办。这条限制针对的是同一机构同时占据多个关键环节。</p>
+<p>第三方机构可通过公开招标等方式参与。协助事项包括政策宣传、投诉举报线索受理、申请受理与材料审核、失能评估、护理需求评估、服务计划形成、定点机构审核、费用初审、日常检查、复评、重新评估、信息系统运用和档案管理。</p>
+<p><strong>文件明写</strong>，第三方是经办服务的延伸和补充，医保经办机构仍是责任主体。第三方服务费从长护险基金中支付。合同履行和服务质量接受考核，考核结果与经办服务费支付、合同续签及参与资格挂钩。</p>
+<p><strong>分析来看</strong>，广东允许第三方进入较深的业务环节，但保留了政府责任主体和协议管理主线。对保险公司等市场主体来说，这提供了参与经办服务的机会。对参保人来说，能否形成稳定服务供给，取决于公开选择程序、协议条款和实际考核结果。</p>
+<h2><span class="n">05</span>还没确定什么：地方细则和跨市安排仍需落地</h2>
+<p>本次检索到的官方正文摘录截至第三十一条“探索建立省内跨市长护……”处。后续跨市长护的具体办法未完整呈现，因此不能据此确认异地申请、异地评估、备案、结算或待遇衔接规则。相关执行口径仍需以完整文件和地方配套文件为准。</p>
+<p>文件没有在已检索内容中列明统一的长护险护理服务项目目录、具体价格和支付标准。相关要求是严格执行当地长期护理保险服务项目等目录。目录内容、支付标准和价格形成方式，需要由各统筹区进一步明确。</p>
+<p>规程还允许各地制定本地区规程或实施细则。申请受理渠道、第三方服务费核定、协议管理细则、长护专员管理、机构空间布局等，都可能存在地方差异。<strong>分析来看</strong>，这有利于适配人口规模和经办能力，也会带来跨市经办口径不完全一致的问题。</p>
+<p>具体施行日期在本次检索到的通知和正文摘录中未载明，未找到公开数据。文件的罚款、追回费用、暂停协议等处理方式，也不能仅凭一般性协议管理条款推断。若发生违规行为，具体责任和处置仍应以国家规定、正式协议及配套规则为准。</p>
+<div class="end"><h4>广东长护险进入“流程可操作”阶段</h4><p>这份规程真正的杠杆点，是把失能评估、护理计划、定点服务、协议管理、费用审核和争议处理连成一条经办链。广东由此解决了“谁来办、按什么顺序办、哪些环节可以交给市场”的问题。决定落地速度的，则是各地服务目录、支付标准、第三方费用和跨市安排能否同步明确。</p></div>
+<p class="fn"><strong>来源与核查口径：</strong><br>
+1. 来源说明：广东省医疗保障局官网《广东省医疗保障局关于印发〈广东省长期护理保险经办规程〉的通知》，官方原文，2026年10月27日发布，https://hsa.gd.gov.cn/zwdt/snkb/content/post_4972566.html<br>
+2. 来源说明：文号、落款日期及正文条款依据上述官方原文；国家医保办发〔2024〕22号、财办社〔2026〕8号为原文列明的制度依据。</p>
+</article>
+</body>
+</html>

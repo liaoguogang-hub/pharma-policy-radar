@@ -1,0 +1,70 @@
+[
+  {
+    "ok": true,
+    "needs_review": true,
+    "claim_block": false,
+    "file": "01-policy_readout-217e5d12.html",
+    "stats": {
+      "body_chars": 3712,
+      "sections": 5,
+      "tables": 2,
+      "boxes": 0,
+      "footnotes": 3,
+      "has_hook": true,
+      "has_end": true,
+      "has_title": true
+    },
+    "problems": [
+      "[P1] 公式化递进 1 处（上限 0）：「首先/其次/最后」是报幕式递进。让内容的递进关系自己呈现。"
+    ],
+    "html_len": 8989,
+    "note": "未通过全部质检，已按最优版本落盘，需人工核查",
+    "title": "生物医学新技术临床研究和临床转化应用管理条例",
+    "score": 8.0,
+    "type": "policy_readout"
+  },
+  {
+    "ok": true,
+    "needs_review": true,
+    "claim_block": false,
+    "file": "02-policy_readout-7209d2ce.html",
+    "stats": {
+      "body_chars": 2741,
+      "sections": 5,
+      "tables": 1,
+      "boxes": 0,
+      "footnotes": 2,
+      "has_hook": true,
+      "has_end": false,
+      "has_title": true
+    },
+    "problems": [
+      "素材/正文涉及征求意见阶段，但文中没有明确写「征求意见稿」或「草案」——政策稿必须区分草案与定稿。",
+      "AI味句式: 这意味着",
+      "AI味句式: 真正的",
+      "AI味句式 2 处（真正的, 这意味着）——必须改掉，不是换词而是拆句重写"
+    ],
+    "html_len": 7250,
+    "note": "未通过全部质检，已按最优版本落盘，需人工核查",
+    "title": "川医保规〔2026〕8号 四川省医疗保障局关于印发《四川省定点零售药店职工基本医疗保险个人账户支付白名单（试行）》的通知",
+    "score": 6.8,
+    "type": "policy_readout"
+  },
+  {
+    "ok": false,
+    "error": "- 小节太少（1 个，至少 3 个）\n- 缺少 FN 来源脚注\n- 正文字数 270 超出范围（目标 2250-3900）\n- 表格列数不一致：表头 3 列，有一行 1 列\n\n# ⚠️ AI 味句式（逐句改写，位置已标出）\n- 短句占比 0.0% < 10%（没有呼吸感）\n  改法：把长句用句号断开，超过 45 字的句子拆成两句；一段只说一件事，控制在 90 字内。",
+    "stats": {
+      "body_chars": 270,
+      "sections": 1,
+      "tables": 1,
+      "boxes": 0,
+      "footnotes": 0,
+      "has_hook": true,
+      "has_end": false,
+      "has_title": true
+    },
+    "title": "关于公开征求《新生抗原药品关键问题的技术考虑（征求意见稿）》意见的通知",
+    "score": 6.5,
+    "type": "consultation"
+  }
+]
