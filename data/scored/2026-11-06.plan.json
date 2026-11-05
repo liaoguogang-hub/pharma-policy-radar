@@ -1,0 +1,130 @@
+{
+  "date": "2026-11-06",
+  "count": 4,
+  "plan": [
+    {
+      "type": "policy_readout",
+      "cluster_key": "policy:罕见病目录制订程序-2026",
+      "channel": "china",
+      "lead_id": "389dd9baef19837e",
+      "title": "《关于印发罕见病目录制订工作程序（2026年版）的通知》政策解读",
+      "score": 7.8,
+      "member_ids": [
+        "389dd9baef19837e"
+      ],
+      "members": [
+        {
+          "title": "《关于印发罕见病目录制订工作程序（2026年版）的通知》政策解读",
+          "url": "https://wjw.shanxi.gov.cn/tzgg/zcjd/202611/t20261105_10253655.shtml",
+          "score": 7.8,
+          "reasoning": "该条属于国家卫健委牵头的全国性罕见病目录管理机制调整，并附有官方政策解读，值得追踪其对目录申请、专家审议及支付保障衔接的潜在影响。"
+        }
+      ],
+      "reasoning": "该条属于国家卫健委牵头的全国性罕见病目录管理机制调整，并附有官方政策解读，值得追踪其对目录申请、专家审议及支付保障衔接的潜在影响。",
+      "verify_todo": [
+        "核对《关于印发罕见病目录制订工作程序（2026年版）的通知》原文、文号和施行日期",
+        "确认本次修订相较2018年版的完整条款差异",
+        "核对国家中医药管理局作为联合发文单位的正式署名及职责分工"
+      ],
+      "flags": [
+        "formal",
+        "national",
+        "approval"
+      ]
+    },
+    {
+      "type": "policy_readout",
+      "cluster_key": "policy:四川-职工医保普通门诊统筹待遇",
+      "channel": "china",
+      "lead_id": "7bfa859eb3d829cd",
+      "title": "川医保规〔2026〕7号 四川省医疗保障局 四川省财政厅关于进一步规范职工基本医疗保险普通门诊统筹待遇标准的通知",
+      "score": 6.3,
+      "member_ids": [
+        "7bfa859eb3d829cd"
+      ],
+      "members": [
+        {
+          "title": "川医保规〔2026〕7号 四川省医疗保障局 四川省财政厅关于进一步规范职工基本医疗保险普通门诊统筹待遇标准的通知",
+          "url": "https://ylbzj.sc.gov.cn/scsybj/nc010105/2026/10/30/6bb25afc65c14ae081aaa2798b5a979c.shtml",
+          "score": 6.3,
+          "reasoning": "省级医保部门联合财政部门规范职工医保普通门诊统筹待遇标准，涉及参保人待遇保障、支付层级和医疗机构结算规则，属于对地方医保支付标准有实质影响的正式文件。"
+        }
+      ],
+      "reasoning": "省级医保部门联合财政部门规范职工医保普通门诊统筹待遇标准，涉及参保人待遇保障、支付层级和医疗机构结算规则，属于对地方医保支付标准有实质影响的正式文件。",
+      "verify_todo": [
+        "核对川医保规〔2026〕7号原文、具体待遇标准和生效日期",
+        "确认适用范围、起付线、支付比例及既有待遇政策的衔接方式",
+        "核实是否需要调整信息系统结算参数及定点机构操作流程"
+      ],
+      "flags": [
+        "formal",
+        "local",
+        "price",
+        "reimbursement",
+        "effective"
+      ]
+    },
+    {
+      "type": "policy_readout",
+      "cluster_key": "policy:职工医保个人账户跨省共济-吉林",
+      "channel": "china",
+      "lead_id": "7c99565a8f50528e",
+      "title": "关于印发《吉林省职工基本医疗保险个人账户跨省共济经办规程（试行）》的通知",
+      "score": 6.3,
+      "member_ids": [
+        "7c99565a8f50528e"
+      ],
+      "members": [
+        {
+          "title": "关于印发《吉林省职工基本医疗保险个人账户跨省共济经办规程（试行）》的通知",
+          "url": "https://ybj.jl.gov.cn/ybxw/gsgg/202611/t20261104_9738745.html",
+          "score": 6.3,
+          "reasoning": "该规程属于职工医保个人账户跨省共济的省级落地机制，值得追踪共济范围、办理渠道、额度控制和异地结算流程对参保人及定点机构的影响。"
+        }
+      ],
+      "reasoning": "该规程属于职工医保个人账户跨省共济的省级落地机制，值得追踪共济范围、办理渠道、额度控制和异地结算流程对参保人及定点机构的影响。",
+      "verify_todo": [
+        "核对文件文号、施行日期以及是否废止原有省级经办文件",
+        "梳理共济范围、授权办理、资金划转和跨省结算流程",
+        "确认与国家医保发〔2025〕35号及医保办发〔2026〕8号的差异和衔接口径"
+      ],
+      "flags": [
+        "formal",
+        "effective",
+        "local",
+        "reimbursement"
+      ]
+    },
+    {
+      "type": "policy_readout",
+      "cluster_key": "policy:cms-2027-physician-fee-schedule",
+      "channel": "global",
+      "lead_id": "702e8a44ba935a21",
+      "title": "CMS Finalizes CY 2027 Physician Fee Schedule to Shift from Sick Care to Healthcare and Curb Waste",
+      "score": 8.5,
+      "member_ids": [
+        "702e8a44ba935a21"
+      ],
+      "members": [
+        {
+          "title": "CMS Finalizes CY 2027 Physician Fee Schedule to Shift from Sick Care to Healthcare and Curb Waste",
+          "url": "https://www.hhs.gov/press-room/cms-finalizes-2027-medicare-physician-fee-schedule.html",
+          "score": 8.5,
+          "reasoning": "CMS以最终规则形式调整联邦医疗保险医生费用安排，属于国家级支付政策，涉及医疗服务提供方的收入结构与支付规则，值得系统拆解规则变化及其利益相关方影响。"
+        }
+      ],
+      "reasoning": "CMS以最终规则形式调整联邦医疗保险医生费用安排，属于国家级支付政策，涉及医疗服务提供方的收入结构与支付规则，值得系统拆解规则变化及其利益相关方影响。",
+      "verify_todo": [
+        "核对最终规则对应的CMS规则编号、发布日期和正式生效日期",
+        "核对主要支付结构调整、适用服务范围及过渡或评论期处理情况",
+        "确认最终规则与此前草案相比发生了哪些实质性修改"
+      ],
+      "flags": [
+        "formal",
+        "overseas",
+        "price",
+        "reimbursement"
+      ]
+    }
+  ]
+}
