@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CY 2027美国联邦医疗保险医生费用表定稿：预防照护加码，同日重复计费少付20%</title>
+<style>
+:root{--bg:#fff;--soft:#f7f7f5;--ink:#1a1a1a;--ink2:#4a4a4a;--faint:#8a8a8a;--rule:#e6e6e3;--bronze:#9c6b3c;--deep:#6b4a2a;--red:#a93226;--green:#4a7c4e;--amber:#f5ecd9;--rose:#f7e8e6;--mint:#e8f0e6;--serif:"Noto Serif SC",Georgia,"Songti SC",serif;--mono:"JetBrains Mono",Menlo,monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--serif);font-size:16px;line-height:1.9;color:var(--ink);background:var(--bg)}
+.wrap{max-width:780px;margin:0 auto;padding:60px 24px 90px}
+p{margin-bottom:18px;text-align:justify}
+.kicker{font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--bronze);margin-bottom:12px}
+h1{font-size:clamp(25px,3.6vw,34px);font-weight:700;color:var(--red);line-height:1.35;margin-bottom:14px}
+.sub{font-size:15px;color:var(--ink2);margin-bottom:34px;font-style:italic}
+h2{font-size:21px;font-weight:600;color:var(--deep);margin:44px 0 16px;padding-top:12px;border-top:1px solid var(--rule)}
+h2 .n{color:var(--red);font-family:var(--mono);font-size:15px;margin-right:9px}
+h3{font-size:17px;font-weight:600;margin:26px 0 10px}
+.hook{background:var(--red);color:#fff;padding:26px 30px;margin:22px 0 32px;font-size:18px;line-height:1.75}
+.hook strong{color:#ffd166}
+.box{background:var(--soft);border:1px solid var(--rule);padding:15px 19px;margin:20px 0;font-size:14px;color:var(--ink2)}
+.box b{color:var(--deep)}
+.box p{margin-bottom:8px;text-align:left}
+.w{background:var(--amber);border-left:3px solid #b88a3e}
+.g{background:var(--mint);border-left:3px solid var(--green)}
+.r{background:var(--rose);border-left:3px solid var(--red)}
+table{width:100%;border-collapse:collapse;margin:20px 0;font-size:13px}
+th{background:var(--deep);color:#fff;text-align:left;padding:9px 11px;font-weight:600;font-size:12.5px}
+td{padding:9px 11px;border-bottom:1px solid var(--rule);vertical-align:top}
+tbody tr:nth-child(even){background:var(--soft)}
+.m{font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:12.5px}
+.hl{color:var(--red);font-weight:700}
+.foot{font-size:12px;color:var(--faint);margin-top:7px}
+strong{font-weight:700}
+ul{margin:12px 0 18px 24px}
+li{margin-bottom:8px}
+.fn{font-size:12px;color:var(--faint);margin-top:38px;line-height:1.8;text-align:left}
+.end{background:var(--deep);color:#fff;padding:24px 28px;margin:40px 0 22px}
+.end h4{font-size:18px;font-weight:600;margin-bottom:8px}
+@media(max-width:720px){.wrap{padding:30px 16px 60px}}
+</style>
+</head>
+<body>
+<article class="wrap">
+<div class="kicker">Policy Readout｜美国医保支付</div>
+<h1>CY 2027美国联邦医疗保险医生费用表定稿：预防照护加码，同日重复计费少付20%</h1>
+<p class="sub">CMS把支付重心推向基层医疗、协同照护和质量支付，同时收紧重复计费与异常支付漏洞。</p>
+<div class="hook">2026年11月4日，美国卫生与公众服务部旗下Medicare与Medicaid服务中心（CMS）发布CY 2027联邦医疗保险医生费用表最终规则。最反常识的变化是，这套延续多年的按服务付费规则一边给预防服务、健康管理和共享医疗预约扩容，一边明确患者同一天接受诊室服务和小手术时，较低价服务将被少付20%。</div>
+<h2><span class="n">01</span>文件说了什么</h2>
+<p>CY 2027联邦医疗保险医生费用表最终规则，CMS编号为CMS-1848-F，联邦公报文件编号为2026-22743。CMS通过美国卫生与公众服务部新闻稿公布政策摘要，并将最终规则文本列入《联邦公报》。</p>
+<table><thead><tr><th>发文机关</th><th>文号/文件编号</th><th>发布日期</th><th>生效日期</th><th>适用对象</th><th>关键条款</th></tr></thead><tbody><tr><td>美国CMS</td><td>CMS-1848-F；2026-22743</td><td>2026年11月4日</td><td>2027年1月1日</td><td>联邦医疗保险Part B医生及部分相关医疗服务提供者、ACO、临床医生及参保人</td><td>调整医生费用表、强化质量支付、ACO共享节余、预防服务编码；同日诊室服务与小手术发生时，较低价服务支付减少20%</td></tr></tbody></table>
+<p>规则的总体适用范围覆盖联邦医疗保险Part B下的医生支付政策，也触及质量支付计划、Medicare共享节余计划和替代支付模式。医生费用表自<strong>2027年1月1日</strong>起生效。ACO降低或取消Part B共付费用的安排自<strong>2027年4月1日</strong>起执行，不能与整套规则视为同一天落地。</p>
+<p>文件同时调整了远期质量报告安排。传统基于绩效的激励支付系统（MIPS）将从CY 2031绩效年度开始退出，临床医生有至CY 2030的过渡期，可转向MIPS Value Pathways（MVPs）或Advanced Alternative Payment Models。相较此前提出的方案，最终规则增加了两年过渡时间。</p>
+<p>CMS没有只改一张价格表。医生费用表、质量报告、ACO共享节余和替代支付模式被放进同一套政策框架：临床医生如何报告质量、医疗机构如何组织照护、参保人承担多少费用，都可能受到影响。</p>
+<p>BOX w： | <strong>日期口径</strong> 主规则自2027年1月1日起生效；ACO共付调整自2027年4月1日起；传统MIPS退出从CY 2031绩效年度开始。三个时间点不能混用。</p>
+<h2><span class="n">02</span>四组关键条款拆解</h2>
+<h3>一、同一日诊室服务加小手术，较低价服务减付20%</h3>
+<p>官方新闻稿列出的第一项支付完整性调整，针对患者同一天接受办公室就诊和较小程序的情形。CMS将对其中较低价的服务减少20%的支付。规则给出的理由是，这部分临床工作已经计入较高价服务的资源估值，继续全额支付会形成重复付费。</p>
+<p>这项调整直接改变医生和医疗机构在同一诊疗日拆分计费时的收入。文件明写的是“较低价服务减付20%”，即同日发生办公室就诊和较小程序时，CMS根据两项服务的成本高低，对较低价项目适用20%的减付。</p>
+<h3>二、ACO可降低或取消部分Part B共付</h3>
+<p>从2027年4月1日起，经批准的ACO可以减少或取消其归属参保人多项Part B服务的共付费用。CMS将其列为共享节余计划的一项调整，使参保人直接降低必要照护的即时现金支出。</p>
+<p>CMS同时提高符合条件的ACO共享节余率，为首次参与者增加激励，并提出让支出目标更具可预期性。已公布的绩效数据来自PY 2024：476个参与ACO中，75%获得合计41亿美元共享节余，同时为联邦医疗保险信托基金产生约25亿美元净节余，相对于预计支出基准计算。</p>
+<p>共享节余计划已连续八个绩效年度为联邦医疗保险信托基金产生节余。最终规则在共付政策、参与者激励和支出目标三方面作出调整，并同步简化电子健康记录报告要求、精简患者告知要求、移除过时行政流程。</p>
+<h3>三、传统MIPS退出，但质量报告并未停止</h3>
+<p>最终规则把临床医生从传统MIPS报告选项转入MVPs或Advanced Alternative Payment Models的过渡期延长至CY 2030。CMS称MVPs已覆盖约98%的临床医生，并据此设置从CY 2031绩效年度开始退出传统MIPS的安排。</p>
+<p>同时，规则新增三个MVP，分别聚焦糖尿病、高血压和医院医生，并要求临床医生从CY 2027起至少报告一项与专业相关的“核心指标”。这项变化压缩了继续沿用传统质量报告路径的空间，也把专科差异带进质量考核。</p>
+<h3>四、预防、健康管理和患者共付获得新编码</h3>
+<p>规则新增两个用于预先照护计划（Advance Care Planning）的收费代码，同时落实《-working Families Tax Cuts》立法确立的非公民联邦医疗保险资格标准。CMS还建立“一般监督下健康与福祉辅导”的全国支付路径，为共享医疗预约设置按时间灵活使用的附加代码，并提高戒烟服务和行为健康评估的估值。</p>
+<p>针对接种疫苗后不良反应的诊断、治疗和咨询，CMS最终确定单独计费，以覆盖专门临床时间。这里的变化在于支付项目从笼统服务转向可识别的服务环节，让预防照护、健康辅导、戒烟、行为健康和疫苗不良反应处理拥有更明确的支付路径。</p>
+<p>BOX g： | <strong>受益方向</strong> 预防照护、健康辅导、戒烟、行为健康、预先照护计划以及符合条件ACO的参保人，是本次规则明确扩大的支付和服务方向。</p>
+<h2><span class="n">03</span>谁受影响，怎么影响</h2>
+<h3>医生与医疗机构</h3>
+<p>文件明写，同日诊室服务与小程序同时发生时，较低价服务减付20%。对高频提供门诊服务、附带小操作的机构而言，同日两项服务分别获取全额支付的空间被压缩。20%减付直接作用于两项服务中成本较低的一项。</p>
+<p>另一方面，共享医疗预约、健康与福祉辅导、疫苗不良反应处理、戒烟和行为健康评估获得更清晰的计费入口。医疗机构原本已经提供这些服务时，可以按照新路径识别专门服务环节并提交相应计费代码。</p>
+<p>质量报告路径也同步改变。临床医生需要从CY 2027起报告至少一项专业相关核心指标，并在CY 2030前完成从传统MIPS向MVPs或Advanced Alternative Payment Models的过渡。糖尿病、高血压和医院医生分别进入新的价值路径，专科服务对应的质量指标与持续管理责任更加明确。</p>
+<h3>ACO及其参保人</h3>
+<p>ACO获得三项方向明确的政策支持：可调整部分Part B共付、共享节余率提高、首次参与激励。自2027年4月1日起，经批准的ACO可减少或取消归属参保人多项Part B服务的共付费用，CMS将其描述为直接降低必要照护的即时现金支出。</p>
+<p>共享节余方面，符合条件的ACO获得更高共享节余率，首次参与者获得新增激励，支出目标也更可预期。PY 2024的既有绩效数据显示，476个参与ACO中有75%获得合计41亿美元共享节余，并为联邦医疗保险信托基金产生约25亿美元净节余。</p>
+<p>ACO同时面对新的衔接要求。电子健康记录报告、患者告知和行政流程被简化；医院医生则进入新的医院医生MVP，与共享节余安排及专科质量考核共同作用。</p>
+<h3>患者</h3>
+<p>患者侧最直接的改变有两项。其一，参加合格ACO后，可减少或取消多项Part B服务的共付费用；其二，新增的健康管理、预先照护计划、戒烟、行为健康和疫苗不良反应服务有了更明确的支付路径。</p>
+<p>ACO归属关系和服务范围决定共付调整覆盖到哪些参保人与哪些服务。共享医疗预约按时间使用附加代码，预先照护计划新增两个收费代码，疫苗不良反应相关临床工作则可单独计费。</p>
+<h3>地方主管部门与质量支付体系</h3>
+<p>ACO共付调整自2027年4月1日起执行，需要ACO、参保人和医疗服务提供者同步更新费用告知与支付安排。规则精简电子健康记录报告、患者告知和过时行政流程，也让质量支付体系减少部分重复操作。</p>
+<p>Ambulatory Specialty Model则把专科医生纳入心力衰竭和下背痛两种慢性疾病的长期管理。CMS称该模型于1月1日启动，通过把服务质量与成本责任落到专科医生，减缓疾病进展，并减少可避免住院和低价值操作。</p>
+<h2><span class="n">04</span>落地后的四个观察点</h2>
+<p>第一，20%减付落在同日诊室服务与小手术的价格比较上。医疗机构需要关注两项服务如何识别、较低价项目如何进入支付流程，以及这类调整对高频门诊计费的影响。</p>
+<p>第二，ACO共付安排自2027年4月1日起执行。ACO需要把降低或取消共付的项目落实到归属参保人，同时更新患者告知；共享节余率提高、首次参与激励和支出目标调整也会改变参加质量与成本管理的收益结构。</p>
+<p>第三，质量报告进入新的过渡阶段。临床医生从CY 2027起至少报告一项专业相关核心指标，并在CY 2030前完成向MVPs或Advanced Alternative Payment Models的过渡。三个新增MVP分别覆盖糖尿病、高血压和医院医生。</p>
+<p>第四，支付完整性调整不只针对20%减付。CMS还纠正一项激励支付漏洞，预计将在未来十年避免约23.8亿美元非预期意外支付；医生费用表估值也将根据现代照护的复杂度和资源消耗重新校准。</p>
+<h2><span class="n">05</span>真正的政策杠杆点</h2>
+<p>CMS这次调整的杠杆并不只在某几项服务涨价。质量支付、ACO共付、共享节余和医生费用估值被同时改动，付费方式开始更多要求医疗机构对患者健康结果和连续照护负责。</p>
+<p>变化最直接体现在两处。一是同日诊室服务与小手术的重复计费被压缩20%，直接碰到收入结构；二是传统MIPS将在CY 2031绩效年度退出，临床医生必须转向以专科价值路径或高级替代支付模式为核心的reporting路径。</p>
+<p>ENDCARD | 这次定稿真正改变的是 Medicare 为“谁持续管理患者健康”付钱。20%的重复计费减付是眼前的收入约束，ACO共付和MVP退出机制则把质量、协同照护和成本控制推向医生执业选择的更深处。</p>
+<p class="fn"><strong>来源与核查口径：</strong><br>
+1. 来源说明：美国卫生与公众服务部CMS官方新闻稿《CMS Finalizes CY 2027 Physician Fee Schedule to Shift from Sick Care to Healthcare and Curb Waste》，2026年11月4日发布；来源性质：官方新闻稿。<br>
+2. 来源说明：《联邦公报》CY 2027 Medicare Physician Fee Schedule Final Rule，文件编号2026-22743，CMS-1848-F；来源性质：官方最终规则文本入口。<br>
+3. 来源说明：CMS《Calendar Year CY 2027 Medicare Physician Fee Schedule Final Rule》事实说明及共享节余计划专题材料；来源性质：官方事实说明。</p>
+</article>
+</body>
+</html>

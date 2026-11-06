@@ -1,0 +1,76 @@
+[
+  {
+    "ok": true,
+    "needs_review": true,
+    "claim_block": false,
+    "file": "01-policy_readout-d0546323.html",
+    "stats": {
+      "body_chars": 2090,
+      "sections": 4,
+      "tables": 2,
+      "boxes": 0,
+      "footnotes": 1,
+      "has_hook": true,
+      "has_end": true,
+      "has_title": true
+    },
+    "problems": [
+      "正文字数 2090 超出范围（目标 2250-3900）"
+    ],
+    "html_len": 7267,
+    "note": "未通过全部质检，已按最优版本落盘，需人工核查",
+    "title": "国家医疗保障局关于印发《全民医疗保障“十五五”规划》的通知",
+    "score": 6.5,
+    "type": "policy_readout"
+  },
+  {
+    "ok": true,
+    "needs_review": true,
+    "claim_block": false,
+    "file": "02-policy_readout-a13a8974.html",
+    "stats": {
+      "body_chars": 2960,
+      "sections": 4,
+      "tables": 0,
+      "boxes": 0,
+      "footnotes": 2,
+      "has_hook": true,
+      "has_end": true,
+      "has_title": true
+    },
+    "problems": [
+      "AI味句式: 不是[^。；！？]{0,30}?而是",
+      "AI味句式 1 处（不是…而是）——必须改掉，不是换词而是拆句重写"
+    ],
+    "html_len": 7110,
+    "note": "未通过全部质检，已按最优版本落盘，需人工核查",
+    "title": "国家药监局 海关总署关于增设云南省清水河、猴桥口岸为药材进口边境口岸的公告（2026年第94号）",
+    "score": 6.5,
+    "type": "policy_readout"
+  },
+  {
+    "ok": true,
+    "needs_review": true,
+    "claim_block": false,
+    "file": "03-policy_readout-929c5ea4.html",
+    "stats": {
+      "body_chars": 2549,
+      "sections": 5,
+      "tables": 1,
+      "boxes": 0,
+      "footnotes": 2,
+      "has_hook": true,
+      "has_end": true,
+      "has_title": true
+    },
+    "problems": [
+      "AI味句式: 这意味着",
+      "AI味句式 1 处（这意味着）——必须改掉，不是换词而是拆句重写"
+    ],
+    "html_len": 7304,
+    "note": "未通过全部质检，已按最优版本落盘，需人工核查",
+    "title": "福建省医疗保障局关于规范整合病理类医疗服务价格项目的通知",
+    "score": 6.3,
+    "type": "policy_readout"
+  }
+]
