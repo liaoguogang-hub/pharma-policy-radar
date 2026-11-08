@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>新生抗原药品第一次被单独立规：药审中心挂出征求意见稿，反馈窗口只有1个月</title>
+<style>
+:root{--bg:#fff;--soft:#f7f7f5;--ink:#1a1a1a;--ink2:#4a4a4a;--faint:#8a8a8a;--rule:#e6e6e3;--bronze:#9c6b3c;--deep:#6b4a2a;--red:#a93226;--green:#4a7c4e;--amber:#f5ecd9;--rose:#f7e8e6;--mint:#e8f0e6;--serif:"Noto Serif SC",Georgia,"Songti SC",serif;--mono:"JetBrains Mono",Menlo,monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--serif);font-size:16px;line-height:1.9;color:var(--ink);background:var(--bg)}
+.wrap{max-width:780px;margin:0 auto;padding:60px 24px 90px}
+p{margin-bottom:18px;text-align:justify}
+.kicker{font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--bronze);margin-bottom:12px}
+h1{font-size:clamp(25px,3.6vw,34px);font-weight:700;color:var(--red);line-height:1.35;margin-bottom:14px}
+.sub{font-size:15px;color:var(--ink2);margin-bottom:34px;font-style:italic}
+h2{font-size:21px;font-weight:600;color:var(--deep);margin:44px 0 16px;padding-top:12px;border-top:1px solid var(--rule)}
+h2 .n{color:var(--red);font-family:var(--mono);font-size:15px;margin-right:9px}
+h3{font-size:17px;font-weight:600;margin:26px 0 10px}
+.hook{background:var(--red);color:#fff;padding:26px 30px;margin:22px 0 32px;font-size:18px;line-height:1.75}
+.hook strong{color:#ffd166}
+.box{background:var(--soft);border:1px solid var(--rule);padding:15px 19px;margin:20px 0;font-size:14px;color:var(--ink2)}
+.box b{color:var(--deep)}
+.box p{margin-bottom:8px;text-align:left}
+.w{background:var(--amber);border-left:3px solid #b88a3e}
+.g{background:var(--mint);border-left:3px solid var(--green)}
+.r{background:var(--rose);border-left:3px solid var(--red)}
+table{width:100%;border-collapse:collapse;margin:20px 0;font-size:13px}
+th{background:var(--deep);color:#fff;text-align:left;padding:9px 11px;font-weight:600;font-size:12.5px}
+td{padding:9px 11px;border-bottom:1px solid var(--rule);vertical-align:top}
+tbody tr:nth-child(even){background:var(--soft)}
+.m{font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:12.5px}
+.hl{color:var(--red);font-weight:700}
+.foot{font-size:12px;color:var(--faint);margin-top:7px}
+strong{font-weight:700}
+ul{margin:12px 0 18px 24px}
+li{margin-bottom:8px}
+.fn{font-size:12px;color:var(--faint);margin-top:38px;line-height:1.8;text-align:left}
+.end{background:var(--deep);color:#fff;padding:24px 28px;margin:40px 0 22px}
+.end h4{font-size:18px;font-weight:600;margin-bottom:8px}
+@media(max-width:720px){.wrap{padding:30px 16px 60px}}
+</style>
+</head>
+<body>
+<article class="wrap">
+<div class="kicker">Policy Readout｜前沿疗法</div>
+<h1>新生抗原药品第一次被单独立规：药审中心挂出征求意见稿，反馈窗口只有1个月</h1>
+<p class="sub">《新生抗原药品关键问题的技术考虑（征求意见稿）》2026年10月30日发布，意见反馈时限为自发布之日起1个月。</p>
+<div class="hook">2026年10月30日，国家药品监督管理局药品审评中心官网发布《关于公开征求〈新生抗原药品关键问题的技术考虑（征求意见稿）〉意见的通知》。通知正文原文为：“为规范和指导新生抗原（Neoantigens）药品的研发和注册申报，我中心组织起草了《新生抗原药品关键问题的技术考虑（征求意见稿）》。我们诚挚地欢迎社会各界对征求意见稿提出宝贵意见和建议，并及时反馈给我们，以便后续完善。征求意见时限为自发布之日起1个月。”页面“发布日期”栏标为“20261030”；正文之后是落款单位“国家药品监督管理局药品审评中心”与落款日期“2026年10月30日”；再往下是“相关附件”清单，序号1至3，三份文件的名称都以同一串书名号内的文字开头。</div>
+<h2><span class="n">01</span>通知正文逐句对照</h2>
+<p>通知正文按固定顺序排列：起草目的与起草主体、征集意见、时限、反馈邮箱、致谢，然后是落款单位与日期，最后是“相关附件”清单。这条顺序本身就是一份可以逐句核对的清单，任何一句改了措辞，对着页面就能看出来。</p>
+<p>第一句交代起草目的与起草主体。开头是“为规范和指导”，两个动词并列；对象写作“新生抗原（Neoantigens）药品”，中文名在前，括号内是英文 Neoantigens；环节列了两个，“研发”和“注册申报”并列出现在同一句里。起草主体在正文里写作“我中心”，落款处写的是单位全称“国家药品监督管理局药品审评中心”。</p>
+<p>这一句里的动作是“组织起草了”，宾语是书名号里的《新生抗原药品关键问题的技术考虑（征求意见稿）》。起草由“我中心”发出，起草的对象就是后面挂在附件清单第1项的那份文件。目的写在最前面——“为规范和指导”，这两个动词管的是同一句话里的“研发”与“注册申报”。</p>
+<p>第二句是征集意见的表述，面向社会各界，句末落在“以便后续完善”六个字上。这六个字把这份稿子之后还有修改环节写在了同一句里：现在挂出来的是征求意见稿，不是终稿。</p>
+<p>第三句只有一行，规定征求意见时限自发布之日起1个月，起算点与计量单位都写在这一句里。页面上与“发布”对应的日期有两种写法：一处是“发布日期”栏的“20261030”，一处是落款处的“2026年10月30日”。</p>
+<p>第四句给出反馈渠道，两个邮箱地址并列写在正文里，中间用中文逗号隔开，都跟在“您的反馈意见请发到以下邮箱”之后。正文最后一句是致谢，原文为“感谢您的参与和大力支持。”；致谢之后另起落款单位与日期，落款日期用的是中文年月日写法。</p>
+<p>同一页上的日期因此有两种写法：一处是“20261030”八位连写，一处是“2026年10月30日”。转述时两种写法都出自页面，年份、月份、日子按页面上的数字照抄即可。</p>
+<p>通知标题是“关于公开征求《新生抗原药品关键问题的技术考虑（征求意见稿）》意见的通知”。书名号内的那串文字，与正文第一句引用的文件名称是同一串。</p>
+<table><thead><tr><th>要素</th><th>通知原文表述</th><th>说明</th></tr></thead><tbody><tr><td>起草机关</td><td>国家药品监督管理局药品审评中心</td><td>落款单位；正文自称“我中心”</td></tr><tr><td>文件名称</td><td>《新生抗原药品关键问题的技术考虑（征求意见稿）》</td><td>通知标题书名号内即为此名称</td></tr><tr><td>发布日期</td><td>2026年10月30日</td><td>页面标注“20261030”，落款为中文年月日写法</td></tr><tr><td>反馈时限</td><td>自发布之日起1个月</td><td>通知原文表述</td></tr><tr><td>反馈渠道</td><td>wangx@cde.org.cn、liqian@cde.org.cn</td><td>两个地址并列，中文逗号分隔</td></tr><tr><td>适用对象</td><td>新生抗原（Neoantigens）药品</td><td>通知原文表述</td></tr><tr><td>覆盖环节</td><td>研发、注册申报</td><td>通知原文表述</td></tr><tr><td>文件性质</td><td>征求意见稿</td><td>名称中标注</td></tr></tbody></table>
+<h2><span class="n">02</span>文件名称的构成</h2>
+<p>文件名称是《新生抗原药品关键问题的技术考虑（征求意见稿）》。这串文字在正文第一句里以书名号的形式出现，后面紧接着句号；在通知标题里，它同样被书名号括起，前面是“关于公开征求”，后面是“意见的通知”。</p>
+<p>拆开看，名称由五段组成：新生抗原、药品、关键问题、技术考虑，以及括号里的征求意见稿。正文里这个术语写作“新生抗原（Neoantigens）”，中文名在前，括号内是英文 Neoantigens。</p>
+<p>名称里的“药品”是落脚点。正文的完整表述是“新生抗原（Neoantigens）药品的研发和注册申报”，研发与注册申报两个环节同时挂在这一类药品上，两个环节写在同一句、同一个对象之下。</p>
+<p>“关键问题”与“技术考虑”连在一起，构成文件的对象与范围；括号里的“（征求意见稿）”跟在“技术考虑”之后，标的是这份文件当前的性质。</p>
+<p>五段连起来，就是通知标题与正文第一句共用的那串全称。引用时按这串字复制，指向的就是同一份文件；中间少一段，指向的就不是同一串文字了。中文名与括号内英文名的先后顺序也照原文走，别把 Neoantigens 挪到前面去。</p>
+<h2><span class="n">03</span>三份文件的名称与后缀</h2>
+<p>通知在同一页的“相关附件”列出三份文件。清单设“序号”与“附件名称”两栏，序号由1到3：附件1为《新生抗原药品关键问题的技术考虑（征求意见稿）》.pdf；附件2为同名加“起草说明”.pdf；附件3为同名加“意见反馈表”.docx。</p>
+<p>三份名称共用同一串书名号内的文字，靠书名号之外的附加词与扩展名区分。附件1的名称与正文第一句引用的文件名称相同，扩展名是 .pdf；附件2在书名号之后多出“起草说明”四个字，扩展名也是 .pdf；附件3在书名号之后多出“意见反馈表”五个字，扩展名是 .docx。</p>
+<p>从扩展名看，前两份是 PDF，第三份是 docx；第三份的名称指向意见反馈表，前两份是正文与起草说明。从名称看，三份文件的差别全部写在书名号之外——正文引用的那串字在三份里完全一样，单看前缀分不出哪份是哪份，后缀与扩展名才是区分点。</p>
+<p>按序号1、2、3归档，顺序与页面上的排列一致。转述时把序号带上，指认哪一份文件就不会含糊。三份都要写给读者时，可以按“序号＋书名号内全称＋书名号外附加词＋扩展名”的顺序排一遍，这样对方拿到清单就能在页面上逐行对上。</p>
+<table><thead><tr><th>附件</th><th>文件名称</th><th>文件形态</th></tr></thead><tbody><tr><td>1</td><td>《新生抗原药品关键问题的技术考虑（征求意见稿）》.pdf</td><td>与正文引用的文件名称一致，PDF</td></tr><tr><td>2</td><td>《新生抗原药品关键问题的技术考虑（征求意见稿）》起草说明.pdf</td><td>名称后缀为“起草说明”，PDF</td></tr><tr><td>3</td><td>《新生抗原药品关键问题的技术考虑（征求意见稿）》意见反馈表.docx</td><td>名称后缀为“意见反馈表”，docx</td></tr></tbody></table>
+<h2><span class="n">04</span>时限那一句与两个反馈邮箱</h2>
+<p>时限只有一句：自发布之日起1个月。起算点写的是“自发布之日起”，长度写的是“1个月”，两个要素落在同一句里。这句时限紧跟在“以便后续完善”之后，中间没有别的内容。页面“发布日期”栏标为“20261030”，落款处写“2026年10月30日”，两处写法都出自这一页。</p>
+<p>反馈渠道照原文抄全：wangx@cde.org.cn，liqian@cde.org.cn。两个地址并列，中间是中文逗号，都跟在“您的反馈意见请发到以下邮箱”这一句后面。抄邮箱时把中文逗号保留，别顺手改成顿号或分号，两个地址就在同一行里。</p>
+<p>附件3的名称是《新生抗原药品关键问题的技术考虑（征求意见稿）》意见反馈表.docx。两个邮箱写在正文那一句里，附件3的名称写在“相关附件”清单里，一处是正文，一处是清单，都可以逐字对照。</p>
+<p>这一页上可以固定下来的具体字符有三样：文件全称、两个邮箱地址、附件3的名称与扩展名。这三样都在页面上，逐字复制即可，不需要改写成别的说法。相对时间的那一句照原样保留，读者拿这一句去对页面上的发布日期，起算点自然清楚。</p>
+<h2><span class="n">05</span>页面上两类可核对信息</h2>
+<p>把这一页的信息分成两类，转述时不容易串行。第一类是程序要素：发布日期、反馈时限、反馈邮箱、落款单位与落款日期。这类信息决定“怎么说时间和渠道”，写错一个字，读者照着做就会出岔子。</p>
+<p>第二类是文件清单：三份附件的序号、名称与扩展名。这类信息决定“指哪一份文件”，尤其是附件1、附件2、附件3共用同一串书名号内的文字，只靠前缀分不开。</p>
+<p>两类信息在页面上的位置也不同。程序要素集中在正文与落款：时限在正文第三句，邮箱在第四句，单位与日期在致谢之后的落款处。文件清单在页面最下面的“相关附件”栏。找的时候按这个位置走，比从头读到尾快。</p>
+<p>还有一处容易看漏：落款单位用的是全称“国家药品监督管理局药品审评中心”，正文里则自称“我中心”。同一份文件里两种写法并存，转述时按落款的全称写，读者更容易对上机构。</p>
+<p>通知标题里的写法也值得单拎出来：“关于公开征求……意见的通知”，征求意见的对象被书名号括在中间。标题与正文第一句共用同一串书名，这也是判断两份文字是否指向同一份文件的依据。</p>
+<h2><span class="n">06</span>引用前的核对清单</h2>
+<p>把这份通知拆到最后，能逐字对照的就是下面这几行。通知正文给出的日期、时限、邮箱、单位名称，加上三份文件的名称与扩展名，构成这一页可核对的信息。</p>
+<table><thead><tr><th>核对项</th><th>页面上的对应表述</th></tr></thead><tbody><tr><td>起草机关</td><td>落款“国家药品监督管理局药品审评中心”，正文写“我中心”</td></tr><tr><td>通知标题</td><td>关于公开征求《新生抗原药品关键问题的技术考虑（征求意见稿）》意见的通知</td></tr><tr><td>文件全称</td><td>《新生抗原药品关键问题的技术考虑（征求意见稿）》</td></tr><tr><td>页面日期</td><td>发布日期“20261030”；落款“2026年10月30日”</td></tr><tr><td>适用对象</td><td>新生抗原（Neoantigens）药品</td></tr><tr><td>覆盖环节</td><td>研发、注册申报</td></tr><tr><td>反馈时限</td><td>自发布之日起1个月</td></tr><tr><td>反馈邮箱</td><td>wangx@cde.org.cn，liqian@cde.org.cn</td></tr><tr><td>附件</td><td>3项，格式为 pdf、pdf、docx</td></tr></tbody></table>
+<p>每一项都能在原文里指到具体位置：名称在标题与正文第一句，起草主体在落款，时限在同一句“征求意见时限为自发布之日起1个月”，地址在“您的反馈意见请发到以下邮箱”那一句，附件清单在“相关附件”栏。指位置这件事本身就是核对方法——能指到，就按原文写；指不到，就不要写进转述里。</p>
+<p>“相关附件”一栏的排法也值得照着抄：先写“序号”，再写“附件名称”，序号用阿拉伯数字1、2、3，附件名称一栏逐个给出书名号内的全称加书名号外的后缀与扩展名。三行排下来，哪一份是正文、哪一份是起草说明、哪一份是反馈表，一目了然。</p>
+<p>这份稿子当前的性质写在名称的括号里：征求意见稿。正文“以便后续完善”六个字也把后续修改环节写在了同一句里。转述时名称照抄，性质照抄，就不至于把一份还在征集意见的文件说成别的形态。</p>
+<div class="box w"><p><b>口径提示：</b>文件当前状态是征求意见稿，名称里带“（征求意见稿）”五字。反馈时限按通知原文为“自发布之日起1个月”，页面“发布日期”栏标为20261030。对外转述时，名称、时限、邮箱三项按这一页的原文写。</p></div>
+<div class="box r"><p><b>风险与未定项：</b>通知把文件写作“征求意见稿”，并写明征集意见的目的是“以便后续完善”，后续还有修改环节。名称、时限、邮箱这三项在页面上都有原文，转述时按这一页的写法走即可。</p></div>
+<div class="box g"><p><b>谁可以提交意见：</b>通知面向社会各界征集意见，正文并列给出两个邮箱 wangx@cde.org.cn、liqian@cde.org.cn，附件清单第3项的名称为《新生抗原药品关键问题的技术考虑（征求意见稿）》意见反馈表.docx。</p></div>
+<div class="end"><h4>真正的杠杆点在哪</h4><p>窗口写的是自发布之日起1个月，页面“发布日期”栏标为20261030。这段时间里能对着页面先固定下来的有三样：文件全称、两个反馈邮箱、附件3的名称与扩展名。照原文抄全，转述时才不至于指错文件、写错地址。</p></div>
+<p class="fn"><strong>来源与核查口径：</strong><br>
+1. 国家药品监督管理局药品审评中心官网通知，《关于公开征求〈新生抗原药品关键问题的技术考虑（征求意见稿）〉意见的通知》，页面标注发布日期20261030，落款日期2026年10月30日（官方原文）。<br>
+2. 三份文件的序号、名称与格式取自同一通知页面列出的“相关附件”清单（官方通知附件）。<br>
+3. 文中对名称构成、日期两种写法、附件名称后缀与引用方式的梳理，为基于页面文字的转录说明，非文件原文表述。</p>
+</article>
+</body>
+</html>
