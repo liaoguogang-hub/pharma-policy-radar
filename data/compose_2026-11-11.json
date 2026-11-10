@@ -1,0 +1,50 @@
+[
+  {
+    "ok": true,
+    "needs_review": true,
+    "claim_block": false,
+    "file": "01-policy_readout-51f57c5a.html",
+    "stats": {
+      "body_chars": 2850,
+      "sections": 5,
+      "tables": 2,
+      "boxes": 0,
+      "footnotes": 2,
+      "has_hook": true,
+      "has_end": true,
+      "has_title": true
+    },
+    "problems": [
+      "[P1] 公式化递进 2 处（上限 0）：「首先/其次/最后」是报幕式递进。让内容的递进关系自己呈现。"
+    ],
+    "html_len": 7808,
+    "note": "未通过全部质检，已按最优版本落盘，需人工核查",
+    "title": "广东省医疗保障局关于印发《广东省长期护理保险护理服务机构定点管理实施细则》的通知",
+    "score": 6.3,
+    "type": "policy_readout"
+  },
+  {
+    "ok": true,
+    "needs_review": true,
+    "claim_block": false,
+    "file": "02-consultation-a8ef4c36.html",
+    "stats": {
+      "body_chars": 2194,
+      "sections": 5,
+      "tables": 3,
+      "boxes": 0,
+      "footnotes": 3,
+      "has_hook": true,
+      "has_end": true,
+      "has_title": true
+    },
+    "problems": [
+      "正文字数 2194 超出范围（目标 2250-3900）"
+    ],
+    "html_len": 8071,
+    "note": "未通过全部质检，已按最优版本落盘，需人工核查",
+    "title": "关于公开征求《艾曲泊帕乙醇胺片生物等效性研究技术指导原则》等12个生物等效性研究技术指导原则意见的通知",
+    "score": 6.0,
+    "type": "consultation"
+  }
+]
