@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>12个生物等效性指导原则修订稿公开征求意见</title>
+<style>
+:root{--bg:#fff;--soft:#f7f7f5;--ink:#1a1a1a;--ink2:#4a4a4a;--faint:#8a8a8a;--rule:#e6e6e3;--bronze:#9c6b3c;--deep:#6b4a2a;--red:#a93226;--green:#4a7c4e;--amber:#f5ecd9;--rose:#f7e8e6;--mint:#e8f0e6;--serif:"Noto Serif SC",Georgia,"Songti SC",serif;--mono:"JetBrains Mono",Menlo,monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--serif);font-size:16px;line-height:1.9;color:var(--ink);background:var(--bg)}
+.wrap{max-width:780px;margin:0 auto;padding:60px 24px 90px}
+p{margin-bottom:18px;text-align:justify}
+.kicker{font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--bronze);margin-bottom:12px}
+h1{font-size:clamp(25px,3.6vw,34px);font-weight:700;color:var(--red);line-height:1.35;margin-bottom:14px}
+.sub{font-size:15px;color:var(--ink2);margin-bottom:34px;font-style:italic}
+h2{font-size:21px;font-weight:600;color:var(--deep);margin:44px 0 16px;padding-top:12px;border-top:1px solid var(--rule)}
+h2 .n{color:var(--red);font-family:var(--mono);font-size:15px;margin-right:9px}
+h3{font-size:17px;font-weight:600;margin:26px 0 10px}
+.hook{background:var(--red);color:#fff;padding:26px 30px;margin:22px 0 32px;font-size:18px;line-height:1.75}
+.hook strong{color:#ffd166}
+.box{background:var(--soft);border:1px solid var(--rule);padding:15px 19px;margin:20px 0;font-size:14px;color:var(--ink2)}
+.box b{color:var(--deep)}
+.box p{margin-bottom:8px;text-align:left}
+.w{background:var(--amber);border-left:3px solid #b88a3e}
+.g{background:var(--mint);border-left:3px solid var(--green)}
+.r{background:var(--rose);border-left:3px solid var(--red)}
+table{width:100%;border-collapse:collapse;margin:20px 0;font-size:13px}
+th{background:var(--deep);color:#fff;text-align:left;padding:9px 11px;font-weight:600;font-size:12.5px}
+td{padding:9px 11px;border-bottom:1px solid var(--rule);vertical-align:top}
+tbody tr:nth-child(even){background:var(--soft)}
+.m{font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:12.5px}
+.hl{color:var(--red);font-weight:700}
+.foot{font-size:12px;color:var(--faint);margin-top:7px}
+strong{font-weight:700}
+ul{margin:12px 0 18px 24px}
+li{margin-bottom:8px}
+.fn{font-size:12px;color:var(--faint);margin-top:38px;line-height:1.8;text-align:left}
+.end{background:var(--deep);color:#fff;padding:24px 28px;margin:40px 0 22px}
+.end h4{font-size:18px;font-weight:600;margin-bottom:8px}
+@media(max-width:720px){.wrap{padding:30px 16px 60px}}
+</style>
+</head>
+<body>
+<article class="wrap">
+<div class="kicker">Policy Readout｜征求意见</div>
+<h1>12个生物等效性指导原则修订稿公开征求意见</h1>
+<p class="sub">涉及艾曲泊帕乙醇胺片、辛伐他汀片等12个品种，意见反馈时限为自发布之日起1个月</p>
+<div class="hook">2026年11月10日，国家药品监督管理局药品审评中心（CDE）发布《关于公开征求〈艾曲泊帕乙醇胺片生物等效性研究技术指导原则〉等12个生物等效性研究技术指导原则意见的通知》。通知明确，为推进ICH M13A落地实施，CDE组织对12个文件开展修订工作并形成征求意见稿。意见反馈时限为自发布之日起1个月。公开页面同时列出12份指导原则修订征求意见稿、意见反馈表和修订说明。</div>
+<h2><span class="n">01</span>这轮征求意见包含什么</h2>
+<p>CDE在通知正文中给出了本轮工作的直接表述：“为推进ICH《M13A:口服固体速释制剂的生物等效性》落地实施，我中心组织对《艾曲泊帕乙醇胺片生物等效性研究技术指导原则》等12个文件开展了修订工作，形成征求意见稿。”这段表述明确了文件修订工作的组织主体、涉及范围和当前状态：相关文件已经开展修订工作，并以征求意见稿形式公开。</p>
+<p>通知邀请社会各界对征求意见稿提出意见和建议，并及时反馈，以便后续完善。征求意见时限为自发布之日起1个月，反馈邮箱为qianxx@cde.org.cn和cdem13@cde.org.cn。通知落款为国家药品监督管理局药品审评中心，日期为2026年11月10日。公开页面列出的相关附件包括12份指导原则修订征求意见稿、一份意见反馈表和一份修订说明。</p>
+<p>12个文件分别对应艾曲泊帕乙醇胺片、辛伐他汀片、奥氮平口崩片、他达拉非片、富马酸喹硫平片、富马酸丙酚替诺福韦片、氯雷他定片、盐酸贝那普利片、硫酸氢氯吡格雷片、依折麦布片、来氟米特片和熊去氧胆酸胶囊。其中，奥氮平口崩片和熊去氧胆酸胶囊分别以口崩片、胶囊列入指导原则清单，其余10个品种均以片剂列入。</p>
+<p>从公开页面看，通知正文之后列出14项相关附件。第1至第12项为品种指导原则修订征求意见稿，文件名后缀均为“pdf”；第13项为意见反馈表，后缀为“docx”；第14项为修订说明，后缀为“pdf”。各附件名称保留了具体品种名称与“（修订征求意见稿）”字样，公众可按附件名称识别所需文件。</p>
+<table><thead><tr><th>文件要素</th><th>本次公开信息</th></tr></thead><tbody><tr><td>起草机关</td><td>国家药品监督管理局药品审评中心</td></tr><tr><td>文件性质</td><td>公开征求意见通知及12个指导原则修订征求意见稿</td></tr><tr><td>发布日期</td><td>2026年11月10日</td></tr><tr><td>意见反馈时限</td><td>自发布之日起1个月</td></tr><tr><td>适用对象</td><td>通知面向社会各界公开征求意见</td></tr><tr><td>核心方向</td><td>推进ICH M13A落地实施</td></tr><tr><td>后续安排</td><td>收集反馈意见，以便后续完善</td></tr></tbody></table>
+<table><thead><tr><th>序号</th><th>指导原则修订征求意见稿</th></tr></thead><tbody><tr><td>1</td><td>艾曲泊帕乙醇胺片生物等效性研究技术指导原则</td></tr><tr><td>2</td><td>辛伐他汀片生物等效性研究技术指导原则</td></tr><tr><td>3</td><td>奥氮平口崩片生物等效性研究技术指导原则</td></tr><tr><td>4</td><td>他达拉非片生物等效性研究技术指导原则</td></tr><tr><td>5</td><td>富马酸喹硫平片生物等效性研究技术指导原则</td></tr><tr><td>6</td><td>富马酸丙酚替诺福韦片生物等效性研究技术指导原则</td></tr><tr><td>7</td><td>氯雷他定片生物等效性研究技术指导原则</td></tr><tr><td>8</td><td>盐酸贝那普利片生物等效性研究技术指导原则</td></tr><tr><td>9</td><td>硫酸氢氯吡格雷片生物等效性研究指导原则</td></tr><tr><td>10</td><td>依折麦布片生物等效性研究指导原则</td></tr><tr><td>11</td><td>来氟米特片生物等效性研究技术指导原则</td></tr><tr><td>12</td><td>熊去氧胆酸胶囊生物等效性研究指导原则</td></tr></tbody></table>
+<h2><span class="n">02</span>官方通知如何界定本轮修订</h2>
+<p>本轮修订的官方表述集中在通知开头：“我中心组织对……12个文件开展了修订工作，形成征求意见稿。”通知使用“形成征求意见稿”说明当前文件状态，并邀请社会各界对征求意见稿提出意见和建议，以便后续完善。</p>
+<p>通知以“为推进ICH《M13A:口服固体速释制剂的生物等效性》落地实施”开篇，随后说明组织修订12个文件并形成征求意见稿。文件修订由CDE组织实施，12个相关文件已经形成征求意见稿。通知在给出上述背景之后，接续安排了意见提交方式、反馈时限与反馈邮箱。</p>
+<p>反馈安排由通知直接给出。征求意见时限为自发布之日起1个月，发布日期为2026年11月10日。通知明确“我们诚挚地欢迎社会各界对征求意见稿提出宝贵意见和建议，并及时反馈给我们，以便后续完善”。通知提供两个反馈邮箱，分别为qianxx@cde.org.cn和cdem13@cde.org.cn。</p>
+<p>ICH M13A在本轮通知中的定位，是开展相关指导原则修订工作的背景。通知正文直接引用该文件名称，将其写入修订工作的目的表述，并在同一句中列出被修订的12个文件与“形成征求意见稿”的状态。因此，本轮公开信息以通知原文为界，可以确认的是工作由CDE组织、12个文件已形成征求意见稿、当前程序为公开征求意见、后续安排为对反馈意见进行完善。</p>
+<p>文件状态也是本次公开安排中的关键信息。通知正文写明“形成征求意见稿”，相关公开页面提供12份PDF格式的品种文件，并提供意见反馈表和修订说明。公众提交意见时，可先按照品种确定需要查阅的文件，再使用随本次公开公布的意见反馈表，通过通知列出的邮箱提交。</p>
+<p>BOX w：本文依据CDE通知正文和公开附件信息，聚焦文件范围、公开程序与反馈安排。</p>
+<h2><span class="n">03</span>12份修订稿分别对应哪些品种</h2>
+<p>本轮公开附件对每个品种分别列出指导原则修订征求意见稿，12个品种依次为艾曲泊帕乙醇胺片、辛伐他汀片、奥氮平口崩片、他达拉非片、富马酸喹硫平片、富马酸丙酚替诺福韦片、氯雷他定片、盐酸贝那普利片、硫酸氢氯吡格雷片、依折麦布片、来氟米特片和熊去氧胆酸胶囊，完整名称列于上表。</p>
+<p>对照附件清单，12份品种文件均以PDF格式列入公开页面，文件名保留具体品种名称与“（修订征求意见稿）”标注。清单中第9、10、12项的名称写作“生物等效性研究指导原则”，其余9项写作“生物等效性研究技术指导原则”，两类名称在附件清单中并行出现。</p>
+<p>清单中的两个剂型需要按原名称识别。奥氮平口崩片对应《奥氮平口崩片生物等效性研究技术指导原则（修订征求意见稿）》，熊去氧胆酸胶囊对应《熊去氧胆酸胶囊生物等效性研究指导原则（修订征求意见稿）》。其余品种在清单中分别以艾曲泊帕乙醇胺片、辛伐他汀片、他达拉非片、富马酸喹硫平片、富马酸丙酚替诺福韦片、氯雷他定片、盐酸贝那普利片、硫酸氢氯吡格雷片、依折麦布片和来氟米特片列示。</p>
+<p>除12份品种文件外，公开清单还设置了两项配套材料。第13项为《艾曲泊帕乙醇胺片生物等效性研究技术指导原则》等12个指导原则修订稿意见反馈表.docx；第14项为《艾曲泊帕乙醇胺片生物等效性研究技术指导原则》等12个指导原则修订说明.pdf。两项材料与12份品种文件同时出现在CDE公开页面的附件清单中。</p>
+<p>按公开清单逐项核对，附件编号从1延续至14，其中第1至第12项为具体品种的指导原则文件，第13项为意见反馈表，第14项为修订说明。附件名称提供了具体文件入口，通知正文则提供意见提交方式，使公开征求意见形成了“查阅文件—填写反馈表—发送意见”的操作路径。</p>
+<p>BOX g：公开材料包括12份指导原则修订征求意见稿、意见反馈表及12个指导原则修订说明。</p>
+<h2><span class="n">04</span>公开程序中的反馈安排</h2>
+<p>通知明确邀请社会各界对征求意见稿提出宝贵意见和建议，并及时反馈，以便后续完善。公开反馈渠道为通知列出的两个邮箱：qianxx@cde.org.cn和cdem13@cde.org.cn。意见反馈时限为自发布之日起1个月。</p>
+<p>本次公开材料同时覆盖12个品种文件、意见反馈表和修订说明。12份品种文件逐项列有品种名称和文件主题；第13项附件为意见反馈表，第14项附件为修订说明。公开页面所列通知标题、发布日期、正文、附件序号和附件名称，构成此次意见征集的基本信息链。</p>
+<p>CDE公开页面列有通知正文和14项相关附件。通知正文写有“为推进ICH《M13A:口服固体速释制剂的生物等效性》落地实施，我中心组织对……12个文件开展了修订工作，形成征求意见稿”，以及“征求意见时限为自发布之日起1个月”和两个反馈邮箱；14项附件则包括12份品种指导原则修订征求意见稿、意见反馈表和修订说明。</p>
+<p>征求意见稿的文件状态贯穿通知正文与附件名称。正文称“形成征求意见稿”，12份品种文件也在名称中标注“修订征求意见稿”。通知将意见反馈与后续完善直接相连，并同步公布自发布之日起1个月的反馈时限、两个反馈邮箱以及配套材料名称。</p>
+<p>按照公开信息，公众可在反馈期限内通过通知列出的邮箱提交意见，并使用随附件公布的意见反馈表。第13项意见反馈表以DOCX格式提供，其名称覆盖《艾曲泊帕乙醇胺片生物等效性研究技术指导原则》等12个指导原则，即一份反馈表对应本轮全部12个文件；第14项修订说明与12份品种文件均为PDF格式。</p>
+<p>反馈表与修订说明在公开清单中的位置相邻，分别为第13项和第14项，均排在12份品种文件之后。附件名称显示，反馈表与修订说明都以艾曲泊帕乙醇胺片指导原则作为首个引用对象，再以“等12个”涵盖其余文件，与通知标题的写法保持一致。</p>
+<p>BOX r：当前文件性质为修订征求意见稿，后续安排为收集反馈意见，以便进一步完善。</p>
+<h2><span class="n">05</span>时间线与后续节点</h2>
+<p>2026年11月10日，CDE发布公开征求意见通知，同时公布12份指导原则修订征求意见稿、意见反馈表和修订说明。通知同时给出两个反馈邮箱：qianxx@cde.org.cn和cdem13@cde.org.cn。</p>
+<p>征求意见时限为自发布之日起1个月。通知使用的表述是：“我们诚挚地欢迎社会各界对征求意见稿提出宝贵意见和建议，并及时反馈给我们，以便后续完善。”这一安排明确了意见提交窗口，也把征求意见与后续完善直接相连。</p>
+<p>从公开节点看，2026年11月10日是本轮文件发布和意见征集启动的日期。通知以“自发布之日起1个月”计算反馈窗口。提交意见时，可将发布日作为核对时限的起点，并通过qianxx@cde.org.cn或cdem13@cde.org.cn两个邮箱提交。</p>
+<p>对提交者而言，反馈对象是这12份修订征求意见稿。公开页面还提供了配套的意见反馈表，文件名称明确标有“12个指导原则修订稿意见反馈表”。通知正文给出了提交期限和反馈邮箱，意见反馈表则作为随本次公开同步公布的配套材料提供。</p>
+<p>本轮公开信息最清晰的边界，是12个生物等效性研究指导原则文件已经形成修订征求意见稿，并进入为期1个月的意见反馈阶段。通知以“为推进ICH《M13A:口服固体速释制剂的生物等效性》落地实施”说明修订背景，以“形成征求意见稿”说明文件状态，并写明自发布之日起1个月的反馈时限和两个接收意见的邮箱。</p>
+<div class="end"><h4>判断</h4><p>这轮公开信息的核心是12个品种文件进入意见征集期。通知将修订工作、ICH M13A落地实施、征求意见和后续完善写入公开安排。12个品种涉及片剂、口崩片和胶囊，意见反馈时限为自发布之日起1个月。</p></div>
+<p class="fn"><strong>来源与核查口径：</strong><br>
+1. 来源说明：国家药品监督管理局药品审评中心《关于公开征求〈艾曲泊帕乙醇胺片生物等效性研究技术指导原则〉等12个生物等效性研究技术指导原则意见的通知》，CDE官方通知，发布日期为2026年11月10日。<br>
+2. 来源说明：ICH《M13A: Oral Immediate Release Solid Dosage Forms—Bioequivalence》；本稿仅引用ICH M13A名称及CDE通知中关于推进其落地实施的表述。<br>
+3. 来源说明：CDE官方通知公开页面所列附件清单，包括12份指导原则修订征求意见稿、意见反馈表及12个指导原则修订说明。</p>
+</article>
+</body>
+</html>
