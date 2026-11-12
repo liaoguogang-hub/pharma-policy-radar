@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>国家药监局第34号通告及两项附件信息要点</title>
+<style>
+:root{--bg:#fff;--soft:#f7f7f5;--ink:#1a1a1a;--ink2:#4a4a4a;--faint:#8a8a8a;--rule:#e6e6e3;--bronze:#9c6b3c;--deep:#6b4a2a;--red:#a93226;--green:#4a7c4e;--amber:#f5ecd9;--rose:#f7e8e6;--mint:#e8f0e6;--serif:"Noto Serif SC",Georgia,"Songti SC",serif;--mono:"JetBrains Mono",Menlo,monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--serif);font-size:16px;line-height:1.9;color:var(--ink);background:var(--bg)}
+.wrap{max-width:780px;margin:0 auto;padding:60px 24px 90px}
+p{margin-bottom:18px;text-align:justify}
+.kicker{font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--bronze);margin-bottom:12px}
+h1{font-size:clamp(25px,3.6vw,34px);font-weight:700;color:var(--red);line-height:1.35;margin-bottom:14px}
+.sub{font-size:15px;color:var(--ink2);margin-bottom:34px;font-style:italic}
+h2{font-size:21px;font-weight:600;color:var(--deep);margin:44px 0 16px;padding-top:12px;border-top:1px solid var(--rule)}
+h2 .n{color:var(--red);font-family:var(--mono);font-size:15px;margin-right:9px}
+h3{font-size:17px;font-weight:600;margin:26px 0 10px}
+.hook{background:var(--red);color:#fff;padding:26px 30px;margin:22px 0 32px;font-size:18px;line-height:1.75}
+.hook strong{color:#ffd166}
+.box{background:var(--soft);border:1px solid var(--rule);padding:15px 19px;margin:20px 0;font-size:14px;color:var(--ink2)}
+.box b{color:var(--deep)}
+.box p{margin-bottom:8px;text-align:left}
+.w{background:var(--amber);border-left:3px solid #b88a3e}
+.g{background:var(--mint);border-left:3px solid var(--green)}
+.r{background:var(--rose);border-left:3px solid var(--red)}
+table{width:100%;border-collapse:collapse;margin:20px 0;font-size:13px}
+th{background:var(--deep);color:#fff;text-align:left;padding:9px 11px;font-weight:600;font-size:12.5px}
+td{padding:9px 11px;border-bottom:1px solid var(--rule);vertical-align:top}
+tbody tr:nth-child(even){background:var(--soft)}
+.m{font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:12.5px}
+.hl{color:var(--red);font-weight:700}
+.foot{font-size:12px;color:var(--faint);margin-top:7px}
+strong{font-weight:700}
+ul{margin:12px 0 18px 24px}
+li{margin-bottom:8px}
+.fn{font-size:12px;color:var(--faint);margin-top:38px;line-height:1.8;text-align:left}
+.end{background:var(--deep);color:#fff;padding:24px 28px;margin:40px 0 22px}
+.end h4{font-size:18px;font-weight:600;margin-bottom:8px}
+@media(max-width:720px){.wrap{padding:30px 16px 60px}}
+</style>
+</head>
+<body>
+<article class="wrap">
+<div class="kicker">Policy Readout｜中药监管</div>
+<h1>国家药监局第34号通告及两项附件信息要点</h1>
+<p class="sub">通告载明制定事项，附件包括《按照省级中药饮片炮制规范炮制的中药饮片跨省级行政区域销售、使用管理规定》和《政策解读》。</p>
+<div class="hook">2026年9月30日，国家药品监督管理局第34号通告载明，根据《中华人民共和国药品管理法》及其实施条例有关规定，国家药品监督管理局组织制定了《按照省级中药饮片炮制规范炮制的中药饮片跨省级行政区域销售、使用管理规定》。通告所列附件包括一份管理规定和一份《政策解读》。</div>
+<h2><span class="n">01</span>通告标题、正文与落款信息</h2>
+<p>国家药品监督管理局官网页面标题为《国家药监局关于按照省级中药饮片炮制规范炮制的中药饮片跨省级行政区域销售、使用管理规定有关事项的通告（2026年第34号）》。资料整理时，标题栏应保留“国家药监局”“有关事项的通告”及括号内年份和序号组成的完整名称，避免只记录机关简称、管理规定名称或通告编号。</p>
+<p>通告正文写明：“按照《中华人民共和国药品管理法》及其实施条例有关规定，国家药品监督管理局组织制定了《按照省级中药饮片炮制规范炮制的中药饮片跨省级行政区域销售、使用管理规定》。”这段文字可以直接核对法律依据、制定主体和制定事项。所列法律依据为《中华人民共和国药品管理法》及其实施条例有关规定；所列制定主体为国家药品监督管理局；所列制定事项为《按照省级中药饮片炮制规范炮制的中药饮片跨省级行政区域销售、使用管理规定》。</p>
+<p>正文所列制定事项采用书名号，完整名称包括“按照省级中药饮片炮制规范炮制”“中药饮片”以及“跨省级行政区域销售、使用”等内容。引用时不宜仅写成“中药饮片管理规定”，也不宜把“按照省级中药饮片炮制规范炮制”改写为其他近义表述，否则会改变该规定的适用条件和事项边界。</p>
+<p>页面落款文字为“国家药监局 2026年9月30日”。因此，可以从标题核对通告年份与序号，从正文核对依据、制定主体和制定事项，从落款核对日期与机关简称。制作文件卡片时，可依次设置完整标题栏、正文原文栏和落款栏：标题栏录入官网完整标题，正文栏录入上述正文段落，落款栏录入“国家药监局 2026年9月30日”。</p>
+<p>需要注意保留书名号、括号、顿号、逗号和句号。《中华人民共和国药品管理法》及其实施条例有关规定是正文所列依据，《按照省级中药饮片炮制规范炮制的中药饮片跨省级行政区域销售、使用管理规定》是正文所列制定事项，两项内容均不宜只保留其中一部分。</p>
+<h2><span class="n">02</span>两项附件名称及对应文件</h2>
+<p>通告所列附件项目包括：“1.按照省级中药饮片炮制规范炮制的中药饮片跨省级行政区域销售、使用管理规定”和“2.政策解读”。两项附件均带有数字序号，逐项转录时应保留原始序号。</p>
+<p>第1项附件名称为“按照省级中药饮片炮制规范炮制的中药饮片跨省级行政区域销售、使用管理规定”。该名称与通告正文所列《按照省级中药饮片炮制规范炮制的中药饮片跨省级行政区域销售、使用管理规定》一致，引用时应保留完整表述，不宜缩写为“跨省销售管理规定”“中药饮片管理规定”或其他标题。</p>
+<p>第2项附件名称为“政策解读”，原始项目写作“2.政策解读”。整理附件清单时，可将两项分别录入为：</p>
+<p>1. 按照省级中药饮片炮制规范炮制的中药饮片跨省级行政区域销售、使用管理规定</p>
+<p>2. 政策解读</p>
+<p>逐项列示时，不应把两项名称合并成一个概括性表述，也不应省略数字序号。需要同时保存“附件名称”和“文件标识”的资料，可将第1项附件名称录入上述完整管理规定名称，将第2项附件名称录入“政策解读”，再分别对应两个docx文件标识。</p>
+<p>页面列出的两个文件标识为“国家药品监督管理局2026年第34号通告附件1.docx”和“国家药品监督管理局2026年第34号通告附件2.docx”。第1项附件对应的文件标识完整写作“国家药品监督管理局2026年第34号通告附件1.docx”；第2项附件对应的文件标识完整写作“国家药品监督管理局2026年第34号通告附件2.docx”。</p>
+<p>转录文件标识时，应保留完整字符串，不宜只写“附件1”或“附件2”，也不宜省略文件名前缀。资料展示中，可将第1项附件与“国家药品监督管理局2026年第34号通告附件1.docx”并列，将第2项附件与“国家药品监督管理局2026年第34号通告附件2.docx”并列，以便核对附件序号与文件标识是否对应。</p>
+<h2><span class="n">03</span>原始信息的记录方式</h2>
+<p>制作政策文件卡片时，标题、正文、附件和落款可以分别录入。标题使用官网完整名称；正文使用关于法律依据、制定主体和制定事项的原始段落；附件保留两项原始项目序号；落款保留机关简称和日期之间的空格。</p>
+<p>正文内容的记录范围包括《中华人民共和国药品管理法》及其实施条例有关规定、国家药品监督管理局，以及《按照省级中药饮片炮制规范炮制的中药饮片跨省级行政区域销售、使用管理规定》。这三项内容分别对应依据、主体和制定事项。转录时应保留“及其实施条例有关规定”的完整连接，不宜只写“《中华人民共和国药品管理法》”。</p>
+<p>附件记录应覆盖两行项目名称和两个文件标识。第1项附件名称为“按照省级中药饮片炮制规范炮制的中药饮片跨省级行政区域销售、使用管理规定”，对应“国家药品监督管理局2026年第34号通告附件1.docx”；第2项附件名称为“政策解读”，对应“国家药品监督管理局2026年第34号通告附件2.docx”。</p>
+<p>落款记录为“国家药监局 2026年9月30日”，日期为2026年9月30日，通告年份和序号为2026年第34号。卡片排版时可以突出日期与文号，但不宜用简称替代官网完整标题，也不宜把两个docx文件标识合并为“附件1、附件2”。</p>
+<p>如果资料模板另设“制定事项”“法律依据”“附件名称”“附件文件”“发布日期”等字段，可按照上述内容对应填写。制定事项使用《按照省级中药饮片炮制规范炮制的中药饮片跨省级行政区域销售、使用管理规定》，法律依据使用《中华人民共和国药品管理法》及其实施条例有关规定，附件文件使用两个完整docx字符串。</p>
+<h2><span class="n">04</span>逐项核对要点</h2>
+<p>核对时首先查看完整标题，确认标题中的管理事项、有关事项的通告、2026年第34号均未遗漏。随后查看正文，确认法律依据、制定主体和制定事项与标题中的管理规定名称一致。</p>
+<p>附件核对分为名称与文件两步。名称部分逐字记录第1项和第2项，保留“1.”“2.”两个序号；文件部分逐字记录“国家药品监督管理局2026年第34号通告附件1.docx”和“国家药品监督管理局2026年第34号通告附件2.docx”，核对附件编号是否对应。</p>
+<p>落款部分记录“国家药监局 2026年9月30日”。完成上述项目后，最终资料可以按完整页面标题、通告正文、两项附件名称、两个docx文件标识和落款文字的顺序呈现。表格、卡片或数据库中的字段名称可以调整，但对应内容应与上述原始信息保持一致。</p>
+<table><thead><tr><th>文件要素</th><th>已核实内容</th><th>尚未披露</th></tr></thead><tbody><tr><td>发文机关</td><td>国家药品监督管理局</td><td>附件所列具体执行流程</td></tr><tr><td>文号</td><td>2026年第34号通告</td><td>许可条件、检查处罚与责任分工的具体条文</td></tr><tr><td>发布日期</td><td>2026年9月30日</td><td>施行日期与过渡安排</td></tr><tr><td>法律依据</td><td>《中华人民共和国药品管理法》及其实施条例有关规定</td><td>与其他现行制度的具体衔接方式</td></tr><tr><td>适用对象</td><td>按省级中药饮片炮制规范炮制的中药饮片</td><td>企业认定、查询及核验的操作方式</td></tr><tr><td>核心场景</td><td>跨省级行政区域销售、使用</td><td>各环节提交的具体材料</td></tr></tbody></table>
+<p>BOX g：标题识别｜页面标题为《国家药监局关于按照省级中药饮片炮制规范炮制的中药饮片跨省级行政区域销售、使用管理规定有关事项的通告（2026年第34号）》。</p>
+<p>BOX r：正文摘录｜“按照《中华人民共和国药品管理法》及其实施条例有关规定，国家药品监督管理局组织制定了《按照省级中药饮片炮制规范炮制的中药饮片跨省级行政区域销售、使用管理规定》。”</p>
+<p>BOX w：附件名称｜“1.按照省级中药饮片炮制规范炮制的中药饮片跨省级行政区域销售、使用管理规定”；“2.政策解读”。文件标识为“国家药品监督管理局2026年第34号通告附件1.docx”和“国家药品监督管理局2026年第34号通告附件2.docx”。</p>
+<div class="end"><h4>2026年9月30日</h4><p>2026年第34号通告｜附件1.docx、附件2.docx</p></div>
+<p class="fn"><strong>来源与核查口径：</strong><br>
+1. 来源性质：国家药品监督管理局官网官方规范性文件页面《国家药监局关于按照省级中药饮片炮制规范炮制的中药饮片跨省级行政区域销售、使用管理规定有关事项的通告（2026年第34号）》；通告落款日期为2026年9月30日。链接：https://www.nmpa.gov.cn/xxgk/fgwj/xzhgfxwj/20261008172748111.html<br>
+2. 来源性质：国家药品监督管理局2026年第34号通告页面正文、附件项目及附件文件标识。页面列明附件1为《按照省级中药饮片炮制规范炮制的中药饮片跨省级行政区域销售、使用管理规定》，附件2为《政策解读》，并列出两个docx文件标识。</p>
+</article>
+</body>
+</html>

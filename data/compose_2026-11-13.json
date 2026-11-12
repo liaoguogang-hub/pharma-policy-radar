@@ -1,0 +1,26 @@
+[
+  {
+    "ok": true,
+    "needs_review": true,
+    "claim_block": false,
+    "file": "01-enforcement-f9ed4039.html",
+    "stats": {
+      "body_chars": 1998,
+      "sections": 5,
+      "tables": 2,
+      "boxes": 0,
+      "footnotes": 2,
+      "has_hook": true,
+      "has_end": true,
+      "has_title": true
+    },
+    "problems": [
+      "正文字数 1998 超出范围（目标 2250-3900）"
+    ],
+    "html_len": 7365,
+    "note": "未通过全部质检，已按最优版本落盘，需人工核查",
+    "title": "国家药监局关于27批次不符合规定药品的通告（2026年第39号）",
+    "score": 7.4,
+    "type": "enforcement"
+  }
+]
