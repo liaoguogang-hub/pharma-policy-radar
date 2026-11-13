@@ -1,0 +1,62 @@
+[
+  {
+    "ok": false,
+    "error": "- 小节太少（1 个，至少 3 个）\n- 缺少 FN 来源脚注\n- 正文字数 340 超出范围（目标 2250-3900）\n- AI味句式: 也就是说\n- AI味句式 1 处（也就是说）——必须改掉，不是换词而是拆句重写\n- 表格列数不一致：表头 3 列，有一行 1 列\n\n# ⚠️ AI 味句式（逐句改写，位置已标出）\n- 删掉「也就是说」这个句式模板：…申请人查阅和准备申报材料。 文件自发布之日起施行。也就是说，自2026年11月13日起，相关一致性评价申报的…\n  改法：把解释层整个删掉，只留事实。「不是 A，而是 B」→ 直接写 B；「这意味着/也就是说」→ 直接给下一句事实。",
+    "stats": {
+      "body_chars": 340,
+      "sections": 1,
+      "tables": 1,
+      "boxes": 0,
+      "footnotes": 0,
+      "has_hook": true,
+      "has_end": false,
+      "has_title": true
+    },
+    "title": "国家药监局药审中心关于发布《仿制药质量和疗效一致性评价受理审查指南》的通告（2026年第53号）",
+    "score": 7.0,
+    "type": "policy_readout"
+  },
+  {
+    "ok": false,
+    "error": "- 小节太少（1 个，至少 3 个）\n- 缺少 FN 来源脚注\n- 正文字数 323 超出范围（目标 2250-3900）\n- 表格列数不一致：表头 3 列，有一行 1 列\n\n# ⚠️ AI 味句式（逐句改写，位置已标出）\n- 短句占比 0.0% < 10%（没有呼吸感）\n  改法：把长句用句号断开，超过 45 字的句子拆成两句；一段只说一件事，控制在 90 字内。",
+    "stats": {
+      "body_chars": 323,
+      "sections": 1,
+      "tables": 1,
+      "boxes": 0,
+      "footnotes": 0,
+      "has_hook": true,
+      "has_end": false,
+      "has_title": true
+    },
+    "title": "河南省医疗保障局 河南省公共资源交易中心 关于进一步规范药品集中采购有关事项的通知（豫医...",
+    "score": 6.8,
+    "type": "policy_readout"
+  },
+  {
+    "ok": true,
+    "needs_review": true,
+    "claim_block": false,
+    "file": "03-policy_readout-ea92bfad.html",
+    "stats": {
+      "body_chars": 3107,
+      "sections": 5,
+      "tables": 1,
+      "boxes": 0,
+      "footnotes": 2,
+      "has_hook": true,
+      "has_end": true,
+      "has_title": true
+    },
+    "problems": [
+      "AI味句式: 不是[^。；！？]{0,30}?而是",
+      "AI味句式: 这意味着",
+      "AI味句式 2 处（不是…而是, 这意味着）——必须改掉，不是换词而是拆句重写"
+    ],
+    "html_len": 7966,
+    "note": "未通过全部质检，已按最优版本落盘，需人工核查",
+    "title": "关于开展第十二批国家组织药品集中带量采购本市未中选药品梯度降价工作的通知",
+    "score": 6.8,
+    "type": "policy_readout"
+  }
+]
