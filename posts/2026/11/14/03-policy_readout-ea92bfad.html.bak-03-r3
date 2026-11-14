@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>上海启动第十二批国采未中选药品梯度降价：11月17日前填报，不接受价格治理将暂停采购</title>
+<style>
+:root{--bg:#fff;--soft:#f7f7f5;--ink:#1a1a1a;--ink2:#4a4a4a;--faint:#8a8a8a;--rule:#e6e6e3;--bronze:#9c6b3c;--deep:#6b4a2a;--red:#a93226;--green:#4a7c4e;--amber:#f5ecd9;--rose:#f7e8e6;--mint:#e8f0e6;--serif:"Noto Serif SC",Georgia,"Songti SC",serif;--mono:"JetBrains Mono",Menlo,monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--serif);font-size:16px;line-height:1.9;color:var(--ink);background:var(--bg)}
+.wrap{max-width:780px;margin:0 auto;padding:60px 24px 90px}
+p{margin-bottom:18px;text-align:justify}
+.kicker{font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--bronze);margin-bottom:12px}
+h1{font-size:clamp(25px,3.6vw,34px);font-weight:700;color:var(--red);line-height:1.35;margin-bottom:14px}
+.sub{font-size:15px;color:var(--ink2);margin-bottom:34px;font-style:italic}
+h2{font-size:21px;font-weight:600;color:var(--deep);margin:44px 0 16px;padding-top:12px;border-top:1px solid var(--rule)}
+h2 .n{color:var(--red);font-family:var(--mono);font-size:15px;margin-right:9px}
+h3{font-size:17px;font-weight:600;margin:26px 0 10px}
+.hook{background:var(--red);color:#fff;padding:26px 30px;margin:22px 0 32px;font-size:18px;line-height:1.75}
+.hook strong{color:#ffd166}
+.box{background:var(--soft);border:1px solid var(--rule);padding:15px 19px;margin:20px 0;font-size:14px;color:var(--ink2)}
+.box b{color:var(--deep)}
+.box p{margin-bottom:8px;text-align:left}
+.w{background:var(--amber);border-left:3px solid #b88a3e}
+.g{background:var(--mint);border-left:3px solid var(--green)}
+.r{background:var(--rose);border-left:3px solid var(--red)}
+table{width:100%;border-collapse:collapse;margin:20px 0;font-size:13px}
+th{background:var(--deep);color:#fff;text-align:left;padding:9px 11px;font-weight:600;font-size:12.5px}
+td{padding:9px 11px;border-bottom:1px solid var(--rule);vertical-align:top}
+tbody tr:nth-child(even){background:var(--soft)}
+.m{font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:12.5px}
+.hl{color:var(--red);font-weight:700}
+.foot{font-size:12px;color:var(--faint);margin-top:7px}
+strong{font-weight:700}
+ul{margin:12px 0 18px 24px}
+li{margin-bottom:8px}
+.fn{font-size:12px;color:var(--faint);margin-top:38px;line-height:1.8;text-align:left}
+.end{background:var(--deep);color:#fff;padding:24px 28px;margin:40px 0 22px}
+.end h4{font-size:18px;font-weight:600;margin-bottom:8px}
+@media(max-width:720px){.wrap{padding:30px 16px 60px}}
+</style>
+</head>
+<body>
+<article class="wrap">
+<div class="kicker">Policy Readout｜国家集采落地</div>
+<h1>上海启动第十二批国采未中选药品梯度降价：11月17日前填报，不接受价格治理将暂停采购</h1>
+<p class="sub">这份通知把国家集采结果继续传导到本市挂网端，三类未中选或非供应清单药品分别按参考治理价、最低价和差比价规则调价。</p>
+<div class="hook">2026年11月11日，上海市医药集中招标采购事务管理所发布《关于开展第十二批国家组织药品集中带量采购本市未中选药品梯度降价工作的通知》。通知明确的价格确认时间为11月11日至11月17日；相关药品如未在11月17日前主动调整价格，或者调整价格不符合要求，均视为不接受价格治理，将在中选结果执行之日起同步暂停采购、作采购失效处理。</div>
+<h2><span class="n">01</span>文件要素：三类挂网药品进入申报价填报</h2>
+<table><thead><tr><th>文件要素</th><th>公开信息</th><th>执行要求</th></tr></thead><tbody><tr><td>发文机关</td><td>上海市医药集中招标采购事务管理所</td><td>负责开通本市相关药品申报价填报通道</td></tr><tr><td>发布日期</td><td>2026年11月11日</td><td>通知及价格填报安排同步发布</td></tr><tr><td>价格确认时间</td><td>2026年11月11日至11月17日</td><td>企业须在窗口内完成适用的价格计算与申报</td></tr><tr><td>填报入口</td><td>门户网站企业业务登录→招采子系统</td><td>进入“业务经办→药品→药品信息管理→申报价填报”</td></tr><tr><td>填报对象</td><td>未中选已挂网药品，以及中选产品中未进入供应清单的规格和包装</td><td>分别适用参考治理价、最低价或中选价格等价格基础</td></tr><tr><td>企业操作</td><td>更新挂网价并提交承诺书</td><td>同时查询适用价格信息，完成企业申报价调整</td></tr><tr><td>不响应后果</td><td>未主动调价或调价不符合要求</td><td>视为不接受价格治理，中选结果执行之日起同步暂停采购、作采购失效处理</td></tr><tr><td>重新申报</td><td>按《上海医药采购平台药品挂网操作办法》等要求执行</td><td>价格仍不得高于当前参考治理价</td></tr></tbody></table>
+<p>通知全称为《关于开展第十二批国家组织药品集中带量采购本市未中选药品梯度降价工作的通知》，发文机关为上海市医药集中招标采购事务管理所，发布日期为<strong>2026年11月11日</strong>。文件设置的价格确认窗口为<strong>2026年11月11日至11月17日</strong>，并明确了未主动调价、调整价格不符合要求时的采购处理方式。</p>
+<p>本次开通的是上海市第十二批国家集采未中选、已挂网药品的申报价填报通道。企业通过门户网站<strong>www.smpaa.cn</strong>登录招采子系统，进入“业务经办→药品→药品信息管理→申报价填报”模块，更新挂网价并提交承诺书。企业还可以在系统中查询本企业相关药品的参考治理价。</p>
+<p>通知将填报药品分为三类：已挂网参比制剂及过评药品，已挂网未过评药品，以及本次中选产品中未进入供应清单的规格和包装。不同类别对应不同的价格计算基础，企业需要根据附件所列范围及系统展示信息核对药品状态，再选择相应规则调整企业申报价。</p>
+<h3>梯度降价覆盖三类情形</h3>
+<p>第一类是第十二批国家集采范围内的已挂网参比制剂、过评药品。文件要求企业按照系统内相应的参考治理价，主动调整“企业申报价”，并鼓励企业在参考治理价基础上进一步降低价格。</p>
+<p>第二类是第十二批国家集采范围内的已挂网未过评药品。其计算基础为<strong>不高于本市有约定采购量的中选药品最低价</strong>，再按照现行差比价规则计算，主动调整“企业申报价”。</p>
+<p>第三类是本次中选产品中未在供应清单内的规格和包装，即中选产品的“二同”药品。文件要求这类药品基于其中选价格，按照现行差比价规则计算，主动调整“企业申报价”。</p>
+<h2><span class="n">02</span>三类药品对应三种价格路径</h2>
+<p>参比制剂和已通过一致性评价的药品，对应系统内的<strong>参考治理价</strong>路径。通知要求企业按照系统内相应的参考治理价主动调整企业申报价，并鼓励企业在此基础上进一步降低价格。参考治理价由企业在系统中查询，调价结果与承诺书均通过申报价填报模块提交。</p>
+<p>已挂网未过评药品对应第二条路径。其计算基础不是系统内的参考治理价，而是<strong>不高于本市有约定采购量的中选药品最低价</strong>。企业以这一最低价为基础，接续现行差比价规则形成新的企业申报价，并主动完成调整。</p>
+<p>通知在未过评药品部分同时提示企业确认相关药品在本市的标识信息状态。文件给出的处理方法是：若药品实际已经通过仿制药质量和疗效一致性评价，但系统标识信息尚未勾选“通过一致性评价”，企业需及时通过“业务经办→我的药品库→标识信息变更”完成勾选。</p>
+<h3>中选产品也可能因规格不在供应清单而调价</h3>
+<p>第三类针对的是已经中选、但部分规格和包装未进入供应清单的产品。通知将其界定为中选产品的“二同”药品，并要求基于其中选价格，按照现行差比价规则计算，主动调整企业申报价。</p>
+<p>这条路径的价格基础与前两类不同：参比制剂和过评药品使用系统内参考治理价，未过评药品使用不高于本市有约定采购量的中选药品最低价，“二同”药品使用其中选价格。填报时，企业需要按照通知列明的范围和附件核对药品状态，再适用相应的价格规则。</p>
+<h2><span class="n">03</span>不调价的后果：暂停采购与采购失效</h2>
+<p>通知对价格确认和采购处理作出了直接规定。相关药品若在<strong>11月17日前</strong>未主动调整价格，或者调整价格不符合要求，均视为<strong>不接受价格治理</strong>。文件明确，处理方式为在中选结果执行之日起同步暂停采购，并作采购失效处理。</p>
+<p>企业填报时需要完成两项系统操作：一是更新“企业申报价”，二是提交承诺书。参比制剂、过评药品在系统查询参考治理价；未过评药品和“二同”药品按照通知指定的计算基础及现行差比价规则形成申报价。</p>
+<p>文件同时规定了采购失效后的重新申报要求。因企业不接受价格治理导致采购失效的药品，重新申报挂网时，需按照《上海医药采购平台药品挂网操作办法》等要求执行，且价格仍不得高于当前参考治理价。</p>
+<h3>标识信息变更的操作提示</h3>
+<p>标识信息提示被写在未过评药品的填报要求之后。通知要求企业确认相关药品在本市的标识信息状态；针对已通过仿制药质量和疗效一致性评价、但系统尚未勾选“通过一致性评价”的情况，给出的操作路径为“业务经办→我的药品库→标识信息变更”。</p>
+<p>因此，企业在核对填报范围时，需要同时查看系统中的标识状态。完成勾选后，再进入“业务经办→药品→药品信息管理→申报价填报”模块更新企业申报价并提交承诺书。</p>
+<h2><span class="n">04</span>申报流程：价格填报与承诺同步完成</h2>
+<p>本次通知面向各相关企业开放申报价填报通道，进入方式为门户网站企业业务登录。路径依次是：登录招采子系统，进入“业务经办”，再进入“药品”目录下的“药品信息管理”，最后进入“申报价填报”模块。</p>
+<p>企业在模块中更新挂网价，并提交承诺书。通知还赋予企业查询功能，可在系统中查询本企业相关药品的参考治理价。三类药品虽然价格计算方式不同，但均要求企业主动调整“企业申报价”。</p>
+<p>通知开篇要求相关方面积极稳妥做好本市未中选药品采购和使用工作，并同步开通申报价填报通道。其后设置的价格确认窗口为<strong>2026年11月11日至11月17日</strong>。企业需要在窗口内完成适用的价格计算、申报价更新和承诺书提交。</p>
+<p>若药品在11月17日前未主动调价，或者调价不符合要求，文件将其统一归入“不接受价格治理”。相应处理是在中选结果执行之日起同步暂停采购、作采购失效处理。</p>
+<h2><span class="n">05</span>执行安排：价格确认、申报与采购处理</h2>
+<p>价格确认环节对应<strong>2026年11月11日至11月17日</strong>。这段时间用于企业查询相关价格信息、计算适用的企业申报价、更新挂网价、提交承诺书，以及在未过评药品部分完成必要的标识信息变更。</p>
+<p>采购处理条款直接关联价格确认结果。通知对不接受价格治理的药品写明，将于<strong>中选结果执行之日起</strong>同步暂停采购并作采购失效处理。价格确认窗口由此对应企业填报动作，中选结果执行之日对应后续采购处理。</p>
+<p>重新申报挂网也有相应衔接要求。文件引用《上海医药采购平台药品挂网操作办法》等规定，并明确因企业不接受价格治理导致采购失效的药品，在重新申报挂网时，价格仍不得高于当前参考治理价。</p>
+<p>实际填报时，企业需要先核对附件和系统中的药品状态。未过评药品如已通过仿制药质量和疗效一致性评价、但系统尚未勾选“通过一致性评价”，应先进入“我的药品库”完成标识信息变更。随后，再按对应类别的价格基础计算企业申报价，更新挂网价并提交承诺书。</p>
+<p>参比制剂和过评药品按系统内相应参考治理价调整；未过评药品以不高于本市有约定采购量的中选药品最低价为基础，接续现行差比价规则计算；“二同”药品以其中选价格为基础，接续现行差比价规则计算。三类药品均须在规定窗口内主动调整价格，未主动调整或调整不符合要求的，进入暂停采购和采购失效处理。</p>
+<p>BOX w：价格确认窗口为<strong>2026年11月11日至11月17日</strong>。相关药品未在11月17日前主动调价，或调价不符合要求，均视为不接受价格治理，并将在中选结果执行之日起同步暂停采购、作采购失效处理。</p>
+<p>BOX r：企业可在系统查询本企业相关药品的参考治理价；参比制剂和过评药品按参考治理价主动调价，文件还鼓励在参考治理价基础上进一步降低价格。</p>
+<p>BOX g：未过评药品以不高于本市有约定采购量的中选药品最低价为价格基础；“二同”药品以其中选价格为价格基础，两类药品均接续现行差比价规则计算。</p>
+<div class="end"><h4>执行重点是三类价格路径与“不接受价格治理”的处理条款</h4><p>参比制剂和过评药品看参考治理价，未过评药品看有约定采购量的中选药品最低价，“二同”药品看中选价格。企业需要按11月17日前的窗口完成申报价更新和承诺书提交；不符合要求的药品，将在中选结果执行之日起暂停采购、作采购失效处理。</p></div>
+<p class="fn"><strong>来源与核查口径：</strong><br>
+1. 来源说明：官方原文，上海市医药集中招标采购事务管理所《关于开展第十二批国家组织药品集中带量采购本市未中选药品梯度降价工作的通知》，2026年11月11日，https://www.smpaa.cn/xxgk/gggs/2026/11/11/25805.shtml。<br>
+2. 来源说明：官方通知所列附件《填报药品范围.xlsx》。</p>
+</article>
+</body>
+</html>
