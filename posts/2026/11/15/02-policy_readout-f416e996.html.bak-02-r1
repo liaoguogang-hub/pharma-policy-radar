@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>仿制药质量和疗效一致性评价受理指南更新：2026年第53号通告发布</title>
+<style>
+:root{--bg:#fff;--soft:#f7f7f5;--ink:#1a1a1a;--ink2:#4a4a4a;--faint:#8a8a8a;--rule:#e6e6e3;--bronze:#9c6b3c;--deep:#6b4a2a;--red:#a93226;--green:#4a7c4e;--amber:#f5ecd9;--rose:#f7e8e6;--mint:#e8f0e6;--serif:"Noto Serif SC",Georgia,"Songti SC",serif;--mono:"JetBrains Mono",Menlo,monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--serif);font-size:16px;line-height:1.9;color:var(--ink);background:var(--bg)}
+.wrap{max-width:780px;margin:0 auto;padding:60px 24px 90px}
+p{margin-bottom:18px;text-align:justify}
+.kicker{font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--bronze);margin-bottom:12px}
+h1{font-size:clamp(25px,3.6vw,34px);font-weight:700;color:var(--red);line-height:1.35;margin-bottom:14px}
+.sub{font-size:15px;color:var(--ink2);margin-bottom:34px;font-style:italic}
+h2{font-size:21px;font-weight:600;color:var(--deep);margin:44px 0 16px;padding-top:12px;border-top:1px solid var(--rule)}
+h2 .n{color:var(--red);font-family:var(--mono);font-size:15px;margin-right:9px}
+h3{font-size:17px;font-weight:600;margin:26px 0 10px}
+.hook{background:var(--red);color:#fff;padding:26px 30px;margin:22px 0 32px;font-size:18px;line-height:1.75}
+.hook strong{color:#ffd166}
+.box{background:var(--soft);border:1px solid var(--rule);padding:15px 19px;margin:20px 0;font-size:14px;color:var(--ink2)}
+.box b{color:var(--deep)}
+.box p{margin-bottom:8px;text-align:left}
+.w{background:var(--amber);border-left:3px solid #b88a3e}
+.g{background:var(--mint);border-left:3px solid var(--green)}
+.r{background:var(--rose);border-left:3px solid var(--red)}
+table{width:100%;border-collapse:collapse;margin:20px 0;font-size:13px}
+th{background:var(--deep);color:#fff;text-align:left;padding:9px 11px;font-weight:600;font-size:12.5px}
+td{padding:9px 11px;border-bottom:1px solid var(--rule);vertical-align:top}
+tbody tr:nth-child(even){background:var(--soft)}
+.m{font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:12.5px}
+.hl{color:var(--red);font-weight:700}
+.foot{font-size:12px;color:var(--faint);margin-top:7px}
+strong{font-weight:700}
+ul{margin:12px 0 18px 24px}
+li{margin-bottom:8px}
+.fn{font-size:12px;color:var(--faint);margin-top:38px;line-height:1.8;text-align:left}
+.end{background:var(--deep);color:#fff;padding:24px 28px;margin:40px 0 22px}
+.end h4{font-size:18px;font-weight:600;margin-bottom:8px}
+@media(max-width:720px){.wrap{padding:30px 16px 60px}}
+</style>
+</head>
+<body>
+<article class="wrap">
+<div class="kicker">Policy Readout｜一致性评价</div>
+<h1>仿制药质量和疗效一致性评价受理指南更新：2026年第53号通告发布</h1>
+<p class="sub">新指南聚焦受理环节的形式审查要求，经国家药监局审查同意后发布，自发布之日起施行。</p>
+<div class="hook">2026年11月13日，国家药品监督管理局药品审评中心发布《仿制药质量和疗效一致性评价受理审查指南》通告。通告明确，为进一步规范仿制药质量和疗效一致性评价受理的形式审查要求，更好地指导和服务申请人，药审中心组织修订相关指南；文件经国家药品监督管理局审查同意后发布，自发布之日起施行。</div>
+<h2><span class="n">01</span>文件要素：发布、同意与施行日期</h2>
+<p>2026年第53号通告的标题为《国家药监局药审中心关于发布〈仿制药质量和疗效一致性评价受理审查指南〉的通告（2026年第53号）》。通告编号为2026年第53号，落款单位为国家药品监督管理局药品审评中心，文件主题为仿制药质量和疗效一致性评价受理审查指南。</p>
+<p>通告原文写明：“为进一步规范仿制药质量和疗效一致性评价受理的形式审查要求，更好地指导和服务申请人，药审中心组织修订了《仿制药质量和疗效一致性评价受理审查指南》。”其中，“规范仿制药质量和疗效一致性评价受理的形式审查要求”界定了本次修订重点，“更好地指导和服务申请人”明确了文件面向的主体。</p>
+<p>程序上，通告写明相关指南经国家药品监督管理局审查同意后予以发布，并规定“自发布之日起施行”。通告页面所列发布日期为2026年11月13日，文末落款日期为2026年11月10日，落款单位为国家药品监督管理局药品审评中心。所列文件还包括《仿制药质量和疗效一致性评价受理审查指南.pdf》。</p>
+<table><thead><tr><th>文件要素</th><th>现行内容</th><th>政策含义</th></tr></thead><tbody><tr><td>发布机关</td><td>国家药品监督管理局药品审评中心</td><td>通告署名单位</td></tr><tr><td>文号</td><td>2026年第53号通告</td><td>本次指南修订的发布文件</td></tr><tr><td>发布日期</td><td>2026年11月13日</td><td>通告页面所载发布日期</td></tr><tr><td>文件落款</td><td>2026年11月10日</td><td>通告文末落款日期</td></tr><tr><td>生效日期</td><td>自发布之日起施行</td><td>自发布之日起执行</td></tr><tr><td>修订目的</td><td>进一步规范受理的形式审查要求，更好地指导和服务申请人</td><td>明确修订所指向的受理端要求</td></tr><tr><td>审查程序</td><td>经国家药品监督管理局审查同意后发布</td><td>记录指南发布前的审查程序</td></tr><tr><td>适用对象</td><td>仿制药质量和疗效一致性评价申请人</td><td>通告明确指向的申报主体</td></tr></tbody></table>
+<p>日期信息分别承担不同识别功能。2026年11月13日是通告页面所列发布日期，2026年11月10日是文件落款日期。“自发布之日起施行”则给出执行规则。发布机关、文号、修订目的、审查同意表述、施行规则及指南名称，共同构成此次通告所列的主要文件要素。</p>
+<h2><span class="n">02</span>修订指向：受理与形式审查</h2>
+<p>本次修订的重点由通告原文直接给出，即“进一步规范仿制药质量和疗效一致性评价受理的形式审查要求”。通告同时写明，药审中心组织修订相关指南，以“更好地指导和服务申请人”。据此，本次文件聚焦的一致性评价事项明确落在受理环节，审查内容限定在形式审查要求。</p>
+<p>通告中的目的表述可以拆分为三个连续部分：首先是仿制药质量和疗效一致性评价这一政策事项；其次是受理这一工作环节；再次是形式审查要求这一规范对象。结尾部分明确提出指导和服务申请人，使政策目标与申报端的使用需求直接联系起来。</p>
+<p>“受理”与“形式审查”是本次指南名称及修订说明中的关键词。文件名称使用“受理审查指南”，修订说明使用“受理的形式审查要求”。</p>
+<p>从文件名称到目的说明，官方信息呈现出清晰的一致性：药审中心修订《仿制药质量和疗效一致性评价受理审查指南》，修订内容围绕受理的形式审查要求展开，并以指导和服务申请人为明确目标。阅读本次更新时，应将指南名称、修订目的及适用对象放在同一框架内理解。</p>
+<h2><span class="n">03</span>服务对象：申请人</h2>
+<p>通告在修订目的中直接写明“更好地指导和服务申请人”，因此本次指南的明确服务对象是仿制药质量和疗效一致性评价申请人。这里的“申请人”采用通告原文中的政策表述，并与修订说明所指向的一致性评价受理事项相对应。</p>
+<p>本次指南与申请端的关系，首先来自通告对受理形式审查要求的明确表述。药审中心组织修订指南，是为了规范仿制药质量和疗效一致性评价受理的形式审查要求，并为申请人提供政策依据。相关政策信息集中于受理阶段的形式审查要求。</p>
+<p>对申请人而言，文件提供的直接信息包括指南名称、修订目的、审查同意程序、施行安排及可查阅的指南文件。通告明确将申请人作为服务对象。</p>
+<p>所列指南文件名称为《仿制药质量和疗效一致性评价受理审查指南.pdf》，发布日期和落款日期分别列于通告页面及文件落款处。申请人识别本次更新时，可先核对2026年第53号通告，再依据指南名称进入相应文件。</p>
+<h2><span class="n">04</span>通告与指南：四组核心信息</h2>
+<p><strong>第一组是文件识别信息。</strong>通告标题列明国家药监局药审中心、指南名称和“2026年第53号”，页面发布日期为2026年11月13日，文末落款日期为2026年11月10日，落款单位为国家药品监督管理局药品审评中心。</p>
+<p><strong>第二组是修订说明。</strong>通告原文将目的表述为“进一步规范仿制药质量和疗效一致性评价受理的形式审查要求，更好地指导和服务申请人”，并说明由药审中心组织修订《仿制药质量和疗效一致性评价受理审查指南》。</p>
+<p><strong>第三组是发布程序与施行规则。</strong>通告采用“经国家药品监督管理局审查同意，现予发布，自发布之日起施行”的表述。其中包括审查同意、发布及施行三项连续信息，执行时间以“自发布之日起”为准。</p>
+<p><strong>第四组是指向指南文件的信息。</strong>通告正文所引修订说明包含《仿制药质量和疗效一致性评价受理审查指南》，相关附件列表列出的名称为《仿制药质量和疗效一致性评价受理审查指南.pdf》。申请人可依据通告列出的文件名称定位指南。</p>
+<p>四组信息的落点不同：文件识别信息用于确认本次发布，修订说明用于确认文件主题，发布程序和施行表述用于说明执行方式，指南文件名用于指向具体文件。上述内容均可在通告所列文字及附件名称中核对。</p>
+<h2><span class="n">05</span>适用边界：以通告原文为准</h2>
+<p>本次通告能够确认的程序事实包括：药审中心组织修订指南，经国家药品监督管理局审查同意后，以2026年第53号通告发布，并自发布之日起施行。通告同时给出统一目的，即进一步规范仿制药质量和疗效一致性评价受理的形式审查要求，更好地指导和服务申请人。</p>
+<p>相关附件列表列有《仿制药质量和疗效一致性评价受理审查指南.pdf》。通告文号、发布日期、施行表述、落款日期和指南名称，均来自官方页面所载通告或附件列表。2026年11月13日对应页面发布日期，2026年11月10日对应文末落款日期，两项日期不应混用。</p>
+<p>本次更新的文件主题可以用一句话概括：围绕仿制药质量和疗效一致性评价受理环节，对形式审查要求进行规范，并为申请人提供指南。评估文件适用范围时，应先确认申请人、所申请事项及受理环节是否处于该主题范围内，再进入指南查看具体要求。</p>
+<table><thead><tr><th>核对层次</th><th>可直接确认的信息</th><th>阅读重点</th></tr></thead><tbody><tr><td>文件识别</td><td>2026年第53号通告、2026年11月13日发布日期</td><td>区分页面发布日期与2026年11月10日落款日期</td></tr><tr><td>程序信息</td><td>经国家药品监督管理局审查同意后发布</td><td>记录审查同意与发布顺序</td></tr><tr><td>施行信息</td><td>自发布之日起施行</td><td>以2026年11月13日作为执行起点</td></tr><tr><td>修订方向</td><td>规范受理的形式审查要求</td><td>限定文件所指向的受理端范围</td></tr><tr><td>服务对象</td><td>申请人</td><td>以通告原文表述为准</td></tr><tr><td>指南文件</td><td>《仿制药质量和疗效一致性评价受理审查指南.pdf》</td><td>从所列文件查阅具体内容</td></tr></tbody></table>
+<p>通告所列信息可以按文件识别、程序安排、施行规则、修订方向、服务对象和指南文件六个层次整理。对仿制药质量和疗效一致性评价申请人而言，本次更新的明确落点是受理阶段的形式审查要求；具体内容应结合指南文件查阅。</p>
+<h2><span class="n">06</span>原文句读：修订、发布与施行</h2>
+<p>通告标题使用《国家药监局药审中心关于发布〈仿制药质量和疗效一致性评价受理审查指南〉的通告（2026年第53号）》这一完整名称，其中包含发布机构、指南名称与通告编号。页面发布日期为2026年11月13日，文末落款日期为2026年11月10日，落款单位为国家药品监督管理局药品审评中心。</p>
+<p>通告原文将修订缘由表述为：“为进一步规范仿制药质量和疗效一致性评价受理的形式审查要求，更好地指导和服务申请人”，随后说明药审中心组织修订《仿制药质量和疗效一致性评价受理审查指南》。这一表述同时给出了政策事项、工作环节、规范内容和目标对象。</p>
+<p>发布安排采用“经国家药品监督管理局审查同意，现予发布，自发布之日起施行”的连续表述。其中，“经国家药品监督管理局审查同意”涉及审查主体与审查结果，“自发布之日起施行”对应执行时间。申请人和政策解读人员可据此确认文件的审查、发布与施行安排。</p>
+<p>相关附件列表列出一项文件，即《仿制药质量和疗效一致性评价受理审查指南.pdf》。因此，本次第53号通告可核对的信息集中在文号、发布日期、落款单位、修订目的、审查同意表述、施行规则和指南名称。</p>
+<p>阅读时应先确认指南适用于仿制药质量和疗效一致性评价受理的形式审查要求，再对照通告所列指南文件查阅具体内容。通告已经明确了修订事项、服务对象、发布程序及施行安排，这些信息构成此次文件更新的基本框架。</p>
+<p>BOX r：“经国家药品监督管理局审查同意，现予发布，自发布之日起施行。”指南：仿制药质量和疗效一致性评价受理审查指南。</p>
+<div class="end"><h4>受理端是本次指南的明确落点</h4><p>2026年第53号通告确认了指南修订、审查同意程序和执行日期。</p></div>
+<p class="fn"><strong>来源与核查口径：</strong><br>
+1. 来源：国家药品监督管理局药品审评中心官方原文，《国家药监局药审中心关于发布〈仿制药质量和疗效一致性评价受理审查指南〉的通告（2026年第53号）》，页面发布日期为2026年11月13日，文末落款日期为2026年11月10日；正文摘录、通告原文及附件名称均据该官方页面。</p>
+</article>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>河南两部门规范药品集中采购：外省新低价须30天内联动，线下采购与备案采购收紧</title>
+<style>
+:root{--bg:#fff;--soft:#f7f7f5;--ink:#1a1a1a;--ink2:#4a4a4a;--faint:#8a8a8a;--rule:#e6e6e3;--bronze:#9c6b3c;--deep:#6b4a2a;--red:#a93226;--green:#4a7c4e;--amber:#f5ecd9;--rose:#f7e8e6;--mint:#e8f0e6;--serif:"Noto Serif SC",Georgia,"Songti SC",serif;--mono:"JetBrains Mono",Menlo,monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--serif);font-size:16px;line-height:1.9;color:var(--ink);background:var(--bg)}
+.wrap{max-width:780px;margin:0 auto;padding:60px 24px 90px}
+p{margin-bottom:18px;text-align:justify}
+.kicker{font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--bronze);margin-bottom:12px}
+h1{font-size:clamp(25px,3.6vw,34px);font-weight:700;color:var(--red);line-height:1.35;margin-bottom:14px}
+.sub{font-size:15px;color:var(--ink2);margin-bottom:34px;font-style:italic}
+h2{font-size:21px;font-weight:600;color:var(--deep);margin:44px 0 16px;padding-top:12px;border-top:1px solid var(--rule)}
+h2 .n{color:var(--red);font-family:var(--mono);font-size:15px;margin-right:9px}
+h3{font-size:17px;font-weight:600;margin:26px 0 10px}
+.hook{background:var(--red);color:#fff;padding:26px 30px;margin:22px 0 32px;font-size:18px;line-height:1.75}
+.hook strong{color:#ffd166}
+.box{background:var(--soft);border:1px solid var(--rule);padding:15px 19px;margin:20px 0;font-size:14px;color:var(--ink2)}
+.box b{color:var(--deep)}
+.box p{margin-bottom:8px;text-align:left}
+.w{background:var(--amber);border-left:3px solid #b88a3e}
+.g{background:var(--mint);border-left:3px solid var(--green)}
+.r{background:var(--rose);border-left:3px solid var(--red)}
+table{width:100%;border-collapse:collapse;margin:20px 0;font-size:13px}
+th{background:var(--deep);color:#fff;text-align:left;padding:9px 11px;font-weight:600;font-size:12.5px}
+td{padding:9px 11px;border-bottom:1px solid var(--rule);vertical-align:top}
+tbody tr:nth-child(even){background:var(--soft)}
+.m{font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:12.5px}
+.hl{color:var(--red);font-weight:700}
+.foot{font-size:12px;color:var(--faint);margin-top:7px}
+strong{font-weight:700}
+ul{margin:12px 0 18px 24px}
+li{margin-bottom:8px}
+.fn{font-size:12px;color:var(--faint);margin-top:38px;line-height:1.8;text-align:left}
+.end{background:var(--deep);color:#fff;padding:24px 28px;margin:40px 0 22px}
+.end h4{font-size:18px;font-weight:600;margin-bottom:8px}
+@media(max-width:720px){.wrap{padding:30px 16px 60px}}
+</style>
+</head>
+<body>
+<article class="wrap">
+<div class="kicker">Policy Readout｜河南集采</div>
+<h1>河南两部门规范药品集中采购：外省新低价须30天内联动，线下采购与备案采购收紧</h1>
+<p class="sub">新通知把挂网价格动态调整、医疗机构网上采购和企业调价放进同一套约束规则。</p>
+<div class="hook">2026年11月12日，河南省医疗保障局、河南省公共资源交易中心发布《关于进一步规范药品集中采购有关事项的通知》。文件明确：在河南省医药集中采购平台挂网的药品，如在其他省级采购平台产生新的最低挂网价格，相关企业应当自外省低价生效之日起30日内主动申请价格调整。通知同时规范医疗机构网上采购、备案采购、企业调价及违规行为处置，并安排季度价格筛查。</div>
+<h2><span class="n">01</span>文件要素：河南规范挂网价格与医疗机构采购</h2>
+<p>通知由河南省医疗保障局、河南省公共资源交易中心联合发布，依据《河南省医药集中采购平台药品挂网规则（试行）》有关规定制定。文件抬头所列对象包括各省辖市、济源示范区医保局，航空港区民政和社会保障局，各省管公立医疗机构及各医药企业。</p>
+<table><thead><tr><th>文件要素</th><th>具体内容</th></tr></thead><tbody><tr><td>发文机关</td><td>河南省医疗保障局、河南省公共资源交易中心</td></tr><tr><td>文件名称</td><td>《关于进一步规范药品集中采购有关事项的通知》</td></tr><tr><td>发布日期</td><td>2026年11月12日</td></tr><tr><td>适用对象</td><td>医药企业、各省管公立医疗机构、各级医保部门、航空港区相关单位</td></tr><tr><td>价格联动</td><td>在河南省医药集中采购平台挂网的药品，如在其他省级采购平台产生新的最低挂网价格，企业应自该外省低价生效之日起30日内主动申请价格调整</td></tr><tr><td>采购要求</td><td>公立医疗机构严格落实网上采购政策，任何线下采购安排均不得违规开展；备案采购仅限临床必需、急需的未挂网药品</td></tr><tr><td>价格筛查</td><td>河南省公共资源交易中心依据全国药品价格一览表，每季度开展价格筛查比对</td></tr><tr><td>违规处置</td><td>未按规定及时联动或存在虚报、瞒报行为的，可暂停该药品挂网交易资格3个月，并按信用评价制度处理</td></tr></tbody></table>
+<p>文件提出，持续规范药品挂网价格管理和医疗机构采购行为，保障临床用药有序供应。价格联动规则适用于在河南省医药集中采购平台挂网的药品，适用范围明确包括中药饮片和中药配方颗粒。</p>
+<p>对于省级集中带量采购中选产品，采购文件已规定联动中选价格；新低价执行后30日内，中选企业也应主动申请价格调整。通知同时设定企业自查节点，要求各医药企业于11月20日前完成挂网药品价格自查梳理，并按规定完成价格联动。</p>
+<p>河南省公共资源交易中心承担季度价格筛查职责；各级医保部门负责属地监管，持续强化辖区医疗机构药品平台采购管理。</p>
+<h2><span class="n">02</span>挂网价格管理：外省低价触发30日调价窗口</h2>
+<p><strong>外省出现新的最低挂网价格后，企业须在30日内主动申请调整。</strong>在河南省医药集中采购平台挂网的药品，如果在其他省级采购平台产生新的最低挂网价格，相关企业应当自该外省低价生效之日起30日内主动申请价格调整。</p>
+<p>对于采购文件规定联动省级集中带量采购中选价格的中选产品，新低价执行后的处理期限同样是30日，中选企业应主动申请价格调整。除11月20日前完成挂网药品价格自查梳理外，企业还需按外省低价生效时间提出调价申请。</p>
+<p><strong>企业调价设有程序要求。</strong>文件规定，企业因生产成本、供需形势、市场格局发生重大变化，确需调整挂网价格的，可以对照《短缺药品价格风险管理操作指引》的相关要求，按程序提出调价申请。文件同时禁止企业借挂网价格偏低之由，在线下以高价方式供货销售。</p>
+<p><strong>季度筛查用于发现价格申报和联动问题。</strong>河南省公共资源交易中心将依据全国药品价格一览表，每季度开展价格筛查比对。发现企业未按规定及时联动，或者存在虚报、瞒报等弄虚作假行为的，暂停该药品挂网交易资格三个月，并可按照医药价格和招标采购信用评价制度相关规定处置。</p>
+<p>对挂网企业而言，通知涉及的事项包括外省低价出现后的价格调整申请、11月20日前的价格自查梳理、按程序申请挂网调价，以及真实准确申报产品价格信息。相关企业还需关注平台每季度筛查比对结果及信用评价要求。</p>
+<h2><span class="n">03</span>医疗机构采购：网上采购与备案采购分别设限</h2>
+<p><strong>公立医疗机构要严格落实网上采购政策。</strong>文件要求公立医疗机构严格落实网上采购政策，任何线下采购安排均不得违规开展。除国家医保准入谈判、集中带量采购中选产品外，鼓励医疗机构在挂网价格基础上，通过招标、议价等形式降低实际采购价格。</p>
+<p>实际采购价格低于挂网价格的，医疗机构应按规定在省医药集中采购平台议价模块如实议价登记。登记的实际采购价格不在采购平台对外公开，原有挂网价格也不因议价登记而改变。</p>
+<p><strong>备案采购的适用范围由文件直接限定。</strong>文件在“从严管控备案采购”部分明确：“备案采购仅限临床必需、急需的未挂网药品，省医药集中采购平台已挂网的药品不得实施备案采购。”医疗机构完成备案采购后，相关企业应及时提交材料，补办药品挂网手续。</p>
+<p>除国家医保准入谈判、集中带量采购中选产品外，医疗机构还可在挂网价格基础上通过招标、议价等形式降低实际采购价格。实际采购价格低于挂网价格时，应在省医药集中采购平台议价模块如实登记。登记价格不进入平台对外展示范围，原有挂网价格也不会因此被替换。</p>
+<p><strong>线上供应与线下高价供应均列入违规行为处置范围。</strong>工作要求部分提出，对医药企业“线上不供，线下高价供应”等违规行为，按照医药价格和招标采购信用评价制度严肃处理。对医疗机构线下采购、违规备案采购等问题，各级医保部门可依规采取函询、约谈、通报等约束性管理措施。</p>
+<h2><span class="n">04</span>监管与处置：季度筛查、属地监管同步展开</h2>
+<p>企业需要按规定时间及时如实申报产品价格信息。河南省公共资源交易中心依据全国药品价格一览表开展价格筛查比对，筛查范围关注企业是否按规定及时联动，以及是否存在虚报、瞒报等弄虚作假行为。</p>
+<p>筛查发现未按规定及时联动，或者存在虚报、瞒报等弄虚作假行为，可暂停该药品挂网交易资格三个月，并进入医药价格和招标采购信用评价制度的处置范围。通知还要求对医药企业“线上不供，线下高价供应”等违规行为，按照信用评价制度严肃处理。</p>
+<p>医疗机构方面，各级医保部门应严格落实属地监管责任，持续强化辖区医疗机构药品平台采购管理，常态化开展数据监测和现场抽查。对医疗机构线下采购、违规备案采购等问题，依规采取函询、约谈、通报等约束性管理措施。</p>
+<p>对问题突出、整改不力的，必要时将问题线索依规移交相关监管部门。违规处置措施覆盖企业端和医疗机构端。企业端涉及暂停挂网交易资格、信用评价处置及对“线上不供，线下高价供应”等行为的处理；医疗机构端涉及函询、约谈、通报，以及问题线索依规移交。</p>
+<h2><span class="n">05</span>执行要求：企业申报与机构采购各有节点</h2>
+<p>企业侧的明确节点包括：各医药企业于11月20日前完成挂网药品价格自查梳理，并按规定完成价格联动；在其他省级采购平台产生新的最低挂网价格后，自外省低价生效之日起30日内主动申请价格调整；存在生产成本、供需形势或市场格局重大变化时，对照相关指引按程序提出调价申请。</p>
+<p>价格筛查由河南省公共资源交易中心依据全国药品价格一览表每季度开展。筛查范围关注企业是否按规定及时联动，以及是否存在虚报、瞒报等弄虚作假行为。相关行为可对应暂停该药品挂网交易资格三个月和信用评价制度处置。</p>
+<p>医疗机构侧的要求覆盖采购入口、价格登记和备案范围。公立医疗机构应严格落实网上采购政策，任何线下采购安排均不得违规开展；实际采购价格低于挂网价格的，应在省医药集中采购平台议价模块如实议价登记；备案采购限于临床必需、急需的未挂网药品。</p>
+<p>各级医保部门负责持续强化辖区医疗机构药品平台采购管理，常态化开展数据监测和现场抽查，并依规处理线下采购、违规备案采购等问题。医疗机构完成备案采购后，相关企业还应及时提交材料，补办药品挂网手续。</p>
+<p>BOX: 通知涉及企业挂网价格管理、医疗机构网上采购和备案采购。</p>
+<div class="end"><h4>河南规范低价联动与平台采购</h4><p>外省新低价触发30日调价窗口，季度筛查与信用评价强化价格管理；医疗机构须落实网上采购，备案采购限于临床必需、急需的未挂网药品。</p></div>
+<p class="fn"><strong>来源与核查口径：</strong><br>
+1. 来源说明：官方原文，河南省医疗保障局、河南省公共资源交易中心《关于进一步规范药品集中采购有关事项的通知》，发布于2026年11月12日，链接：ylbz.henan.gov.cn/2026/11-12/3446909.html。<br>
+2. 内容说明：文中所引价格联动期限、企业调价条件、备案采购范围、价格筛查频次、违规处置措施及管理责任，均来自上述官方通知。</p>
+</article>
+</body>
+</html>
