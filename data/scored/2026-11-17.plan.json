@@ -1,0 +1,99 @@
+{
+  "date": "2026-11-17",
+  "count": 3,
+  "plan": [
+    {
+      "type": "policy_readout",
+      "cluster_key": "policy:cde-儿童药物PRO指导原则",
+      "channel": "china",
+      "lead_id": "74721c5ed2814a1f",
+      "title": "国家药监局药审中心关于发布《儿童药物临床试验中应用患者报告结局（PRO）技术指导原则》的通告（2026年第54号）",
+      "score": 7.5,
+      "member_ids": [
+        "74721c5ed2814a1f"
+      ],
+      "members": [
+        {
+          "title": "国家药监局药审中心关于发布《儿童药物临床试验中应用患者报告结局（PRO）技术指导原则》的通告（2026年第54号）",
+          "url": "https://www.cde.org.cn/main/news/viewInfoCommon/971310680757f6949a90addb65fab92b",
+          "score": 7.5,
+          "reasoning": "CDE发布儿童药物临床试验中应用患者报告结局的正式指导原则，直接关系儿童用药临床研究的终点设计和审评沟通规范，值得逐项拆解适用范围与方法学要求。"
+        }
+      ],
+      "reasoning": "CDE发布儿童药物临床试验中应用患者报告结局的正式指导原则，直接关系儿童用药临床研究的终点设计和审评沟通规范，值得逐项拆解适用范围与方法学要求。",
+      "verify_todo": [
+        "核对2026年第54号通告、附件全文及自发布之日起施行的表述",
+        "确认适用药物类别、临床试验阶段和PRO终点类型",
+        "梳理与儿童药物临床试验其他审评要求或指导原则的衔接关系"
+      ],
+      "flags": [
+        "approval",
+        "effective",
+        "formal",
+        "national"
+      ]
+    },
+    {
+      "type": "policy_readout",
+      "cluster_key": "policy:新疆-医保智能监管两库-第三批",
+      "channel": "china",
+      "lead_id": "bc193c4edf9ddd36",
+      "title": "关于公布《新疆维吾尔自治区医疗保障局 新疆生产建设兵团医疗保障局第三批智能监管“两库”规则和知识点》的通告",
+      "score": 6.6,
+      "member_ids": [
+        "bc193c4edf9ddd36"
+      ],
+      "members": [
+        {
+          "title": "关于公布《新疆维吾尔自治区医疗保障局 新疆生产建设兵团医疗保障局第三批智能监管“两库”规则和知识点》的通告",
+          "url": "http://ylbzj.xinjiang.gov.cn/ylbzj/tzgg/202611/ee51db7734f8428c8151a518b0d4b25a.shtml",
+          "score": 6.6,
+          "reasoning": "自治区与兵团医保部门正式公布医保基金智能监管规则库及知识点，属于地方医保基金审核规则的批次更新，可能直接影响定点医药机构的费用审核与合规管理。"
+        }
+      ],
+      "reasoning": "自治区与兵团医保部门正式公布医保基金智能监管规则库及知识点，属于地方医保基金审核规则的批次更新，可能直接影响定点医药机构的费用审核与合规管理。",
+      "verify_todo": [
+        "核对正式通告文号、附件名称和公开范围",
+        "确认规则的正式生效时间及是否存在过渡安排",
+        "核实规则适用对象、智能审核系统上线节点与违规处理衔接方式",
+        "确认该批次与后续征求意见批次之间的承继关系"
+      ],
+      "flags": [
+        "formal",
+        "local",
+        "reimbursement"
+      ]
+    },
+    {
+      "type": "policy_readout",
+      "cluster_key": "policy:hhs-hipaa-privacy-rule",
+      "channel": "global",
+      "lead_id": "867f386f35c8fd34",
+      "title": "HHS Issues New Final Rule to Modernize the HIPAA Privacy Rule to Support Coordinated Care and Individual Engagement and Reduce Regulatory Burdens",
+      "score": 8.8,
+      "member_ids": [
+        "867f386f35c8fd34"
+      ],
+      "members": [
+        {
+          "title": "HHS Issues New Final Rule to Modernize the HIPAA Privacy Rule to Support Coordinated Care and Individual Engagement and Reduce Regulatory Burdens",
+          "url": "https://www.hhs.gov/press-room/hhs-issues-new-final-rule-modernize-hipaa-privacy-rule-support-coordinated-care-individual-engagement-reduce-regulatory-burdens.html",
+          "score": 8.8,
+          "reasoning": "HHS发布HIPAA隐私规则最终规则，涉及美国受监管医疗实体及业务伙伴的信息使用和披露义务，属于影响广泛的数据治理合规变化，值得解读核心调整和实施准备。"
+        }
+      ],
+      "reasoning": "HHS发布HIPAA隐私规则最终规则，涉及美国受监管医疗实体及业务伙伴的信息使用和披露义务，属于影响广泛的数据治理合规变化，值得解读核心调整和实施准备。",
+      "verify_todo": [
+        "取得HHS最终规则及联邦公报正式文本，确认规则编号和发布日期",
+        "核对最终生效日期、分阶段合规期限及过渡安排",
+        "确认受约束主体、例外条款和个体授权机制的具体变化",
+        "核对官方所称监管负担变化所依据的评估口径"
+      ],
+      "flags": [
+        "formal",
+        "industry",
+        "overseas"
+      ]
+    }
+  ]
+}

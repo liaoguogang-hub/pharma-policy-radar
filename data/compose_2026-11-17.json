@@ -1,0 +1,78 @@
+[
+  {
+    "ok": true,
+    "needs_review": true,
+    "claim_block": false,
+    "file": "01-policy_readout-74721c5e.html",
+    "stats": {
+      "body_chars": 2946,
+      "sections": 5,
+      "tables": 1,
+      "boxes": 0,
+      "footnotes": 2,
+      "has_hook": true,
+      "has_end": true,
+      "has_title": true
+    },
+    "problems": [
+      "AI味句式: 不在于[^。；！？]{0,25}?而在于",
+      "AI味句式 2 处（不在于…而在于）——必须改掉，不是换词而是拆句重写"
+    ],
+    "html_len": 7932,
+    "note": "未通过全部质检，已按最优版本落盘，需人工核查",
+    "title": "国家药监局药审中心关于发布《儿童药物临床试验中应用患者报告结局（PRO）技术指导原则》的通告（2026年第54号）",
+    "score": 7.5,
+    "type": "policy_readout"
+  },
+  {
+    "ok": true,
+    "needs_review": true,
+    "claim_block": false,
+    "file": "02-policy_readout-bc193c4e.html",
+    "stats": {
+      "body_chars": 2708,
+      "sections": 5,
+      "tables": 3,
+      "boxes": 0,
+      "footnotes": 2,
+      "has_hook": true,
+      "has_end": false,
+      "has_title": true
+    },
+    "problems": [
+      "AI味句式: 真正的",
+      "AI味句式 1 处（真正的）——必须改掉，不是换词而是拆句重写"
+    ],
+    "html_len": 8021,
+    "note": "未通过全部质检，已按最优版本落盘，需人工核查",
+    "title": "关于公布《新疆维吾尔自治区医疗保障局 新疆生产建设兵团医疗保障局第三批智能监管“两库”规则和知识点》的通告",
+    "score": 6.6,
+    "type": "policy_readout"
+  },
+  {
+    "ok": true,
+    "needs_review": true,
+    "claim_block": false,
+    "file": "03-policy_readout-867f386f.html",
+    "stats": {
+      "body_chars": 3021,
+      "sections": 5,
+      "tables": 1,
+      "boxes": 0,
+      "footnotes": 4,
+      "has_hook": true,
+      "has_end": true,
+      "has_title": true
+    },
+    "problems": [
+      "AI味句式: 不是[^。；！？]{0,30}?而是",
+      "AI味句式: 真正的",
+      "AI味句式 3 处（不是…而是, 值得注意, 真正的）——必须改掉，不是换词而是拆句重写"
+    ],
+    "html_len": 9444,
+    "note": "未通过全部质检，已按最优版本落盘，需人工核查",
+    "title": "HHS Issues New Final Rule to Modernize the HIPAA Privacy Rule to Support Coordinated Care and Individual Engagement and Reduce Regulatory Burdens",
+    "score": 8.8,
+    "type": "policy_readout"
+  }
+]
