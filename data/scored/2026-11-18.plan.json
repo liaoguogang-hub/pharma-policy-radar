@@ -1,0 +1,37 @@
+{
+  "date": "2026-11-18",
+  "count": 1,
+  "plan": [
+    {
+      "type": "policy_readout",
+      "cluster_key": "policy:fda-global-reliance-disclosure",
+      "channel": "global",
+      "lead_id": "dd24940201be9c6b",
+      "title": "FDA Launches the Global Reliance Disclosure Program to Expand Patient Access to Medicines Worldwide",
+      "score": 8.8,
+      "member_ids": [
+        "dd24940201be9c6b"
+      ],
+      "members": [
+        {
+          "title": "FDA Launches the Global Reliance Disclosure Program to Expand Patient Access to Medicines Worldwide",
+          "url": "http://www.fda.gov/news-events/press-announcements/fda-launches-global-reliance-disclosure-program-expand-patient-access-medicines-worldwide",
+          "score": 8.8,
+          "reasoning": "FDA推出新的全球监管互赖披露项目，属于国家级监管机构推动跨境审评信息协作的重要政策动向；其适用范围、披露要求与参与路径值得深入核查"
+        }
+      ],
+      "reasoning": "FDA推出新的全球监管互赖披露项目，属于国家级监管机构推动跨境审评信息协作的重要政策动向；其适用范围、披露要求与参与路径值得深入核查",
+      "verify_todo": [
+        "核对项目对应的正式法律文件、政策指南或启动公告名称及发布日期",
+        "确认参与主体、披露内容、适用范围和实施期限",
+        "核实项目是否具有强制约束力，以及与FDA审评审批决策的具体关联"
+      ],
+      "flags": [
+        "formal",
+        "national",
+        "overseas",
+        "industry"
+      ]
+    }
+  ]
+}
