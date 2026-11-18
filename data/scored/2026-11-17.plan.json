@@ -1,99 +1,129 @@
 {
   "date": "2026-11-17",
-  "count": 3,
+  "count": 4,
   "plan": [
     {
-      "type": "consultation",
-      "cluster_key": "policy:cde-申办者变更问答",
+      "type": "policy_readout",
+      "cluster_key": "policy:纠正医药购销不正之风-2026",
       "channel": "china",
-      "lead_id": "59b44840114982ea",
-      "title": "关于公开征求《药物临床试验申办者变更有关问题问与答（征求意见稿）》意见的通知",
-      "score": 6.0,
+      "lead_id": "9a2f400930d71ea6",
+      "title": "关于印发2026年纠正医药购销领域和医疗服务中不正之风工作要点的通知",
+      "score": 6.9,
       "member_ids": [
-        "59b44840114982ea"
+        "9a2f400930d71ea6"
       ],
       "members": [
         {
-          "title": "关于公开征求《药物临床试验申办者变更有关问题问与答（征求意见稿）》意见的通知",
-          "url": "https://www.cde.org.cn/main/news/viewInfoCommon/7c0d5f0e5f23eb1aa8e407d9f0dd0737",
-          "score": 6.0,
-          "reasoning": "CDE就药物临床试验申办者变更相关问答公开征求意见，涉及临床试验期间申办责任和注册申报衔接，具有明确的行业操作指向，值得追踪其最终规则及企业流程调整。"
+          "title": "关于印发2026年纠正医药购销领域和医疗服务中不正之风工作要点的通知",
+          "url": "http://wsjkw.nx.gov.cn/zfxxgk_279/zcfg/202606/t20260611_5263165.html",
+          "score": 6.9,
+          "reasoning": "多部门年度纠风工作要点横跨医药购销、医疗服务和重点利益环节，属于覆盖全行业的合规治理框架，值得系统比较其年度新增要求；但发布时间已远超一周，应按政策回顾而非即时新闻处理。"
         }
       ],
-      "reasoning": "CDE就药物临床试验申办者变更相关问答公开征求意见，涉及临床试验期间申办责任和注册申报衔接，具有明确的行业操作指向，值得追踪其最终规则及企业流程调整。",
+      "reasoning": "多部门年度纠风工作要点横跨医药购销、医疗服务和重点利益环节，属于覆盖全行业的合规治理框架，值得系统比较其年度新增要求；但发布时间已远超一周，应按政策回顾而非即时新闻处理。",
       "verify_todo": [
-        "获取征求意见稿及起草说明全文",
-        "核对适用的申办者变更情形、申报程序和材料要求",
-        "确认反馈截止日期及征求意见稿拟解决的具体监管问题",
-        "核实其与现行药物临床试验相关法规和审评要求的关系"
+        "核验全部联合发文机关、文件文号及国家卫健委官方原文链接",
+        "对照上一年度工作要点，识别新增、调整及延续要求",
+        "确认文件有效状态以及是否有后续专项检查或处罚安排"
       ],
       "flags": [
-        "consultation",
+        "formal",
         "national",
-        "approval"
+        "effective"
       ]
     },
     {
-      "type": "consultation",
-      "cluster_key": "policy:cde-中药注册通用技术文档格式",
+      "type": "policy_readout",
+      "cluster_key": "policy:基层医疗质量改善三年行动-2026-2028",
       "channel": "china",
-      "lead_id": "cdf06b602896cadf",
-      "title": "关于公开征求《中药注册通用技术文档申报格式指导原则（征求意见稿）》意见的通知",
-      "score": 6.0,
+      "lead_id": "5984a70a4cf0c734",
+      "title": "关于开展基层医疗卫生机构医疗质量改善三年行动（2026—2028年）的通知",
+      "score": 6.5,
       "member_ids": [
-        "cdf06b602896cadf"
+        "5984a70a4cf0c734"
       ],
       "members": [
         {
-          "title": "关于公开征求《中药注册通用技术文档申报格式指导原则（征求意见稿）》意见的通知",
-          "url": "https://www.cde.org.cn/main/news/viewInfoCommon/6ea4de7f2ab9611f26203d3d8ad1304a",
-          "score": 6.0,
-          "reasoning": "CDE就中药注册通用技术文档申报格式指导原则公开征求意见，涉及中药注册申报材料组织和审评沟通方式，可能影响相关企业的文档准备与递交流程，值得比较新旧要求。"
+          "title": "关于开展基层医疗卫生机构医疗质量改善三年行动（2026—2028年）的通知",
+          "url": "http://wsjkw.nx.gov.cn/zfxxgk_279/zcfg/202604/t20260409_5212993.html",
+          "score": 6.5,
+          "reasoning": "国家层面的基层医疗质量三年行动覆盖广泛医疗服务环节，涉及基层机构质量管理机制建设，属于值得持续跟踪的行业级行动；虽已非近日发布，仍具有政策周期和地方落地比较价值。"
         }
       ],
-      "reasoning": "CDE就中药注册通用技术文档申报格式指导原则公开征求意见，涉及中药注册申报材料组织和审评沟通方式，可能影响相关企业的文档准备与递交流程，值得比较新旧要求。",
+      "reasoning": "国家层面的基层医疗质量三年行动覆盖广泛医疗服务环节，涉及基层机构质量管理机制建设，属于值得持续跟踪的行业级行动；虽已非近日发布，仍具有政策周期和地方落地比较价值。",
       "verify_todo": [
-        "获取征求意见稿、起草说明及附件全文",
-        "核对适用注册事项、文档格式要求和提交路径",
-        "确认反馈截止日期及新旧格式的衔接安排",
-        "核实其与中药注册申报现有资料要求及审评规程的关系"
+        "核对国卫办基层发〔2026〕4号原文、附件和发布信息",
+        "确认行动目标、质控要求及基层医疗机构的执行责任",
+        "核实是否配套监测评估、质控通报或考核激励机制"
       ],
       "flags": [
-        "consultation",
+        "formal",
         "national",
-        "approval"
+        "effective"
       ]
     },
     {
-      "type": "consultation",
-      "cluster_key": "policy:cms-crush-program-integrity",
+      "type": "policy_readout",
+      "cluster_key": "policy:医保支持基层医疗-广东实施意见",
+      "channel": "china",
+      "lead_id": "9fab48ec35f4c5dc",
+      "title": "广东省医疗保障局 广东省卫生健康委关于医保支持基层医疗卫生服务发展的实施意见",
+      "score": 6.3,
+      "member_ids": [
+        "9fab48ec35f4c5dc"
+      ],
+      "members": [
+        {
+          "title": "广东省医疗保障局 广东省卫生健康委关于医保支持基层医疗卫生服务发展的实施意见",
+          "url": "http://hsa.gd.gov.cn/zwdt/snkb/content/post_4979018.html",
+          "score": 6.3,
+          "reasoning": "省级医保与卫健部门联合出台基层医疗服务支持文件，涉及医保基金预算、支付机制和基层机构结算安排，覆盖面横跨基层医疗、医疗机构和参保人，值得系统梳理其与国家指导意见的衔接及对支付规则的影响。"
+        }
+      ],
+      "reasoning": "省级医保与卫健部门联合出台基层医疗服务支持文件，涉及医保基金预算、支付机制和基层机构结算安排，覆盖面横跨基层医疗、医疗机构和参保人，值得系统梳理其与国家指导意见的衔接及对支付规则的影响。",
+      "verify_todo": [
+        "核对粤医保发〔2026〕22号原文、发文日期及是否已明确生效",
+        "提取总额管理、支付方式、考核激励和风险调剂方面的具体新增安排",
+        "确认与国家医保发〔2026〕7号指导意见的对应关系及地方可自主裁量空间"
+      ],
+      "flags": [
+        "formal",
+        "local",
+        "price",
+        "reimbursement",
+        "industry"
+      ]
+    },
+    {
+      "type": "policy_readout",
+      "cluster_key": "policy:fda-global-reliance-disclosure",
       "channel": "global",
-      "lead_id": "9d8df24d37dcaa6d",
-      "title": "CMS CRUSH Proposed Rule Aims to Reap Nearly $90 Billion for Taxpayers in Savings by Targeting Fraud Across Medicare, Medicaid/CHIP, and the Marketplace",
-      "score": 8.3,
+      "lead_id": "dd24940201be9c6b",
+      "title": "FDA Launches the Global Reliance Disclosure Program to Expand Patient Access to Medicines Worldwide",
+      "score": 8.5,
       "member_ids": [
-        "9d8df24d37dcaa6d"
+        "dd24940201be9c6b"
       ],
       "members": [
         {
-          "title": "CMS CRUSH Proposed Rule Aims to Reap Nearly $90 Billion for Taxpayers in Savings by Targeting Fraud Across Medicare, Medicaid/CHIP, and the Marketplace",
-          "url": "https://www.hhs.gov/press-room/cms-crush-rule-targets-healthcare-fraud-saves-90-billion.html",
-          "score": 8.3,
-          "reasoning": "CMS发布覆盖多类联邦医疗支付计划的拟议规则，重点涉及支付项目完整性与反欺诈机制，属于影响广泛且可能重塑监管流程和支付方合规要求的高层级政策议题，值得系统梳理规则变化及潜在行业影响。"
+          "title": "FDA Launches the Global Reliance Disclosure Program to Expand Patient Access to Medicines Worldwide",
+          "url": "http://www.fda.gov/news-events/press-announcements/fda-launches-global-reliance-disclosure-program-expand-patient-access-medicines-worldwide",
+          "score": 8.5,
+          "reasoning": "FDA启动跨境监管信息依赖披露机制，属于全球监管协作与药品审评制度的重要安排；其适用主体、信息披露边界及对其他监管机构的影响值得系统梳理。"
         }
       ],
-      "reasoning": "CMS发布覆盖多类联邦医疗支付计划的拟议规则，重点涉及支付项目完整性与反欺诈机制，属于影响广泛且可能重塑监管流程和支付方合规要求的高层级政策议题，值得系统梳理规则变化及潜在行业影响。",
+      "reasoning": "FDA启动跨境监管信息依赖披露机制，属于全球监管协作与药品审评制度的重要安排；其适用主体、信息披露边界及对其他监管机构的影响值得系统梳理。",
       "verify_todo": [
-        "获取CMS拟议规则全文、联邦公报文号及评论截止日期",
-        "核对拟议规则涉及的适用范围、义务主体和合规流程",
-        "确认官方新闻稿所列十年节支测算的口径与测算依据",
-        "核实规则与CMS现有Program Integrity相关要求之间的关系"
+        "核对项目正式名称、启动日期及适用的监管审评环节",
+        "确认项目属于强制披露、自愿披露还是分阶段实施",
+        "梳理参与机构、信息提交标准和监管互认安排",
+        "确认是否另有配套指南、实施细则或正式文件"
       ],
       "flags": [
-        "consultation",
-        "national",
+        "formal",
         "overseas",
-        "reimbursement"
+        "industry",
+        "approval"
       ]
     }
   ]

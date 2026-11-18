@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CDE就药物临床试验申办者变更问答征求意见</title>
+<style>
+:root{--bg:#fff;--soft:#f7f7f5;--ink:#1a1a1a;--ink2:#4a4a4a;--faint:#8a8a8a;--rule:#e6e6e3;--bronze:#9c6b3c;--deep:#6b4a2a;--red:#a93226;--green:#4a7c4e;--amber:#f5ecd9;--rose:#f7e8e6;--mint:#e8f0e6;--serif:"Noto Serif SC",Georgia,"Songti SC",serif;--mono:"JetBrains Mono",Menlo,monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--serif);font-size:16px;line-height:1.9;color:var(--ink);background:var(--bg)}
+.wrap{max-width:780px;margin:0 auto;padding:60px 24px 90px}
+p{margin-bottom:18px;text-align:justify}
+.kicker{font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--bronze);margin-bottom:12px}
+h1{font-size:clamp(25px,3.6vw,34px);font-weight:700;color:var(--red);line-height:1.35;margin-bottom:14px}
+.sub{font-size:15px;color:var(--ink2);margin-bottom:34px;font-style:italic}
+h2{font-size:21px;font-weight:600;color:var(--deep);margin:44px 0 16px;padding-top:12px;border-top:1px solid var(--rule)}
+h2 .n{color:var(--red);font-family:var(--mono);font-size:15px;margin-right:9px}
+h3{font-size:17px;font-weight:600;margin:26px 0 10px}
+.hook{background:var(--red);color:#fff;padding:26px 30px;margin:22px 0 32px;font-size:18px;line-height:1.75}
+.hook strong{color:#ffd166}
+.box{background:var(--soft);border:1px solid var(--rule);padding:15px 19px;margin:20px 0;font-size:14px;color:var(--ink2)}
+.box b{color:var(--deep)}
+.box p{margin-bottom:8px;text-align:left}
+.w{background:var(--amber);border-left:3px solid #b88a3e}
+.g{background:var(--mint);border-left:3px solid var(--green)}
+.r{background:var(--rose);border-left:3px solid var(--red)}
+table{width:100%;border-collapse:collapse;margin:20px 0;font-size:13px}
+th{background:var(--deep);color:#fff;text-align:left;padding:9px 11px;font-weight:600;font-size:12.5px}
+td{padding:9px 11px;border-bottom:1px solid var(--rule);vertical-align:top}
+tbody tr:nth-child(even){background:var(--soft)}
+.m{font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:12.5px}
+.hl{color:var(--red);font-weight:700}
+.foot{font-size:12px;color:var(--faint);margin-top:7px}
+strong{font-weight:700}
+ul{margin:12px 0 18px 24px}
+li{margin-bottom:8px}
+.fn{font-size:12px;color:var(--faint);margin-top:38px;line-height:1.8;text-align:left}
+.end{background:var(--deep);color:#fff;padding:24px 28px;margin:40px 0 22px}
+.end h4{font-size:18px;font-weight:600;margin-bottom:8px}
+@media(max-width:720px){.wrap{padding:30px 16px 60px}}
+</style>
+</head>
+<body>
+<article class="wrap">
+<div class="kicker">Policy Readout｜征求意见</div>
+<h1>CDE就药物临床试验申办者变更问答征求意见</h1>
+<p class="sub">《药物临床试验申办者变更有关问题问与答（征求意见稿）》公开征求意见，反馈期限为10个工作日</p>
+<div class="hook">2026年11月13日，国家药品监督管理局药品审评中心发布《关于公开征求〈药物临床试验申办者变更有关问题问与答（征求意见稿）〉意见的通知》。通知写明，为明确申办者变更注册申报要求、指导企业规范开展相关工作，药审中心起草了《药物临床试验申办者变更有关问题问与答（征求意见稿）》。征求意见时限为自发布之日起10个工作日，反馈邮箱为liyn@cde.org.cn，页面“相关附件”部分列有征求意见稿PDF、起草说明PDF和意见反馈表DOCX。</div>
+<h2><span class="n">01</span>通知给出的核心信息</h2>
+<p>通知正文中关于起草目的的原文为：“为明确申办者变更注册申报要求，指导企业规范开展相关工作，我中心起草了《药物临床试验申办者变更有关问题问与答（征求意见稿）》。”这段表述同时给出了文件名称和起草目的：文件聚焦药物临床试验申办者变更相关的注册申报要求，通知所述工作目标是为企业开展相关工作提供规范依据。</p>
+<p>通知中的发布日期字段为20261113，落款主体为国家药品监督管理局药品审评中心，落款日期为2026年11月13日。正文同时写明：“征求意见时限为自发布之日起10个工作日。”因此，通知给出的反馈期限以文件发布之日起算，而不是要求反馈者另行填报一个截止日期。</p>
+<p>对于反馈渠道，通知原文写道：“您的反馈意见请发到以下邮箱：liyn@cde.org.cn。”邮件地址为liyn@cde.org.cn，收件方式为电子邮件。通知还邀请社会各界对征求意见稿提出意见和建议，并及时反馈，以便后续完善。</p>
+<p>页面“相关附件”部分按序号和名称列示了《药物临床试验申办者变更有关问题问与答（征求意见稿）》.pdf、同名文件起草说明.pdf以及同名文件意见反馈表.docx。这三行名称和格式可以在原页面逐项核对。</p>
+<p>BOX 风险提示：本次通知发布于2026年11月13日，征求意见时限为自发布之日起10个工作日，反馈邮箱为liyn@cde.org.cn。</p>
+<h2><span class="n">02</span>起草目的如何理解</h2>
+<p>通知将起草目的写为“明确申办者变更注册申报要求，指导企业规范开展相关工作”。其中，“明确申办者变更注册申报要求”对应文件名称中的“药物临床试验申办者变更”和“有关问题问与答”；“指导企业规范开展相关工作”则是通知对起草目标作出的直接说明。</p>
+<p>从操作角度看，这一定位并不改变通知现有内容，而是提示反馈意见应围绕申办者变更的注册申报要求展开。通知没有在正文摘要中展开具体场景、程序或材料要求，因此不能仅依据标题进一步延伸出更多适用范围。企业阅读附件时，应以《药物临床试验申办者变更有关问题问与答（征求意见稿）》正文为依据，再决定提交意见所涉及的问题。</p>
+<p>通知还写道：“我们诚挚地欢迎社会各界对征求意见稿提出宝贵意见和建议，并及时反馈给我们，以便后续完善。”从这段文字可以直接确认，意见对象是征求意见稿，意见来源面向社会各界，反馈结果将用于后续完善。</p>
+<h2><span class="n">03</span>核心信息一览</h2>
+<table><thead><tr><th>要素</th><th>通知载明内容</th><th>对应原文位置</th></tr></thead><tbody><tr><td>起草机关</td><td>国家药品监督管理局药品审评中心</td><td>通知落款</td></tr><tr><td>文件名称</td><td>《药物临床试验申办者变更有关问题问与答（征求意见稿）》</td><td>通知正文</td></tr><tr><td>文件性质</td><td>征求意见稿</td><td>文件名称</td></tr><tr><td>发布日期</td><td>2026年11月13日</td><td>发布日期字段及落款</td></tr><tr><td>征求意见时限</td><td>自发布之日起10个工作日</td><td>通知正文</td></tr><tr><td>反馈邮箱</td><td>liyn@cde.org.cn</td><td>通知正文</td></tr><tr><td>征求意见稿附件</td><td>《药物临床试验申办者变更有关问题问与答（征求意见稿）》.pdf</td><td>相关附件</td></tr><tr><td>起草说明附件</td><td>《药物临床试验申办者变更有关问题问与答（征求意见稿）》起草说明.pdf</td><td>相关附件</td></tr><tr><td>意见反馈表附件</td><td>《药物临床试验申办者变更有关问题问与答（征求意见稿）》意见反馈表.docx</td><td>相关附件</td></tr></tbody></table>
+<p>通知原文的信息链条较为清楚：药审中心于2026年11月13日发布公开征求意见通知；起草目的为“明确申办者变更注册申报要求，指导企业规范开展相关工作”；意见反馈邮箱为liyn@cde.org.cn；征求意见时限为“自发布之日起10个工作日”。通知落款主体与发布日期也列于页面正文。</p>
+<p>阅读这份通知时，可以把发布日期、期限起算方式、反馈地址和附件名称作为核对入口。发布日期字段与落款日期均为2026年11月13日；“自发布之日起10个工作日”明确了期限计算方式；liyn@cde.org.cn是正文给出的反馈邮箱。</p>
+<p>页面“相关附件”所列文件名称分别为《药物临床试验申办者变更有关问题问与答（征求意见稿）》.pdf、《药物临床试验申办者变更有关问题问与答（征求意见稿）》起草说明.pdf，以及《药物临床试验申办者变更有关问题问与答（征求意见稿）》意见反馈表.docx。附件格式也分别显示为PDF、PDF和DOCX。</p>
+<h2><span class="n">04</span>意见反馈安排</h2>
+<p>征求意见时限、反馈邮箱和意见来源均见于通知正文。正文写明，意见发送至liyn@cde.org.cn，期限为自发布之日起10个工作日，并邀请社会各界对征求意见稿提出宝贵意见和建议，以供后续完善。</p>
+<p>“相关附件”部分列有《药物临床试验申办者变更有关问题问与答（征求意见稿）》意见反馈表.docx。文件名称显示其格式为DOCX，内容定位可从文件名识别为意见反馈表。发送反馈前，提交者可核对邮件地址、反馈期限及附件名称，避免将文件对应关系混淆。</p>
+<p>通知对时间安排的表达可以拆分为两部分：发布日期字段写为20261113，落款日期写为2026年11月13日；正文另写明“征求意见时限为自发布之日起10个工作日”。因此，查看期限时应以通知发布日作为起点，并按工作日计算。</p>
+<p>在准备反馈内容时，可以先阅读《药物临床试验申办者变更有关问题问与答（征求意见稿）》.pdf，再参考《药物临床试验申办者变更有关问题问与答（征求意见稿）》起草说明.pdf。若需使用配套的书面反馈格式，可打开《药物临床试验申办者变更有关问题问与答（征求意见稿）》意见反馈表.docx。完成整理后，将意见发送至通知指定的liyn@cde.org.cn。</p>
+<h2><span class="n">05</span>相关附件名称与格式</h2>
+<table><thead><tr><th>比较项</th><th>通知页面可确认内容</th><th>信息来源</th></tr></thead><tbody><tr><td>文件主题</td><td>药物临床试验申办者变更</td><td>文件名称</td></tr><tr><td>起草目的</td><td>明确申办者变更注册申报要求</td><td>通知正文</td></tr><tr><td>文件载体</td><td>问与答</td><td>文件名称</td></tr><tr><td>意见征询</td><td>面向社会各界征求意见</td><td>通知正文</td></tr><tr><td>反馈安排</td><td>发送电子邮件至liyn@cde.org.cn</td><td>通知正文</td></tr><tr><td>配套材料</td><td>起草说明、意见反馈表</td><td>相关附件</td></tr></tbody></table>
+<p>《药物临床试验申办者变更有关问题问与答（征求意见稿）》.pdf是“相关附件”部分列示的文件名称，格式标记为PDF。通知正文将《药物临床试验申办者变更有关问题问与答（征求意见稿）》称为“征求意见稿”，并邀请社会各界就此提出意见和建议。</p>
+<p>《药物临床试验申办者变更有关问题问与答（征求意见稿）》起草说明.pdf也是页面列示的附件名称，格式标记为PDF。其名称在征求意见稿名称后增加了“起草说明”，用于配套呈现文件的起草背景与说明。</p>
+<p>《药物临床试验申办者变更有关问题问与答（征求意见稿）》意见反馈表.docx的格式标记为DOCX，名称中直接包含“意见反馈表”。通知正文给出的电子邮件地址为liyn@cde.org.cn，页面同时提供该反馈表文件。</p>
+<p>区分这些文件时，可直接依据附件名称和扩展名：问与答征求意见稿使用PDF，起草说明使用PDF，意见反馈表使用DOCX。这里能够确认的是文件名称、格式及通知正文所列的反馈安排；具体条款和填写要求应以各自文件内容为准。</p>
+<h2><span class="n">06</span>企业如何安排阅读与反馈</h2>
+<p>围绕本次通知，企业可先完成基础信息核对。第一，记录文件名称《药物临床试验申办者变更有关问题问与答（征求意见稿）》；第二，记录起草目的“明确申办者变更注册申报要求，指导企业规范开展相关工作”；第三，记录发布机关、发布日期、征求意见时限、反馈邮箱和附件名称。上述内容分别可在通知正文、发布日期字段、落款和“相关附件”部分找到原文依据。</p>
+<p>随后核对反馈安排。通知规定自发布之日起10个工作日征求意见，反馈邮箱为liyn@cde.org.cn。页面“相关附件”列有《药物临床试验申办者变更有关问题问与答（征求意见稿）》.pdf、《药物临床试验申办者变更有关问题问与答（征求意见稿）》起草说明.pdf和《药物临床试验申办者变更有关问题问与答（征求意见稿）》意见反馈表.docx。</p>
+<p>阅读附件时，可按页面列示的名称和格式逐项打开，并根据文件名称识别材料。需要整理意见的企业，应以问与答征求意见稿为主要阅读对象，并结合起草说明核对文件背景；需要书面记录反馈内容的企业，可使用意见反馈表DOCX。完成整理后，将意见发送至通知指定的电子邮件地址。</p>
+<p>持续记录时，可围绕文件名称、发布机关、发布日期、反馈期限和反馈邮箱建立核对表。这些项目均有对应的通知原文位置，便于在反馈期结束前复核信息。</p>
+<p>对于政策进展，可留意后续公开文件及其与本次征求意见稿名称的变化。后续跟踪时，先以本次通知中的名称、日期和附件信息建立基准，再对照新发布材料识别文件名称、发布日期及具体内容的变化。</p>
+<div class="end"><h4>CDE于2026年11月13日就《药物临床试验申办者变更有关问题问与答（征求意见稿）》公开征求意见</h4><p>反馈期限为自发布之日起10个工作日｜反馈邮箱：liyn@cde.org.cn｜相关附件包括征求意见稿PDF、起草说明PDF及意见反馈表DOCX</p></div>
+<p class="fn"><strong>来源与核查口径：</strong><br>
+1. 来源说明：国家药品监督管理局药品审评中心《关于公开征求〈药物临床试验申办者变更有关问题问与答（征求意见稿）〉意见的通知》，发布日期字段及落款日期均为2026年11月13日。通知正文载明起草目的、征求意见期限、反馈邮箱及意见反馈安排。https://www.cde.org.cn/main/news/viewInfoCommon/7c0d5f0e5f23eb1aa8e407d9f0dd0737<br>
+2. 来源说明：上述官方通知“相关附件”部分，按序号列示《药物临床试验申办者变更有关问题问与答（征求意见稿）》PDF、同名文件起草说明PDF及同名文件意见反馈表DOCX。</p>
+</article>
+</body>
+</html>

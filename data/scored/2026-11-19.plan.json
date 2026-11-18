@@ -1,0 +1,130 @@
+{
+  "date": "2026-11-19",
+  "count": 4,
+  "plan": [
+    {
+      "type": "policy_readout",
+      "cluster_key": "policy:nmpa-医疗器械临床试验方案前置咨询",
+      "channel": "china",
+      "lead_id": "2077fe2f9d4b63e5",
+      "title": "国家药监局关于全面开展医疗器械临床试验方案前置咨询服务的通告（2026年第40号）",
+      "score": 8.0,
+      "member_ids": [
+        "2077fe2f9d4b63e5"
+      ],
+      "members": [
+        {
+          "title": "国家药监局关于全面开展医疗器械临床试验方案前置咨询服务的通告（2026年第40号）",
+          "url": "https://www.nmpa.gov.cn/xxgk/ggtg/ylqxggtg/ylqxqtggtg/20261116092706144.html",
+          "score": 8.0,
+          "reasoning": "第三类医疗器械临床试验方案前置咨询属于国家药监局新增监管服务安排，影响器械研发申报流程与上市准备，值得拆解适用范围、申请路径和后续配套要求。"
+        }
+      ],
+      "reasoning": "第三类医疗器械临床试验方案前置咨询属于国家药监局新增监管服务安排，影响器械研发申报流程与上市准备，值得拆解适用范围、申请路径和后续配套要求。",
+      "verify_todo": [
+        "核对国家药监局2026年第40号通告完整原文及2027年1月1日实施安排",
+        "确认器审中心另行发布的申请通知是否已经出台，以及申请材料、办理流程和反馈形式"
+      ],
+      "flags": [
+        "formal",
+        "national",
+        "approval",
+        "industry"
+      ]
+    },
+    {
+      "type": "policy_readout",
+      "cluster_key": "policy:qh-检验类医疗服务价格与支付类别调整",
+      "channel": "china",
+      "lead_id": "ac20acf2127931d9",
+      "title": "青海省医疗保障局关于调整检验类等医疗服务价格项目及医保支付类别的通知",
+      "score": 6.3,
+      "member_ids": [
+        "ac20acf2127931d9"
+      ],
+      "members": [
+        {
+          "title": "青海省医疗保障局关于调整检验类等医疗服务价格项目及医保支付类别的通知",
+          "url": "https://ybj.qinghai.gov.cn/20261118/90601f3830ca483aa71e86fab8e1ff6c/c.html",
+          "score": 6.3,
+          "reasoning": "省医保局对大批医疗服务价格项目及医保支付类别作出调整，并涉及中药配方颗粒零差率与调剂费计价调整，属价格与支付规则的双重变化，直接影响医疗机构结算与药企渠道定价预期"
+        }
+      ],
+      "reasoning": "省医保局对大批医疗服务价格项目及医保支付类别作出调整，并涉及中药配方颗粒零差率与调剂费计价调整，属价格与支付规则的双重变化，直接影响医疗机构结算与药企渠道定价预期",
+      "verify_todo": [
+        "核对调整项目的数量口径与附件清单",
+        "确认执行日期及对已发生业务的衔接方式",
+        "核对中药配方颗粒零差率适用范围与调剂费调整依据"
+      ],
+      "flags": [
+        "local",
+        "formal",
+        "price",
+        "reimbursement",
+        "effective"
+      ]
+    },
+    {
+      "type": "policy_readout",
+      "cluster_key": "policy:第十二批药品及全国中成药中药饮片集采执行-新疆",
+      "channel": "china",
+      "lead_id": "8dad71353edf62d7",
+      "title": "关于做好第十二批国家组织药品、全国中成药（第二批接续、第四批）、全国中药饮片集中带量采购中选结果执行工作的通知",
+      "score": 6.1,
+      "member_ids": [
+        "8dad71353edf62d7"
+      ],
+      "members": [
+        {
+          "title": "关于做好第十二批国家组织药品、全国中成药（第二批接续、第四批）、全国中药饮片集中带量采购中选结果执行工作的通知",
+          "url": "http://ylbzj.xinjiang.gov.cn/ylbzj/tzgg/202611/9eb1cd950d104746843b0bb52841e65a.shtml",
+          "score": 6.1,
+          "reasoning": "区级医保局就第十二批国家药品、全国中成药与中药饮片集采中选结果落地执行作出部署，涉及供应清单外规格的价格处理与撤网规则，属集采执行层面的关键约束变化"
+        }
+      ],
+      "reasoning": "区级医保局就第十二批国家药品、全国中成药与中药饮片集采中选结果落地执行作出部署，涉及供应清单外规格的价格处理与撤网规则，属集采执行层面的关键约束变化",
+      "verify_todo": [
+        "核对供应清单外规格的处理规则与生效时点",
+        "确认约定采购量、结算与配送要求",
+        "核对兵团与自治区执行口径的衔接方式"
+      ],
+      "flags": [
+        "local",
+        "formal",
+        "procurement",
+        "price",
+        "effective"
+      ]
+    },
+    {
+      "type": "policy_readout",
+      "cluster_key": "policy:fda-global-reliance-disclosure-program",
+      "channel": "global",
+      "lead_id": "dd24940201be9c6b",
+      "title": "FDA Launches the Global Reliance Disclosure Program to Expand Patient Access to Medicines Worldwide",
+      "score": 8.0,
+      "member_ids": [
+        "dd24940201be9c6b"
+      ],
+      "members": [
+        {
+          "title": "FDA Launches the Global Reliance Disclosure Program to Expand Patient Access to Medicines Worldwide",
+          "url": "http://www.fda.gov/news-events/press-announcements/fda-launches-global-reliance-disclosure-program-expand-patient-access-medicines-worldwide",
+          "score": 8.0,
+          "reasoning": "FDA 启动全球监管互认信息披露机制，属国家级监管机构面向全球监管协同的政策安排，可能改变境外监管机构对FDA审评结论的采信方式，对中国药企出海注册路径有间接影响，值得梳理机制设计与参与条件"
+        }
+      ],
+      "reasoning": "FDA 启动全球监管互认信息披露机制，属国家级监管机构面向全球监管协同的政策安排，可能改变境外监管机构对FDA审评结论的采信方式，对中国药企出海注册路径有间接影响，值得梳理机制设计与参与条件",
+      "verify_todo": [
+        "核对GRDP的官方文件类型、参与主体与信息披露内容要求",
+        "确认是否有正式指南或规定文本及发布时间表",
+        "确认适用产品范围与对非FDA审评结论的采信边界"
+      ],
+      "flags": [
+        "overseas",
+        "formal",
+        "approval"
+      ]
+    }
+  ]
+}

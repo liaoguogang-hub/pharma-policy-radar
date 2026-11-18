@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>中药注册通用技术文档《申报格式指导原则（征求意见稿）》公开征求意见</title>
+<style>
+:root{--bg:#fff;--soft:#f7f7f5;--ink:#1a1a1a;--ink2:#4a4a4a;--faint:#8a8a8a;--rule:#e6e6e3;--bronze:#9c6b3c;--deep:#6b4a2a;--red:#a93226;--green:#4a7c4e;--amber:#f5ecd9;--rose:#f7e8e6;--mint:#e8f0e6;--serif:"Noto Serif SC",Georgia,"Songti SC",serif;--mono:"JetBrains Mono",Menlo,monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--serif);font-size:16px;line-height:1.9;color:var(--ink);background:var(--bg)}
+.wrap{max-width:780px;margin:0 auto;padding:60px 24px 90px}
+p{margin-bottom:18px;text-align:justify}
+.kicker{font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--bronze);margin-bottom:12px}
+h1{font-size:clamp(25px,3.6vw,34px);font-weight:700;color:var(--red);line-height:1.35;margin-bottom:14px}
+.sub{font-size:15px;color:var(--ink2);margin-bottom:34px;font-style:italic}
+h2{font-size:21px;font-weight:600;color:var(--deep);margin:44px 0 16px;padding-top:12px;border-top:1px solid var(--rule)}
+h2 .n{color:var(--red);font-family:var(--mono);font-size:15px;margin-right:9px}
+h3{font-size:17px;font-weight:600;margin:26px 0 10px}
+.hook{background:var(--red);color:#fff;padding:26px 30px;margin:22px 0 32px;font-size:18px;line-height:1.75}
+.hook strong{color:#ffd166}
+.box{background:var(--soft);border:1px solid var(--rule);padding:15px 19px;margin:20px 0;font-size:14px;color:var(--ink2)}
+.box b{color:var(--deep)}
+.box p{margin-bottom:8px;text-align:left}
+.w{background:var(--amber);border-left:3px solid #b88a3e}
+.g{background:var(--mint);border-left:3px solid var(--green)}
+.r{background:var(--rose);border-left:3px solid var(--red)}
+table{width:100%;border-collapse:collapse;margin:20px 0;font-size:13px}
+th{background:var(--deep);color:#fff;text-align:left;padding:9px 11px;font-weight:600;font-size:12.5px}
+td{padding:9px 11px;border-bottom:1px solid var(--rule);vertical-align:top}
+tbody tr:nth-child(even){background:var(--soft)}
+.m{font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:12.5px}
+.hl{color:var(--red);font-weight:700}
+.foot{font-size:12px;color:var(--faint);margin-top:7px}
+strong{font-weight:700}
+ul{margin:12px 0 18px 24px}
+li{margin-bottom:8px}
+.fn{font-size:12px;color:var(--faint);margin-top:38px;line-height:1.8;text-align:left}
+.end{background:var(--deep);color:#fff;padding:24px 28px;margin:40px 0 22px}
+.end h4{font-size:18px;font-weight:600;margin-bottom:8px}
+@media(max-width:720px){.wrap{padding:30px 16px 60px}}
+</style>
+</head>
+<body>
+<article class="wrap">
+<div class="kicker">Policy Readout｜中药注册</div>
+<h1>中药注册通用技术文档《申报格式指导原则（征求意见稿）》公开征求意见</h1>
+<p class="sub">国家药监局药审中心于2026年11月13日发布通知，拟就中药注册通用技术文档的申报格式听取意见。</p>
+<div class="hook">2026年11月13日，国家药品监督管理局药品审评中心发布公开征求意见通知，文件名称为《中药注册通用技术文档申报格式指导原则（征求意见稿）》。通知写明，为提高审评效率和审评质量，更好地服务中药产业发展，药审中心起草了上述文件，并邀请社会各界对征求意见稿提出意见和建议，及时反馈以便后续完善。征求意见时限为自发布之日起1个月，反馈邮箱为zyyxzdyz@cde.org.cn，邮件标题应标注“中药注册通用技术文档”。</div>
+<h2><span class="n">01</span>通知确认了哪些程序信息</h2>
+<p>药审中心在通知中说明，为提高审评效率和审评质量，更好地服务中药产业发展，起草了《中药注册通用技术文档申报格式指导原则（征求意见稿）》。通知同时邀请社会各界对征求意见稿提出意见和建议，并要求及时反馈，以便后续完善。</p>
+<p>本次征求意见期限为自发布之日起1个月。反馈邮箱为zyyxzdyz@cde.org.cn，邮件标题应标注“中药注册通用技术文档”。通知落款为国家药品监督管理局药品审评中心，落款日期为2026年11月13日。</p>
+<p>相关附件共三份，分别是《中药注册通用技术文档申报格式指导原则（征求意见稿）》.pdf、《中药注册通用技术文档申报格式指导原则（征求意见稿）》起草说明.pdf，以及《中药注册通用技术文档申报格式指导原则（征求意见稿）》意见反馈表.docx。</p>
+<table><thead><tr><th>要素</th><th>通知确认内容</th><th>申报端关注事项</th></tr></thead><tbody><tr><td>起草机关</td><td>国家药品监督管理局药品审评中心</td><td>反馈内容应围绕药审中心发布的征求意见稿整理</td></tr><tr><td>文件性质</td><td>《中药注册通用技术文档申报格式指导原则（征求意见稿）》</td><td>当前文件处于公开征求意见阶段</td></tr><tr><td>发布日期</td><td>2026年11月13日</td><td>意见准备与提交应结合通知时限安排</td></tr><tr><td>征求意见时限</td><td>自发布之日起1个月</td><td>申报团队应预留内部汇总和复核时间</td></tr><tr><td>反馈邮箱</td><td>zyyxzdyz@cde.org.cn</td><td>邮件标题须标注“中药注册通用技术文档”</td></tr><tr><td>相关附件</td><td>征求意见稿、起草说明和意见反馈表</td><td>具体意见应逐项对应附件内容</td></tr></tbody></table>
+<p>从程序安排看，反馈工作需要在明确的期限内完成。一般而言，申报团队在准备材料时，可以把邮箱、邮件标题、反馈期限和附件清单分别核对，避免把程序信息与具体技术意见混在一起。这样形成的内部清单，既能对应通知原文，也便于后续安排提交。</p>
+<h2><span class="n">02</span>三份附件对应哪些阅读任务</h2>
+<p>通知并列列出三份附件。就通知本身而言，可以直接确认的是三份文件的名称、格式和排列顺序；附件内部的栏目、表格及具体要求，应以各自文件正文为准。</p>
+<p>一般而言，围绕三份附件开展阅读，可以分别建立页码索引和内容摘录，避免只记住文件名而无法回查具体表述。对内容较多的文件，可在摘录中保留条款位置、原文摘录和待讨论问题三项信息；对篇幅较短的文件，也可以只记录需要反馈的段落及上下文。</p>
+<p>附件之间的对照阅读，属于一般性的材料整理方法。例如，同一事项在两份文件中均有出现时，可以分别记录两处表述，再由起草方确认以哪一处为最终依据。若两处表述无法直接对应，也可以把差异整理成需要回答的问题。此类记录用于内部讨论，不代表对文件关系或正式要求的判断。</p>
+<table><thead><tr><th>阅读对象</th><th>一般性核对建议</th><th>可形成的内部记录</th></tr></thead><tbody><tr><td>征求意见稿</td><td>记录条款位置、原文摘录和待讨论事项</td><td>条款摘录表</td></tr><tr><td>起草说明</td><td>记录相关段落及与正文对应的位置</td><td>内容对照表</td></tr><tr><td>意见反馈表</td><td>按文件实际显示的字段核对填写项目</td><td>反馈表底稿</td></tr><tr><td>官方通知</td><td>核对发布日期、期限、邮箱、标题和附件目录</td><td>程序核对表</td></tr></tbody></table>
+<p>从材料管理角度，一份便于复核的阅读记录，最好能够直接回到原文位置。页码、段落或条款编号都可以作为定位标记，但选择何种标记方式属于内部整理习惯。提交前再检查所引内容是否准确、页码是否对应、摘录是否保留必要上下文，可以减少后续沟通中的重复核对。</p>
+<h2><span class="n">03</span>怎样把格式问题写成可回答的问题</h2>
+<p>格式类意见通常越具体越便于讨论。一般而言，企业可以从日常使用的申报资料中选取典型案例，例如目录设置、表格字段、编号方式、附件名称、相互引用关系、签署位置和版本记录，再将现有做法与征求意见稿相应内容逐项对照。</p>
+<p>以目录为例，可以记录现有目录的名称与顺序、征求意见稿中的对应表述，以及两者在章节归属或资料组织上需要确认的差异。以附件引用为例，可以说明附件在现有材料中的引用位置和标识方式，并提出希望进一步明确的问题。以表格为例，可以列出实际使用的字段、填写方式和相互引用关系，供起草方判断相关表述是否需要调整。</p>
+<p>书面意见常可采用四段式结构：第一部分标注对应文件、章节和页码；第二部分描述现有资料中的实际做法；第三部分写明需要起草方回答的问题；第四部分提出可供讨论的处理建议。这是一种通用的意见组织方法，不是通知规定的提交格式。涉及多个注册事项时，也可以分别提供场景，减少不同业务条件之间的混淆。</p>
+<table><thead><tr><th>意见要素</th><th>一般性写法</th><th>复核重点</th></tr></thead><tbody><tr><td>对应位置</td><td>标注附件、章节、条款和页码</td><td>定位信息是否完整</td></tr><tr><td>实际场景</td><td>描述现行材料或业务处理方式</td><td>是否来自真实申报工作</td></tr><tr><td>核心问题</td><td>写明需要起草方说明的事项</td><td>是否只有一个明确问题</td></tr><tr><td>建议处理</td><td>给出具体、可讨论的处理思路</td><td>是否与所提问题相对应</td></tr></tbody></table>
+<p>意见编号也有助于内部管理。一般可以在编号中加入附件序号、章节号和问题序号，并在涉及多个场景时附加场景标识。这样的编号便于合并同类问题、回访时定位原始描述，也便于检查是否遗漏相关案例。</p>
+<h2><span class="n">04</span>申报端现在可以完成哪些准备工作</h2>
+<p>申报团队可以从现行材料入手，建立一份基础清单，记录资料名称、版本、签署信息、附件关系、编号层级和引用方式。随后再把相关内容映射到征求意见稿及起草说明，形成可供内部讨论的对照材料。</p>
+<p>目录核对可以记录现行目录与征求意见稿目录之间的对应关系，并标出名称、顺序或归属方面的不同。附件核对可以整理附件名称、引用位置、文件标识和版本记录。表格与编号核对可以记录常用模板、编号层级、交叉引用和填写方式。这些记录属于一般性准备方法，可用于提高后续查找和复核效率。</p>
+<table><thead><tr><th>核对对象</th><th>建议记录内容</th><th>可形成的底稿</th></tr></thead><tbody><tr><td>适用范围</td><td>注册事项、申报主体和资料类型</td><td>范围核对表</td></tr><tr><td>目录结构</td><td>章节名称、顺序及资料归属</td><td>目录对照表</td></tr><tr><td>表格与编号</td><td>字段、模板、编号层级和引用方式</td><td>格式清单</td></tr><tr><td>附件关系</td><td>附件名称、引用位置、索引和标识</td><td>附件关系表</td></tr><tr><td>版本与签署</td><td>版本号、修订记录、签署及盖章信息</td><td>版本管理表</td></tr><tr><td>反馈准备</td><td>意见编号、对应条款、责任人和提交状态</td><td>意见台账</td></tr></tbody></table>
+<p>底稿与意见之间可以建立一一对应关系。同一问题涉及多个业务场景时，可以将场景说明和对应材料一并纳入内部附件，并在意见中保留必要索引。这样做有助于在提交前检查是否存在重复、矛盾或缺少上下文的内容，也便于起草方询问时快速定位。</p>
+<p>企业内部还可以安排一次提交前复核，重点查看每条意见是否标明位置、是否写清待回答问题、是否区分不同注册事项，以及邮件所附文件是否与正文引用一致。完成复核后，再按通知列明的邮箱和邮件标题提交。</p>
+<h2><span class="n">05</span>反馈工作的重点是形成可追踪的意见闭环</h2>
+<p>一份便于讨论的意见，通常需要同时呈现材料依据和具体问题。依据来自通知及三份附件，问题则应能够定位到具体格式事项。一般而言，提交前可以把每条意见整理为“附件位置—当前场景—需要说明的问题—建议处理方式”的连续记录。</p>
+<p>对于企业内部常见的问题，可以按目录、表格、编号、附件、签署和版本等类别归集。归集的目的，是把分散的实际做法整理成便于讨论的基础信息，而不是提前判断正式文本会采用哪一种处理方案。行业组织汇总意见时，也可以保留具体场景和附件位置，便于审核者理解问题产生的业务条件。</p>
+<p>从通知可以确认的提交信息包括：征求意见对象为《中药注册通用技术文档申报格式指导原则（征求意见稿）》，反馈期限为自2026年11月13日发布之日起1个月，提交渠道为指定邮箱，邮件标题需标注“中药注册通用技术文档”，并随通知列出征求意见稿、起草说明和意见反馈表三份附件。围绕这组确定信息开展反馈，可以先核对附件及页码，再写明希望说明的格式事项，最后按意见反馈表整理并通过通知列明的邮箱提交。</p>
+<p>BOX w：药审中心已发布《中药注册通用技术文档申报格式指导原则（征求意见稿）》并公开征求意见；征求意见时限为自2026年11月13日起1个月，反馈邮箱为zyyxzdyz@cde.org.cn，邮件标题须标注“中药注册通用技术文档”。随通知发布的附件为征求意见稿、起草说明和意见反馈表三份文件。</p>
+<p>本次公开征求意见的核心信息并不复杂：药审中心已发布征求意见稿，征求时间为自2026年11月13日起1个月，反馈邮箱为zyyxzdyz@cde.org.cn，邮件标题须标注“中药注册通用技术文档”。三项附件为征求意见稿、起草说明和意见反馈表。</p>
+<div class="end"><h4>药审中心就中药注册通用技术文档申报格式指导原则公开征求意见</h4><p>征求意见时限为自2026年11月13日起1个月，反馈邮箱为zyyxzdyz@cde.org.cn，邮件标题请标注“中药注册通用技术文档”。</p></div>
+<p class="fn"><strong>来源与核查口径：</strong><br>
+1. 来源：国家药品监督管理局药品审评中心《关于公开征求〈中药注册通用技术文档申报格式指导原则（征求意见稿）〉意见的通知》，官方通知，发布日期为2026年11月13日。<br>
+2. 来源：国家药品监督管理局药品审评中心官网通知页面及附件目录，官方原文页面；页面列有征求意见稿、起草说明和意见反馈表三项附件。</p>
+</article>
+</body>
+</html>
