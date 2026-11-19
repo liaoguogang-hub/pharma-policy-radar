@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>国家药监局第40号通告：第三类器械临床试验方案前置咨询全面开展</title>
+<style>
+:root{--bg:#fff;--soft:#f7f7f5;--ink:#1a1a1a;--ink2:#4a4a4a;--faint:#8a8a8a;--rule:#e6e6e3;--bronze:#9c6b3c;--deep:#6b4a2a;--red:#a93226;--green:#4a7c4e;--amber:#f5ecd9;--rose:#f7e8e6;--mint:#e8f0e6;--serif:"Noto Serif SC",Georgia,"Songti SC",serif;--mono:"JetBrains Mono",Menlo,monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--serif);font-size:16px;line-height:1.9;color:var(--ink);background:var(--bg)}
+.wrap{max-width:780px;margin:0 auto;padding:60px 24px 90px}
+p{margin-bottom:18px;text-align:justify}
+.kicker{font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--bronze);margin-bottom:12px}
+h1{font-size:clamp(25px,3.6vw,34px);font-weight:700;color:var(--red);line-height:1.35;margin-bottom:14px}
+.sub{font-size:15px;color:var(--ink2);margin-bottom:34px;font-style:italic}
+h2{font-size:21px;font-weight:600;color:var(--deep);margin:44px 0 16px;padding-top:12px;border-top:1px solid var(--rule)}
+h2 .n{color:var(--red);font-family:var(--mono);font-size:15px;margin-right:9px}
+h3{font-size:17px;font-weight:600;margin:26px 0 10px}
+.hook{background:var(--red);color:#fff;padding:26px 30px;margin:22px 0 32px;font-size:18px;line-height:1.75}
+.hook strong{color:#ffd166}
+.box{background:var(--soft);border:1px solid var(--rule);padding:15px 19px;margin:20px 0;font-size:14px;color:var(--ink2)}
+.box b{color:var(--deep)}
+.box p{margin-bottom:8px;text-align:left}
+.w{background:var(--amber);border-left:3px solid #b88a3e}
+.g{background:var(--mint);border-left:3px solid var(--green)}
+.r{background:var(--rose);border-left:3px solid var(--red)}
+table{width:100%;border-collapse:collapse;margin:20px 0;font-size:13px}
+th{background:var(--deep);color:#fff;text-align:left;padding:9px 11px;font-weight:600;font-size:12.5px}
+td{padding:9px 11px;border-bottom:1px solid var(--rule);vertical-align:top}
+tbody tr:nth-child(even){background:var(--soft)}
+.m{font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:12.5px}
+.hl{color:var(--red);font-weight:700}
+.foot{font-size:12px;color:var(--faint);margin-top:7px}
+strong{font-weight:700}
+ul{margin:12px 0 18px 24px}
+li{margin-bottom:8px}
+.fn{font-size:12px;color:var(--faint);margin-top:38px;line-height:1.8;text-align:left}
+.end{background:var(--deep);color:#fff;padding:24px 28px;margin:40px 0 22px}
+.end h4{font-size:18px;font-weight:600;margin-bottom:8px}
+@media(max-width:720px){.wrap{padding:30px 16px 60px}}
+</style>
+</head>
+<body>
+<article class="wrap">
+<div class="kicker">Policy Readout｜医疗器械</div>
+<h1>国家药监局第40号通告：第三类器械临床试验方案前置咨询全面开展</h1>
+<p class="sub">资格门槛、三类申请路径与创新产品优先办理规则明确，具体申请安排由器审中心另行发布</p>
+<div class="hook">2026年11月11日，国家药监局发布《关于全面开展医疗器械临床试验方案前置咨询服务的通告》。通告自2027年1月1日起实施，面向第三类医疗器械开展临床试验方案前置咨询服务，并明确体外诊断试剂一并适用。“全面开展”以产品已定型、已完成必要的非临床研究为前提，并非所有第三类器械均可直接申请。</div>
+<h2><span class="n">01</span>文件要素：资格门槛、实施时间与适用范围</h2>
+<p>这份通告以《国务院办公厅关于全面深化药品医疗器械监管改革促进医药产业高质量发展的意见》（国办发〔2024〕53号）为政策依据，文件编号为2026年第40号，官方落款日期为2026年11月11日。政策直接调整点是临床试验方案咨询的申请安排：符合服务范围的产品，可在开展临床试验前进入器审中心的方案研究及意见反馈程序。</p>
+<p>适用范围限定为第三类医疗器械，并明确包含体外诊断试剂。通告对“全面开展”的限定主要体现在服务范围，而不是取消条件。申请开展临床试验方案前置咨询服务的产品，应当同时满足两个状态要求：产品已经定型，已经完成必要的非临床研究。</p>
+<table><thead><tr><th>政策要素</th><th>通告内容</th><th>核对结果</th></tr></thead><tbody><tr><td>发文机关</td><td>国家药品监督管理局</td><td>官方原文</td></tr><tr><td>文件名称</td><td>《国家药监局关于全面开展医疗器械临床试验方案前置咨询服务的通告》</td><td>官方原文</td></tr><tr><td>文号或通告编号</td><td>2026年第40号</td><td>通告编号</td></tr><tr><td>发布日期</td><td>2026年11月11日</td><td>通告落款日期</td></tr><tr><td>实施日期</td><td>2027年1月1日起</td><td>明确</td></tr><tr><td>适用对象</td><td>第三类医疗器械，包括体外诊断试剂</td><td>明确</td></tr><tr><td>申请条件</td><td>产品已定型，并已完成必要的非临床研究</td><td>明确</td></tr><tr><td>咨询主体</td><td>国家药品监督管理局医疗器械技术审评中心</td><td>明确</td></tr><tr><td>政策依据</td><td>《国务院办公厅关于全面深化药品医疗器械监管改革促进医药产业高质量发展的意见》，国办发〔2024〕53号</td><td>通告列明</td></tr></tbody></table>
+<p>通告所列的临床试验方案前置咨询，是围绕临床试验方案开展的一项监管服务安排。器审中心对方案有关问题进行研究后反馈意见，服务内容直接指向申请人开展临床试验。换言之，政策覆盖的是临床试验开展前的方案沟通，而不是临床试验完成后的上市材料处理。</p>
+<p>从适用范围看，通告同时处理“哪些产品可以咨询”和“产品从哪条路径进入咨询”两个问题。前者由第三类器械范围以及定型、非临床研究条件共同确定，后者由创新医疗器械特别审查程序、境内申请人和境外申请人身份决定。</p>
+<h2><span class="n">02</span>申请路径：创新产品、普通境内产品与境外产品分流</h2>
+<p>通告设置了三条申请路径。路径选择首先取决于产品是否已经纳入创新医疗器械特别审查程序，其次取决于申请人位于境内还是境外。</p>
+<p>对于已纳入创新医疗器械特别审查程序的产品，申请人可通过《创新医疗器械特别审查程序》的有关途径，向国家药监局医疗器械技术审评中心提出临床试验方案前置咨询服务申请。器审中心按照创新产品相关规定予以优先办理。通告由此把该类产品的咨询申请直接连接到既有创新产品路径，并给出明确的优先办理规则。</p>
+<p>对于未纳入创新医疗器械特别审查程序的产品，境内申请人向所在地省级药品监管部门提出申请。省级药品监管部门对申请进行初核，符合条件的，由省级药品监管部门报送器审中心。这条路径包含申请、初核和报送三个前后衔接的环节，器审中心的服务工作由此前移至省级初核之后。</p>
+<p>境外申请人不经过上述省级初核环节，而是由其境内代理人向器审中心提交临床试验方案前置咨询服务申请。对境外主体而言，境内代理人是连接申请人与器审中心的直接入口。</p>
+<p>三条路径的差异可以归纳为：创新产品通过特别审查有关途径申请，并适用优先办理；普通境内产品由所在地省级药品监管部门初核后报器审中心；境外产品由境内代理人直接向器审中心提交。产品分类与申请人身份共同决定申请入口，三类路径最终均汇入器审中心的方案研究和意见反馈安排。</p>
+<h2><span class="n">03</span>服务内容：器审中心研究方案问题并反馈意见</h2>
+<p>通告对服务内容的表述集中于三个连续环节：器审中心组织研究医疗器械临床试验方案有关问题，随后向申请人反馈意见，反馈内容用于指导申请人开展临床试验。</p>
+<p>这一安排把咨询对象明确落在临床试验方案，而不是产品注册资料的整体审评。企业申请前需要先完成适用性判断：产品属于第三类医疗器械，体外诊断试剂同样纳入；产品已定型；必要的非临床研究已经完成。三个条件对应进入服务范围的基础要求。</p>
+<p>在创新产品路径下，申请人通过《创新医疗器械特别审查程序》的有关途径提出申请，器审中心按照创新产品相关规定予以优先办理。在普通境内产品路径下，省级药品监管部门负责初核符合条件的申请并报送器审中心。境外申请人则由境内代理人直接提交。</p>
+<p>对于产品研发和注册团队而言，这项服务提供了临床试验方案沟通渠道。咨询申请与后续服务由不同路径衔接：创新产品直接面向器审中心申请，普通境内产品先进入省级初核，境外申请则由境内代理人完成提交。通告明确，临床试验方案前置咨询服务具体通知由器审中心另行发布。</p>
+<h2><span class="n">04</span>三类产品对应三套操作框架</h2>
+<h3>创新医疗器械：沿特别审查路径申请</h3>
+<p>通告对创新医疗器械给出了最为集中的程序安排。申请入口位于《创新医疗器械特别审查程序》的有关途径，咨询受理主体为器审中心，办理规则则直接衔接创新产品相关规定。</p>
+<p>对于已经进入特别审查程序的产品，申请人无需把咨询申请转入普通境内申请人的省级初核路径。通告层面的制度差异集中在申请入口和办理规则两部分：前者指向特别审查有关途径，后者明确器审中心予以优先办理。</p>
+<h3>普通境内产品：省级初核后报器审中心</h3>
+<p>未纳入创新医疗器械特别审查程序的产品，由所在地省级药品监管部门受理申请。初核符合条件的申请，由省级药品监管部门报送器审中心。</p>
+<p>这意味着普通境内产品的咨询申请不是在申请人与器审中心之间直接完成。通告设置了两个明确责任主体：省级药品监管部门承担初核和报送，器审中心负责研究方案问题并反馈意见。</p>
+<h3>境外产品：境内代理人直接提交</h3>
+<p>境外申请人的路径不设置省级药品监管部门初核环节，而是由其境内代理人向器审中心提交临床试验方案前置咨询服务申请。器审中心仍是方案研究和意见反馈的责任主体。</p>
+<p>境外产品路径与普通境内产品路径的共同点，是最终进入器审中心；区别在于前者由境内代理人直接提交，后者由所在地省级药品监管部门初核后报送。通告同时把两类路径与创新产品的特别审查路径区分开来。</p>
+<h2><span class="n">05</span>政策读法：先看资格，再看入口，最后看服务内容</h2>
+<p>理解第40号通告，可以按照“资格—路径—内容”三个层次阅读。</p>
+<p>资格层面，第三类医疗器械是政策覆盖范围，体外诊断试剂一并适用；产品已定型、已完成必要的非临床研究，是申请前置咨询的条件。对第三类器械的概括性覆盖，并不等于所有处于研发早期阶段的产品都可以进入服务流程。</p>
+<p>路径层面，产品与申请人的身份决定申请入口。已纳入创新医疗器械特别审查程序的产品，通过特别审查有关途径向器审中心申请，并适用优先办理；未纳入创新程序的境内产品，由所在地省级药品监管部门初核后报送；境外产品由境内代理人直接提交。</p>
+<p>内容层面，器审中心对临床试验方案有关问题进行研究后反馈意见，以指导申请人开展临床试验。通告确立的是服务范围、申请分流和办理主体，申请环节的具体操作由器审中心另行发布的通知承接。</p>
+<p>BOX: 政策提示｜2027年1月1日起，符合条件的第三类医疗器械及体外诊断试剂可进入前置咨询流程；企业应按产品是否纳入创新医疗器械特别审查程序，以及申请人境内、境外身份，分别匹配对应申请路径。</p>
+<div class="end"><h4>第40号通告确立三类器械临床试验方案前置咨询框架</h4><p>创新产品适用优先办理，普通境内产品经省级初核后报器审中心，境外产品由境内代理人直接提交；具体申请安排由器审中心另行发布</p></div>
+<p class="fn"><strong>来源与核查口径：</strong><br>
+1. 国家药品监督管理局《国家药监局关于全面开展医疗器械临床试验方案前置咨询服务的通告》（2026年第40号），官方原文，发布日期为2026年11月11日，来源：https://www.nmpa.gov.cn/xxgk/ggtg/ylqxggtg/ylqxqtggtg/20261116092706144.html<br>
+2. 国家药品监督管理局医疗器械技术审评中心具体申请通知相关条款，通告原文明确“临床试验方案前置咨询服务具体通知由器审中心另行发布”，来源性质：官方政策原文。</p>
+</article>
+</body>
+</html>

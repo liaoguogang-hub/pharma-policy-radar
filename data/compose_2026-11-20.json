@@ -1,0 +1,27 @@
+[
+  {
+    "ok": true,
+    "needs_review": true,
+    "claim_block": false,
+    "file": "01-policy_readout-37a65652.html",
+    "stats": {
+      "body_chars": 2771,
+      "sections": 5,
+      "tables": 1,
+      "boxes": 0,
+      "footnotes": 2,
+      "has_hook": true,
+      "has_end": true,
+      "has_title": true
+    },
+    "problems": [
+      "AI味句式: 这意味着",
+      "AI味句式 1 处（这意味着）——必须改掉，不是换词而是拆句重写"
+    ],
+    "html_len": 8504,
+    "note": "未通过全部质检，已按最优版本落盘，需人工核查",
+    "title": "EU recommendations for 2026/2027 seasonal flu vaccine composition",
+    "score": 7.5,
+    "type": "policy_readout"
+  }
+]

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FDA开放审评材料跨境流转：GRDP先用于PEPFAR，10日申请窗口与海外申报绑定</title>
+<style>
+:root{--bg:#fff;--soft:#f7f7f5;--ink:#1a1a1a;--ink2:#4a4a4a;--faint:#8a8a8a;--rule:#e6e6e3;--bronze:#9c6b3c;--deep:#6b4a2a;--red:#a93226;--green:#4a7c4e;--amber:#f5ecd9;--rose:#f7e8e6;--mint:#e8f0e6;--serif:"Noto Serif SC",Georgia,"Songti SC",serif;--mono:"JetBrains Mono",Menlo,monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--serif);font-size:16px;line-height:1.9;color:var(--ink);background:var(--bg)}
+.wrap{max-width:780px;margin:0 auto;padding:60px 24px 90px}
+p{margin-bottom:18px;text-align:justify}
+.kicker{font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--bronze);margin-bottom:12px}
+h1{font-size:clamp(25px,3.6vw,34px);font-weight:700;color:var(--red);line-height:1.35;margin-bottom:14px}
+.sub{font-size:15px;color:var(--ink2);margin-bottom:34px;font-style:italic}
+h2{font-size:21px;font-weight:600;color:var(--deep);margin:44px 0 16px;padding-top:12px;border-top:1px solid var(--rule)}
+h2 .n{color:var(--red);font-family:var(--mono);font-size:15px;margin-right:9px}
+h3{font-size:17px;font-weight:600;margin:26px 0 10px}
+.hook{background:var(--red);color:#fff;padding:26px 30px;margin:22px 0 32px;font-size:18px;line-height:1.75}
+.hook strong{color:#ffd166}
+.box{background:var(--soft);border:1px solid var(--rule);padding:15px 19px;margin:20px 0;font-size:14px;color:var(--ink2)}
+.box b{color:var(--deep)}
+.box p{margin-bottom:8px;text-align:left}
+.w{background:var(--amber);border-left:3px solid #b88a3e}
+.g{background:var(--mint);border-left:3px solid var(--green)}
+.r{background:var(--rose);border-left:3px solid var(--red)}
+table{width:100%;border-collapse:collapse;margin:20px 0;font-size:13px}
+th{background:var(--deep);color:#fff;text-align:left;padding:9px 11px;font-weight:600;font-size:12.5px}
+td{padding:9px 11px;border-bottom:1px solid var(--rule);vertical-align:top}
+tbody tr:nth-child(even){background:var(--soft)}
+.m{font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:12.5px}
+.hl{color:var(--red);font-weight:700}
+.foot{font-size:12px;color:var(--faint);margin-top:7px}
+strong{font-weight:700}
+ul{margin:12px 0 18px 24px}
+li{margin-bottom:8px}
+.fn{font-size:12px;color:var(--faint);margin-top:38px;line-height:1.8;text-align:left}
+.end{background:var(--deep);color:#fff;padding:24px 28px;margin:40px 0 22px}
+.end h4{font-size:18px;font-weight:600;margin-bottom:8px}
+@media(max-width:720px){.wrap{padding:30px 16px 60px}}
+</style>
+</head>
+<body>
+<article class="wrap">
+<div class="kicker">Policy Readout｜FDA全球监管协同</div>
+<h1>FDA开放审评材料跨境流转：GRDP先用于PEPFAR，10日申请窗口与海外申报绑定</h1>
+<p class="sub">符合条件者可在批准后限时取得最小删节审评包，再提交境外监管机构，各市场仍自行作出监管决定</p>
+<div class="hook">2026年11月17日，美国食品药品监督管理局（FDA）发布新闻稿，宣布全球依赖信息披露计划（GRDP）已于10月30日启动。符合GRDP适用条件的申请人可在产品批准后10个日历日内申请取得最小删节批准申请包，并将其中包含的详细科学评估和监管评估提交给境外监管机构。境外监管机构可依赖FDA基于科学审评作出的决定，同时保留其监管决定的自主权。</div>
+<h2><span class="n">01</span>启动范围与基本机制</h2>
+<p>GRDP以PEPFAR暂定批准产品为起点。新闻稿称，项目于2026年10月30日启动，首个适用场景是FDA对lenacapavir作出的PEPFAR暂定批准。lenacapavir的适应症包括HIV预防和治疗。</p>
+<p>当前范围限于PEPFAR暂定批准，排除暂定批准的简明新药申请产品。FDA同时公布了后续扩展安排：计划在2027年1月将GRDP扩展至所有新分子实体新药申请和351(a)生物制品许可申请，并在2027年初为已经批准或许可的药品、生物制品设置最小删节行动包申请路径。</p>
+<table><thead><tr><th>要素</th><th>FDA官方披露</th></tr></thead><tbody><tr><td>发文机关</td><td>美国食品药品监督管理局（FDA）</td></tr><tr><td>文件类型</td><td>官方新闻稿</td></tr><tr><td>发布日期</td><td>2026年11月17日</td></tr><tr><td>项目启动日</td><td>2026年10月30日</td></tr><tr><td>当前适用范围</td><td>PEPFAR暂定批准产品，不包括暂定批准的简明新药申请产品</td></tr><tr><td>后续计划</td><td>2027年1月拟扩大至所有新分子实体新药申请和351(a)生物制品许可申请；2027年初拟为已获批或已获许可药品、生物制品设置申请路径</td></tr><tr><td>申请时限</td><td>符合条件者在批准后10个日历日内提出申请，并确认相关申请包正提交给境外监管机构</td></tr><tr><td>适用内容</td><td>药品和生物制品的批准、许可及相关审评信息</td></tr></tbody></table>
+<p>GRDP处理的是FDA审评材料如何被境外监管机构使用。最小删节批准申请包包括FDA的详细科学评估和监管评估。申请人取得材料后，可以将其分享给美国境外的监管机构。</p>
+<p><strong>境外监管机构保留监管决定的自主权。</strong> GRDP提供的是FDA已经完成的科学和监管评估，而不是由FDA替外国监管机构作出上市决定。境外机构可利用这些材料，减少重复开展、耗时较长的产品评价，同时继续掌握本地监管决定。</p>
+<p>BOX w：GRDP当前以PEPFAR暂定批准产品为起点。10个日历日申请窗口与境外上市申请确认共同构成参与条件，申请人需要同时满足时间要求和材料用途确认要求。</p>
+<h2><span class="n">02</span>五步申请与传递流程</h2>
+<p>第一步是确认产品属于GRDP适用范围。当前项目面向PEPFAR暂定批准产品，lenacapavir的PEPFAR暂定批准构成项目启动时的适用场景。</p>
+<p>第二步是在产品批准后10个日历日内申请参与。新闻稿明确，申请人必须在批准后10个日历日内提出参与GRDP的申请。这个期限以产品获得批准为起点，也是取得最小删节批准申请包的申请窗口。</p>
+<p>第三步是确认材料用于境外上市申请。申请人在提出申请时，还须确认相关申请包正提交给外国监管机构，并用于支持营销申请。境外申报不是完成后的附加说明，而是申请环节中的确认事项。</p>
+<p>第四步是由FDA向符合条件的申请人提供材料。符合GRDP条件的批准函将增加详细信息，FDA拟以加速方式提供最小删节批准申请包。该申请包汇集FDA的详细科学和监管评估，申请人取得后可以与境外监管机构分享。</p>
+<p>第五步由境外监管机构决定如何使用这些材料。境外机构可依赖FDA基于科学审评作出的决定，避免重复开展产品评价；也可以继续开展本地监管评估。材料进入境外监管流程后，上市决定由当地监管机构作出。</p>
+<p>这一流程还设有明确的用途分界。用于其他目的的最小删节批准申请包请求不按GRDP办理，应作为美国《信息自由法》（FOIA）请求提交。GRDP对应的是已经确认的境外营销申请场景，其他用途则进入FOIA渠道。</p>
+<table><thead><tr><th>环节</th><th>申请人或机构的动作</th><th>关键条件</th></tr></thead><tbody><tr><td>适用范围确认</td><td>核对产品是否属于当前或后续扩展范围</td><td>当前为PEPFAR暂定批准产品</td></tr><tr><td>提出参与申请</td><td>在产品批准后申请取得最小删节批准申请包</td><td>申请须在10个日历日内提出</td></tr><tr><td>用途确认</td><td>确认相关申请包正提交给境外监管机构</td><td>用于支持境外营销申请</td></tr><tr><td>材料提供</td><td>接收详细科学评估、监管评估及相关信息</td><td>FDA拟以加速方式提供</td></tr><tr><td>境外使用</td><td>将材料提交给外国监管机构</td><td>境外机构可依赖FDA审评决定，同时保留监管决定的自主权</td></tr></tbody></table>
+<h2><span class="n">03</span>2027年的两类扩展</h2>
+<p>第一条扩展路线发生在2027年1月。FDA拟将GRDP从当前PEPFAR暂定批准产品范围，扩大至所有新分子实体新药申请和351(a)生物制品许可申请。这里的“所有”覆盖两类审评类别，意味着适用对象不再限于PEPFAR暂定批准场景。</p>
+<p>第二条路线计划在2027年初启动。届时，已经取得FDA批准或许可的药品、生物制品，可以申请其最小删节行动包。新闻稿将这条路径描述为加快申请人申请相关材料，并面向已经在美国上市、且经FDA认定安全有效的药品和生物制品。</p>
+<table><thead><tr><th>阶段</th><th>拟适用产品或功能</th><th>时间</th><th>办理要求</th></tr></thead><tbody><tr><td>当前启动</td><td>PEPFAR暂定批准产品</td><td>2026年10月30日启动</td><td>排除暂定批准的简明新药申请产品</td></tr><tr><td>第一次扩展</td><td>所有新分子实体新药申请及351(a)生物制品许可申请</td><td>FDA拟于2027年1月扩展</td><td>仍须满足申请时限和境外上市申请确认条件</td></tr><tr><td>新增路径</td><td>已获FDA批准或许可的药品、生物制品</td><td>FDA拟于2027年初启动</td><td>申请人可申请最小删节批准包</td></tr></tbody></table>
+<p>两条扩展路线对应不同的信息获取场景。审评类别扩展面向进入FDA审评流程的新药和生物制品；既有上市产品路径则面向已经取得FDA批准或许可的药品和生物制品。两者都以最小删节批准申请包为信息载体，并要求申请与境外营销申请相联系。</p>
+<p>10个日历日窗口适用于取得GRDP批准申请包的申请。新闻稿还说明，符合GRDP条件的批准函将增加详细信息，FDA拟加速提供最小删节申请包。产品类别扩展、既有产品申请路径和材料提供方式，则是后续运行需要关注的三项安排。</p>
+<h2><span class="n">04</span>境外监管机构与患者可及性</h2>
+<p>GRDP回应的是不同国家监管能力与资源配置存在差异所形成的时差。新闻稿指出，药品获得FDA批准后，在监管能力和资源有限的部分地区，患者仍可能等待数月或数年，等待本国主管机构完成独立审评。</p>
+<p>GRDP让境外监管机构能够利用FDA已经完成的详细科学评估，减少重复开展产品评价所涉及的时间和资源。新闻稿将这一安排与美国FDA的政策负责人提出的“加快患者获得创新疗法”相联系；境外机构可依赖FDA的审评结果，并继续保留监管决定的自主权。</p>
+<p>监管机构之间的信息共享也不改变决定权归属。FDA的监管决定可以被境外机构用于本地审评流程，但境外机构在依赖这些决定的同时，仍对其监管决定保有自主权。境外机构可利用材料减少重复评价，也可以继续开展本地审评工作。</p>
+<p>GRDP还涉及不同市场之间的标准协调。新闻稿称，协调后的监管决定可以减少不同市场产品标准碎片化或不一致的风险，使同一疗法能够在不同地区获得审评。它同时把GRDP与全球健康安全、药品开发和供应链的全球相互依赖联系起来。</p>
+<p>从全球健康角度看，FDA把GRDP描述为支持全球健康安全的安排。新闻稿援引美国FDA全球政策与战略负责人Mark Abdoo的话称，在药品开发和供应链全球相互依赖程度上升的背景下，监管协作有助于提升全球标准。</p>
+<h2><span class="n">05</span>企业申请时的四项核对</h2>
+<p>第一，核对产品类别。当前适用对象为PEPFAR暂定批准产品，暂定批准的简明新药申请产品不在范围内。2027年1月，FDA拟扩展至所有新分子实体新药申请和351(a)生物制品许可申请；2027年初则拟为已经批准或许可的药品、生物制品设置专门申请路径。</p>
+<p>第二，核对申请时限。取得最小删节批准申请包，参与申请须在产品批准后10个日历日内提出。获批节点与申请节点之间的日历天数，是项目参与条件之一。</p>
+<p>第三，核对境外申请状态。提出申请时，申请人须确认相关申请包正提交给外国监管机构，并用于支持营销申请。境外上市申请是GRDP申请中的用途确认项。</p>
+<p>第四，核对请求用途。用于境外营销申请的合格请求按GRDP办理；用于其他目的的最小删节批准申请包请求不按GRDP办理，而应作为FOIA请求提交。用途决定申请人进入哪条材料获取路径。</p>
+<p>第五，关注材料内容与提供方式。GRDP批准申请包包括FDA的详细科学和监管评估。符合GRDP条件的批准函将增加详细信息，FDA拟以加速方式提供最小删节申请包。申请人取得材料后，可以将其分享给境外监管机构，供其用于本地上市申请。</p>
+<p>BOX g：GRDP的核心不是FDA替境外市场批准产品，而是增加一条材料传递路径：申请人取得最小删节批准申请包，再将其交给外国监管机构；境外机构可依赖FDA科学审评，同时保留监管决定的自主权。</p>
+<div class="end"><h4>GRDP把美国审评材料接入境外注册流程</h4><p>申请人须在批准后10个日历日内提出参与申请，并确认相关申请包正提交给境外监管机构。GRDP当前面向PEPFAR暂定批准产品，2027年拟扩展至更多审评类别及既有批准或许可产品。</p></div>
+<p class="fn"><strong>来源与核查口径：</strong><br>
+1. 美国FDA官方新闻稿《FDA Launches the Global Reliance Disclosure Program to Expand Patient Access to Medicines Worldwide》，2026年11月17日发布，内容截至当日；项目启动日为2026年10月30日。<br>
+2. FDA官方新闻稿所列“FDA Request for Comment”入口及媒体联系信息，属于官方征求意见与新闻稿联系信息。</p>
+</article>
+</body>
+</html>

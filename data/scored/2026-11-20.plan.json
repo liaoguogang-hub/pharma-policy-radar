@@ -1,0 +1,34 @@
+{
+  "date": "2026-11-20",
+  "count": 1,
+  "plan": [
+    {
+      "type": "policy_readout",
+      "cluster_key": "policy:ema-流感疫苗组成建议-2026-2027",
+      "channel": "global",
+      "lead_id": "37a6565267e6fc56",
+      "title": "EU recommendations for 2026/2027 seasonal flu vaccine composition",
+      "score": 7.5,
+      "member_ids": [
+        "37a6565267e6fc56"
+      ],
+      "members": [
+        {
+          "title": "EU recommendations for 2026/2027 seasonal flu vaccine composition",
+          "url": "https://www.ema.europa.eu/en/news/eu-recommendations-2026-2027-seasonal-flu-vaccine-composition",
+          "score": 7.5,
+          "reasoning": "EMA对2026/2027流感季疫苗组成作出更新，并涉及疫苗品类和标准化试剂文件调整，属于可能影响疫苗研发、申报及上市准备的监管技术政策，适合梳理版本变化及产业影响。"
+        }
+      ],
+      "reasoning": "EMA对2026/2027流感季疫苗组成作出更新，并涉及疫苗品类和标准化试剂文件调整，属于可能影响疫苗研发、申报及上市准备的监管技术政策，适合梳理版本变化及产业影响。",
+      "verify_todo": [
+        "核对推荐文件版本、适用流感季及各疫苗类型对应的毒株组成",
+        "确认本次更新与既往版本相比的新增或调整内容及适用范围"
+      ],
+      "flags": [
+        "formal",
+        "overseas"
+      ]
+    }
+  ]
+}
