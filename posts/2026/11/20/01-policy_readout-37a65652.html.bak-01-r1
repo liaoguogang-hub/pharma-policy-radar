@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>2026/2027欧盟流感疫苗推荐更新：mRNA首次纳入，B/Yamagata退出常规组成</title>
+<style>
+:root{--bg:#fff;--soft:#f7f7f5;--ink:#1a1a1a;--ink2:#4a4a4a;--faint:#8a8a8a;--rule:#e6e6e3;--bronze:#9c6b3c;--deep:#6b4a2a;--red:#a93226;--green:#4a7c4e;--amber:#f5ecd9;--rose:#f7e8e6;--mint:#e8f0e6;--serif:"Noto Serif SC",Georgia,"Songti SC",serif;--mono:"JetBrains Mono",Menlo,monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--serif);font-size:16px;line-height:1.9;color:var(--ink);background:var(--bg)}
+.wrap{max-width:780px;margin:0 auto;padding:60px 24px 90px}
+p{margin-bottom:18px;text-align:justify}
+.kicker{font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--bronze);margin-bottom:12px}
+h1{font-size:clamp(25px,3.6vw,34px);font-weight:700;color:var(--red);line-height:1.35;margin-bottom:14px}
+.sub{font-size:15px;color:var(--ink2);margin-bottom:34px;font-style:italic}
+h2{font-size:21px;font-weight:600;color:var(--deep);margin:44px 0 16px;padding-top:12px;border-top:1px solid var(--rule)}
+h2 .n{color:var(--red);font-family:var(--mono);font-size:15px;margin-right:9px}
+h3{font-size:17px;font-weight:600;margin:26px 0 10px}
+.hook{background:var(--red);color:#fff;padding:26px 30px;margin:22px 0 32px;font-size:18px;line-height:1.75}
+.hook strong{color:#ffd166}
+.box{background:var(--soft);border:1px solid var(--rule);padding:15px 19px;margin:20px 0;font-size:14px;color:var(--ink2)}
+.box b{color:var(--deep)}
+.box p{margin-bottom:8px;text-align:left}
+.w{background:var(--amber);border-left:3px solid #b88a3e}
+.g{background:var(--mint);border-left:3px solid var(--green)}
+.r{background:var(--rose);border-left:3px solid var(--red)}
+table{width:100%;border-collapse:collapse;margin:20px 0;font-size:13px}
+th{background:var(--deep);color:#fff;text-align:left;padding:9px 11px;font-weight:600;font-size:12.5px}
+td{padding:9px 11px;border-bottom:1px solid var(--rule);vertical-align:top}
+tbody tr:nth-child(even){background:var(--soft)}
+.m{font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:12.5px}
+.hl{color:var(--red);font-weight:700}
+.foot{font-size:12px;color:var(--faint);margin-top:7px}
+strong{font-weight:700}
+ul{margin:12px 0 18px 24px}
+li{margin-bottom:8px}
+.fn{font-size:12px;color:var(--faint);margin-top:38px;line-height:1.8;text-align:left}
+.end{background:var(--deep);color:#fff;padding:24px 28px;margin:40px 0 22px}
+.end h4{font-size:18px;font-weight:600;margin-bottom:8px}
+@media(max-width:720px){.wrap{padding:30px 16px 60px}}
+</style>
+</head>
+<body>
+<article class="wrap">
+<div class="kicker">Policy Readout｜欧洲流感疫苗</div>
+<h1>2026/2027欧盟流感疫苗推荐更新：mRNA首次纳入，B/Yamagata退出常规组成</h1>
+<p class="sub">EMA调整不同工艺疫苗的推荐毒株，并同步更新标准化试剂附件，但四价灭活疫苗的过渡安排仍需关注。</p>
+<div class="hook">2026年3月30日，欧洲药品管理局（EMA）发布2026/2027流感季疫苗组成建议，后续于5月和11月更新毒株、纳入mRNA疫苗并修订标准化试剂文件。最反常识的变化是，B/Yamagata自2020年3月后未再被检出，已不再列入欧盟常规流感疫苗组成；但部分尚未完成三价转换的地区，仍可考虑生产含两个B谱系毒株的四价灭活疫苗。</div>
+<h2><span class="n">01</span>文件要素：一份年度技术推荐，不是新的市场准入文件</h2>
+<p>这份文件由EMA生物制品工作组疫苗质量运行专家组（BV-OEG）形成，参考编号为<strong>EMA/CHMP/BWP/62405/2026</strong>。EMA称，文件规定了2026/2027流感季季节性流感疫苗应包含的流感病毒毒株或序列，适用于预防2026年秋季开始流行的季节性流感。2026/2027流感季推荐在EMA药品管理委员会（CHMP）2026年3月全体会议上获得认可。</p>
+<p>文件性质需要先厘清。EMA每年根据世界卫生组织（WHO）的监测结果，更新季节性流感疫苗组成建议。此次文件直接规定“应包含哪些毒株或序列”，并给出上市许可持有人变更 centrally authorised（欧盟中央许可）季节性流感疫苗组成的申请时限。<strong>截至本次检索到的材料，未见该文件另行设定法定生效日期，也未将其表述为对所有欧盟国家上市许可的普遍程序要求。</strong></p>
+<table><thead><tr><th>要素</th><th>文件信息</th><th>政策含义</th></tr></thead><tbody><tr><td>发文机关</td><td>欧洲药品管理局（EMA），BV-OEG形成</td><td>欧盟药品监管技术推荐</td></tr><tr><td>参考编号</td><td>EMA/CHMP/BWP/62405/2026</td><td>页面标注为“Amended”修订版</td></tr><tr><td>首次发布</td><td>2026年3月30日</td><td>2026/2027流感季组成建议首次公布</td></tr><tr><td>最后更新</td><td>2026年11月17日</td><td>纳入mRNA疫苗建议，并更新标准化试剂附件</td></tr><tr><td>适用季节</td><td>2026/2027流感季</td><td>面向2026年秋季起使用的季节性流感疫苗</td></tr><tr><td>申请时限</td><td>2026年6月15日</td><td>中央许可持有人提交组成变更申请的建议期限</td></tr><tr><td>关键范围</td><td>灭活疫苗、减毒活疫苗、细胞培养疫苗及核酸类疫苗</td><td>不同工艺采用不同H3N2及B谱系推荐</td></tr></tbody></table>
+<p>表中日期反映的是推荐文件及EMA新闻页面的公开信息。新闻页面先后列出2026年5月7日、5月26日和11月17日的内容更新；页末又说明文件曾在5月5日、5月21日及11月12日修订。现有材料没有解释两套日期记录之间的对应关系。<strong>产业主体应以“Related documents”区域中的最新版PDF为工作底稿，不能仅依据新闻摘要判断毒株组成。</strong></p>
+<h2><span class="n">02</span>毒株怎么变：三价成为基线，H3N2随生产工艺调整</h2>
+<p>对<strong>减毒活疫苗和卵制疫苗</strong>，2026/2027流感季推荐组成包括三部分：<strong>A/Missouri/11/2025 (H1N1)pdm09)样病毒、</strong>A/Darwin/1454/2025 (H3N2)样病毒，以及<strong>B/Tokyo/EIS13-175/2025（B/Victoria谱系）样病毒。</strong>其中，H1N1部分与细胞培养或核酸类疫苗推荐相同，主要差异集中在H3N2和B谱系。</p>
+<p>对<strong>细胞培养疫苗或核酸类疫苗</strong>，推荐组成调整为：<strong>A/Missouri/11/2025 (H1N1)pdm09)样病毒、</strong>A/Darwin/1415/2025 (H3N2)样病毒，以及<strong>B/Pennsylvania/14/2025（B/Victoria谱系）样病毒。</strong>这意味着2026/2027推荐并未给所有生产工艺套用完全相同的H3N2候选株。卵制或减毒活疫苗使用A/Darwin/1454/2025，细胞培养或核酸类疫苗使用A/Darwin/1415/2025；两条B病毒推荐也采用不同毒株背景。</p>
+<p>这一区分直接影响“换毒株”工作的颗粒度。<strong>分析上看，疫苗研发和申报团队需要按具体生产工艺核对毒株清单。</strong>仅看到“2026/2027流感疫苗组成”几个字，无法替代对减毒活、卵制、细胞培养、灭活和核酸类产品的逐项比对。文件公开摘要未提供每一剂产品中各组分的含量、减毒活疫苗的接种途径，也未说明不同候选株与既有生产株之间的具体工艺桥接安排，这些内容仍应以最新版推荐文件及申报沟通为准。</p>
+<p>BOX g：受益方向 | 对采用三价组成、并按生产工艺落实对应毒株的企业，推荐内容比过去统一保留四个主要流感病毒株的框架更集中；灭活、减毒活、细胞培养和核酸类疫苗的差异化要求也更清楚。</p>
+<h2><span class="n">03</span>三次更新：新增mRNA，标准化试剂附件同步调整</h2>
+<p>EMA新闻页显示，2026年5月7日，内容更新加入卵制疫苗和减毒活疫苗的额外毒株建议；5月26日，又加入细胞培养疫苗适用的H3N2候选株，以及减毒活疫苗适用的B谱系候选株。到11月17日，推荐范围进一步扩展，<strong>首次加入核酸类流感疫苗建议，即mRNA流感疫苗，并同步更新附件I“疫苗标准化试剂”。</strong></p>
+<p>“首次加入”是本次更新中变化最明确的一项。但它只说明推荐文件开始纳入mRNA疫苗，<strong>本次检索到的新闻材料未进一步列出mRNA疫苗对应的完整毒株序列，也未给出该类产品从临床开发到欧盟上市许可的技术要求。</strong>因此，不能把“纳入推荐”直接等同于mRNA产品已获得欧盟上市许可，或推定其申报路径已经确定。现有材料能够确认的，是核酸类疫苗被纳入2026/2027组成推荐框架。</p>
+<p>附件I同样值得关注。病毒组成决定产品应包含什么，标准化试剂则服务于产品批次的一致性评价、检测或放行等质量环节。此次推荐更新了附件I，意味着企业不能只替换毒株名称，还需要核对最新版试剂文件。<strong>但新闻摘要未披露附件I逐项变化内容，本次检索也未取得该附件的完整修订对照。</strong>对质量、注册和生产团队而言，这一空白需要回到官方PDF逐条比对。</p>
+<p>文件还给出明确时间要求：EMA建议中央许可持有人在<strong>2026年6月15日前</strong>提交中央许可季节性流感疫苗组成变更申请。该日期对应首版推荐形成后的申报准备窗口，而mRNA建议和附件I在11月更新。对这一时间关系，受影响企业应以EMA最新文件及后续沟通判断是否需要补充提交，现有材料不足以推定具体处理方式。</p>
+<p>BOX w：口径提示 | 本次公开材料只明确了推荐毒株、适用工艺、部分四价灭活疫苗过渡安排和中央许可申请期限。附件I的完整修订内容、mRNA产品专项技术要求、申报表格与补充提交规则均未在新闻摘要中展开。</p>
+<h2><span class="n">04</span>谁受影响：申报、生产和质量管理都要改，临床端仍以获批产品为准</h2>
+<p>对疫苗企业，最直接的变化是2026/2027批次的组成决策。还在四价阶段的企业需要评估是否转为三价。若产品属于灭活疫苗，且所服务地区尚未完成三价转换，EMA给出的处理是：<strong>可以考虑生产2026/2027流感季四价疫苗，并纳入两个B谱系毒株。</strong>其中，第四个组成为<strong>B/Phuket/3073/2013（B/Yamagata谱系）样病毒</strong>，方案沿用WHO往年对该谱系的建议。</p>
+<p>这一过渡安排的适用范围有明确边界。新闻材料将其限定在<strong>仍需要四价疫苗的地区</strong>，并点名“灭活疫苗生产商可以考虑”。减毒活疫苗、细胞培养疫苗和核酸类疫苗所列推荐组成均为三种病毒成分，不能直接把四价灭活疫苗的过渡选项套用于所有产品。<strong>分析上看，企业需要同时核对产品类别、目标市场疫苗组成要求和自身批间生产安排，不能仅按“欧盟是否已转向三价”作统一决策。</strong></p>
+<p>对中央许可持有人，2026年6月15日是材料中唯一明确的变更申请期限。对生产质量团队，B/Yamagata退出推荐并不会自动消除既有库存、已放行批次或不同注册地区的质量责任；本次材料也没有提供库存处置办法。对研发团队，mRNA进入推荐范围意味着企业需要关注与灭活或减毒活产品不同的毒株序列表达、标准化和一致性评价材料，但具体要求尚未在新闻材料中展开。</p>
+<p>对医疗机构和接种服务方，普通公众仍使用已获欧盟许可并按照实际供应的流感疫苗。推荐毒株变化不等同于医疗机构自行采购某种疫苗。对地方卫生主管部门，四价向三价转换可能影响采购需求，但各国实施进度、公共采购安排和接种政策并不由这份EMA技术推荐统一决定。<strong>本次检索到的材料中，未见欧盟层面统一规定各国具体切换日期。</strong></p>
+<p>BOX r：风险点 | “不再推荐B/Yamagata”与“可以继续生产部分四价灭活疫苗”同时成立。企业若忽略产品类别或地区条件，可能在组成设计、申报路径和供应衔接上出现偏差；具体过渡期限仍需以国家实施情况及主管机关解释为准。</p>
+<h2><span class="n">05</span>还没确定什么：看最新版文件，也看各国执行</h2>
+<p>目前最需要补齐的信息，是附件I的具体修订内容。EMA已明确附件I在11月17日更新，但新闻摘要没有列出试剂名称、规格、检测方法或适用范围的变化。生产和质量人员无法据此完成全部内部评估，必须查阅官方最新版PDF及其修订痕迹。</p>
+<p>其次是mRNA疫苗的技术细节。本次推荐把核酸类疫苗纳入范围，并给出适用于此类产品的H1N1、H3N2和B谱系推荐。不过，公开摘要没有说明不同mRNA平台的序列设计、表达构建、效力评价或提交资料要求，也没有公布具体已申报产品。<strong>本次检索到的材料中未见可据以判断某一mRNA流感疫苗已获欧盟批准的公开数据。</strong></p>
+<p>再次是时间线衔接。首次发布、页面更新、文件修订和申请截止日之间存在多个节点。现有材料无法解释为何11月新增mRNA建议晚于6月15日申请期限，也未说明已经提交的组成变更申请如何处理。产业主体不能自行推定“晚到内容无需补充”或“必须重新提交”，应以EMA最新文件、申报系统说明和官方答复为准。</p>
+<p>最后是四价过渡的地域边界。EMA明确允许部分仍需要四价疫苗的地区继续评估四价灭活疫苗，同时强调欧盟已不再推荐B/Yamagata。此次材料没有给出完成三价转换的统一期限，也没有点名哪些欧盟国家已经完成、哪些仍处于过渡阶段。医院、疾控机构和企业做供应计划时，需要把EMA推荐与本国公共卫生部门的采购和接种安排叠加核对。</p>
+<p>BOX w：执行核对清单 | 先确认产品工艺和中央许可状态；再按最新版文件核对H1N1、H3N2及B谱系；随后比对附件I和申报材料；涉及四价灭活疫苗时，另查目标地区的转换进度与采购要求。</p>
+<div class="end"><h4>真正的杠杆点在“按产品类别分轨”</h4><p>这份2026/2027推荐并未只做一次年度换株。它把mRNA纳入推荐，同时按灭活、减毒活、卵制、细胞培养和核酸类工艺区分H3N2及B谱系候选株，并更新了疫苗标准化试剂附件。企业准备的重点应落在最新版文件逐项比对、申报一致性生产和四价灭活疫苗的地域过渡判断上。mRNA是新增范围，四价例外有条件保留；这两项都比“流感疫苗毒株又更新了”更值得决策层关注。</p></div>
+<p class="fn"><strong>来源与核查口径：</strong><br>
+1. 来源说明：EMA官方新闻《EU recommendations for 2026/2027 seasonal flu vaccine composition》，首次发布于2026年3月30日，最后更新于2026年11月17日，来源性质为官方监管新闻及官方推荐文件摘要。<br>
+2. 来源说明：EMA相关文件《EU recommendations for the seasonal influenza vaccine composition for the season 2026/2027》，参考编号EMA/CHMP/BWP/62405/2026，来源性质为官方推荐文件；本次素材提供其标题、编号、状态及文件入口，未提供全文逐页转录。</p>
+</article>
+</body>
+</html>
