@@ -1,0 +1,132 @@
+{
+  "date": "2026-11-22",
+  "count": 4,
+  "plan": [
+    {
+      "type": "policy_readout",
+      "cluster_key": "policy:上海-医保基金监管处罚裁量规则",
+      "channel": "china",
+      "lead_id": "dd05c909f7ab389f",
+      "title": "关于印发修订后的《上海市基本医疗保障基金监督管理行政处罚裁量规则》的通知",
+      "score": 6.8,
+      "member_ids": [
+        "dd05c909f7ab389f"
+      ],
+      "members": [
+        {
+          "title": "关于印发修订后的《上海市基本医疗保障基金监督管理行政处罚裁量规则》的通知",
+          "url": "https://ybj.sh.gov.cn/gfxwj/20261119/161e3af40e3741c4ad3d04948a48090c.html",
+          "score": 6.8,
+          "reasoning": "行政处罚裁量规则直接关系医保基金执法的一致性和可预期性，修订内容值得结合典型违法情形分析裁量基准变化及其对定点医药机构合规的影响。"
+        }
+      ],
+      "reasoning": "行政处罚裁量规则直接关系医保基金执法的一致性和可预期性，修订内容值得结合典型违法情形分析裁量基准变化及其对定点医药机构合规的影响。",
+      "verify_todo": [
+        "核对文号、生效日期、废止文件及新旧规则对照表",
+        "确认本次修订涉及哪些违法行为、裁量档次和处罚幅度",
+        "核对是否附有政策解读、裁量基准示例或配套执法指南"
+      ],
+      "flags": [
+        "formal",
+        "enforcement",
+        "effective",
+        "local"
+      ]
+    },
+    {
+      "type": "policy_readout",
+      "cluster_key": "policy:上海-药品再注册管理",
+      "channel": "china",
+      "lead_id": "a042ce0adda07e8b",
+      "title": "上海市药品监督管理局关于印发《上海市药品再注册管理办法》的通知",
+      "score": 6.3,
+      "member_ids": [
+        "a042ce0adda07e8b"
+      ],
+      "members": [
+        {
+          "title": "上海市药品监督管理局关于印发《上海市药品再注册管理办法》的通知",
+          "url": "https://yjj.sh.gov.cn/zx-yp/20261120/138790442e5c46ff8e5b68504af564a2.html",
+          "score": 6.3,
+          "reasoning": "药品再注册是上市许可持有人和原料药登记人持续合规的重要环节，属地管理办法值得与国家层面的申报要求逐项对照，核清程序变化及配套材料要求。"
+        }
+      ],
+      "reasoning": "药品再注册是上市许可持有人和原料药登记人持续合规的重要环节，属地管理办法值得与国家层面的申报要求逐项对照，核清程序变化及配套材料要求。",
+      "verify_todo": [
+        "核对文号、发布日期、生效日期及废止的旧文件",
+        "逐条比对新版与原有规定，确认申请流程、审评时限和材料要求的变化",
+        "确认与国家再注册申报程序及资料要求文件的衔接关系"
+      ],
+      "flags": [
+        "formal",
+        "effective",
+        "local",
+        "approval"
+      ]
+    },
+    {
+      "type": "enforcement",
+      "cluster_key": "policy:第10批集采-泽恒医药违规处理",
+      "channel": "china",
+      "lead_id": "f97d6b8718bb0abf",
+      "title": "关于取消南京泽恒医药技术开发有限公司舒更葡糖钠注射液中选资格并将该企业及受托生产企业亚邦医药股份有限公司列入违规名单的公告",
+      "score": 6.3,
+      "member_ids": [
+        "f97d6b8718bb0abf"
+      ],
+      "members": [
+        {
+          "title": "关于取消南京泽恒医药技术开发有限公司舒更葡糖钠注射液中选资格并将该企业及受托生产企业亚邦医药股份有限公司列入违规名单的公告",
+          "url": "https://www.smpaa.cn/gjsdcg/2026/11/20/26271.shtml",
+          "score": 6.3,
+          "reasoning": "该处置连接中选资格、违规名单、竞采资格暂停及供应替补等关键环节，虽直接对象较为集中，但对全国集采违规处理尺度和信用惩戒机制具有较高观察价值。"
+        }
+      ],
+      "reasoning": "该处置连接中选资格、违规名单、竞采资格暂停及供应替补等关键环节，虽直接对象较为集中，但对全国集采违规处理尺度和信用惩戒机制具有较高观察价值。",
+      "verify_todo": [
+        "核对处罚起止时间、资格暂停范围及违规名单期限",
+        "核对所引国家集采文件条款及企业申辩、复议或申诉程序",
+        "确认主供企业替补程序、供应责任和价格执行安排"
+      ],
+      "flags": [
+        "formal",
+        "enforcement",
+        "effective",
+        "national",
+        "procurement"
+      ]
+    },
+    {
+      "type": "consultation",
+      "cluster_key": "policy:cms-medicare-advantage-competition",
+      "channel": "global",
+      "lead_id": "4785bdd09273a2df",
+      "title": "CMS Proposes Reforms to Strengthen Competition, Elevate Care Quality, and Expand Beneficiary Choice in Medicare Advantage",
+      "score": 7.5,
+      "member_ids": [
+        "4785bdd09273a2df"
+      ],
+      "members": [
+        {
+          "title": "CMS Proposes Reforms to Strengthen Competition, Elevate Care Quality, and Expand Beneficiary Choice in Medicare Advantage",
+          "url": "https://www.hhs.gov/press-room/cms-proposes-medicare-advantage-reforms-competition-quality-beneficiary-choice.html",
+          "score": 7.5,
+          "reasoning": "拟议规则涉及 Medicare Advantage 和 Part D 的竞争机制、计划质量要求及受益人选择空间，可能影响保险计划合同、定价和福利设计，值得系统梳理政策选项及行业影响。"
+        }
+      ],
+      "reasoning": "拟议规则涉及 Medicare Advantage 和 Part D 的竞争机制、计划质量要求及受益人选择空间，可能影响保险计划合同、定价和福利设计，值得系统梳理政策选项及行业影响。",
+      "verify_todo": [
+        "核对CMS proposed rule的正式标题、规则编号和联邦公报发布日期",
+        "确认征求意见截止日期及拟议规则与CMMI新模型之间的边界",
+        "逐项核对竞争机制、质量指标、福利和支付条款的影响对象"
+      ],
+      "flags": [
+        "consultation",
+        "overseas",
+        "price",
+        "reimbursement",
+        "industry"
+      ]
+    }
+  ]
+}
