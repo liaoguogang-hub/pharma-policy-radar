@@ -1,0 +1,28 @@
+[
+  {
+    "ok": true,
+    "needs_review": true,
+    "claim_block": false,
+    "file": "01-policy_readout-424d6f54.html",
+    "stats": {
+      "body_chars": 2713,
+      "sections": 5,
+      "tables": 2,
+      "boxes": 0,
+      "footnotes": 3,
+      "has_hook": true,
+      "has_end": true,
+      "has_title": true
+    },
+    "problems": [
+      "AI味句式: 也就是说",
+      "AI味句式 1 处（也就是说）——必须改掉，不是换词而是拆句重写",
+      "[P1] 公式化递进 1 处（上限 0）：「首先/其次/最后」是报幕式递进。让内容的递进关系自己呈现。"
+    ],
+    "html_len": 8201,
+    "note": "未通过全部质检，已按最优版本落盘，需人工核查",
+    "title": "转发国家卫生健康委等三部门关于做好基本药物优先配备使用工作的通知",
+    "score": 6.0,
+    "type": "policy_readout"
+  }
+]
