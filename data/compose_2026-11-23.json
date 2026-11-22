@@ -1,0 +1,50 @@
+[
+  {
+    "ok": true,
+    "needs_review": true,
+    "claim_block": false,
+    "file": "01-enforcement-8dbc607e.html",
+    "stats": {
+      "body_chars": 2099,
+      "sections": 5,
+      "tables": 2,
+      "boxes": 0,
+      "footnotes": 2,
+      "has_hook": true,
+      "has_end": true,
+      "has_title": true
+    },
+    "problems": [
+      "正文字数 2099 超出范围（目标 2250-3900）"
+    ],
+    "html_len": 7170,
+    "note": "未通过全部质检，已按最优版本落盘，需人工核查",
+    "title": "黑龙江省医疗保障局2026年度飞行检查发现问题清单（第三批）",
+    "score": 6.0,
+    "type": "enforcement"
+  },
+  {
+    "ok": true,
+    "needs_review": true,
+    "claim_block": false,
+    "file": "02-policy_readout-f4d3f051.html",
+    "stats": {
+      "body_chars": 1996,
+      "sections": 4,
+      "tables": 1,
+      "boxes": 0,
+      "footnotes": 2,
+      "has_hook": true,
+      "has_end": true,
+      "has_title": true
+    },
+    "problems": [
+      "正文字数 1996 超出范围（目标 2250-3900）"
+    ],
+    "html_len": 6254,
+    "note": "未通过全部质检，已按最优版本落盘，需人工核查",
+    "title": "黑龙江省医保局发布第十六批智能监管“两库”规则和知识点",
+    "score": 6.0,
+    "type": "policy_readout"
+  }
+]
