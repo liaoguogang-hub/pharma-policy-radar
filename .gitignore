@@ -33,3 +33,6 @@ desktop.ini
 *.tmp
 *.bak
 COMMIT_MSG*
+
+# 改稿备份文件（2026-11-24 加：会撑大 push payload 导致推送失败）
+*.bak-*
