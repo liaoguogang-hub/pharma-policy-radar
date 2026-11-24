@@ -226,12 +226,43 @@ def extract_claims(client, eff: dict, article_text: str,
                     max_tokens=_e.get("max_tokens", 4000),
                 )
             except Exception as _ex:
+                # 2026-11-24：连接失败时重建 client 再试一次。
+                # 现象：同一进程里改稿 LLM 正常，claimcheck 却一直 APIConnectionError；
+                # 单��跑同样的调用却成功。判断是 client 的 httpx 连接池状态问题，
+                # 重建 client（同样的 base_url/key/timeout）能恢复。
+                print(f"[claimcheck] {_e.get('provider')} 调用失败"
+                      f"（{type(_ex).__name__}: {str(_ex)[:80]}）→ 重建 client 重试")
+                _cause = _ex.__cause__ or _ex
+                print(f"[claimcheck]   底层: {type(_cause).__name__}: {str(_cause)[:160]}")
+                try:
+                    import os as _os
+                    import openai as _openai
+                    _key = None
+                    for _env in (_e.get("env_key", ""), "LLM_API_KEY", "OPENAI_API_KEY"):
+                        if _env and os.getenv(_env):
+                            _key = os.getenv(_env)
+                            break
+                    if _key and _e.get("base_url"):
+                        _c2 = _openai.OpenAI(api_key=_key, base_url=_e["base_url"],
+                                             timeout=180.0, max_retries=2)
+                        chain[_ci] = (_c2, _e)
+                        _c = _c2
+                        r = _c.chat.completions.create(
+                            model=_e["model"],
+                            messages=[{"role": "system", "content": CLAIM_SYS},
+                                      {"role": "user", "content": user}],
+                            temperature=0,
+                            max_tokens=_e.get("max_tokens", 4000),
+                        )
+                        last = (r.choices[0].message.content or "").strip()
+                        data = claims_from_raw(last)
+                        if data:
+                            break
+                        continue
+                except Exception as _ex2:
+                    print(f"[claimcheck]   重建后仍失败: {type(_ex2).__name__}: {str(_ex2)[:80]}")
                 if _ci + 1 < len(chain):
-                    print(f"[claimcheck] {_e.get('provider')} 调用失败"
-                          f"（{type(_ex).__name__}: {str(_ex)[:80]}）→ 切备用")
-                else:
-                    print(f"[claimcheck] {_e.get('provider')} 调用失败"
-                          f"（{type(_ex).__name__}: {str(_ex)[:80]}）")
+                    print(f"[claimcheck] {_e.get('provider')} → 切备用")
                 last = ""
                 continue
             last = (r.choices[0].message.content or "").strip()
