@@ -582,6 +582,41 @@ def score_items(items: list[RawItem], cfg: dict, client: OpenAI,
     pre = _prefilter(items, cfg)
     print(f"[score] 预筛后 {len(pre)} 条（原始 {len(items)}）")
 
+    # ---- 象信前置闸门（2026-11-25 新增）----
+    # 在昂贵的 LLM 打分之前，用象信先判断「这条到底是不是一条政策」，
+    # 把明显不是政策的内容（融资并购 / 临床读出 / 股价 / 人事 / 科普 /
+    # 招聘榜单）拦掉。只做这一个原子判断，不替代 LLM 打分。
+    #
+    # ⚠️ 判据与另外两个雷达【不同】，不要照搬：
+    #    BD 问「有没有交易对手方」，临床问「有没有临床读出」，
+    #    本雷达问「是不是官方机关发出的、对行业有约束力的文件」。
+    #
+    # ⚠️ 闸门只判「是不是政策」，【不】判发文机关在不在白名单、
+    #    影响范围够不够大——那是 scope.py 和 LLM 的活。
+    #    闸门管太宽会误杀省级文件。
+    #
+    # 安全边界：
+    #   - 闸门只拦「高置信度非政策」，低置信度一律放行给 LLM。
+    #   - 象信不可用（无 key / 未装包 / 报错）时整体旁路，绝不阻断生产。
+    #   - 可用配置关闭：scoring.yaml 里 llm.xiangxin_gate.enabled = false
+    if (cfg.get("llm") or {}).get("xiangxin_gate", {}).get("enabled", False):
+        try:
+            from xiangxin_gate import filter_items as _xx_filter
+            pre, gate_stats = _xx_filter(pre)
+            if gate_stats.get("enabled"):
+                blocked = gate_stats.get("blocked", 0)
+                total = gate_stats.get("total", 0)
+                pct = (blocked / total * 100) if total else 0
+                print(f"[xiangxin-gate] 拦掉 {blocked}/{total}（{pct:.1f}%）"
+                      f"非政策条目，剩 {len(pre)} 条送 LLM")
+            elif gate_stats.get("error"):
+                print(f"[xiangxin-gate] 旁路（{gate_stats['error']}），"
+                      f"{len(pre)} 条全部送 LLM")
+        except Exception as e:
+            print(f"[xiangxin-gate] 异常，全部放行: {type(e).__name__}: {e}")
+    else:
+        print("[xiangxin-gate] 未启用（scoring.yaml → llm.xiangxin_gate.enabled）")
+
     for i in range(0, len(pre), batch):
         chunk = pre[i:i + batch]
         user = f"请为以下 {len(chunk)} 条医药政策/监管条目打分。\n" \

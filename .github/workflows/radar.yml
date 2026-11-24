@@ -144,6 +144,14 @@ jobs:
       - name: 安装依赖
         run: pip install -r requirements.txt
 
+      # 2026-11-25：象信 AI 前置闸门的可选依赖。
+      # ⚠️ 故意【不】写进 requirements.txt：闸门是可选增强，
+      #    若把它当必需依赖，一旦 PyPI 抖动/装不上就会连带整条评分链路失败。
+      #    这里单独装并 continue-on-error：装不上就退回旁路，雷达照常跑。
+      - name: 安装象信可选依赖
+        continue-on-error: true
+        run: pip install "xiangxin-sdk>=0.3.2"
+
       - name: 采集
         if: ${{ inputs.publish_only != true }}
         working-directory: src
@@ -166,6 +174,12 @@ jobs:
           # 2026-11-01：MiniMax 额度耗尽后切 DeepSeek Flash；
           # 配置里 provider=deepseek_flash 优先读 DEEPSEEK_API_KEY。
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          # 2026-11-25：象信 AI 前置闸门。在 LLM 打分前拦掉明显不是政策
+          # 的内容（融资并购 / 临床读出 / 股价 / 人事 / 科普 / 招聘榜单）。
+          # ⚠️ 判据与另外两个雷达不同：本雷达问「是不是官方机关发出的、
+          #    对行业有约束力的文件」。
+          # ⚠️ 没配这个 secret 时闸门会自动旁路，不影响评分。
+          XIANGXIN_API_KEY: ${{ secrets.XIANGXIN_API_KEY }}
         run: python score.py ${{ inputs.date }}
 
       - name: 选题
