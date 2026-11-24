@@ -71,6 +71,37 @@ def _day_articles(date: str) -> list[Path]:
     return sorted(p for p in d.glob("*.txt") if not p.name.startswith("_"))
 
 
+
+def _sort_errs_by_position(errs: list[str], body: str) -> list[str]:
+    """按断言在正文中首次出现的位置排序报错。
+
+    背景（2026-11-24 事故）：claimcheck.verify_claims 返回的 errs 顺序
+    取决于核查模型返回 claims 的顺序，**不是正文出现顺序**。
+    结果是报告里打印的前 3 条样本可能指向早已被改掉的旧句，
+    排障时找不到真正的残留问题（当日案例：报的「首份…」早已在第 1 轮改稿删掉）。
+
+    这里按断言文本在正文里的首次出现位置重排，让样本指向真正还存在的问题。
+    找不到位置的排到最后（多半来自表格/BOX 等非正文区域）。
+    """
+    if not errs:
+        return errs
+
+    def pos(e: str) -> int:
+        m = re.search(r"断言「(.+?)」", e)
+        if not m:
+            return 10**9
+        t = m.group(1).rstrip("…")
+        for L in (len(t), 30, 20, 12):
+            if L < 4:
+                break
+            i = body.find(t[:L])
+            if i >= 0:
+                return i
+        return 10**9
+
+    return sorted(errs, key=pos)
+
+
 def audit(date: str, do_notify: bool = True,
           report_only: bool = False) -> dict:
     items = _day_articles(date)
@@ -151,6 +182,7 @@ def audit(date: str, do_notify: bool = True,
                 f"（至少应有 {min_claims} 条）。核查未真正展开，"
                 f"**不能判为可信**，需人工复核"]
 
+        errs = _sort_errs_by_position(errs, body or "")
         if not errs:
             verdict = "✅ 可信"
         elif insufficient or not claims:

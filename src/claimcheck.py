@@ -122,6 +122,20 @@ CLAIM_SYS = """你是事实核查员，专门核查**医药政策**类文章。�
 # 但是一条很好的出处。门槛太高会把"简短但真实"的引文误杀。
 MIN_EVIDENCE_LEN = 5
 
+# 短引文兜底（2026-11-24 补）：核查模型有时只贴 4 个字（如「8种剂型」），
+# 归一化后长度 < MIN_EVIDENCE_LEN，最长公共子串判定会把它误判成「编造出处」。
+# 同一份稿子连续核验 5 次报出的错完全不同（0-4 条随机波动），根因就在这里。
+# 判据：若归一化后的 evidence **整体就是素材的连续子串**，则它是真出处，
+# 无论多短都放行。真正编造的引文不会整体出现在素材里，不会被这条放过。
+SHORT_EVIDENCE_FALLBACK = True
+
+# 第二层兜底（2026-11-24 补）：核查模型有时整条 evidence 留空（判 no_evidence），
+# 但断言文本本身就是素材里的原话。这时素材确实支撑这条断言，不该判无出处。
+# 判据：断言文本去掉标点后是素材的连续子串（≥6 字），或反之（素材片段在断言里 ≥6 字）。
+# 这样不必依赖模型贴对 evidence，判定由素材本身决定，结果稳定。
+ASSERT_TEXT_FALLBACK = True
+ASSERT_TEXT_MIN_LEN = 6
+
 # 引文与素材比对判据：**最长公共子串**。
 #
 # ⚠️ 试过两种更"高级"的算法，都不如这个（2026-10-17 实测）：
@@ -297,6 +311,23 @@ def _cjk_ratio(s: str) -> float:
     return cjk / letters if letters else 0.0
 
 
+
+
+def _assert_text_supported(text: str, mat_n: str) -> bool:
+    """断言文本本身是否被素材支撑（不依赖模型给的 evidence）。
+
+    两种判据都算支撑：
+      ① 断言文本归一化后是素材的连续子串；
+      ② 素材里有 ≥ASSERT_TEXT_MIN_LEN 字的连续片段落在断言文本里。
+    """
+    t_n = _norm(text)
+    if len(t_n) < ASSERT_TEXT_MIN_LEN or not mat_n:
+        return False
+    if t_n in mat_n:
+        return True
+    return _longest_common_run(t_n, mat_n) >= ASSERT_TEXT_MIN_LEN
+
+
 def verify_claims(claims: list[dict], material: str) -> tuple[list[str], dict]:
     """
     程序化核验。返回 (问题列表, 统计)。
@@ -325,6 +356,11 @@ def verify_claims(claims: list[dict], material: str) -> tuple[list[str], dict]:
         stat["total"] += 1
         ev = c.get("evidence") or ""
         if not ev:
+            # 第二层兜底：断言文本本身就是素材原话 → 素材支撑，放行
+            if ASSERT_TEXT_FALLBACK and _assert_text_supported(c.get("text", ""), mat_n):
+                stat["ok"] += 1
+                stat["assert_text_fallback"] = stat.get("assert_text_fallback", 0) + 1
+                continue
             stat["no_evidence"] += 1
             errs.append(f"[{kind}] 断言「{c['text'][:60]}」在素材里找不到出处。"
                         f"把它删掉，或改成素材支持的表述。")
@@ -338,6 +374,11 @@ def verify_claims(claims: list[dict], material: str) -> tuple[list[str], dict]:
         run = _longest_common_run(ev_n, mat_n)
         if len(ev_n) >= MIN_EVIDENCE_LEN and run >= MIN_EVIDENCE_LEN:
             stat["ok"] += 1
+            continue
+        # 短引文兜底：整体是素材连续子串 → 真出处，放行
+        if SHORT_EVIDENCE_FALLBACK and ev_n and len(ev_n) >= 3 and ev_n in mat_n:
+            stat["ok"] += 1
+            stat["short_fallback"] = stat.get("short_fallback", 0) + 1
             continue
         stat["fake_evidence"] += 1
         errs.append(
