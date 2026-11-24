@@ -1,6 +1,6 @@
 {
   "date": "2026-11-24",
-  "count": 2,
+  "count": 3,
   "posts": [
     {
       "rel": "2026/11/24/02-policy_readout-4c12e4ef.html",
@@ -27,7 +27,23 @@
       "needs_review": false,
       "problems": [],
       "below_threshold": false
+    },
+    {
+      "rel": "2026/11/24/01-policy_readout-c50680f2.html",
+      "date": "2026-11-24",
+      "title": "第六批鼓励研发申报儿童药品清单：18个品种释放哪些研发信号",
+      "kicker": "Policy Readout｜儿童用药",
+      "sub": "新清单把儿童临床急需、适宜剂型和说明书补充纳入遴选，企业申报方向随之调整。",
+      "hook": "2026年11月24日，国家卫生健康委官网发布《关于印发第六批鼓励研发申报儿童药品清单的通知》配套解读。第四部门通过组织专家遴选、社会公示等程序形成18个品种、27个规格、8种剂型的清单。最容易被忽略的变化是，部分入选品种并非全新药。个别药品已在国内外上市，但国内说明书缺少儿童适应症或用法用量，清单希望推动企业补充儿童用药信息。",
+      "chars": 2926,
+      "site_rel": "posts/2026/11/24/01-policy_readout-c50680f2.html",
+      "needs_review": true,
+      "problems": [
+        "AI味句式: 真正的",
+        "AI味句式 1 处（真正的）——必须改掉，不是换词而是拆句重写"
+      ],
+      "below_threshold": false
     }
   ],
-  "all_count": 67
+  "all_count": 68
 }

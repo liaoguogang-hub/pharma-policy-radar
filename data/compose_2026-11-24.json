@@ -1,18 +1,27 @@
 [
   {
     "ok": true,
-    "skipped": true,
-    "title": "关于做好第十二批国家组织药品、全国中成药（第二批接续、第四批）、全国中药饮片集中带量采购中选结果执行工作的通知",
-    "score": 6.3,
-    "type": "policy_review",
-    "stats": {}
-  },
-  {
-    "ok": true,
-    "skipped": true,
-    "title": "国家药监局关于发布《医疗美容用途超声产品分类界定指导原则》的通告（2026年第43号）",
-    "score": 8.5,
-    "type": "policy_readout",
-    "stats": {}
+    "needs_review": true,
+    "claim_block": false,
+    "file": "01-policy_readout-c50680f2.html",
+    "stats": {
+      "body_chars": 2281,
+      "sections": 5,
+      "tables": 1,
+      "boxes": 0,
+      "footnotes": 3,
+      "has_hook": true,
+      "has_end": true,
+      "has_title": true
+    },
+    "problems": [
+      "AI味句式: 真正的",
+      "AI味句式 1 处（真正的）——必须改掉，不是换词而是拆句重写"
+    ],
+    "html_len": 6982,
+    "note": "未通过全部质检，已按最优版本落盘，需人工核查",
+    "title": "《关于印发第六批鼓励研发申报儿童药品清单的通知》政策解读",
+    "score": 7.2,
+    "type": "policy_readout"
   }
 ]
