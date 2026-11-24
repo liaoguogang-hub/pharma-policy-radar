@@ -228,6 +228,28 @@ jobs:
         with:
           path: ./site
 
+      # 2026-11-25 修：GitHub artifact 元数据传播竞态。
+      # 现象：upload-pages-artifact 刚传完（blob 已写入），deploy-pages 立刻查 artifact
+      #      却返回 'Found 0 artifact(s)' → 'No artifacts named "github-pages"'。
+      # 实测两次失败（2026-11-23、2026-11-24）间隔仅 643ms，全是 workflow_dispatch，
+      # 定时任务从无失败。artifact 事后确实存在（723896B，未过期），所以不是产物问题。
+      # 修法：部署前轮询等待 artifact 可见；最多等 60 秒。
+      - name: 等待 Pages 产物可见
+        if: ${{ inputs.skip_compose != true }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          for i in $(seq 1 30); do
+            n=$(gh api "repos/${{ github.repository }}/actions/runs/${{ github.run_id }}/artifacts" \
+                  --jq '[.artifacts[] | select(.name=="github-pages")] | length' 2>/dev/null || echo 0)
+            if [ "$n" != "0" ]; then
+              echo "artifact 已可见（第 $i 次探测）"
+              exit 0
+            fi
+            echo "等待 artifact 元数据可见... $((i * 2))s"
+            sleep 2
+          done
+          echo "::warning::等待 60s 后 artifact 仍不可见，继续尝试部署"
       - name: 部署 Pages
         if: ${{ inputs.skip_compose != true }}
         id: deployment
