@@ -1,0 +1,45 @@
+[
+  {
+    "ok": false,
+    "skipped": true,
+    "reason": "素材太薄：material is an attachment-only notice (see attached file); the guideline text lives in the PDF, so the web body is too thin to write a 2200+ char article. Skip this pick.",
+    "title": "国家医保局发布第二十三批智能监管“两库”规则和知识点",
+    "score": 7.8,
+    "type": "policy_readout",
+    "stats": {}
+  },
+  {
+    "ok": false,
+    "skipped": true,
+    "reason": "素材太薄：material is an attachment-only notice (see attached file); the guideline text lives in the PDF, so the web body is too thin to write a 2200+ char article. Skip this pick.",
+    "title": "关于规范发展全省惠民型商业医疗保险的通知",
+    "score": 6.3,
+    "type": "policy_readout",
+    "stats": {}
+  },
+  {
+    "ok": true,
+    "needs_review": true,
+    "claim_block": false,
+    "file": "03-policy_readout-531f3c07.html",
+    "stats": {
+      "body_chars": 2877,
+      "sections": 5,
+      "tables": 0,
+      "boxes": 0,
+      "footnotes": 2,
+      "has_hook": true,
+      "has_end": true,
+      "has_title": true
+    },
+    "problems": [
+      "AI味句式: 不是[^。；！？]{0,30}?而是",
+      "AI味句式 1 处（不是…而是）——必须改掉，不是换词而是拆句重写"
+    ],
+    "html_len": 7315,
+    "note": "未通过全部质检，已按最优版本落盘，需人工核查",
+    "title": "转发《国家卫生健康委办公厅 教育部办公厅 国家中医药局综合司 国家疾控局综合司关于加强医院法治建设的意见》的通知",
+    "score": 6.2,
+    "type": "policy_readout"
+  }
+]
