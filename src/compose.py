@@ -210,6 +210,39 @@ async def build_material_async(date: str, plan_item: dict) -> str:
     return base + anchors if anchors else base
 
 
+# Tiered material threshold (2026-11-25): material length decides the minimum.
+# Background: on 2026-11-25 two policy picks had only 229 / 329 chars of source
+# (the notice body is short; the guideline text lives in a PDF attachment).
+# They barely cleared the old 200-char gate, produced 2400-char articles,
+# got 31-54 unsupported claims, and failed after 3 revision rounds.
+# New rule: required = material_chars * TIERED_MIN_CHARS_RATIO (floor 800).
+TIERED_MIN_CHARS_RATIO = 5
+TIERED_MIN_CHARS_FLOOR = 800
+
+def _material_is_attachment_only(ids: set, s_by: dict, r_by: dict) -> bool:
+    """素材是否属于「通告壳 + PDF 附件」型（2026-11-25）。
+
+    判据：正文里出现「见附件」/「相关附件」/「.pdf」——说明网页只给了通告壳，
+    真正的指导原则全文在 PDF 附件里。这样的素材撑不起 2200+ 字的稿子。
+
+    不带的（如政策解读全文在网页上）不算，照常成稿。
+    """
+    import re as _re
+    pat = _re.compile(r"见附件|相关附件|\.pdf", _re.I)
+    for i in ids:
+        s = s_by.get(i, {}) or {}
+        r = r_by.get(i, {}) or {}
+        blob = " ".join([
+            s.get("content") or "",
+            s.get("summary") or "",
+            r.get("content") or "",
+            r.get("summary") or "",
+            r.get("body") or "",
+        ])
+        if blob and pat.search(blob):
+            return True
+    return False
+
 def material_too_thin(date: str, plan_item: dict,
                       min_chars: int = 200) -> tuple[bool, str]:
     """
@@ -247,6 +280,20 @@ def material_too_thin(date: str, plan_item: dict,
         summ = s.get("summary") or r.get("summary") or ""
         # 与 build_material 的取值口径一致：正文够长才用正文，否则用摘要
         usable += len((content if len(content) > 200 else summ).strip())
+    # 附件型素材：正文只给标题，全文在 PDF 附件里（2026-11-25）
+    #
+    # 背景：2026-11-25 政策雷达 3 条选题中，两条素材正文带「（见附件）」——
+    # 通告正文只有两三句，指导原则全文在 PDF 里。旧门槛只看字数（200），
+    # 229/329 字刚好越过，于是成稿 2400 字 → 核验报 31~54 条无依据 → 改 3 轮不放行。
+    #
+    # 判据用「（见附件）」而不是字数：
+    #   带（见附件）= 网页只有通告壳，全文在附件 → 素材不足以成稿，跳过；
+    #   不带        = 网页正文完整（如政策解读）→ 可以成稿。
+    # 用字数比例会误杀：一条 468 字的完整解读能写出 2569 字并通过核验。
+    if _material_is_attachment_only(ids, s_by, r_by):
+        return True, ('material is an attachment-only notice (see attached file); '
+                      'the guideline text lives in the PDF, so the web body is '
+                      'too thin to write a 2200+ char article. Skip this pick.')
     if usable < min_chars:
         return True, (f"模型可用素材仅 {usable} 字（< {min_chars}），"
                       f"相当于只有标题")
@@ -293,6 +340,8 @@ FN 2. 来源说明
 # 内容规范
 
 - **正文 2200-3200 字**（不含表格和脚注）
+  - material length caps article length: if the source is under 1500 chars,
+    write 1200-1800 chars instead of forcing 2200+. Never invent content to pad.
 - **HOOK 第一句必须交代两件事**：发文机关 + 发布日期
   （年-月-日，如"2026年10月28日，国家医保局发布…"）。
   之后给最反常识的变化或影响，不要铺垫。
