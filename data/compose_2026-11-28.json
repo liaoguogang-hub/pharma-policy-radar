@@ -1,0 +1,37 @@
+[
+  {
+    "ok": false,
+    "skipped": true,
+    "reason": "素材太薄：material is an attachment-only notice (see attached file); the guideline text lives in the PDF, so the web body is too thin to write a 2200+ char article. Skip this pick.",
+    "title": "国家医保局发布第二十三批智能监管“两库”规则和知识点",
+    "score": 7.5,
+    "type": "policy_readout",
+    "stats": {}
+  },
+  {
+    "ok": false,
+    "skipped": true,
+    "reason": "素材太薄：material is an attachment-only notice (see attached file); the guideline text lives in the PDF, so the web body is too thin to write a 2200+ char article. Skip this pick.",
+    "title": "国家药监局药审中心关于发布《中药注射剂上市后研究和评价基本技术要求》和《中药注射剂上市后研究和评价申报资料要求》的通告（2026年第58号）",
+    "score": 7.5,
+    "type": "policy_readout",
+    "stats": {}
+  },
+  {
+    "ok": false,
+    "error": "- 小节太少（1 个，至少 3 个）\n- 缺少 FN 来源脚注\n- 正文字数 378 超出范围（目标 2250-3900）\n- 表格列数不一致：表头 6 列，有一行 5 列\n\n# ⚠️ AI 味句式（逐句改写，位置已标出）\n- 段落长度中位数 97 字 > 90（段落焊成一大坨）\n  改法：把长句用句号断开，超过 45 字的句子拆成两句；一段只说一件事，控制在 90 字内。",
+    "stats": {
+      "body_chars": 378,
+      "sections": 1,
+      "tables": 1,
+      "boxes": 0,
+      "footnotes": 0,
+      "has_hook": true,
+      "has_end": false,
+      "has_title": true
+    },
+    "title": "云南省医疗保障局关于印发《云南省医疗保障基金监督检查五年行动实施方案（2026年—2030年）》的通知",
+    "score": 6.8,
+    "type": "policy_readout"
+  }
+]
